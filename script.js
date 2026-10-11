@@ -1,0 +1,6 @@
+function toggleMenu(){const nav=document.getElementById('nav');if(nav)nav.classList.toggle('open')}
+document.querySelectorAll('#year').forEach(el=>el.textContent=new Date().getFullYear());
+const dateField=document.getElementById('date');if(dateField){const now=new Date();dateField.min=new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().split('T')[0];}
+const params=new URLSearchParams(window.location.search);
+['service','bhk'].forEach(key=>{const el=document.getElementById(key);const value=params.get(key);if(el&&value){for(const option of el.options){if(option.value===value||option.text===value){el.value=option.value;break;}}}});
+const form=document.getElementById('bookingForm');if(form){form.addEventListener('submit',function(e){e.preventDefault();const data=new FormData(form);const lines=['Hello Saf Safai Pune, I would like to request a cleaning booking.','',`Name: ${data.get('customerName')}`,`Phone: ${data.get('customerPhone')}`,`Service: ${data.get('service')}`,`Home size: ${data.get('bhk')}`,`Wall cleaning: ${data.get('walls')}`,`Preferred date: ${data.get('date')||'Flexible'}`,`Locality: ${data.get('locality')}`,`Details: ${data.get('details')||'None'}`,'','Please confirm availability and final price.'];window.open('https://wa.me/919325100228?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');});}
