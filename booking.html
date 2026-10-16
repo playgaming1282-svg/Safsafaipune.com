@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Service | Saf Safai Pune - Step by Step Booking</title>
+  <link rel="icon" type="image/png" href="favicon-96.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --accent: #10b981;
+      --dark: #0f172a;
+      --light-bg: #f8fafc;
+      --border: #e2e8f0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+    body { background-color: var(--light-bg); color: #334155; padding-bottom: 50px; }
+    
+    header {
+      background: white;
+      padding: 15px 5%;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .back-home {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .booking-wrapper {
+      max-width: 620px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+
+    /* Steps */
+    .step-indicator {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .step-indicator::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: var(--border);
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+    .step-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 800;
+      position: relative;
+      z-index: 2;
+    }
+    .step-dot.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-weight: 700; font-size: 13px; margin-bottom: 8px; color: var(--dark); }
+    .form-control {
+      width: 100%;
+      padding: 13px 15px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 14px;
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .price-preview-badge {
+      background: #ecfdf5;
+      border: 1px dashed var(--accent);
+      padding: 16px;
+      border-radius: 14px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .price-preview-badge .p-val {
+      font-size: 26px;
+      font-weight: 800;
+      color: #065f46;
+    }
+
+    .modal-step { display: none; }
+    .modal-step.active { display: block; }
+
+    .btn-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 25px;
+    }
+    .btn-next {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 13px 25px;
+      border-radius: 50px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-back {
+      background: #f1f5f9;
+      color: var(--dark);
+      border: 1px solid var(--border);
+      padding: 13px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Home Par Wapas Jayein</a>
+    <span style="font-weight: 800; color: var(--dark); font-size: 15px;">Saf Safaai Pune</span>
+  </header>
+
+  <div class="booking-wrapper">
+    <div class="step-indicator">
+      <div class="step-dot active" id="dot1">1</div>
+      <div class="step-dot" id="dot2">2</div>
+      <div class="step-dot" id="dot3">3</div>
+    </div>
+
+    <!-- Step 1: Select Service -->
+    <div class="modal-step active" id="step1">
+      <h3 style="margin-bottom: 15px; color: var(--dark);">Step 1: Service Select Karein</h3>
+      
+      <div class="form-group">
+        <label for="serviceType">Cleaning Service Chuniye:</label>
+        <select id="serviceType" class="form-control" onchange="handleServiceChange()">
+          <!-- Full Packages -->
+          <optgroup label="Full Home Packages">
+            <option value="1bhk">1 BHK Full Deep Cleaning</option>
+            <option value="2bhk">2 BHK Full Deep Cleaning</option>
+            <option value="3bhk">3 BHK Full Deep Cleaning</option>
+            <option value="4bhk">4 BHK Full Deep Cleaning</option>
+          </optgroup>
+          <!-- Single Items -->
+          <optgroup label="Single Items (Urban Style)">
+            <option value="single-bathroom">1 Bathroom Deep Clean (₹499)</option>
+            <option value="kitchen-single">Kitchen Deep Clean (₹999)</option>
+            <option value="sofa-seat">Sofa Cleaning (₹250/seat)</option>
+            <option value="window-clean">Window Track Cleaning (₹250/window)</option>
+            <option value="balcony-wash">Balcony Deep Wash (₹499)</option>
+            <option value="mattress-clean">Double Mattress Sanitization (₹799)</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <!-- Option for BHK Wall -->
+      <div class="form-group" id="wallOptionGroup">
+        <label for="wallOption">Wall Cleaning Chahiye?</label>
+        <select id="wallOption" class="form-control" onchange="updateEstimatedPrice()">
+          <option value="without">Without Wall Cleaning</option>
+          <option value="with">With Wall Cleaning</option>
+        </select>
+      </div>
+
+      <!-- Option for Sofa Seats -->
+      <div class="form-group" id="sofaSeatGroup" style="display: none;">
+        <label for="sofaSeats">Kitne Seats Ka Sofa Hai?:</label>
+        <select id="sofaSeats" class="form-control" onchange="updateEstimatedPrice()">
+          <option value="3">3 Seater (₹750)</option>
+          <option value="5">5 Seater (₹1,250)</option>
+          <option value="6">6 Seater (₹1,500)</option>
+          <option value="7">7 Seater (₹1,750)</option>
+        </select>
+      </div>
+
+      <div class="price-preview-badge">
+        <div style="font-size: 13px; color: #047857; font-weight: 600;">Estimated Service Price</div>
+        <div class="p-val" id="priceDisplay">₹4,000</div>
+      </div>
+
+      <div class="btn-row" style="justify-content: flex-end;">
+        <button class="btn-next" onclick="goToStep(2)">Agla Step (Date & Slot) &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Date & Slot -->
+    <div class="modal-step" id="step2">
+      <h3 style="margin-bottom: 15px; color: var(--dark);">Step 2: Date aur Time Chuniye</h3>
+      
+      <div class="form-group">
+        <label for="bookDate">Service Ki Date:</label>
+        <input type="date" id="bookDate" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="bookTime">Time Slot Chuniye:</label>
+        <select id="bookTime" class="form-control">
+          <option value="09:00 AM">Morning (09:00 AM)</option>
+          <option value="11:30 AM">Afternoon (11:30 AM)</option>
+          <option value="02:00 PM">Afternoon (02:00 PM)</option>
+          <option value="04:30 PM">Evening (04:30 PM)</option>
+        </select>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-back" onclick="goToStep(1)">&larr; Back</button>
+        <button class="btn-next" onclick="goToStep(3)">Agla Step (Address Details) &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Address & Confirmation -->
+    <div class="modal-step" id="step3">
+      <h3 style="margin-bottom: 15px; color: var(--dark);">Step 3: Aapki Details</h3>
+
+      <div class="form-group">
+        <label for="custName">Aapka Poora Naam:</label>
+        <input type="text" id="custName" class="form-control" placeholder="Jaise: Santosh Chavan" required>
+      </div>
+
+      <div class="form-group">
+        <label for="custPhone">Mobile Number:</label>
+        <input type="tel" id="custPhone" class="form-control" placeholder="10 Digit Mobile Number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="custArea">Pune Area / Society Address:</label>
+        <input type="text" id="custArea" class="form-control" placeholder="Jaise: Wakad, Hinjewadi Phase 1, Baner...">
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-back" onclick="goToStep(2)">&larr; Back</button>
+        <button class="btn-next" style="background: #25d366;" onclick="submitBookingToWhatsApp()">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Par Booking Bhejein
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const PRICING = {
+      '1bhk': { without: 4000, with: 6000 },
+      '2bhk': { without: 5000, with: 7500 },
+      '3bhk': { without: 6500, with: 9000 },
+      '4bhk': { without: 9000, with: 12000 },
+      'single-bathroom': 499,
+      'kitchen-single': 999,
+      'sofa-seat': 250,
+      'window-clean': 250,
+      'balcony-wash': 499,
+      'mattress-clean': 799
+    };
+
+    window.onload = function() {
+      // Check query params if clicked from index.html
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceParam = urlParams.get('service');
+      if (serviceParam && PRICING[serviceParam]) {
+        document.getElementById('serviceType').value = serviceParam;
+      }
+      handleServiceChange();
+
+      // Tomorrow's date default
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      document.getElementById('bookDate').value = tomorrow.toISOString().split('T')[0];
+    };
+
+    function handleServiceChange() {
+      const s = document.getElementById('serviceType').value;
+      document.getElementById('wallOptionGroup').style.display = ['1bhk', '2bhk', '3bhk', '4bhk'].includes(s) ? 'block' : 'none';
+      document.getElementById('sofaSeatGroup').style.display = s === 'sofa-seat' ? 'block' : 'none';
+      updateEstimatedPrice();
+    }
+
+    function updateEstimatedPrice() {
+      const s = document.getElementById('serviceType').value;
+      const display = document.getElementById('priceDisplay');
+
+      if (['1bhk', '2bhk', '3bhk', '4bhk'].includes(s)) {
+        const wall = document.getElementById('wallOption').value;
+        display.innerText = '₹' + PRICING[s][wall].toLocaleString('en-IN');
+      } else if (s === 'sofa-seat') {
+        const seats = Number(document.getElementById('sofaSeats').value);
+        display.innerText = '₹' + (seats * 250).toLocaleString('en-IN');
+      } else {
+        display.innerText = '₹' + PRICING[s].toLocaleString('en-IN');
+      }
+    }
+
+    function goToStep(step) {
+      for(let i=1; i<=3; i++) {
+        document.getElementById('step' + i).classList.remove('active');
+        document.getElementById('dot' + i).classList.remove('active');
+      }
+      document.getElementById('step' + step).classList.add('active');
+      for(let i=1; i<=step; i++) {
+        document.getElementById('dot' + i).classList.add('active');
+      }
+    }
+
+    function submitBookingToWhatsApp() {
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const area = document.getElementById('custArea').value.trim();
+      const date = document.getElementById('bookDate').value;
+      const time = document.getElementById('bookTime').value;
+      const service = document.getElementById('serviceType').value;
+      const price = document.getElementById('priceDisplay').innerText;
+
+      if (!name || !phone) {
+        alert('Kripya apna Naam aur Mobile number dalein.');
+        return;
+      }
+
+      let extra = "";
+      if (['1bhk', '2bhk', '3bhk', '4bhk'].includes(service)) {
+        extra = `• Wall Wash: ${document.getElementById('wallOption').value}\n`;
+      } else if (service === 'sofa-seat') {
+        extra = `• Seats: ${document.getElementById('sofaSeats').value} Seater\n`;
+      }
+
+      const msg = `✨ *Nayi Booking Request - Saf Safaai Pune* ✨\n\n` +
+        `👤 *Naam:* ${name}\n` +
+        `📞 *Phone:* ${phone}\n` +
+        `📍 *Area/Address:* ${area || 'Pune'}\n\n` +
+        `🛠 *Service:* ${service.toUpperCase()}\n` +
+        extra +
+        `💰 *Estimated Price:* ${price}\n` +
+        `📅 *Date:* ${date}\n` +
+        `⏰ *Time Slot:* ${time}\n\n` +
+        `Kripya meri booking confirm kijiye.`;
+
+      window.open(`https://wa.me/919325100228?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+  </script>
+</body>
+</html>
