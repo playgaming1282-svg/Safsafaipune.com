@@ -113,12 +113,35 @@
       font-weight: 700;
       font-size: 0.85rem;
       cursor: pointer;
-      transition: 0.2s;
     }
     .btn-logout:hover { background: var(--danger); color: var(--white); }
 
-    .main-wrap { max-width: 1250px; margin: 24px auto 0; padding: 0 20px; }
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      max-width: 1250px;
+      margin: 20px auto 0;
+      padding: 0 20px;
+    }
+    .tab-btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: var(--slate);
+    }
+    .tab-btn.active {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
 
+    .main-wrap { max-width: 1250px; margin: 20px auto 0; padding: 0 20px; }
+
+    /* Bookings Tab */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -154,11 +177,7 @@
       flex-wrap: wrap;
       gap: 12px;
     }
-    .search-box {
-      flex: 1;
-      min-width: 240px;
-      max-width: 400px;
-    }
+    .search-box { flex: 1; min-width: 240px; max-width: 400px; }
     .search-box input {
       width: 100%;
       padding: 10px 14px;
@@ -167,8 +186,6 @@
       font-size: 0.9rem;
       outline: none;
     }
-    .search-box input:focus { border-color: var(--primary); }
-
     .filter-box select {
       padding: 10px 14px;
       border: 1px solid var(--border);
@@ -190,12 +207,7 @@
       color: #475569;
       border-bottom: 1px solid var(--border);
     }
-    td {
-      padding: 16px 18px;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.9rem;
-      vertical-align: middle;
-    }
+    td { padding: 16px 18px; border-bottom: 1px solid var(--border); font-size: 0.9rem; vertical-align: middle; }
     tr:hover { background: #fafafa; }
 
     .cust-name { font-weight: 700; color: var(--dark); }
@@ -242,16 +254,71 @@
     .act-del { background: #fef2f2; color: var(--danger); }
     .act-del:hover { background: var(--danger); color: var(--white); }
 
-    .no-data {
-      text-align: center;
-      padding: 40px;
-      color: var(--slate);
-      font-size: 0.95rem;
+    /* Price Manager Tab */
+    #tabPrices { display: none; }
+    .price-admin-card {
+      background: var(--white);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
     }
+    .price-group-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin: 18px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e0f2fe;
+    }
+    .price-group-title:first-child { margin-top: 0; }
+    .price-editor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .price-item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8fafc;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .price-item-row label { font-size: 0.88rem; font-weight: 700; color: #334155; }
+    .price-input-wrap { display: flex; align-items: center; gap: 6px; }
+    .price-input-wrap span { font-weight: 800; color: var(--primary); }
+    .price-input-wrap input {
+      width: 100px;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      outline: none;
+      text-align: right;
+    }
+    .price-input-wrap input:focus { border-color: var(--primary); }
+    .btn-save-prices {
+      margin-top: 24px;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 800;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .btn-save-prices:hover { background: var(--primary-dark); }
+    .save-alert { margin-top: 12px; padding: 10px; border-radius: 6px; font-weight: 700; text-align: center; display: none; }
   </style>
 </head>
 <body>
 
+<!-- LOGIN SCREEN -->
 <div id="loginScreen">
   <div class="login-card">
     <div class="login-icon">🔒</div>
@@ -273,6 +340,7 @@
   </div>
 </div>
 
+<!-- DASHBOARD SCREEN -->
 <div id="dashboardScreen">
   <div class="topbar">
     <div class="topbar-wrap">
@@ -286,7 +354,14 @@
     </div>
   </div>
 
-  <div class="main-wrap">
+  <!-- Switch Tabs -->
+  <div class="nav-tabs">
+    <button class="tab-btn active" id="btnTabBookings" onclick="switchTab('bookings')">📋 Live Bookings</button>
+    <button class="tab-btn" id="btnTabPrices" onclick="switchTab('prices')">🏷️ Price Manager (Edit Rates)</button>
+  </div>
+
+  <!-- 1. Bookings Tab -->
+  <div class="main-wrap" id="tabBookings">
     <div class="stats-grid">
       <div class="stat-card">
         <h4>Total Bookings</h4>
@@ -334,9 +409,66 @@
           <tbody id="leadsTbody"></tbody>
         </table>
       </div>
-      <div id="noDataNotice" class="no-data" style="display: none;">
+      <div id="noDataNotice" style="display: none; padding: 40px; text-align: center; color: var(--slate);">
         No cleaning bookings found matching your search.
       </div>
+    </div>
+  </div>
+
+  <!-- 2. Price Manager Tab -->
+  <div class="main-wrap" id="tabPrices">
+    <div class="price-admin-card">
+      <h3 style="margin-bottom: 8px;">Direct Rate Card Manager</h3>
+      <p style="color: var(--slate); font-size: 0.9rem; margin-bottom: 20px;">Yaha price badal kar "Save All Prices" dabayein. Website par live naya rate turant update ho jayega bina code chhue.</p>
+
+      <form id="priceManagerForm" onsubmit="saveAllPrices(event)">
+        <!-- Full Home Packages -->
+        <div class="price-group-title">Full Apartment Packages (Kitchen Included)</div>
+        <div class="price-editor-grid">
+          <div class="price-item-row"><label>1 BHK Full Deep Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_1bhk" value="2499"></div></div>
+          <div class="price-item-row"><label>2 BHK Full Deep Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_2bhk" value="3499"></div></div>
+          <div class="price-item-row"><label>3 BHK Full Deep Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_3bhk" value="4499"></div></div>
+          <div class="price-item-row"><label>4 BHK Full Deep Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_4bhk" value="5999"></div></div>
+        </div>
+
+        <!-- Single Spaces -->
+        <div class="price-group-title">Single Space & Combos</div>
+        <div class="price-editor-grid">
+          <div class="price-item-row"><label>Kitchen Deep Cleaning</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_kitchen" value="1299"></div></div>
+          <div class="price-item-row"><label>Bathroom Deep Cleaning</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_bathroom" value="499"></div></div>
+          <div class="price-item-row"><label>Kitchen + Bath Combo</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_combo" value="1699"></div></div>
+          <div class="price-item-row"><label>3-Seater Sofa Shampoo</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_sofa3" value="799"></div></div>
+          <div class="price-item-row"><label>5-Seater Sofa Set</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_sofa5" value="1199"></div></div>
+        </div>
+
+        <!-- Individual Items -->
+        <div class="price-group-title">20+ Individual Single Items</div>
+        <div class="price-editor-grid">
+          <div class="price-item-row"><label>Chair Cleaning</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_chair" value="149"></div></div>
+          <div class="price-item-row"><label>Window & Mesh Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_window" value="199"></div></div>
+          <div class="price-item-row"><label>Balcony Deep Wash</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_balcony" value="399"></div></div>
+          <div class="price-item-row"><label>Single Bed Mattress</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_mattress_single" value="599"></div></div>
+          <div class="price-item-row"><label>Double Bed Mattress</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_mattress_double" value="999"></div></div>
+          <div class="price-item-row"><label>Ceiling Fan</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_fan" value="99"></div></div>
+          <div class="price-item-row"><label>Exhaust Fan</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_exhaust" value="149"></div></div>
+          <div class="price-item-row"><label>Refrigerator</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_fridge" value="349"></div></div>
+          <div class="price-item-row"><label>Microwave Oven</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_microwave" value="199"></div></div>
+          <div class="price-item-row"><label>Small Carpet</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_carpet_sm" value="399"></div></div>
+          <div class="price-item-row"><label>Large Carpet</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_carpet_lg" value="699"></div></div>
+          <div class="price-item-row"><label>Single Wardrobe</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_wardrobe_single" value="199"></div></div>
+          <div class="price-item-row"><label>Double Wardrobe</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_wardrobe_double" value="349"></div></div>
+          <div class="price-item-row"><label>Chimney Outer Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_chimney" value="499"></div></div>
+          <div class="price-item-row"><label>Gas Stove Top</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_gasstove" value="199"></div></div>
+          <div class="price-item-row"><label>Curtain Vacuuming</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_curtain" value="149"></div></div>
+          <div class="price-item-row"><label>Single Room Floor Scrub</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_floorscrub" value="499"></div></div>
+          <div class="price-item-row"><label>Glass Partition</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_glass" value="299"></div></div>
+          <div class="price-item-row"><label>Bird Net Cleaning</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_birdnet" value="299"></div></div>
+          <div class="price-item-row"><label>Shoe Rack Sanitization</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_shoerack" value="149"></div></div>
+        </div>
+
+        <button type="submit" class="btn-save-prices" id="savePriceBtn">💾 Save All Prices to Website</button>
+        <div id="savePriceMsg" class="save-alert"></div>
+      </form>
     </div>
   </div>
 </div>
@@ -346,7 +478,6 @@
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
 <script>
-  // Correct Sahi Firebase Configuration
   const firebaseConfig = {
     apiKey: "AIzaSyD6Mi-G6sFadne_U0XLBJCrOXm2UKQHgME",
     authDomain: "deepcleaningadmin-a4aae.firebaseapp.com",
@@ -368,6 +499,7 @@
       document.getElementById('dashboardScreen').style.display = 'block';
       document.getElementById('loggedAdminEmail').innerText = user.email;
       listenToLiveLeads();
+      loadCurrentPrices();
     } else {
       document.getElementById('loginScreen').style.display = 'flex';
       document.getElementById('dashboardScreen').style.display = 'none';
@@ -405,6 +537,20 @@
 
   function logoutAdmin() {
     auth.signOut();
+  }
+
+  function switchTab(tab) {
+    if (tab === 'bookings') {
+      document.getElementById('tabBookings').style.display = 'block';
+      document.getElementById('tabPrices').style.display = 'none';
+      document.getElementById('btnTabBookings').classList.add('active');
+      document.getElementById('btnTabPrices').classList.remove('active');
+    } else {
+      document.getElementById('tabBookings').style.display = 'none';
+      document.getElementById('tabPrices').style.display = 'block';
+      document.getElementById('btnTabBookings').classList.remove('active');
+      document.getElementById('btnTabPrices').classList.add('active');
+    }
   }
 
   function listenToLiveLeads() {
@@ -477,9 +623,9 @@
         </td>
         <td>
           <div class="action-group">
-            <a href="tel:${item.phone}" class="act-btn act-call" title="Direct Phone Call">📞 Call</a>
-            <a href="https://wa.me/91${item.phone}?text=Hello%20${encodeURIComponent(item.name || '')},%20we%20received%20your%20deep%20cleaning%20booking%20at%20Saf%20Safai%20Pune." target="_blank" class="act-btn act-wa" title="Send WhatsApp Message">💬 WA</a>
-            <button class="act-btn act-del" onclick="deleteLead('${item.id}')" title="Delete Booking">🗑️</button>
+            <a href="tel:${item.phone}" class="act-btn act-call" title="Call">📞 Call</a>
+            <a href="https://wa.me/91${item.phone}?text=Hello%20${encodeURIComponent(item.name || '')},%20we%20received%20your%20deep%20cleaning%20booking%20at%20Saf%20Safai%20Pune." target="_blank" class="act-btn act-wa" title="WhatsApp">💬 WA</a>
+            <button class="act-btn act-del" onclick="deleteLead('${item.id}')" title="Delete">🗑️</button>
           </div>
         </td>
       `;
@@ -514,6 +660,80 @@
     });
 
     renderDashboardTable(filtered);
+  }
+
+  // Load Saved Prices from Firestore
+  function loadCurrentPrices() {
+    db.collection("prices").doc("current").get().then(doc => {
+      if (doc.exists) {
+        const data = doc.data();
+        for (const [key, val] of Object.entries(data)) {
+          const input = document.getElementById('p_' + key);
+          if (input) input.value = val;
+        }
+      }
+    }).catch(err => console.log("No custom prices yet, using defaults:", err));
+  }
+
+  // Save All Prices to Firestore
+  function saveAllPrices(e) {
+    e.preventDefault();
+    const btn = document.getElementById('savePriceBtn');
+    const msg = document.getElementById('savePriceMsg');
+
+    btn.disabled = true;
+    btn.innerText = "Saving to Database...";
+
+    const priceData = {
+      "1bhk": document.getElementById('p_1bhk').value,
+      "2bhk": document.getElementById('p_2bhk').value,
+      "3bhk": document.getElementById('p_3bhk').value,
+      "4bhk": document.getElementById('p_4bhk').value,
+      "kitchen": document.getElementById('p_kitchen').value,
+      "bathroom": document.getElementById('p_bathroom').value,
+      "combo": document.getElementById('p_combo').value,
+      "sofa3": document.getElementById('p_sofa3').value,
+      "sofa5": document.getElementById('p_sofa5').value,
+      "chair": document.getElementById('p_chair').value,
+      "window": document.getElementById('p_window').value,
+      "balcony": document.getElementById('p_balcony').value,
+      "mattress_single": document.getElementById('p_mattress_single').value,
+      "mattress_double": document.getElementById('p_mattress_double').value,
+      "fan": document.getElementById('p_fan').value,
+      "exhaust": document.getElementById('p_exhaust').value,
+      "fridge": document.getElementById('p_fridge').value,
+      "microwave": document.getElementById('p_microwave').value,
+      "carpet_sm": document.getElementById('p_carpet_sm').value,
+      "carpet_lg": document.getElementById('p_carpet_lg').value,
+      "wardrobe_single": document.getElementById('p_wardrobe_single').value,
+      "wardrobe_double": document.getElementById('p_wardrobe_double').value,
+      "chimney": document.getElementById('p_chimney').value,
+      "gasstove": document.getElementById('p_gasstove').value,
+      "curtain": document.getElementById('p_curtain').value,
+      "floorscrub": document.getElementById('p_floorscrub').value,
+      "glass": document.getElementById('p_glass').value,
+      "birdnet": document.getElementById('p_birdnet').value,
+      "shoerack": document.getElementById('p_shoerack').value
+    };
+
+    db.collection("prices").doc("current").set(priceData)
+      .then(() => {
+        btn.disabled = false;
+        btn.innerText = "💾 Save All Prices to Website";
+        msg.style.display = "block";
+        msg.style.background = "#dcfce7";
+        msg.style.color = "#166534";
+        msg.innerText = "✅ Prices successfully updated! Website will now show new rates.";
+        setTimeout(() => msg.style.display = "none", 4000);
+      })
+      .catch(err => {
+        btn.disabled = false;
+        btn.innerText = "💾 Save All Prices to Website";
+        msg.style.display = "block";
+        msg.style.background = "#fee2e2";
+        msg.style.color = "#991b1b";
+        msg.innerText = "Error saving prices: " + err.message;
+      });
   }
 </script>
 
