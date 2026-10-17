@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saf Safai Pune | Professional Deep Cleaning Services Pune & PCMC</title>
-  <meta name="description" content="Best home deep cleaning, sofa cleaning & bathroom cleaning in Pune & PCMC. 100% spotless results at standardized rates. Call 9325100228 to book now!">
-  
+  <meta name="keywords" content="home cleaning services pune, deep cleaning pune, 1 bhk deep cleaning pune, 2 bhk deep cleaning pune, 3 bhk deep cleaning, 4 bhk cleaning pune, full house cleaning pcmc, kitchen deep cleaning wakad, bathroom deep cleaning pune, sofa dry cleaning hinjewadi, carpet cleaning chinchwad, flat deep cleaning pimple saudagar, professional house cleaning, residential cleaning services, balcony cleaning pune, window cleaning services, floor scrubbing polishing pune, move in cleaning pune, post construction cleaning, shree seva deep cleaning, saf safaai pune">
+  <meta name="description" content="Best home deep cleaning, sofa cleaning & bathroom cleaning in Pune & PCMC. 100% spotless mechanized results. Standardized rates without advance. Call 9325100228 to book now!">
+
   <link rel="icon" type="image/png" href="favicon-96.png">
   <meta name="google-site-verification" content="ZmLOCf83ck6BDMNnBfkuPDkAf826okArK1idn_x-2sE" />
 
   <style>
     :root {
-      --primary: #0284c7;
-      --primary-dark: #0369a1;
-      --secondary: #16a34a;
-      --dark: #0f172a;
-      --slate: #475569;
-      --light: #f8fafc;
+      --primary: #16a34a;          /* Premium Eco Green */
+      --primary-dark: #15803d;     /* Deep Green */
+      --primary-light: #dcfce7;    /* Soft Mint Green */
+      --dark: #0f172a;             /* Slate Black */
+      --dark-card: #1e293b;
+      --slate: #475569;            /* Grey Text */
+      --light-bg: #f8fafc;         /* Clean White-Slate */
       --white: #ffffff;
       --border: #e2e8f0;
       --yellow: #f59e0b;
@@ -24,149 +26,301 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
     html { scroll-behavior: smooth; }
-    body { background: var(--light); color: var(--dark); line-height: 1.6; }
+    body { background: var(--light-bg); color: var(--dark); line-height: 1.6; }
 
     /* Top Strip */
     .top-strip {
-      background: #0284c7;
-      color: #ffffff;
-      font-size: 0.82rem;
-      font-weight: 700;
-      padding: 6px 15px;
-      text-align: center;
-      letter-spacing: 0.3px;
+      background: var(--dark);
+      color: #94a3b8;
+      font-size: 0.8rem;
+      padding: 6px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
     }
+    .top-strip span { color: #f8fafc; font-weight: 600; }
 
     /* Header */
-    header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 1000; }
-    .header-wrap { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
     .brand-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .logo-svg {
-      width: 44px;
-      height: 44px;
-      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #16a34a, #22c55e);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 8px rgba(2, 132, 199, 0.3);
+      box-shadow: 0 4px 10px rgba(22, 163, 74, 0.35);
     }
-    .logo-text h1 { font-size: 1.25rem; font-weight: 800; color: var(--dark); line-height: 1.1; }
-    .logo-text span { font-size: 0.72rem; color: var(--primary); font-weight: 700; letter-spacing: 0.6px; }
+    .logo-text h1 { font-size: 1.3rem; font-weight: 800; color: var(--dark); line-height: 1.1; }
+    .logo-text span { font-size: 0.72rem; color: var(--primary); font-weight: 800; letter-spacing: 0.8px; }
 
-    .header-tagline-badge {
-      background: #e0f2fe;
-      color: var(--primary-dark);
-      font-weight: 700;
-      font-size: 0.85rem;
-      padding: 6px 14px;
-      border-radius: 20px;
-      border: 1px solid #bae6fd;
+    /* Header Slogan Badge (Bada aur Hindi me) */
+    .header-slogan-badge {
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      color: #14532d;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 6px 18px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(22, 163, 74, 0.1);
     }
-    @media(max-width: 820px){ .header-tagline-badge { display: none; } }
+    @media(max-width: 890px) { .header-slogan-badge { display: none; } }
 
-    .btn-header-call {
-      background: var(--secondary);
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .btn-header-book {
+      background: var(--dark);
       color: var(--white);
       text-decoration: none;
       padding: 9px 18px;
       border-radius: 8px;
       font-weight: 700;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .btn-header-book:hover { background: #1e293b; }
+    .btn-header-call {
+      background: var(--primary);
+      color: var(--white);
+      text-decoration: none;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      box-shadow: 0 3px 8px rgba(22, 163, 74, 0.25);
     }
+    .btn-header-call:hover { background: var(--primary-dark); }
 
     /* Hero */
     .hero {
-      background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.88)), 
+      background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.85)), 
                   url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       color: var(--white);
-      padding: 70px 20px 60px;
+      padding: 85px 20px 75px;
       text-align: center;
     }
-    .hero-content { max-width: 860px; margin: 0 auto; }
-    .hero h2 { font-size: 2.5rem; font-weight: 800; line-height: 1.25; margin-bottom: 14px; }
-    .hero p { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 24px; }
-    .hero-badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
-    .hero-badge-item { background: rgba(255,255,255,0.12); padding: 8px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; }
+    .hero-content { max-width: 900px; margin: 0 auto; }
+    .hero-pill {
+      background: rgba(22, 163, 74, 0.25);
+      border: 1px solid rgba(74, 222, 128, 0.4);
+      color: #86efac;
+      padding: 6px 18px;
+      border-radius: 30px;
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .hero h2 { font-size: 2.7rem; font-weight: 800; line-height: 1.25; margin-bottom: 16px; }
+    .hero p { font-size: 1.15rem; color: #cbd5e1; margin-bottom: 28px; }
+    .hero-badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+    .hero-badge-item { background: rgba(255,255,255,0.12); padding: 8px 16px; border-radius: 8px; font-size: 0.88rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.15); }
+    .hero-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .btn-hero-primary { background: var(--primary); color: var(--white); padding: 13px 28px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 1rem; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4); }
+    .btn-hero-primary:hover { background: var(--primary-dark); }
+    .btn-hero-outline { background: rgba(255,255,255,0.1); color: var(--white); border: 1px solid rgba(255,255,255,0.3); padding: 13px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; }
 
     /* Sections Common */
-    section { padding: 55px 20px; }
-    .container { max-width: 1200px; margin: 0 auto; }
-    .sec-head { text-align: center; margin-bottom: 35px; }
-    .sec-badge { background: #e0f2fe; color: var(--primary-dark); font-size: 0.8rem; font-weight: 700; padding: 4px 14px; border-radius: 20px; display: inline-block; margin-bottom: 8px; }
-    .sec-head h2 { font-size: 1.95rem; color: var(--dark); font-weight: 800; }
-    .sec-head p { color: var(--slate); max-width: 650px; margin: 6px auto 0; font-size: 0.95rem; }
+    section { padding: 65px 20px; }
+    .container { max-width: 1280px; margin: 0 auto; }
+    .sec-head { text-align: center; margin-bottom: 40px; }
+    .sec-badge {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 5px 16px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .sec-head h2 { font-size: 2.1rem; color: var(--dark); font-weight: 800; }
+    .sec-head p { color: var(--slate); max-width: 700px; margin: 8px auto 0; font-size: 0.98rem; }
 
-    /* Packages Grid */
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    /* Full Home Packages (1BHK-4BHK) */
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; }
     .price-card {
       background: var(--white);
       border-radius: 16px;
       border: 1px solid var(--border);
-      padding: 24px;
+      padding: 26px;
       text-align: center;
       position: relative;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
-      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 10px -2px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .price-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px -3px rgba(0,0,0,0.08); }
-    .price-card.popular { border: 2px solid var(--primary); }
-    .tag-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary); color: var(--white); padding: 2px 14px; border-radius: 12px; font-size: 0.72rem; font-weight: 700; }
-    .price-card h3 { font-size: 1.25rem; margin-top: 6px; }
-    .price-val { font-size: 2.2rem; font-weight: 800; color: var(--primary); margin: 12px 0 16px; }
-    .price-list { list-style: none; text-align: left; font-size: 0.88rem; color: var(--slate); margin-bottom: 22px; }
-    .price-list li { padding: 6px 0; border-bottom: 1px dashed #f1f5f9; }
-    .price-list li::before { content: "✓ "; color: var(--secondary); font-weight: bold; }
-    .btn-pack-book { width: 100%; background: var(--primary); color: var(--white); border: none; padding: 12px; border-radius: 10px; font-weight: 800; font-size: 0.95rem; cursor: pointer; transition: 0.2s; }
+    .price-card.popular { border: 2px solid var(--primary); box-shadow: 0 8px 24px -4px rgba(22, 163, 74, 0.18); }
+    .tag-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--primary); color: var(--white); padding: 3px 16px; border-radius: 14px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; }
+    .price-card h3 { font-size: 1.3rem; margin-top: 6px; color: var(--dark); }
+    .price-sub { font-size: 0.82rem; color: var(--slate); margin-top: 2px; }
+    .price-val { font-size: 2.3rem; font-weight: 900; color: var(--primary); margin: 14px 0 16px; }
+    .price-list { list-style: none; text-align: left; font-size: 0.88rem; color: var(--slate); margin-bottom: 24px; }
+    .price-list li { padding: 7px 0; border-bottom: 1px dashed #f1f5f9; display: flex; align-items: flex-start; gap: 8px; }
+    .price-list li::before { content: "✓"; color: var(--primary); font-weight: 900; font-size: 1rem; line-height: 1; }
+    .btn-pack-book { width: 100%; background: var(--primary); color: var(--white); border: none; padding: 13px; border-radius: 10px; font-weight: 800; font-size: 0.98rem; cursor: pointer; transition: 0.2s; }
     .btn-pack-book:hover { background: var(--primary-dark); }
 
-    /* Real Action Photography Cards */
-    .room-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .room-card { background: var(--white); border-radius: 14px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
-    .room-card-img-wrap { position: relative; height: 180px; overflow: hidden; }
-    .room-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-    .room-card:hover img { transform: scale(1.05); }
-    .live-badge { position: absolute; top: 10px; left: 10px; background: rgba(15,23,42,0.75); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 6px; }
-    .room-body { padding: 18px; text-align: center; }
-    .room-body h4 { font-size: 1.15rem; margin-bottom: 6px; }
-    .room-body .val { font-size: 1.6rem; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
-    .room-body p { font-size: 0.85rem; color: var(--slate); margin-bottom: 16px; text-align: left; }
+    /* Single Spaces (Photo Cards) */
+    .room-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+    .room-card { background: var(--white); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 4px 12px rgba(15,23,42,0.04); display: flex; flex-direction: column; }
+    .room-img-wrap { position: relative; height: 195px; width: 100%; overflow: hidden; }
+    .room-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .room-card:hover img { transform: scale(1.06); }
+    .action-badge { position: absolute; bottom: 10px; left: 10px; background: rgba(15, 23, 42, 0.82); color: #86efac; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(74, 222, 128, 0.3); }
+    .room-body { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; text-align: center; }
+    .room-body h4 { font-size: 1.2rem; color: var(--dark); margin-bottom: 6px; }
+    .room-body .val { font-size: 1.7rem; font-weight: 900; color: var(--primary); margin-bottom: 8px; }
+    .room-body p { font-size: 0.88rem; color: var(--slate); margin-bottom: 18px; text-align: left; }
 
-    /* 20+ Items Grid */
-    .item-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
-    .single-item-card {
+    /* 20+ Single Individual Items With Real Photos (Urban Company Grid) */
+    .uc-items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 18px;
+    }
+    .uc-item-card {
       background: var(--white);
+      border-radius: 14px;
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .uc-item-card:hover { transform: translateY(-3px); border-color: var(--primary); }
+    .uc-item-img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .uc-item-content {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .uc-item-title { font-size: 0.95rem; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+    .uc-item-desc { font-size: 0.78rem; color: var(--slate); margin-bottom: 12px; line-height: 1.35; }
+    .uc-item-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: border-color 0.2s;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 10px;
     }
-    .single-item-card:hover { border-color: var(--primary); }
-    .item-info h5 { font-size: 0.95rem; color: var(--dark); font-weight: 700; }
-    .item-info span { font-size: 0.8rem; color: var(--slate); }
-    .item-action { text-align: right; }
-    .item-rate { font-size: 1.1rem; font-weight: 800; color: var(--primary); display: block; margin-bottom: 4px; }
-    .btn-add-item { background: #e0f2fe; color: var(--primary-dark); border: none; padding: 6px 14px; border-radius: 8px; font-size: 0.82rem; font-weight: 700; cursor: pointer; }
-    .btn-add-item:hover { background: var(--primary); color: #fff; }
+    .uc-item-price { font-size: 1.15rem; font-weight: 900; color: var(--primary); }
+    .btn-uc-book {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border: 1px solid #bbf7d0;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-uc-book:hover { background: var(--primary); color: #fff; }
 
-    /* Hindi Info Cards */
-    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
-    .info-card { background: var(--white); border-radius: 14px; border: 1px solid var(--border); padding: 22px; text-align: left; }
-    .info-card h3 { font-size: 1.15rem; color: var(--dark); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
-    .info-card p { font-size: 0.88rem; color: var(--slate); line-height: 1.6; }
+    /* Deep Cleaning Detailed Hindi Knowledge Guide */
+    .hindi-guide-sec { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .hindi-guide-box {
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 35px 30px;
+      margin-bottom: 30px;
+    }
+    .hindi-guide-box h3 {
+      font-size: 1.4rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hindi-guide-box p {
+      font-size: 0.95rem;
+      color: #334155;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .guide-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+    .guide-feat-item {
+      background: var(--white);
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .guide-feat-item h4 { font-size: 1.05rem; color: var(--primary-dark); margin-bottom: 6px; }
+    .guide-feat-item p { font-size: 0.86rem; color: var(--slate); line-height: 1.55; }
 
-    /* INTERACTIVE BOOKING DRAWER / POPUP MODAL (Urban Company Style) */
+    /* Coverage & Map Section */
+    .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; align-items: center; }
+    .area-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+    .area-chip { background: var(--white); border: 1px solid var(--border); padding: 7px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: #334155; }
+    .map-frame-box { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 14px rgba(0,0,0,0.06); height: 320px; }
+
+    /* Testimonials */
+    .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .review-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 22px; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+    .review-stars { color: var(--yellow); font-size: 1.1rem; margin-bottom: 8px; }
+    .review-text { font-size: 0.9rem; color: #334155; margin-bottom: 14px; font-style: italic; }
+    .reviewer { font-weight: 800; font-size: 0.9rem; color: var(--dark); }
+    .reviewer-loc { font-size: 0.78rem; color: var(--slate); }
+
+    /* FAQ */
+    .faq-wrap { max-width: 850px; margin: 0 auto; }
+    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+    .faq-question { padding: 16px 20px; font-weight: 700; font-size: 0.98rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { padding: 0 20px 16px; font-size: 0.9rem; color: var(--slate); display: none; line-height: 1.6; }
+    .faq-item.active .faq-answer { display: block; }
+    .faq-item.active .faq-toggle { transform: rotate(180deg); color: var(--primary); }
+
+    /* INTERACTIVE POPUP / DRAWER (Urban Company Checkout) */
     #bookingModal {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(4px);
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(5px);
       z-index: 99999;
       display: none;
       align-items: center;
@@ -175,13 +329,13 @@
     }
     .modal-sheet {
       background: var(--white);
-      max-width: 640px;
+      max-width: 650px;
       width: 100%;
       max-height: 90vh;
       border-radius: 20px;
       overflow-y: auto;
-      padding: 26px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      padding: 28px 24px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3);
       position: relative;
     }
     .modal-close {
@@ -195,13 +349,12 @@
       cursor: pointer;
       font-weight: 800;
     }
-    .modal-head h3 { font-size: 1.4rem; color: var(--dark); margin-bottom: 4px; }
+    .modal-head h3 { font-size: 1.45rem; color: var(--dark); font-weight: 800; }
     .modal-head p { font-size: 0.88rem; color: var(--slate); margin-bottom: 16px; }
 
-    /* Selected Item Box */
     .selected-box {
-      background: #f0f9ff;
-      border: 1px solid #bae6fd;
+      background: #f0fdf4;
+      border: 1.5px solid #bbf7d0;
       border-radius: 12px;
       padding: 14px 18px;
       display: flex;
@@ -209,10 +362,10 @@
       align-items: center;
       margin-bottom: 18px;
     }
-    .sel-info h4 { font-size: 1.1rem; color: var(--primary-dark); }
-    .sel-price { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
+    .sel-info h4 { font-size: 1.15rem; color: var(--primary-dark); font-weight: 800; }
+    .sel-price { font-size: 1.45rem; font-weight: 900; color: var(--primary); }
 
-    /* Wall / Furniture Options */
+    /* Wall / Furniture Toggles */
     .addon-toggles { margin-bottom: 20px; }
     .addon-toggle-item {
       background: #f8fafc;
@@ -225,72 +378,62 @@
       margin-bottom: 10px;
       cursor: pointer;
     }
-    .addon-toggle-item label { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 0.92rem; cursor: pointer; }
+    .addon-toggle-item label { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 0.92rem; cursor: pointer; color: var(--dark); }
     .addon-toggle-item input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--primary); cursor: pointer; }
 
-    /* "Aur kuch add karna hai?" */
+    /* "Anything else to add?" Cross-sell */
     .cross-sell-section { margin-bottom: 22px; border-top: 1px solid var(--border); padding-top: 16px; }
-    .cross-sell-section h4 { font-size: 1rem; color: var(--dark); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
-    .cross-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 10px;
-    }
-    .cross-card {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
-    }
-    .cross-card span { display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 4px; }
+    .cross-sell-section h4 { font-size: 1rem; color: var(--dark); margin-bottom: 10px; font-weight: 800; }
+    .cross-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
+    .cross-card { background: #f8fafc; border: 1px solid var(--border); border-radius: 10px; padding: 10px; text-align: center; }
+    .cross-card span { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 4px; color: var(--dark); }
     .cross-card .price { font-weight: 800; color: var(--primary); font-size: 0.9rem; margin-bottom: 6px; }
-    .btn-add-cross { background: #e0f2fe; color: var(--primary-dark); border: none; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer; }
-    .btn-add-cross.added { background: var(--secondary); color: #fff; }
+    .btn-add-cross { background: var(--primary-light); color: var(--primary-dark); border: none; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer; }
+    .btn-add-cross.added { background: var(--primary); color: #fff; }
 
-    /* Bill Summary */
-    .bill-box {
-      background: #fafafa;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 18px;
-      margin-bottom: 20px;
-    }
+    /* Bill Breakdown */
+    .bill-box { background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin-bottom: 20px; }
     .bill-row { display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 6px; color: var(--slate); }
-    .bill-total { display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: 800; color: var(--dark); border-top: 1px solid var(--border); padding-top: 8px; margin-top: 6px; }
+    .bill-total { display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: 900; color: var(--dark); border-top: 1.5px solid var(--border); padding-top: 8px; margin-top: 6px; }
 
-    /* Form Fields */
     .form-group { margin-bottom: 12px; }
     .form-group label { display: block; font-weight: 700; font-size: 0.82rem; margin-bottom: 4px; text-transform: uppercase; color: #475569; }
     .form-group input { width: 100%; padding: 11px 13px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.92rem; outline: none; }
-    .btn-confirm-order { width: 100%; background: var(--primary); color: #fff; padding: 14px; border: none; border-radius: 10px; font-size: 1.05rem; font-weight: 800; cursor: pointer; }
+    .btn-confirm-order { width: 100%; background: var(--primary); color: #fff; padding: 14px; border: none; border-radius: 10px; font-size: 1.05rem; font-weight: 800; cursor: pointer; transition: 0.2s; }
+    .btn-confirm-order:hover { background: var(--primary-dark); }
 
     /* Footer & Floating */
-    footer { background: var(--dark); color: #94a3b8; padding: 45px 20px 20px; }
-    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; margin-bottom: 25px; }
-    .footer-col h4 { color: var(--white); margin-bottom: 12px; font-size: 1rem; }
+    footer { background: var(--dark); color: #94a3b8; padding: 50px 20px 25px; }
+    .footer-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 30px; margin-bottom: 30px; }
+    .footer-col h4 { color: var(--white); margin-bottom: 14px; font-size: 1.05rem; }
     .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 7px; font-size: 0.85rem; }
+    .footer-col ul li { margin-bottom: 8px; font-size: 0.88rem; }
     .footer-col ul li a { color: #94a3b8; text-decoration: none; }
-    .footer-bottom { text-align: center; border-top: 1px solid #1e293b; padding-top: 18px; font-size: 0.82rem; }
+    .footer-bottom { text-align: center; border-top: 1px solid #1e293b; padding-top: 20px; font-size: 0.82rem; }
 
     .floating-buttons { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 9999; }
-    .float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.22); text-decoration: none; color: white; font-size: 1.4rem; }
+    .float-btn { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.25); text-decoration: none; color: white; font-size: 1.45rem; }
     .float-wa { background: #25d366; }
     .float-call { background: var(--primary); }
+
+    @media(max-width: 768px) {
+      .hero h2 { font-size: 2.1rem; }
+      .header-wrap { padding: 10px 15px; }
+    }
   </style>
 </head>
 <body>
 
-<div class="top-strip" id="dynHeaderTagline">
-  ✨ आपका घर, हमारी ज़िम्मेदारी | 100% Spotless Results Pune & PCMC
+<div class="top-strip">
+  <div>⭐ Rated 4.9/5 by 1,200+ Verified Pune Families</div>
+  <div>⚡ Same-Day Service Available in PCMC & Pune</div>
 </div>
 
 <header>
   <div class="header-wrap">
     <a href="#" class="brand-logo">
       <div class="logo-svg">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M3 10.5 12 3l9 7.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
           <path d="M9 22V13h6v9"/>
           <path d="m14 8 3-3" stroke-width="2.5"/>
@@ -303,232 +446,674 @@
         <span>SHREE SEVA DEEP CLEANING</span>
       </div>
     </a>
-    <div class="header-tagline-badge">
+
+    <!-- Header Slogan Badge In Hindi (Large & Prominent) -->
+    <div class="header-slogan-badge">
       🏠 आपका घर, हमारी ज़िम्मेदारी
     </div>
-    <div>
+
+    <div class="header-actions">
+      <a href="#fullHomePackages" class="btn-header-book">Book Now</a>
       <a href="tel:9325100228" class="btn-header-call">📞 9325100228</a>
     </div>
   </div>
 </header>
 
-<!-- 1. Hero -->
+<!-- 1. HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h2 id="dynHeroH1">पुणे और PCMC में प्रोफेशनल मैकेनाइज्ड डीप होम क्लीनिंग</h2>
-    <p id="dynHeroSub">1 BHK से 4 BHK फ्लैट्स, किचन डीग्रेसिंग, बाथरूम स्केलिंग और 20+ सिंगल आइटम्स की स्पॉटलेस सफाई।</p>
+    <div class="hero-pill">Professional Mechanized Cleaning</div>
+    <h2>Complete Apartment & Single Space Deep Cleaning in Pune</h2>
+    <p>Standardized rates, German rotary floor buffing, Taski certified eco-friendly chemicals, and zero advance payment required.</p>
     
     <div class="hero-badges">
-      <div class="hero-badge-item">🛡️ Verified Background Staff</div>
-      <div class="hero-badge-item">⚙️ German Floor Rotary Buffers</div>
-      <div class="hero-badge-item">💵 Direct Fixed Prices</div>
-      <div class="hero-badge-item">🧼 Diversey / Taski Chemicals</div>
+      <div class="hero-badge-item">🛡️ Verified Background Crew</div>
+      <div class="hero-badge-item">⚙️ High-Pressure Rotary Buffers</div>
+      <div class="hero-badge-item">💵 Direct Fixed Rates</div>
+      <div class="hero-badge-item">🧼 Pay Post Inspection</div>
+    </div>
+
+    <div class="hero-btns">
+      <a href="#fullHomePackages" class="btn-hero-primary">Explore Packages & Book ➔</a>
+      <a href="tel:9325100228" class="btn-hero-outline">Call 9325100228</a>
     </div>
   </div>
 </section>
 
-<!-- 2. Hindi Saf Safai Jankari Guide -->
-<section style="background: var(--white);">
+<!-- 2. FULL HOME APARTMENT PACKAGES (1BHK TO 4BHK) -->
+<section id="fullHomePackages">
   <div class="container">
     <div class="sec-head">
-      <span class="sec-badge">डीप क्लीनिंग की जानकारी</span>
-      <h2>साफ सफाई क्यों है ज़रूरी?</h2>
-      <p>रोज़ का झाड़ू-पोछा सिर्फ ऊपर की धूल हटाता है, मैकेनाइज्ड डीप क्लीनिंग छुपी हुई गंदगी और बैक्टीरिया को जड़ से खत्म करती है।</p>
-    </div>
-
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>🚿 हार्ड वॉटर स्केलिंग रिमूवल</h3>
-        <p>पुणे और PCMC के पानी में कैल्शियम और नमक की मात्रा अधिक होने से बाथरूम टाइल्स, नलों और शॉवर पर सफेद-पीले जिद्दी दाग जम जाते हैं। हमारे स्पेशल Taski केमिकल्स टाइल्स को नुकसान पहुंचाए बिना स्केलिंग को पूरी तरह पिघला देते हैं।</p>
-      </div>
-      <div class="info-card">
-        <h3>🍳 किचन ऑयल और ग्रीस डीग्रेसिंग</h3>
-        <p>किचन चिमनी, टाइल्स और गैस स्टोव पर कुकिंग ऑयल के गाढ़े चिपचिपे दाग जम जाते हैं। हम हाई-ग्रेड नॉन-हज़ार्डस डीग्रेसर से चिमनी के फिल्टर्स और टाइल ग्रूट्स को बिल्कुल नया जैसा चमकाते हैं।</p>
-      </div>
-      <div class="info-card">
-        <h3>🛋️ सोफा और गद्दे की डीप एक्सट्रैक्शन</h3>
-        <p>सोफे और गद्दों के रेशों में पसीना, धूल के कीटाणु (Dust Mites) और बदबू बैठ जाती है। हमारी इंजेक्शन-एक्सट्रैक्शन वैक्यूम मशीन गहरे झाग से धोकर गंदा पानी तुरंत बाहर खींच लेती है, जिससे सोफा फ्रेश और हाइजीनिक हो जाता है।</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 3. Full Home Packages (Base Price: Without Wall) -->
-<section>
-  <div class="container">
-    <div class="sec-head">
-      <span class="sec-badge">फुल फ्लैट डीप क्लीनिंग</span>
-      <h2>अपार्टमेंट पैकेजेस (किचन सहित)</h2>
-      <p>फ्लोर रोटरी बफिंग, बालकनी वॉश, विंडोज़, बाथरूम्स और पूरा किचन डीप क्लीन शामिल।</p>
+      <span class="sec-badge">Apartment Deep Clean</span>
+      <h2>Full Home Deep Cleaning Packages</h2>
+      <p>Includes heavy floor machine scrubbing, kitchen degreasing, bathroom descaling, balcony wash, windows, and fans.</p>
     </div>
 
     <div class="pricing-grid">
       <!-- 1 BHK -->
       <div class="price-card">
-        <h3>1 BHK Full Deep Clean</h3>
-        <div class="price-val" id="disp_1bhk">₹4,499</div>
-        <ul class="price-list">
-          <li>1 Kitchen (Cabinet, Slab & Tiles)</li>
-          <li>1 Hall & 1 Bedroom scrubbing</li>
-          <li>1 Bathroom descaling & mirror shine</li>
-          <li>Balcony wash + Windows & Fans</li>
-        </ul>
+        <div>
+          <h3>1 BHK Full Deep Clean</h3>
+          <div class="price-sub">Without Wall Cleaning</div>
+          <div class="price-val" id="disp_1bhk">₹4,499</div>
+          <ul class="price-list">
+            <li>1 Kitchen (Cabinets, Tiles, Gas Stove & Sink)</li>
+            <li>1 Hall & 1 Bedroom rotary floor scrubbing</li>
+            <li>1 Bathroom calcium scale & mirror cleaning</li>
+            <li>Balcony wash, Window glass buff & fans</li>
+          </ul>
+        </div>
         <button class="btn-pack-book" onclick="openBookingDrawer('1 BHK Full Deep Cleaning', 4499, 'flat', '1bhk')">Book 1 BHK (₹4,499)</button>
       </div>
 
       <!-- 2 BHK -->
       <div class="price-card popular">
         <div class="tag-badge">Most Popular</div>
-        <h3>2 BHK Full Deep Clean</h3>
-        <div class="price-val" id="disp_2bhk">₹5,499</div>
-        <ul class="price-list">
-          <li>1 Full Kitchen (Degreasing & Cabinets)</li>
-          <li>2 Bedrooms + Living + Dining Area</li>
-          <li>Up to 2 Bathrooms intense descaling</li>
-          <li>Balconies, Fans, Switches & Windows</li>
-        </ul>
+        <div>
+          <h3>2 BHK Full Deep Clean</h3>
+          <div class="price-sub">Without Wall Cleaning</div>
+          <div class="price-val" id="disp_2bhk">₹5,499</div>
+          <ul class="price-list">
+            <li>1 Kitchen (Cabinet deep wipe & degreasing)</li>
+            <li>2 Bedrooms + Living + Dining area buffing</li>
+            <li>Up to 2 Bathrooms heavy calcium descaling</li>
+            <li>Balconies, Fans, Switches, Slabs & Windows</li>
+          </ul>
+        </div>
         <button class="btn-pack-book" onclick="openBookingDrawer('2 BHK Full Deep Cleaning', 5499, 'flat', '2bhk')">Book 2 BHK (₹5,499)</button>
       </div>
 
       <!-- 3 BHK -->
       <div class="price-card">
-        <h3>3 BHK Full Deep Clean</h3>
-        <div class="price-val" id="disp_3bhk">₹6,499</div>
-        <ul class="price-list">
-          <li>1 Kitchen (Trolley & Exterior Wipe)</li>
-          <li>3 Bedrooms + Large Living Space</li>
-          <li>Up to 3 Bathrooms complete sanitization</li>
-          <li>Machine floor rotary buffing</li>
-        </ul>
+        <div>
+          <h3>3 BHK Full Deep Clean</h3>
+          <div class="price-sub">Without Wall Cleaning</div>
+          <div class="price-val" id="disp_3bhk">₹6,499</div>
+          <ul class="price-list">
+            <li>1 Kitchen (Trolleys, Chimney & Utility wash)</li>
+            <li>3 Bedrooms + Large Living Space scrub</li>
+            <li>Up to 3 Bathrooms complete sanitization</li>
+            <li>High-torque machine floor rotary buffing</li>
+          </ul>
+        </div>
         <button class="btn-pack-book" onclick="openBookingDrawer('3 BHK Full Deep Cleaning', 6499, 'flat', '3bhk')">Book 3 BHK (₹6,499)</button>
       </div>
 
       <!-- 4 BHK -->
       <div class="price-card">
-        <h3>4 BHK Full Deep Clean</h3>
-        <div class="price-val" id="disp_4bhk">₹7,999</div>
-        <ul class="price-list">
-          <li>1 Full Kitchen + Utility Area</li>
-          <li>4 Master/Bedrooms + Huge Hall</li>
-          <li>Up to 4 Bathrooms deep descaling</li>
-          <li>Complete mechanized flat scrubbing</li>
-        </ul>
+        <div>
+          <h3>4 BHK Full Deep Clean</h3>
+          <div class="price-sub">Without Wall Cleaning</div>
+          <div class="price-val" id="disp_4bhk">₹7,999</div>
+          <ul class="price-list">
+            <li>1 Full Kitchen + Utility + Dry balcony</li>
+            <li>4 Master/Bedrooms + Extended Hall Area</li>
+            <li>Up to 4 Bathrooms descaling & tile shine</li>
+            <li>Complete mechanized end-to-end flat clean</li>
+          </ul>
+        </div>
         <button class="btn-pack-book" onclick="openBookingDrawer('4 BHK Full Deep Cleaning', 7999, 'flat', '4bhk')">Book 4 BHK (₹7,999)</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4. Real Action Photography Single Spaces -->
+<!-- 3. REAL ACTION CLEANING SINGLE SPACES -->
 <section style="background: var(--white);">
   <div class="container">
     <div class="sec-head">
-      <span class="sec-badge">रियल वर्क फोटोज़</span>
-      <h2>किचन, बाथरूम और सोफा सर्विसेज</h2>
-      <p>काम करते हुए असली मशीनों और प्रोसेस के साथ समर्पित सफाई।</p>
+      <span class="sec-badge">In-Action Work Photography</span>
+      <h2>Specialized Single Space Solutions</h2>
+      <p>Targeted mechanized cleaning for kitchens, washrooms, and upholstery without booking full flats.</p>
     </div>
 
     <div class="room-grid">
       <!-- Kitchen -->
       <div class="room-card">
-        <div class="room-card-img-wrap">
-          <span class="live-badge">Live Degreasing</span>
-          <img id="imgLiveKitchen" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="Kitchen Degreasing Action">
+        <div class="room-img-wrap">
+          <img id="img_kitchen" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="Kitchen Degreasing Action">
+          <span class="action-badge">Live Degreasing Action</span>
         </div>
         <div class="room-body">
-          <h4>किचन डीप क्लीनिंग</h4>
+          <h4>Kitchen Deep Cleaning</h4>
           <div class="val" id="disp_kitchen">₹1,299</div>
-          <p>चिमनी आउटर, गैस स्टोव, टाइल ग्रूट्स, सिंक स्क्रबिंग और ट्रॉली कैबिनेट्स की डीप वाइपिंग।</p>
+          <p>Chimney exterior, gas stove, tile grout degreasing, sink scrubbing, and trolley cabinets wiping.</p>
           <button class="btn-pack-book" onclick="openBookingDrawer('Kitchen Deep Cleaning', 1299, 'single')">Book Kitchen</button>
         </div>
       </div>
 
       <!-- Bathroom -->
       <div class="room-card">
-        <div class="room-card-img-wrap">
-          <span class="live-badge">Rotary Scrubbing</span>
-          <img id="imgLiveBathroom" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80" alt="Bathroom Tile Scrubbing Action">
+        <div class="room-img-wrap">
+          <img id="img_bathroom" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80" alt="Bathroom Rotary Scrubbing">
+          <span class="action-badge">Rotary Tile Scrubbing</span>
         </div>
         <div class="room-body">
-          <h4>बाथरूम डीप क्लीन</h4>
+          <h4>Bathroom Deep Clean</h4>
           <div class="val"><span id="disp_bathroom">₹499</span> <small style="font-size:0.8rem; color:#64748b;">/ bath</small></div>
-          <p>हार्ड वॉटर कैल्शियम दाग हटाना, क्रोम टैप्स, शॉवर हेड, मिरर बफिंग और कमोड सैनिटाइजेशन।</p>
+          <p>Hard water calcium stain removal, chrome taps, showerhead descaling, mirror buffing, and commode sanitization.</p>
           <button class="btn-pack-book" onclick="openBookingDrawer('Bathroom Deep Cleaning', 499, 'single')">Book Bathroom</button>
         </div>
       </div>
 
       <!-- Sofa -->
       <div class="room-card">
-        <div class="room-card-img-wrap">
-          <span class="live-badge">Injection Extraction</span>
-          <img id="imgLiveSofa" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80" alt="Sofa Vacuum Extraction Action">
+        <div class="room-img-wrap">
+          <img id="img_sofa" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80" alt="Sofa Wet Extraction Machine">
+          <span class="action-badge">Injection-Extraction Vacuum</span>
         </div>
         <div class="room-body">
-          <h4>3-सीटर सोफा शैम्पूइंग</h4>
+          <h4>3-Seater Sofa Shampooing</h4>
           <div class="val" id="disp_sofa3">₹799</div>
-          <p>वेट फोम शैम्पूइंग, दाग हटाना और एक्सट्रैक्शन मशीन से गहरे कीटाणुओं और बदबू का खात्मा।</p>
+          <p>Wet foam shampooing, deep stain lifting, and industrial extraction vacuuming to remove deep mites and sweat odor.</p>
           <button class="btn-pack-book" onclick="openBookingDrawer('3-Seater Sofa Shampooing', 799, 'single')">Book Sofa Clean</button>
         </div>
       </div>
 
-      <!-- Window -->
+      <!-- Kitchen + Bath Combo -->
       <div class="room-card">
-        <div class="room-card-img-wrap">
-          <span class="live-badge">Glass Squeegee</span>
-          <img id="imgLiveWindow" src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=700&q=80" alt="Window Buffing Action">
+        <div class="room-img-wrap">
+          <img id="img_combo" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80" alt="Kitchen and Bath Combo Clean">
+          <span class="action-badge">Special Value Combo</span>
         </div>
         <div class="room-body">
-          <h4>स्लाइडिंग विंडो & मेश</h4>
-          <div class="val" id="disp_window">₹199</div>
-          <p>ग्लास बफिंग, ग्रिल क्लीनिंग और चैनल ट्रैक्स की इंडस्ट्रियल वैक्यूमिंग।</p>
-          <button class="btn-pack-book" onclick="openBookingDrawer('Window & Mesh Cleaning', 199, 'single')">Book Window Clean</button>
+          <h4>Kitchen + Bathroom Combo</h4>
+          <div class="val" id="disp_combo">₹1,699</div>
+          <p>Standardized bundled rate covering complete kitchen degreasing and 1 intensive bathroom descaling.</p>
+          <button class="btn-pack-book" onclick="openBookingDrawer('Kitchen + Bathroom Combo', 1699, 'single')">Book Combo</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 5. 20+ Single Items -->
+<!-- 4. 20+ INDIVIDUAL SINGLE ITEMS WITH REAL PHOTOS (URBAN COMPANY STYLE) -->
 <section>
   <div class="container">
     <div class="sec-head">
-      <span class="sec-badge">सिंगल आइटम्स रेट लिस्ट</span>
-      <h2>इंडिविजुअल आइटम्स क्लीनिंग (20+ Items)</h2>
-      <p>सिर्फ कुर्सी, पंखा, बालकनी या गद्दे साफ़ करवाने हैं? कोई भी आइटम सीधे बुक करें।</p>
+      <span class="sec-badge">Itemized Rate Card</span>
+      <h2>Individual Items Cleaning (20+ Items)</h2>
+      <p>Clean specific furniture, windows, mattresses, or kitchen appliances without booking the whole house.</p>
     </div>
 
-    <div class="item-grid">
-      <div class="single-item-card"><div class="item-info"><h5>Dining / Office Chair</h5><span>Dry vacuum & wet foam</span></div><div class="item-action"><span class="item-rate" id="disp_chair">₹149</span><button class="btn-add-item" onclick="openBookingDrawer('Chair Cleaning', 149, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Balcony Deep Wash</h5><span>Floor scrub & railing wipe</span></div><div class="item-action"><span class="item-rate" id="disp_balcony">₹399</span><button class="btn-add-item" onclick="openBookingDrawer('Balcony Deep Cleaning', 399, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Single Bed Mattress</h5><span>Shampooing & extraction</span></div><div class="item-action"><span class="item-rate" id="disp_mattress_single">₹599</span><button class="btn-add-item" onclick="openBookingDrawer('Single Bed Mattress', 599, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Double Bed Mattress</h5><span>Deep foam wash & extraction</span></div><div class="item-action"><span class="item-rate" id="disp_mattress_double">₹999</span><button class="btn-add-item" onclick="openBookingDrawer('Double Bed Mattress', 999, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>5-Seater Sofa Set</h5><span>Complete set wet shampoo</span></div><div class="item-action"><span class="item-rate" id="disp_sofa5">₹1,199</span><button class="btn-add-item" onclick="openBookingDrawer('5-Seater Sofa Set', 1199, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Ceiling Fan Cleaning</h5><span>Blade degreasing & wipe</span></div><div class="item-action"><span class="item-rate" id="disp_fan">₹99</span><button class="btn-add-item" onclick="openBookingDrawer('Ceiling Fan Cleaning', 99, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Exhaust Fan Degreasing</h5><span>Heavy oil & grease removal</span></div><div class="item-action"><span class="item-rate" id="disp_exhaust">₹149</span><button class="btn-add-item" onclick="openBookingDrawer('Exhaust Fan Cleaning', 149, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Refrigerator Cleaning</h5><span>Interior & exterior wipe</span></div><div class="item-action"><span class="item-rate" id="disp_fridge">₹349</span><button class="btn-add-item" onclick="openBookingDrawer('Fridge Cleaning', 349, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Microwave Oven</h5><span>Food splatter & odor removal</span></div><div class="item-action"><span class="item-rate" id="disp_microwave">₹199</span><button class="btn-add-item" onclick="openBookingDrawer('Microwave Cleaning', 199, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Small Carpet Cleaning</h5><span>Up to 5x3 ft shampooing</span></div><div class="item-action"><span class="item-rate" id="disp_carpet_sm">₹399</span><button class="btn-add-item" onclick="openBookingDrawer('Small Carpet Cleaning', 399, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Large Carpet Cleaning</h5><span>Up to 8x6 ft wet rotary scrub</span></div><div class="item-action"><span class="item-rate" id="disp_carpet_lg">₹699</span><button class="btn-add-item" onclick="openBookingDrawer('Large Carpet Cleaning', 699, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Single Door Wardrobe</h5><span>Inside & outside deep wipe</span></div><div class="item-action"><span class="item-rate" id="disp_wardrobe_single">₹199</span><button class="btn-add-item" onclick="openBookingDrawer('Single Wardrobe Cleaning', 199, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Double Door Wardrobe</h5><span>Shelves, drawers & mirror</span></div><div class="item-action"><span class="item-rate" id="disp_wardrobe_double">₹349</span><button class="btn-add-item" onclick="openBookingDrawer('Double Wardrobe Cleaning', 349, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Chimney Outer Wipe</h5><span>Filter wash & hood degreasing</span></div><div class="item-action"><span class="item-rate" id="disp_chimney">₹499</span><button class="btn-add-item" onclick="openBookingDrawer('Chimney Outer Degreasing', 499, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Gas Stove Burner & Top</h5><span>Carbon & oil cleaning</span></div><div class="item-action"><span class="item-rate" id="disp_gasstove">₹199</span><button class="btn-add-item" onclick="openBookingDrawer('Gas Stove Cleaning', 199, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Curtain Vacuuming</h5><span>Dust & mite removal per set</span></div><div class="item-action"><span class="item-rate" id="disp_curtain">₹149</span><button class="btn-add-item" onclick="openBookingDrawer('Curtain Vacuuming', 149, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Single Room Floor Scrub</h5><span>Rotary disc machine scrub</span></div><div class="item-action"><span class="item-rate" id="disp_floorscrub">₹499</span><button class="btn-add-item" onclick="openBookingDrawer('Single Room Floor Scrub', 499, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Glass Partition Descaling</h5><span>Shower cubicle water marks</span></div><div class="item-action"><span class="item-rate" id="disp_glass">₹299</span><button class="btn-add-item" onclick="openBookingDrawer('Glass Partition Cleaning', 299, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Balcony Bird Net Wash</h5><span>Dust & droppings disinfection</span></div><div class="item-action"><span class="item-rate" id="disp_birdnet">₹299</span><button class="btn-add-item" onclick="openBookingDrawer('Bird Net Cleaning', 299, 'single')">Book</button></div></div>
-      <div class="single-item-card"><div class="item-info"><h5>Shoe Rack Sanitization</h5><span>Dusting & antibacterial spray</span></div><div class="item-action"><span class="item-rate" id="disp_shoerack">₹149</span><button class="btn-add-item" onclick="openBookingDrawer('Shoe Rack Cleaning', 149, 'single')">Book</button></div></div>
+    <div class="uc-items-grid">
+      <!-- 1. Chair -->
+      <div class="uc-item-card">
+        <img id="img_item_chair" class="uc-item-img" src="https://images.unsplash.com/photo-1580481077195-c3a821a58875?auto=format&fit=crop&w=500&q=80" alt="Chair Cleaning">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Dining / Office Chair</div>
+            <div class="uc-item-desc">Dry vacuuming & wet shampoo foam extraction</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_chair">₹149</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Chair Cleaning', 149, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Window -->
+      <div class="uc-item-card">
+        <img id="img_item_window" class="uc-item-img" src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=500&q=80" alt="Window Cleaning">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Sliding Window & Mesh</div>
+            <div class="uc-item-desc">Glass squeegee buffing & track channel vacuuming</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_window">₹199</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Sliding Window & Mesh', 199, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Balcony -->
+      <div class="uc-item-card">
+        <img id="img_item_balcony" class="uc-item-img" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=500&q=80" alt="Balcony Cleaning">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Balcony Deep Wash</div>
+            <div class="uc-item-desc">High-pressure floor scrub, railing wipe & drain flush</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_balcony">₹399</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Balcony Deep Cleaning', 399, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Single Mattress -->
+      <div class="uc-item-card">
+        <img id="img_item_mattress_single" class="uc-item-img" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=500&q=80" alt="Single Bed Mattress">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Single Bed Mattress</div>
+            <div class="uc-item-desc">Dust mite sanitization & shampoo wet extraction</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_mattress_single">₹599</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Single Bed Mattress', 599, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Double Mattress -->
+      <div class="uc-item-card">
+        <img id="img_item_mattress_double" class="uc-item-img" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=500&q=80" alt="Double Bed Mattress">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Double Bed Mattress</div>
+            <div class="uc-item-desc">Full 2-sided foam shampooing & deep extraction</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_mattress_double">₹999</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Double Bed Mattress', 999, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. 5-Seater Sofa -->
+      <div class="uc-item-card">
+        <img id="img_item_sofa5" class="uc-item-img" src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=500&q=80" alt="5-Seater Sofa">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">5-Seater Sofa Set</div>
+            <div class="uc-item-desc">Complete 3+1+1 set shampooing & deodorization</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_sofa5">₹1,199</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('5-Seater Sofa Set', 1199, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Ceiling Fan -->
+      <div class="uc-item-card">
+        <img id="img_item_fan" class="uc-item-img" src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=500&q=80" alt="Ceiling Fan">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Ceiling Fan Cleaning</div>
+            <div class="uc-item-desc">Blade degreasing, motor wipe & anti-static polish</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_fan">₹99</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Ceiling Fan Cleaning', 99, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Exhaust Fan -->
+      <div class="uc-item-card">
+        <img id="img_item_exhaust" class="uc-item-img" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=500&q=80" alt="Exhaust Fan">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Exhaust Fan Degreasing</div>
+            <div class="uc-item-desc">Heavy sticky grease & carbon deposit chemical wash</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_exhaust">₹149</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Exhaust Fan Cleaning', 149, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Refrigerator -->
+      <div class="uc-item-card">
+        <img id="img_item_fridge" class="uc-item-img" src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=500&q=80" alt="Refrigerator Cleaning">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Refrigerator Cleaning</div>
+            <div class="uc-item-desc">Trays wash, interior odor removal & antibacterial wipe</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_fridge">₹349</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Fridge Cleaning', 349, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Microwave Oven -->
+      <div class="uc-item-card">
+        <img id="img_item_microwave" class="uc-item-img" src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=500&q=80" alt="Microwave Cleaning">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Microwave Oven Cleaning</div>
+            <div class="uc-item-desc">Burned food splatter removal & turntable degreasing</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_microwave">₹199</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Microwave Cleaning', 199, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. Small Carpet -->
+      <div class="uc-item-card">
+        <img id="img_item_carpet_sm" class="uc-item-img" src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=500&q=80" alt="Small Carpet">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Carpet Cleaning (Small)</div>
+            <div class="uc-item-desc">Up to 5x3 ft wet foam shampoo & extraction</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_carpet_sm">₹399</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Small Carpet Cleaning', 399, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12. Large Carpet -->
+      <div class="uc-item-card">
+        <img id="img_item_carpet_lg" class="uc-item-img" src="https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?auto=format&fit=crop&w=500&q=80" alt="Large Carpet">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Carpet Cleaning (Large)</div>
+            <div class="uc-item-desc">Up to 8x6 ft mechanized rotary scrubbing</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_carpet_lg">₹699</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Large Carpet Cleaning', 699, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13. Single Wardrobe -->
+      <div class="uc-item-card">
+        <img id="img_item_wardrobe_single" class="uc-item-img" src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=500&q=80" alt="Single Wardrobe">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Single Door Wardrobe</div>
+            <div class="uc-item-desc">Inside shelves wipe, outer polish & hinges dusting</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_wardrobe_single">₹199</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Single Wardrobe Cleaning', 199, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14. Double Wardrobe -->
+      <div class="uc-item-card">
+        <img id="img_item_wardrobe_double" class="uc-item-img" src="https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=500&q=80" alt="Double Wardrobe">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Double Door Wardrobe</div>
+            <div class="uc-item-desc">Shelves, drawers, hangers & full mirror buffing</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_wardrobe_double">₹349</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Double Wardrobe Cleaning', 349, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15. Chimney Outer -->
+      <div class="uc-item-card">
+        <img id="img_item_chimney" class="uc-item-img" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=500&q=80" alt="Chimney Cleaning">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Chimney Outer Wipe</div>
+            <div class="uc-item-desc">Baffle filter wash & hood exterior degreasing</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_chimney">₹499</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Chimney Outer Degreasing', 499, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 16. Gas Stove -->
+      <div class="uc-item-card">
+        <img id="img_item_gasstove" class="uc-item-img" src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=500&q=80" alt="Gas Stove">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Gas Stove Burner & Top</div>
+            <div class="uc-item-desc">Heavy carbon removal, knobs & steel/glass descaling</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_gasstove">₹199</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Gas Stove Cleaning', 199, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 17. Curtain Vacuuming -->
+      <div class="uc-item-card">
+        <img id="img_item_curtain" class="uc-item-img" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=500&q=80" alt="Curtain Vacuuming">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Curtain Vacuuming</div>
+            <div class="uc-item-desc">Dust mite removal & fabric freshening per set</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_curtain">₹149</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Curtain Vacuuming', 149, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 18. Single Floor Scrub -->
+      <div class="uc-item-card">
+        <img id="img_item_floorscrub" class="uc-item-img" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=500&q=80" alt="Floor Scrubbing">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Single Room Floor Scrub</div>
+            <div class="uc-item-desc">Single-disc mechanized buffer scrubbing for tiles</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_floorscrub">₹499</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Single Room Floor Scrub', 499, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 19. Glass Partition -->
+      <div class="uc-item-card">
+        <img id="img_item_glass" class="uc-item-img" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=80" alt="Glass Partition">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Glass Partition Descaling</div>
+            <div class="uc-item-desc">Shower cubicle calcium water spots removal</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_glass">₹299</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Glass Partition Cleaning', 299, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 20. Bird Net -->
+      <div class="uc-item-card">
+        <img id="img_item_birdnet" class="uc-item-img" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=500&q=80" alt="Bird Net Cleaning">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Balcony Bird Net Wash</div>
+            <div class="uc-item-desc">Droppings disinfection & high pressure jet wash</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_birdnet">₹299</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Bird Net Cleaning', 299, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 21. Shoe Rack -->
+      <div class="uc-item-card">
+        <img id="img_item_shoerack" class="uc-item-img" src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=500&q=80" alt="Shoe Rack Cleaning">
+        <div class="uc-item-content">
+          <div>
+            <div class="uc-item-title">Shoe Rack Sanitization</div>
+            <div class="uc-item-desc">Dust wipe & antibacterial deodorizing spray</div>
+          </div>
+          <div class="uc-item-bottom">
+            <span class="uc-item-price" id="disp_shoerack">₹149</span>
+            <button class="btn-uc-book" onclick="openBookingDrawer('Shoe Rack Cleaning', 149, 'single')">Book</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- DEDICATED URBAN COMPANY STYLE BOOKING POPUP DRAWER -->
+<!-- 5. DETAILED HINDI SAF SAFAI KNOWLEDGE GUIDE (EXTENSIVE EXPLANATION) -->
+<section class="hindi-guide-sec">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">डीप क्लीनिंग की संपूर्ण जानकारी</span>
+      <h2>साफ सफाई क्यों है सबसे ज़रूरी?</h2>
+      <p>घर में नियमित झाड़ू-पोछा सिर्फ 20% ऊपरी धूल साफ करता है। जानिए मैकेनाइज्ड डीप क्लीनिंग से घर कैसे सुरक्षित रहता है।</p>
+    </div>
+
+    <div class="hindi-guide-box">
+      <h3>🧼 1. पुणे और PCMC में हार्ड वॉटर (Hard Water) की समस्या और समाधान</h3>
+      <p>पुणे, वाकड, हिंजेवाड़ी, बाणेर और पिंपरी-चिंचवड़ के बोरवेल और कॉरपोरेशन वॉटर में टीडीएस और कैल्शियम की मात्रा अधिक होती है। जब यह पानी बाथरूम टाइल्स, शीशे, नल और शावर पर पड़ता है, तो कुछ ही महीनों में सफेद और पीले रंग की सख्त कैल्शियम परत (Scaling) जम जाती है जिसे साधारण डिटर्जेंट या एसिड से साफ करने पर टाइल्स खराब हो जाती हैं। हम <strong>Diversey Taski R1 और R9</strong> फॉर्म्युला इस्तेमाल करते हैं, जो टाइल्स और क्रोम प्लेटिंग को सुरक्षित रखते हुए हार्ड वॉटर के दागों को पूरी तरह पिघलाकर शीशे जैसी चमक लौटा देता है।</p>
+    </div>
+
+    <div class="hindi-guide-box">
+      <h3>🍳 2. किचन ऑयल, ग्रीस और बैक्टीरिया का खात्मा</h3>
+      <p>भारतीय कुकिंग में तेल और मसालों के तड़के से निकली भाप चिमनी, एग्जॉस्ट फैन, गैस स्टोव और टाइल के जोड़ों में चिपक जाती है। यह चिपचिपापन कॉकरोच और हानिकारक बैक्टीरिया का मुख्य घर बन जाता है। हमारी टीम फ़ूड-ग्रेड डीग्रेसर और स्टीम वाइपिंग तकनीक से बिना किसी हानिकारक गंध के पूरी चिकनाई को जड़ से बाहर निकालती है।</p>
+    </div>
+
+    <div class="hindi-guide-box">
+      <h3>🛋️ 3. सोफा, गद्दे और कालीन की एक्सट्रैक्शन वैक्यूमिंग</h3>
+      <p>सोफे और गद्दों के रेशों में इंसानी पसीना, मृत त्वचा (Dead Skin) और लाखों सूक्ष्म डस्ट माइट्स जमा होते हैं, जो सांस की एलर्जी और अस्थमा का कारण बनते हैं। हमारा वेट फोम शैम्पू और 1400W हाई-सक्शन एक्सट्रैक्शन वैक्यूम सोफे के अंदर तक जाकर गंदा काला पानी बाहर खींच लेता है, जिससे सोफा 2 घंटे में सूखकर बिल्कुल नया और कीटाणुरहित हो जाता है।</p>
+    </div>
+
+    <div class="guide-features">
+      <div class="guide-feat-item">
+        <h4>⚙️ सिंगल डिस्क रोटरी मशीन</h4>
+        <p>जर्मन हेवी बफर मशीन फ्लोर के जॉइंट्स और टाइल्स के गहरे मैल को घिसकर निकालती है।</p>
+      </div>
+      <div class="guide-feat-item">
+        <h4>🛡️ नॉन-हज़ार्डस केमिकल्स</h4>
+        <p>100% सेफ केमिकल्स जो बच्चों, बुजुर्गों और पालतू जानवरों के लिए बिल्कुल सुरक्षित हैं।</p>
+      </div>
+      <div class="guide-feat-item">
+        <h4>💯 इंस्पेक्शन के बाद पेमेंट</h4>
+        <p>कोई एडवांस नहीं! काम पूरा होने के बाद अपने सामने घर जांचें और संतुष्ट होकर UPI/Cash दें।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. COVERAGE MAP & LOCATION GRID -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Operational Areas</span>
+      <h2>Active Service Coverage Across Pune & PCMC</h2>
+      <p>Equipped cleaning teams stationed daily across prime residential clusters.</p>
+    </div>
+
+    <div class="coverage-grid">
+      <div>
+        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--dark);">Serving All Key Societies Daily</h3>
+        <p style="color: var(--slate); font-size: 0.95rem;">Our mobile teams reach your doorstep equipped with machines, chemicals, ladders, and extraction tools within scheduled time slots.</p>
+        
+        <div class="area-chips">
+          <span class="area-chip">📍 Wakad</span>
+          <span class="area-chip">📍 Hinjewadi Phase 1, 2, 3</span>
+          <span class="area-chip">📍 Baner & Balewadi</span>
+          <span class="area-chip">📍 Rahatani</span>
+          <span class="area-chip">📍 Pimple Saudagar</span>
+          <span class="area-chip">📍 Pimple Nilakh</span>
+          <span class="area-chip">📍 Chinchwad & Akurdi</span>
+          <span class="area-chip">📍 Ravet & Punawale</span>
+          <span class="area-chip">📍 Tathawade</span>
+          <span class="area-chip">📍 Aundh & Pashan</span>
+          <span class="area-chip">📍 Kothrud & Bavdhan</span>
+          <span class="area-chip">📍 Moshi & Bhosari</span>
+        </div>
+      </div>
+
+      <div class="map-frame-box">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.0436033481!2d73.713889!3d18.591944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e76c8fa205%3A0x1b2101319157343!2sPimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. REVIEWS & TESTIMONIALS (4.9★) -->
+<section style="background: var(--white);">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Verified Testimonials</span>
+      <h2>What Pune Homeowners Say (4.9★)</h2>
+      <p>Authentic reviews from families who experienced our deep cleaning service.</p>
+    </div>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Booked 2BHK cleaning before moving into our new flat in Wakad. The kitchen oil grease was completely wiped clean and floor buffing gave an unbelievable shine. Great team!"</p>
+        <div class="reviewer">Rohit Shinde</div>
+        <div class="reviewer-loc">Wakad, Pune</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Hard water scaling on our bathroom tiles and shower taps was completely eliminated without damaging the chrome finish. Extremely polite and hard working crew."</p>
+        <div class="reviewer">Pooja Kulkarni</div>
+        <div class="reviewer-loc">Pimple Saudagar</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Got 5-seater sofa shampooing and sliding window track cleaning done in Hinjewadi. Punctual arrival and fair fixed rates without unexpected extra charges."</p>
+        <div class="reviewer">Amit Verma</div>
+        <div class="reviewer-loc">Hinjewadi Phase 1</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. FAQ -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Frequently Asked Questions</span>
+      <h2>Got Questions Before Booking?</h2>
+      <p>Everything you need to know about our mechanized deep cleaning workflow.</p>
+    </div>
+
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">How long does a complete home deep cleaning take?<span class="faq-toggle">▼</span></div>
+        <div class="faq-answer">A standard 1 BHK or 2 BHK takes between 4 to 6 hours, while larger 3 BHK and 4 BHK flats require 6 to 8 hours depending on condition and carpet area.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Do I need to arrange ladders, buckets, or detergents?<span class="faq-toggle">▼</span></div>
+        <div class="faq-answer">No. Our team arrives fully equipped with single-disc floor buffers, industrial vacuum cleaners, Taski certified chemicals, ladders, and microfiber wipers. We only need running water and an electrical connection.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Can I book individual items like sofa, kitchen, or chairs only?<span class="faq-toggle">▼</span></div>
+        <div class="faq-answer">Yes! You can book individual single items like chair wash, window cleaning, kitchen degreasing, or sofa shampooing directly from our itemized rate card.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">When and how do I make payment?<span class="faq-toggle">▼</span></div>
+        <div class="faq-answer">No advance deposit is needed. You only pay after our cleaning is complete and you have personally inspected every room. Payment is accepted via UPI (GPay, PhonePe, Paytm) or cash.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEDICATED URBAN COMPANY STYLE INTERACTIVE BOOKING DRAWER / POPUP -->
 <div id="bookingModal">
   <div class="modal-sheet">
     <button class="modal-close" onclick="closeBookingDrawer()">✕</button>
     
     <div class="modal-head">
-      <h3>Schedule Cleaning</h3>
+      <h3>Schedule Your Cleaning</h3>
       <p>Confirm your booking details and customize add-ons.</p>
     </div>
 
@@ -536,7 +1121,7 @@
     <div class="selected-box">
       <div class="sel-info">
         <h4 id="modalServiceTitle">2 BHK Full Deep Cleaning</h4>
-        <span style="font-size:0.8rem; color:#0369a1;">Standardized Fixed Rate</span>
+        <span style="font-size:0.8rem; color:#15803d; font-weight:700;">Direct Standardized Rate</span>
       </div>
       <div class="sel-price" id="modalServiceBasePrice">₹5,499</div>
     </div>
@@ -548,7 +1133,7 @@
           <input type="checkbox" id="chkWall" onchange="calculateGrandTotal()">
           <span>With Wall Deep Dusting & Cleaning</span>
         </label>
-        <span style="font-weight:800; color:var(--primary);" id="dispWallExtraRate">+₹3,000</span>
+        <span style="font-weight:900; color:var(--primary);" id="dispWallExtraRate">+₹3,000</span>
       </div>
 
       <div class="addon-toggle-item" onclick="toggleCheckbox('chkFurniture')">
@@ -556,13 +1141,13 @@
           <input type="checkbox" id="chkFurniture" onchange="calculateGrandTotal()">
           <span>With Heavy Furniture Shifting & Under-Clean</span>
         </label>
-        <span style="font-weight:800; color:var(--primary);">+₹499</span>
+        <span style="font-weight:900; color:var(--primary);">+₹499</span>
       </div>
     </div>
 
-    <!-- "Aur kuch add karna hai?" Section -->
+    <!-- "Anything else to add?" Cross-sell Section -->
     <div class="cross-sell-section">
-      <h4>⚡ क्या और कुछ भी जोड़ना है? (Single Items)</h4>
+      <h4>⚡ Would you like to add anything else?</h4>
       <div class="cross-grid">
         <div class="cross-card">
           <span>Chair Wash</span>
@@ -570,7 +1155,7 @@
           <button type="button" class="btn-add-cross" id="btnCross_chair" onclick="toggleCrossItem('chair', 'Chair Wash', 149)">+ Add</button>
         </div>
         <div class="cross-card">
-          <span>Window Cleaning</span>
+          <span>Window Clean</span>
           <div class="price">₹199</div>
           <button type="button" class="btn-add-cross" id="btnCross_window" onclick="toggleCrossItem('window', 'Window Clean', 199)">+ Add</button>
         </div>
@@ -602,19 +1187,19 @@
         <span>₹499</span>
       </div>
       <div class="bill-row" id="billRowExtras" style="display:none;">
-        <span>Extra Single Items:</span>
+        <span>Additional Single Items:</span>
         <span id="billExtras">₹0</span>
       </div>
       <div class="bill-total">
-        <span>Grand Total Payable:</span>
+        <span>Total Payable:</span>
         <span id="billGrandTotal" style="color:var(--primary);">₹0</span>
       </div>
     </div>
 
-    <!-- Booking Form -->
+    <!-- Customer Form -->
     <form id="drawerForm" onsubmit="submitDrawerBooking(event)">
       <div class="form-group">
-        <label>Your Name *</label>
+        <label>Full Name *</label>
         <input type="text" id="custName" placeholder="Enter your full name" required>
       </div>
 
@@ -624,7 +1209,7 @@
       </div>
 
       <div class="form-group">
-        <label>Society / Area in Pune or PCMC *</label>
+        <label>Society Name & Area in Pune / PCMC *</label>
         <input type="text" id="custArea" placeholder="e.g. Wakad, Hinjewadi, Baner, Chinchwad" required>
       </div>
 
@@ -633,16 +1218,26 @@
   </div>
 </div>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-col">
       <h4>Saf Safai Pune</h4>
-      <p style="font-size: 0.86rem; line-height: 1.6;">Shree Seva Deep Cleaning Services is Pune's trusted mechanized residential and commercial hygiene brand.</p>
+      <p style="font-size: 0.88rem; line-height: 1.6;">Shree Seva Deep Cleaning Services is Pune's leading residential and commercial mechanized deep hygiene brand.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Popular Packages</h4>
+      <ul>
+        <li><a href="#fullHomePackages">1 BHK to 4 BHK Deep Cleaning</a></li>
+        <li><a href="#fullHomePackages">Kitchen Oil Degreasing</a></li>
+        <li><a href="#fullHomePackages">Bathroom Calcium Descaling</a></li>
+        <li><a href="#fullHomePackages">Sofa Shampooing & Extraction</a></li>
+      </ul>
     </div>
     <div class="footer-col">
       <h4>Direct Helpline</h4>
       <ul>
-        <li>📞 Phone: <a href="tel:9325100228" style="color: #38bdf8; font-weight: bold;">9325100228</a></li>
+        <li>📞 Phone: <a href="tel:9325100228" style="color: #4ade80; font-weight: bold;">9325100228</a></li>
         <li>📍 Serving: Wakad, Hinjewadi, Baner, Rahatani, PCMC</li>
         <li>🕒 Working: 8:00 AM - 9:00 PM (All 7 Days)</li>
       </ul>
@@ -678,18 +1273,20 @@
   let liveRates = {
     "1bhk": 4499, "2bhk": 5499, "3bhk": 6499, "4bhk": 7999,
     "wall_1bhk": 2000, "wall_2bhk": 3000, "wall_3bhk": 4000, "wall_4bhk": 5000,
-    "kitchen": 1299, "bathroom": 499, "sofa3": 799, "window": 199,
-    "chair": 149, "balcony": 399, "fan": 99
+    "kitchen": 1299, "bathroom": 499, "combo": 1699, "sofa3": 799, "sofa5": 1199,
+    "chair": 149, "window": 199, "balcony": 399, "mattress_single": 599, "mattress_double": 999,
+    "fan": 99, "exhaust": 149, "fridge": 349, "microwave": 199, "carpet_sm": 399, "carpet_lg": 699,
+    "wardrobe_single": 199, "wardrobe_double": 349, "chimney": 499, "gasstove": 199,
+    "curtain": 149, "floorscrub": 499, "glass": 299, "birdnet": 299, "shoerack": 149
   };
 
-  // Drawer Booking State
   let currentService = "";
   let currentBaseRate = 0;
   let currentType = "";
   let currentFlatCode = "";
   let selectedCrossItems = {};
 
-  // Listen to Price Changes from Admin
+  // Listen to Price Changes
   db.collection("prices").doc("current").onSnapshot(doc => {
     if (doc.exists) {
       liveRates = { ...liveRates, ...doc.data() };
@@ -700,27 +1297,28 @@
     }
   });
 
-  // Listen to Website Content & Photos from Admin CMS
+  // Listen to Photo & Content Changes from Admin CMS
   db.collection("settings").doc("content").onSnapshot(doc => {
     if (doc.exists) {
       const d = doc.data();
-      if (d.headerTagline) document.getElementById('dynHeaderTagline').innerText = d.headerTagline;
-      if (d.heroH1) document.getElementById('dynHeroH1').innerText = d.heroH1;
-      if (d.heroSub) document.getElementById('dynHeroSub').innerText = d.heroSub;
-      if (d.imgBathroom) document.getElementById('imgLiveBathroom').src = d.imgBathroom;
-      if (d.imgKitchen) document.getElementById('imgLiveKitchen').src = d.imgKitchen;
-      if (d.imgSofa) document.getElementById('imgLiveSofa').src = d.imgSofa;
-      if (d.imgWindow) document.getElementById('imgLiveWindow').src = d.imgWindow;
+      // Photos
+      for (const [key, url] of Object.entries(d)) {
+        const imgEl = document.getElementById(key);
+        if (imgEl && url) imgEl.src = url;
+      }
     }
   });
 
-  // Open Interactive Booking Drawer
+  function toggleFaq(el) {
+    el.parentElement.classList.toggle('active');
+  }
+
+  // Open Drawer Modal
   function openBookingDrawer(serviceName, basePrice, type, flatCode = '') {
     currentService = serviceName;
     currentType = type;
     currentFlatCode = flatCode;
 
-    // Fetch live base rate if exists
     if (flatCode && liveRates[flatCode]) {
       currentBaseRate = Number(liveRates[flatCode]);
     } else {
@@ -731,7 +1329,6 @@
     document.getElementById('modalServiceBasePrice').innerText = '₹' + currentBaseRate.toLocaleString('en-IN');
     document.getElementById('billBase').innerText = '₹' + currentBaseRate.toLocaleString('en-IN');
 
-    // Wall & Furniture Toggles
     const wallFurnBox = document.getElementById('wallFurnitureContainer');
     document.getElementById('chkWall').checked = false;
     document.getElementById('chkFurniture').checked = false;
@@ -744,7 +1341,6 @@
       wallFurnBox.style.display = 'none';
     }
 
-    // Reset Extras
     selectedCrossItems = {};
     ['chair', 'window', 'balcony', 'fan'].forEach(k => {
       const btn = document.getElementById('btnCross_' + k);
@@ -787,7 +1383,6 @@
   function calculateGrandTotal() {
     let grand = currentBaseRate;
 
-    // Wall Cleaning
     const isWall = document.getElementById('chkWall').checked;
     const wallRate = (currentType === 'flat' && liveRates['wall_' + currentFlatCode]) ? Number(liveRates['wall_' + currentFlatCode]) : 0;
     
@@ -799,7 +1394,6 @@
       document.getElementById('billRowWall').style.display = 'none';
     }
 
-    // Furniture
     const isFurn = document.getElementById('chkFurniture').checked;
     if (isFurn) {
       grand += 499;
@@ -808,7 +1402,6 @@
       document.getElementById('billRowFurn').style.display = 'none';
     }
 
-    // Cross items
     let extraTotal = 0;
     for (const k in selectedCrossItems) {
       extraTotal += selectedCrossItems[k].rate;
@@ -826,7 +1419,6 @@
     return grand;
   }
 
-  // Submit Drawer Booking to Firestore
   function submitDrawerBooking(e) {
     e.preventDefault();
     const btn = document.getElementById('submitOrderBtn');
