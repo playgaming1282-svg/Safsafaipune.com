@@ -7,7 +7,6 @@
   <meta name="keywords" content="home cleaning services pune, deep cleaning pune, 1 bhk deep cleaning pune, 2 bhk deep cleaning pune, 3 bhk deep cleaning, 4 bhk cleaning pune, full house cleaning pcmc, kitchen deep cleaning wakad, bathroom deep cleaning pune, sofa dry cleaning hinjewadi, carpet cleaning chinchwad, flat deep cleaning pimple saudagar, professional house cleaning, residential cleaning services, balcony cleaning pune, window cleaning services, floor scrubbing polishing pune, move in cleaning pune, post construction cleaning, shree seva deep cleaning, saf safaai pune">
   <meta name="description" content="Best home deep cleaning, sofa cleaning & bathroom cleaning in Pune & PCMC. 100% spotless results at standardized rates. Call 9325100228 to book now!">
 
-  <!-- Favicon & Search Console Verification -->
   <link rel="icon" type="image/png" href="favicon-96.png">
   <meta name="google-site-verification" content="ZmLOCf83ck6BDMNnBfkuPDkAf826okArK1idn_x-2sE" />
 
@@ -28,7 +27,6 @@
     html { scroll-behavior: smooth; }
     body { background: var(--light); color: var(--dark); line-height: 1.6; }
 
-    /* Header & Branding */
     header {
       background: var(--white);
       box-shadow: 0 2px 10px rgba(0,0,0,0.06);
@@ -46,12 +44,7 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-    .brand-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
+    .brand-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .logo-svg {
       width: 46px;
       height: 46px;
@@ -78,7 +71,6 @@
       gap: 6px;
     }
 
-    /* Sections */
     section { padding: 55px 20px; }
     .container { max-width: 1200px; margin: 0 auto; }
     .sec-head { text-align: center; margin-bottom: 35px; }
@@ -96,7 +88,7 @@
     .sec-head h2 { font-size: 1.95rem; color: var(--dark); font-weight: 800; }
     .sec-head p { color: var(--slate); max-width: 650px; margin: 6px auto 0; font-size: 0.95rem; }
 
-    /* 1. Hero Section */
+    /* 1. Hero */
     .hero {
       background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.85)), 
                   url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -123,14 +115,14 @@
     .btn-hero-book { background: var(--primary); color: var(--white); padding: 13px 26px; border-radius: 8px; text-decoration: none; font-weight: 700; }
     .btn-hero-call { background: var(--white); color: var(--dark); padding: 13px 26px; border-radius: 8px; text-decoration: none; font-weight: 700; }
 
-    /* 2. Step Flow */
+    /* 2. Steps */
     .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
     .step-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-align: center; }
     .step-num { width: 34px; height: 34px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 12px; }
     .step-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
     .step-card p { font-size: 0.85rem; color: var(--slate); }
 
-    /* 3. Package Grid (Full Flat) */
+    /* 3. Packages */
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
     .price-card { background: var(--white); border-radius: 14px; border: 1px solid var(--border); padding: 24px; text-align: center; position: relative; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03); }
     .price-card.popular { border: 2px solid var(--primary); }
@@ -142,7 +134,7 @@
     .price-list li::before { content: "✓ "; color: var(--secondary); font-weight: bold; }
     .btn-pack-book { width: 100%; background: var(--primary); color: var(--white); border: none; padding: 11px; border-radius: 8px; font-weight: 700; cursor: pointer; }
 
-    /* 4. Single Room Packages */
+    /* 4. Single Room */
     .room-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
     .room-card { background: var(--white); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; }
     .room-card img { width: 100%; height: 160px; object-fit: cover; }
@@ -151,7 +143,7 @@
     .room-body .val { font-size: 1.6rem; font-weight: 800; color: var(--primary); margin-bottom: 10px; }
     .room-body p { font-size: 0.83rem; color: var(--slate); margin-bottom: 14px; text-align: left; }
 
-    /* 5. 20+ Single Individual Items Grid */
+    /* 5. 20+ Items */
     .item-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
     .single-item-card {
       background: var(--white);
@@ -161,9 +153,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: border-color 0.2s;
     }
-    .single-item-card:hover { border-color: var(--primary); }
     .item-info h5 { font-size: 0.92rem; color: var(--dark); font-weight: 700; }
     .item-info span { font-size: 0.78rem; color: var(--slate); }
     .item-action { text-align: right; }
@@ -178,9 +168,8 @@
       font-weight: 700;
       cursor: pointer;
     }
-    .btn-add-item:hover { background: var(--primary); color: var(--white); }
 
-    /* 6. Why Choose Us */
+    /* 6. Trust */
     .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
     .trust-card { background: var(--white); padding: 22px; border-radius: 12px; border: 1px solid var(--border); text-align: center; }
     .trust-icon { font-size: 1.8rem; margin-bottom: 8px; }
@@ -207,7 +196,7 @@
     .faq-item.active .faq-answer { display: block; }
     .faq-item.active .faq-toggle { transform: rotate(180deg); }
 
-    /* 10. Booking Form */
+    /* 10. Form */
     .booking-sec { background: #f0f9ff; }
     .form-box { background: var(--white); border-radius: 14px; padding: 34px; max-width: 600px; margin: 0 auto; border: 1px solid var(--border); box-shadow: 0 6px 16px rgba(0,0,0,0.05); }
     .form-group { margin-bottom: 16px; }
@@ -215,9 +204,7 @@
     .form-group input, .form-group select { width: 100%; padding: 11px 13px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.92rem; outline: none; }
     .form-group input:focus, .form-group select:focus { border-color: var(--primary); }
     .btn-form-submit { width: 100%; background: var(--primary); color: var(--white); padding: 13px; border: none; border-radius: 8px; font-size: 1.02rem; font-weight: 800; cursor: pointer; }
-    .btn-form-submit:hover { background: var(--primary-dark); }
 
-    /* Footer */
     footer { background: var(--dark); color: #94a3b8; padding: 45px 20px 20px; }
     .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; margin-bottom: 25px; }
     .footer-col h4 { color: var(--white); margin-bottom: 12px; font-size: 1rem; }
@@ -226,7 +213,6 @@
     .footer-col ul li a { color: #94a3b8; text-decoration: none; }
     .footer-bottom { text-align: center; border-top: 1px solid #1e293b; padding-top: 18px; font-size: 0.82rem; }
 
-    /* Floating Buttons */
     .floating-buttons { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 9999; }
     .float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.22); text-decoration: none; color: white; font-size: 1.4rem; }
     .float-wa { background: #25d366; }
@@ -240,18 +226,13 @@
 </head>
 <body>
 
-<!-- Header -->
 <header>
   <div class="header-wrap">
     <a href="#" class="brand-logo">
-      <!-- House & Broom Modern Logo -->
       <div class="logo-svg">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <!-- House Structure -->
           <path d="M3 10.5 12 3l9 7.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-          <!-- Window/Door -->
           <path d="M9 22V13h6v9"/>
-          <!-- Broom / Sparkle Brush Icon -->
           <path d="m14 8 3-3" stroke-width="2.5"/>
           <path d="M16 4l3 3" stroke-width="2.5"/>
           <circle cx="18" cy="4" r="1.5" fill="#fef08a" stroke="none"/>
@@ -268,7 +249,7 @@
   </div>
 </header>
 
-<!-- 1. Hero Section -->
+<!-- 1. Hero -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-pill">⚡ Rated 4.9/5 by 1,200+ Pune & PCMC Families</div>
@@ -288,7 +269,7 @@
   </div>
 </section>
 
-<!-- 2. Step-by-Step Flow -->
+<!-- 2. Steps -->
 <section style="background: var(--white);">
   <div class="container">
     <div class="sec-head">
@@ -321,7 +302,7 @@
   </div>
 </section>
 
-<!-- 3. Full Home Packages (1BHK to 4BHK with Kitchen Included) -->
+<!-- 3. Full Home Packages -->
 <section>
   <div class="container">
     <div class="sec-head">
@@ -331,63 +312,59 @@
     </div>
 
     <div class="pricing-grid">
-      <!-- 1 BHK -->
       <div class="price-card">
         <h3>1 BHK Full Deep Clean</h3>
-        <div class="price-val">₹2,499</div>
+        <div class="price-val" id="disp_1bhk">₹2,499</div>
         <ul class="price-list">
           <li>1 Kitchen (Cabinet, Slab & Tiles)</li>
           <li>1 Hall & 1 Bedroom scrubbing</li>
           <li>1 Bathroom descaling & mirror shine</li>
           <li>1 Balcony wash + Windows & Fans</li>
         </ul>
-        <button class="btn-pack-book" onclick="selectItem('1 BHK Full Deep Cleaning - ₹2,499')">Book 1 BHK</button>
+        <button class="btn-pack-book" onclick="selectItem('1 BHK Full Deep Cleaning')">Book 1 BHK</button>
       </div>
 
-      <!-- 2 BHK -->
       <div class="price-card popular">
         <div class="tag-badge">Most Popular</div>
         <h3>2 BHK Full Deep Clean</h3>
-        <div class="price-val">₹3,499</div>
+        <div class="price-val" id="disp_2bhk">₹3,499</div>
         <ul class="price-list">
           <li>1 Kitchen (Degreasing & Cabinets)</li>
           <li>2 Bedrooms + Living + Dining Area</li>
           <li>Up to 2 Bathrooms intense descaling</li>
           <li>Balconies, Fans, Switches & Windows</li>
         </ul>
-        <button class="btn-pack-book" onclick="selectItem('2 BHK Full Deep Cleaning - ₹3,499')">Book 2 BHK</button>
+        <button class="btn-pack-book" onclick="selectItem('2 BHK Full Deep Cleaning')">Book 2 BHK</button>
       </div>
 
-      <!-- 3 BHK -->
       <div class="price-card">
         <h3>3 BHK Full Deep Clean</h3>
-        <div class="price-val">₹4,499</div>
+        <div class="price-val" id="disp_3bhk">₹4,499</div>
         <ul class="price-list">
           <li>1 Kitchen (Trolley & Exterior Wipe)</li>
           <li>3 Bedrooms + Large Living Space</li>
           <li>Up to 3 Bathrooms complete sanitization</li>
           <li>Machine floor rotary buffing</li>
         </ul>
-        <button class="btn-pack-book" onclick="selectItem('3 BHK Full Deep Cleaning - ₹4,499')">Book 3 BHK</button>
+        <button class="btn-pack-book" onclick="selectItem('3 BHK Full Deep Cleaning')">Book 3 BHK</button>
       </div>
 
-      <!-- 4 BHK -->
       <div class="price-card">
         <h3>4 BHK Full Deep Clean</h3>
-        <div class="price-val">₹5,999</div>
+        <div class="price-val" id="disp_4bhk">₹5,999</div>
         <ul class="price-list">
           <li>1 Full Kitchen + Utility Area</li>
           <li>4 Master/Bedrooms + Huge Hall</li>
           <li>Up to 4 Bathrooms deep descaling</li>
           <li>Complete mechanized flat scrubbing</li>
         </ul>
-        <button class="btn-pack-book" onclick="selectItem('4 BHK Full Deep Cleaning - ₹5,999')">Book 4 BHK</button>
+        <button class="btn-pack-book" onclick="selectItem('4 BHK Full Deep Cleaning')">Book 4 BHK</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4. Single Room / Area Packages (Kitchen, Bathroom, Sofa) -->
+<!-- 4. Single Room Packages -->
 <section style="background: var(--white);">
   <div class="container">
     <div class="sec-head">
@@ -397,54 +374,50 @@
     </div>
 
     <div class="room-grid">
-      <!-- Standalone Kitchen -->
       <div class="room-card">
         <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Kitchen Deep Cleaning">
         <div class="room-body">
           <h4>Kitchen Deep Cleaning</h4>
-          <div class="val">₹1,299</div>
+          <div class="val" id="disp_kitchen">₹1,299</div>
           <p>Complete degreasing of chimney surface, gas stove, tiles, oil stains, sink scrubbing, and trolley cabinet wiping.</p>
-          <button class="btn-pack-book" onclick="selectItem('Kitchen Deep Cleaning - ₹1,299')">Book Kitchen</button>
+          <button class="btn-pack-book" onclick="selectItem('Kitchen Deep Cleaning')">Book Kitchen</button>
         </div>
       </div>
 
-      <!-- Standalone Bathroom -->
       <div class="room-card">
         <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Bathroom Deep Cleaning">
         <div class="room-body">
           <h4>Bathroom Deep Clean</h4>
-          <div class="val">₹499 <span style="font-size: 0.8rem; color: #64748b;">/ bath</span></div>
+          <div class="val"><span id="disp_bathroom">₹499</span> <span style="font-size: 0.8rem; color: #64748b;">/ bath</span></div>
           <p>Hard water calcium scale removal from wall tiles, chrome taps, shower head, mirror buffing, and WC sanitation.</p>
-          <button class="btn-pack-book" onclick="selectItem('Bathroom Deep Cleaning - ₹499')">Book Bathroom</button>
+          <button class="btn-pack-book" onclick="selectItem('Bathroom Deep Cleaning')">Book Bathroom</button>
         </div>
       </div>
 
-      <!-- Sofa Shampooing -->
       <div class="room-card">
         <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80" alt="Sofa Shampooing">
         <div class="room-body">
           <h4>Sofa Deep Shampooing</h4>
-          <div class="val">₹799 <span style="font-size: 0.8rem; color: #64748b;">(3 Seater)</span></div>
+          <div class="val"><span id="disp_sofa3">₹799</span> <span style="font-size: 0.8rem; color: #64748b;">(3 Seater)</span></div>
           <p>Wet foam shampooing, stain lifting, injection-extraction vacuuming to remove deep mites and sweat odor.</p>
-          <button class="btn-pack-book" onclick="selectItem('3-Seater Sofa Shampooing - ₹799')">Book Sofa Clean</button>
+          <button class="btn-pack-book" onclick="selectItem('3-Seater Sofa Shampooing')">Book Sofa Clean</button>
         </div>
       </div>
 
-      <!-- Kitchen + Bathroom Combo -->
       <div class="room-card">
         <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="Combo Cleaning">
         <div class="room-body">
           <h4>Kitchen + Bathroom Combo</h4>
-          <div class="val">₹1,699</div>
+          <div class="val" id="disp_combo">₹1,699</div>
           <p>Combined deep cleaning of 1 full kitchen and 1 bathroom at a standardized bundled rate.</p>
-          <button class="btn-pack-book" onclick="selectItem('Kitchen + Bathroom Combo - ₹1,699')">Book Combo</button>
+          <button class="btn-pack-book" onclick="selectItem('Kitchen + Bathroom Combo')">Book Combo</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 5. 20+ Single Individual Items Rate List -->
+<!-- 5. 20+ Single Individual Items -->
 <section>
   <div class="container">
     <div class="sec-head">
@@ -454,262 +427,115 @@
     </div>
 
     <div class="item-grid">
-      <!-- 1 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Dining / Office Chair</h5>
-          <span>Dry vacuum & wet foam wash</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹149</span>
-          <button class="btn-add-item" onclick="selectItem('Chair Cleaning (₹149)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Dining / Office Chair</h5><span>Dry vacuum & wet foam wash</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_chair">₹149</span><button class="btn-add-item" onclick="selectItem('Chair Cleaning')">Select</button></div>
       </div>
 
-      <!-- 2 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Sliding Window & Mesh</h5>
-          <span>Glass buff & track vacuuming</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹199</span>
-          <button class="btn-add-item" onclick="selectItem('Window & Mesh Cleaning (₹199)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Sliding Window & Mesh</h5><span>Glass buff & track vacuuming</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_window">₹199</span><button class="btn-add-item" onclick="selectItem('Window & Mesh Cleaning')">Select</button></div>
       </div>
 
-      <!-- 3 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Balcony Deep Wash</h5>
-          <span>Floor scrub & railing wipe</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹399</span>
-          <button class="btn-add-item" onclick="selectItem('Balcony Deep Cleaning (₹399)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Balcony Deep Wash</h5><span>Floor scrub & railing wipe</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_balcony">₹399</span><button class="btn-add-item" onclick="selectItem('Balcony Deep Cleaning')">Select</button></div>
       </div>
 
-      <!-- 4 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Single Bed Mattress</h5>
-          <span>Shampooing & extraction</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹599</span>
-          <button class="btn-add-item" onclick="selectItem('Single Bed Mattress (₹599)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Single Bed Mattress</h5><span>Shampooing & extraction</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_mattress_single">₹599</span><button class="btn-add-item" onclick="selectItem('Single Bed Mattress')">Select</button></div>
       </div>
 
-      <!-- 5 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Double / King Bed Mattress</h5>
-          <span>Deep sanitization & foam wash</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹999</span>
-          <button class="btn-add-item" onclick="selectItem('Double Bed Mattress (₹999)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Double / King Mattress</h5><span>Deep sanitization & foam wash</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_mattress_double">₹999</span><button class="btn-add-item" onclick="selectItem('Double Bed Mattress')">Select</button></div>
       </div>
 
-      <!-- 6 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>5-Seater Sofa Set (3+1+1)</h5>
-          <span>Complete set wet shampooing</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹1,199</span>
-          <button class="btn-add-item" onclick="selectItem('5-Seater Sofa Set (₹1,199)')">Select</button>
-        </div>
+        <div class="item-info"><h5>5-Seater Sofa Set (3+1+1)</h5><span>Complete set wet shampooing</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_sofa5">₹1,199</span><button class="btn-add-item" onclick="selectItem('5-Seater Sofa Set')">Select</button></div>
       </div>
 
-      <!-- 7 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Ceiling Fan Cleaning</h5>
-          <span>Blade degreasing & motor wipe</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹99</span>
-          <button class="btn-add-item" onclick="selectItem('Ceiling Fan Cleaning (₹99)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Ceiling Fan Cleaning</h5><span>Blade degreasing & motor wipe</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_fan">₹99</span><button class="btn-add-item" onclick="selectItem('Ceiling Fan Cleaning')">Select</button></div>
       </div>
 
-      <!-- 8 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Exhaust Fan Degreasing</h5>
-          <span>Sticky grease & carbon wash</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹149</span>
-          <button class="btn-add-item" onclick="selectItem('Exhaust Fan Cleaning (₹149)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Exhaust Fan Degreasing</h5><span>Sticky grease & carbon wash</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_exhaust">₹149</span><button class="btn-add-item" onclick="selectItem('Exhaust Fan Cleaning')">Select</button></div>
       </div>
 
-      <!-- 9 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Refrigerator Cleaning</h5>
-          <span>Interior & exterior sanitization</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹349</span>
-          <button class="btn-add-item" onclick="selectItem('Fridge Cleaning (₹349)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Refrigerator Cleaning</h5><span>Interior & exterior sanitization</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_fridge">₹349</span><button class="btn-add-item" onclick="selectItem('Fridge Cleaning')">Select</button></div>
       </div>
 
-      <!-- 10 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Microwave Oven Cleaning</h5>
-          <span>Food splatter & odor removal</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹199</span>
-          <button class="btn-add-item" onclick="selectItem('Microwave Cleaning (₹199)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Microwave Oven Cleaning</h5><span>Food splatter & odor removal</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_microwave">₹199</span><button class="btn-add-item" onclick="selectItem('Microwave Cleaning')">Select</button></div>
       </div>
 
-      <!-- 11 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Carpet Cleaning (Small)</h5>
-          <span>Up to 5x3 ft shampooing</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹399</span>
-          <button class="btn-add-item" onclick="selectItem('Small Carpet Cleaning (₹399)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Carpet Cleaning (Small)</h5><span>Up to 5x3 ft shampooing</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_carpet_sm">₹399</span><button class="btn-add-item" onclick="selectItem('Small Carpet Cleaning')">Select</button></div>
       </div>
 
-      <!-- 12 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Carpet Cleaning (Large)</h5>
-          <span>Up to 8x6 ft wet rotary scrub</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹699</span>
-          <button class="btn-add-item" onclick="selectItem('Large Carpet Cleaning (₹699)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Carpet Cleaning (Large)</h5><span>Up to 8x6 ft wet rotary scrub</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_carpet_lg">₹699</span><button class="btn-add-item" onclick="selectItem('Large Carpet Cleaning')">Select</button></div>
       </div>
 
-      <!-- 13 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Single Door Wardrobe</h5>
-          <span>Inside & outside deep wipe</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹199</span>
-          <button class="btn-add-item" onclick="selectItem('Single Wardrobe Cleaning (₹199)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Single Door Wardrobe</h5><span>Inside & outside deep wipe</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_wardrobe_single">₹199</span><button class="btn-add-item" onclick="selectItem('Single Wardrobe Cleaning')">Select</button></div>
       </div>
 
-      <!-- 14 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Double Door Wardrobe</h5>
-          <span>Shelves, drawers & mirror wipe</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹349</span>
-          <button class="btn-add-item" onclick="selectItem('Double Wardrobe Cleaning (₹349)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Double Door Wardrobe</h5><span>Shelves, drawers & mirror wipe</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_wardrobe_double">₹349</span><button class="btn-add-item" onclick="selectItem('Double Wardrobe Cleaning')">Select</button></div>
       </div>
 
-      <!-- 15 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Kitchen Chimney Outer Wipe</h5>
-          <span>Filter wash & hood degreasing</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹499</span>
-          <button class="btn-add-item" onclick="selectItem('Chimney Cleaning (₹499)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Chimney Outer Wipe</h5><span>Filter wash & hood degreasing</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_chimney">₹499</span><button class="btn-add-item" onclick="selectItem('Chimney Outer Degreasing')">Select</button></div>
       </div>
 
-      <!-- 16 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Gas Stove Burner & Top</h5>
-          <span>Carbon & heavy oil removal</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹199</span>
-          <button class="btn-add-item" onclick="selectItem('Gas Stove Cleaning (₹199)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Gas Stove Burner & Top</h5><span>Carbon & heavy oil removal</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_gasstove">₹199</span><button class="btn-add-item" onclick="selectItem('Gas Stove Cleaning')">Select</button></div>
       </div>
 
-      <!-- 17 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Curtain Dry Vacuuming</h5>
-          <span>Dust & mite removal per set</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹149</span>
-          <button class="btn-add-item" onclick="selectItem('Curtain Vacuuming (₹149)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Curtain Dry Vacuuming</h5><span>Dust & mite removal per set</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_curtain">₹149</span><button class="btn-add-item" onclick="selectItem('Curtain Vacuuming')">Select</button></div>
       </div>
 
-      <!-- 18 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Single Room Floor Scrub</h5>
-          <span>Machine disc scrubbing only</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹499</span>
-          <button class="btn-add-item" onclick="selectItem('Single Room Floor Scrub (₹499)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Single Room Floor Scrub</h5><span>Machine disc scrubbing only</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_floorscrub">₹499</span><button class="btn-add-item" onclick="selectItem('Single Room Floor Scrub')">Select</button></div>
       </div>
 
-      <!-- 19 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Glass Partition Descaling</h5>
-          <span>Shower cubicle water marks</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹299</span>
-          <button class="btn-add-item" onclick="selectItem('Glass Partition Cleaning (₹299)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Glass Partition Descaling</h5><span>Shower cubicle water marks</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_glass">₹299</span><button class="btn-add-item" onclick="selectItem('Glass Partition Cleaning')">Select</button></div>
       </div>
 
-      <!-- 20 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Balcony Bird Net Wash</h5>
-          <span>Dust & droppings disinfection</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹299</span>
-          <button class="btn-add-item" onclick="selectItem('Bird Net Cleaning (₹299)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Balcony Bird Net Wash</h5><span>Dust & droppings disinfection</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_birdnet">₹299</span><button class="btn-add-item" onclick="selectItem('Bird Net Cleaning')">Select</button></div>
       </div>
 
-      <!-- 21 -->
       <div class="single-item-card">
-        <div class="item-info">
-          <h5>Shoe Rack Deep Sanitization</h5>
-          <span>Dusting & antibacterial spray</span>
-        </div>
-        <div class="item-action">
-          <span class="item-rate">₹149</span>
-          <button class="btn-add-item" onclick="selectItem('Shoe Rack Cleaning (₹149)')">Select</button>
-        </div>
+        <div class="item-info"><h5>Shoe Rack Sanitization</h5><span>Dusting & antibacterial spray</span></div>
+        <div class="item-action"><span class="item-rate" id="disp_shoerack">₹149</span><button class="btn-add-item" onclick="selectItem('Shoe Rack Cleaning')">Select</button></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 6. Trust Factors -->
+<!-- 6. Trust -->
 <section style="background: var(--white);">
   <div class="container">
     <div class="sec-head">
@@ -717,33 +543,16 @@
       <h2>Why Choose Saf Safai Pune?</h2>
       <p>Direct owner service with verified cleaning specialists.</p>
     </div>
-
     <div class="trust-grid">
-      <div class="trust-card">
-        <div class="trust-icon">🧼</div>
-        <h3>Eco-Friendly Chemicals</h3>
-        <p>Taski/Diversey grade certified non-hazardous cleaning solutions.</p>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon">⚙️</div>
-        <h3>Mechanized Equipment</h3>
-        <p>Single-disc floor buffers and industrial wet/dry vacuum cleaners.</p>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon">⏱️</div>
-        <h3>On-Time Doorstep Service</h3>
-        <p>Punctual arrival with complete equipment across Pune and PCMC.</p>
-      </div>
-      <div class="trust-card">
-        <div class="trust-icon">💯</div>
-        <h3>100% Satisfaction</h3>
-        <p>Thorough inspection with the homeowner before completing the job.</p>
-      </div>
+      <div class="trust-card"><div class="trust-icon">🧼</div><h3>Eco-Friendly Chemicals</h3><p>Taski/Diversey grade certified non-hazardous cleaning solutions.</p></div>
+      <div class="trust-card"><div class="trust-icon">⚙️</div><h3>Mechanized Equipment</h3><p>Single-disc floor buffers and industrial wet/dry vacuum cleaners.</p></div>
+      <div class="trust-card"><div class="trust-icon">⏱️</div><h3>On-Time Doorstep Service</h3><p>Punctual arrival with complete equipment across Pune and PCMC.</p></div>
+      <div class="trust-card"><div class="trust-icon">💯</div><h3>100% Satisfaction</h3><p>Thorough inspection with the homeowner before completing the job.</p></div>
     </div>
   </div>
 </section>
 
-<!-- 7. Service Areas -->
+<!-- 7. Locations -->
 <section>
   <div class="container">
     <div class="sec-head">
@@ -771,7 +580,7 @@
   </div>
 </section>
 
-<!-- 8. Real Customer Reviews -->
+<!-- 8. Reviews -->
 <section style="background: var(--white);">
   <div class="container">
     <div class="sec-head">
@@ -779,7 +588,6 @@
       <h2>What Our Pune Clients Say (4.9★)</h2>
       <p>Real reviews from verified homeowners.</p>
     </div>
-
     <div class="review-grid">
       <div class="review-card">
         <div class="review-stars">★★★★★</div>
@@ -811,52 +619,28 @@
       <h2>Frequently Asked Questions</h2>
       <p>Quick answers to common questions before booking.</p>
     </div>
-
     <div class="faq-wrap">
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          How long does a full home deep cleaning take?
-          <span class="faq-toggle">▼</span>
-        </div>
-        <div class="faq-answer">
-          A standard 1 BHK or 2 BHK takes between 4 to 6 hours, while 3 BHK and 4 BHK flats take 6 to 8 hours depending on property size and condition.
-        </div>
+        <div class="faq-question" onclick="toggleFaq(this)">How long does a full home deep cleaning take?<span class="faq-toggle">▼</span></div>
+        <div class="faq-answer">A standard 1 BHK or 2 BHK takes between 4 to 6 hours, while 3 BHK and 4 BHK flats take 6 to 8 hours depending on property size and condition.</div>
       </div>
-
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Do I need to arrange buckets, ladders, or detergents?
-          <span class="faq-toggle">▼</span>
-        </div>
-        <div class="faq-answer">
-          No. Our team comes fully prepared with single-disc floor machines, vacuum cleaners, ladders, microfiber wipers, and Taski cleaning chemicals. We only require running water and an electrical connection.
-        </div>
+        <div class="faq-question" onclick="toggleFaq(this)">Do I need to arrange buckets, ladders, or detergents?<span class="faq-toggle">▼</span></div>
+        <div class="faq-answer">No. Our team comes fully prepared with single-disc floor machines, vacuum cleaners, ladders, microfiber wipers, and Taski cleaning chemicals. We only require running water and an electrical connection.</div>
       </div>
-
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          Can I book only single items like sofa, kitchen, or chairs?
-          <span class="faq-toggle">▼</span>
-        </div>
-        <div class="faq-answer">
-          Yes! You can book individual items like chair wash (₹149), window track cleaning (₹199), kitchen (₹1,299), or sofa shampooing (₹799) without booking the full house.
-        </div>
+        <div class="faq-question" onclick="toggleFaq(this)">Can I book only single items like sofa, kitchen, or chairs?<span class="faq-toggle">▼</span></div>
+        <div class="faq-answer">Yes! You can book individual items like chair wash, window track cleaning, kitchen, or sofa shampooing without booking the full house.</div>
       </div>
-
       <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          When do I make the payment?
-          <span class="faq-toggle">▼</span>
-        </div>
-        <div class="faq-answer">
-          No advance payment is needed. You only pay after the cleaning is finished and you have verified the work. Payment can be made via UPI (GPay, PhonePe, Paytm) or cash.
-        </div>
+        <div class="faq-question" onclick="toggleFaq(this)">When do I make the payment?<span class="faq-toggle">▼</span></div>
+        <div class="faq-answer">No advance payment is needed. You only pay after the cleaning is finished and you have verified the work. Payment can be made via UPI (GPay, PhonePe, Paytm) or cash.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 10. Live Firebase Booking Form -->
+<!-- 10. Booking Form -->
 <section class="booking-sec" id="bookingSection">
   <div class="container">
     <div class="sec-head">
@@ -880,43 +664,40 @@
         <div class="form-group">
           <label>Selected Service / Package *</label>
           <select id="custService" required>
-            <!-- Full Apartments -->
             <optgroup label="Full Home Packages (Kitchen Included)">
-              <option value="1 BHK Full Deep Cleaning - ₹2,499">1 BHK Full Deep Cleaning - ₹2,499</option>
-              <option value="2 BHK Full Deep Cleaning - ₹3,499" selected>2 BHK Full Deep Cleaning - ₹3,499</option>
-              <option value="3 BHK Full Deep Cleaning - ₹4,499">3 BHK Full Deep Cleaning - ₹4,499</option>
-              <option value="4 BHK Full Deep Cleaning - ₹5,999">4 BHK Full Deep Cleaning - ₹5,999</option>
+              <option value="1 BHK Full Deep Cleaning">1 BHK Full Deep Cleaning</option>
+              <option value="2 BHK Full Deep Cleaning" selected>2 BHK Full Deep Cleaning</option>
+              <option value="3 BHK Full Deep Cleaning">3 BHK Full Deep Cleaning</option>
+              <option value="4 BHK Full Deep Cleaning">4 BHK Full Deep Cleaning</option>
             </optgroup>
-            <!-- Single Space Packages -->
             <optgroup label="Single Space Packages">
-              <option value="Kitchen Deep Cleaning - ₹1,299">Kitchen Deep Cleaning - ₹1,299</option>
-              <option value="Bathroom Deep Cleaning - ₹499">Bathroom Deep Cleaning - ₹499 / bath</option>
-              <option value="Kitchen + Bathroom Combo - ₹1,699">Kitchen + Bathroom Combo - ₹1,699</option>
-              <option value="3-Seater Sofa Shampooing - ₹799">3-Seater Sofa Shampooing - ₹799</option>
-              <option value="5-Seater Sofa Set (3+1+1) - ₹1,199">5-Seater Sofa Set - ₹1,199</option>
+              <option value="Kitchen Deep Cleaning">Kitchen Deep Cleaning</option>
+              <option value="Bathroom Deep Cleaning">Bathroom Deep Cleaning</option>
+              <option value="Kitchen + Bathroom Combo">Kitchen + Bathroom Combo</option>
+              <option value="3-Seater Sofa Shampooing">3-Seater Sofa Shampooing</option>
+              <option value="5-Seater Sofa Set">5-Seater Sofa Set</option>
             </optgroup>
-            <!-- Single Items -->
             <optgroup label="Individual Items Rate Card">
-              <option value="Chair Cleaning - ₹149">Chair Cleaning - ₹149</option>
-              <option value="Window & Mesh Cleaning - ₹199">Window & Mesh Cleaning - ₹199</option>
-              <option value="Balcony Deep Cleaning - ₹399">Balcony Deep Cleaning - ₹399</option>
-              <option value="Single Bed Mattress - ₹599">Single Bed Mattress - ₹599</option>
-              <option value="Double Bed Mattress - ₹999">Double Bed Mattress - ₹999</option>
-              <option value="Ceiling Fan Cleaning - ₹99">Ceiling Fan Cleaning - ₹99</option>
-              <option value="Exhaust Fan Cleaning - ₹149">Exhaust Fan Cleaning - ₹149</option>
-              <option value="Fridge Cleaning - ₹349">Fridge Cleaning - ₹349</option>
-              <option value="Microwave Cleaning - ₹199">Microwave Cleaning - ₹199</option>
-              <option value="Small Carpet Cleaning - ₹399">Small Carpet Cleaning - ₹399</option>
-              <option value="Large Carpet Cleaning - ₹699">Large Carpet Cleaning - ₹699</option>
-              <option value="Single Wardrobe Cleaning - ₹199">Single Wardrobe Cleaning - ₹199</option>
-              <option value="Double Wardrobe Cleaning - ₹349">Double Wardrobe Cleaning - ₹349</option>
-              <option value="Chimney Outer Degreasing - ₹499">Chimney Outer Degreasing - ₹499</option>
-              <option value="Gas Stove Cleaning - ₹199">Gas Stove Cleaning - ₹199</option>
-              <option value="Curtain Vacuuming - ₹149">Curtain Vacuuming - ₹149</option>
-              <option value="Single Room Floor Scrub - ₹499">Single Room Floor Scrub - ₹499</option>
-              <option value="Glass Partition Cleaning - ₹299">Glass Partition Cleaning - ₹299</option>
-              <option value="Bird Net Cleaning - ₹299">Bird Net Cleaning - ₹299</option>
-              <option value="Shoe Rack Cleaning - ₹149">Shoe Rack Cleaning - ₹149</option>
+              <option value="Chair Cleaning">Chair Cleaning</option>
+              <option value="Window & Mesh Cleaning">Window & Mesh Cleaning</option>
+              <option value="Balcony Deep Cleaning">Balcony Deep Cleaning</option>
+              <option value="Single Bed Mattress">Single Bed Mattress</option>
+              <option value="Double Bed Mattress">Double Bed Mattress</option>
+              <option value="Ceiling Fan Cleaning">Ceiling Fan Cleaning</option>
+              <option value="Exhaust Fan Cleaning">Exhaust Fan Cleaning</option>
+              <option value="Fridge Cleaning">Fridge Cleaning</option>
+              <option value="Microwave Cleaning">Microwave Cleaning</option>
+              <option value="Small Carpet Cleaning">Small Carpet Cleaning</option>
+              <option value="Large Carpet Cleaning">Large Carpet Cleaning</option>
+              <option value="Single Wardrobe Cleaning">Single Wardrobe Cleaning</option>
+              <option value="Double Wardrobe Cleaning">Double Wardrobe Cleaning</option>
+              <option value="Chimney Outer Degreasing">Chimney Outer Degreasing</option>
+              <option value="Gas Stove Cleaning">Gas Stove Cleaning</option>
+              <option value="Curtain Vacuuming">Curtain Vacuuming</option>
+              <option value="Single Room Floor Scrub">Single Room Floor Scrub</option>
+              <option value="Glass Partition Cleaning">Glass Partition Cleaning</option>
+              <option value="Bird Net Cleaning">Bird Net Cleaning</option>
+              <option value="Shoe Rack Cleaning">Shoe Rack Cleaning</option>
             </optgroup>
           </select>
         </div>
@@ -932,7 +713,6 @@
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <div class="footer-grid">
     <div class="footer-col">
@@ -962,18 +742,15 @@
   </div>
 </footer>
 
-<!-- Floating Call & WhatsApp Buttons -->
 <div class="floating-buttons">
   <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune,%20I%20want%20to%20enquire%20about%20cleaning%20services" class="float-btn float-wa" target="_blank" title="Chat on WhatsApp">💬</a>
   <a href="tel:9325100228" class="float-btn float-call" title="Call Now">📞</a>
 </div>
 
-<!-- Firebase SDKs -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
 <script>
-  // Correct Sahi Firebase Configuration
   const firebaseConfig = {
     apiKey: "AIzaSyD6Mi-G6sFadne_U0XLBJCrOXm2UKQHgME",
     authDomain: "deepcleaningadmin-a4aae.firebaseapp.com",
@@ -986,29 +763,34 @@
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 
-  // Quick Plan Selection
-  function selectItem(itemName) {
-    const sel = document.getElementById('custService');
-    let found = false;
-    for (let i = 0; i < sel.options.length; i++) {
-      if (sel.options[i].value.includes(itemName) || itemName.includes(sel.options[i].text)) {
-        sel.selectedIndex = i;
-        found = true;
-        break;
+  // Listen for Realtime Price Changes from Admin Panel
+  db.collection("prices").doc("current").onSnapshot(doc => {
+    if (doc.exists) {
+      const p = doc.data();
+      for (const [key, val] of Object.entries(p)) {
+        const el = document.getElementById('disp_' + key);
+        if (el) {
+          el.innerText = '₹' + Number(val).toLocaleString('en-IN');
+        }
       }
     }
-    if (!found) {
-      sel.value = itemName;
+  }, err => console.log("Default prices loaded"));
+
+  function selectItem(itemName) {
+    const sel = document.getElementById('custService');
+    for (let i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value.includes(itemName) || itemName.includes(sel.options[i].value)) {
+        sel.selectedIndex = i;
+        break;
+      }
     }
     document.getElementById('bookingSection').scrollIntoView({ behavior: 'smooth' });
   }
 
-  // FAQ Accordion
   function toggleFaq(el) {
     el.parentElement.classList.toggle('active');
   }
 
-  // Live Booking Form Submission
   const form = document.getElementById('firebaseBookingForm');
   const btn = document.getElementById('bookBtn');
 
