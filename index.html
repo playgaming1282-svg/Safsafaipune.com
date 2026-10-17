@@ -3,960 +3,755 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saf Safai Pune | Sofa Cleaning |Deep Home Cleaning | Kitchen Cleaning |Professional Deep Cleaning Services</title>
+  <title>Saf Safai Pune | Sofa Cleaning | Deep Home Cleaning | Kitchen Cleaning | Professional Deep Cleaning Services</title>
   <meta name="keywords" content="home cleaning services pune, deep cleaning pune, 1 bhk deep cleaning pune, 2 bhk deep cleaning pune, 3 bhk deep cleaning, full house cleaning pcmc, kitchen deep cleaning wakad, bathroom deep cleaning pune, sofa dry cleaning hinjewadi, carpet cleaning chinchwad, flat deep cleaning pimple saudagar, professional house cleaning, residential cleaning services, balcony cleaning pune, window cleaning services, floor scrubbing polishing pune, move in cleaning pune, post construction cleaning, shree seva deep cleaning, saf safaai pune">
   <meta name="description" content="Best home deep cleaning, sofa cleaning & bathroom cleaning in Pune & PCMC. 100% spotless results at affordable rates. Call 9325100228 to book now!">
 
-  <!-- Favicon & Search Console (Untouched) -->
+  <!-- Favicon & Search Console Verification -->
   <link rel="icon" type="image/png" href="favicon-96.png">
   <meta name="google-site-verification" content="ZmLOCf83ck6BDMNnBfkuPDkAf826okArK1idn_x-2sE" />
-
-  <!-- Google Fonts & FontAwesome -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     :root {
       --primary: #0284c7;
       --primary-dark: #0369a1;
-      --accent: #10b981;
-      --accent-hover: #059669;
+      --secondary: #16a34a;
       --dark: #0f172a;
-      --light-bg: #f8fafc;
-      --card-bg: #ffffff;
-      --text-main: #334155;
-      --text-muted: #64748b;
+      --slate: #475569;
+      --light: #f8fafc;
+      --white: #ffffff;
       --border: #e2e8f0;
-      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+      --yellow: #f59e0b;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--light); color: var(--dark); line-height: 1.6; }
 
-    body {
-      background-color: var(--light-bg);
-      color: var(--text-main);
-      line-height: 1.6;
-      padding-bottom: 85px;
-    }
-
+    /* Sticky Header */
     header {
+      background: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       z-index: 1000;
-      padding: 12px 5%;
+    }
+    .header-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-
-    .logo {
+    .brand-logo {
       display: flex;
       align-items: center;
       gap: 10px;
       text-decoration: none;
     }
-
     .logo-icon {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white;
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
-    }
-
-    .logo-text h1 {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--dark);
-      line-height: 1.1;
-    }
-
-    .logo-text span {
-      font-size: 11px;
-      color: var(--primary);
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text-main);
-      font-weight: 600;
-      font-size: 14px;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    .header-btn {
-      background: var(--primary);
-      color: white;
-      padding: 9px 20px;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: 0.3s;
-    }
-
-    .header-btn:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, #0b1329 0%, #1e293b 100%);
-      color: white;
-      padding: 70px 5% 90px;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(16, 185, 129, 0.15);
-      color: #34d399;
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      padding: 6px 16px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .hero h2 {
-      font-size: clamp(28px, 4vw, 46px);
-      font-weight: 800;
-      line-height: 1.25;
-      max-width: 820px;
-      margin: 0 auto 18px;
-    }
-
-    .hero h2 span {
-      color: #38bdf8;
-    }
-
-    .hero p {
-      color: #94a3b8;
-      font-size: 16px;
-      max-width: 650px;
-      margin: 0 auto 30px;
-    }
-
-    .hero-actions {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn-main {
-      background: var(--accent);
-      color: white;
-      padding: 13px 28px;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      border: none;
-      font-size: 15px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .btn-main:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 2px solid #475569;
-      color: white;
-      padding: 12px 26px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 15px;
-      transition: 0.3s;
-    }
-
-    .btn-outline:hover {
-      border-color: white;
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    /* Trust Stats */
-    .trust-strip {
-      background: white;
-      padding: 25px 5%;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .trust-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      text-align: center;
-    }
-
-    .trust-item h5 {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--primary);
-    }
-
-    .trust-item p {
-      font-size: 13px;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
-
-    /* Section Styling */
-    section {
-      padding: 60px 5%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h3 {
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 8px;
-    }
-
-    .section-title p {
-      color: var(--text-muted);
-      font-size: 15px;
-    }
-
-    /* Cards Grid */
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: 0.3s;
-      position: relative;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: var(--primary);
-    }
-
-    .card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card-body {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      justify-content: space-between;
-    }
-
-    .card-tag {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(4px);
-      color: #38bdf8;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 30px;
-      text-transform: uppercase;
-    }
-
-    .card h4 {
-      font-size: 19px;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 6px;
-    }
-
-    .card p.desc {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      min-height: 40px;
-    }
-
-    .price-box {
-      margin: 10px 0 16px;
-      padding: 10px 14px;
-      background: #f1f5f9;
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--primary), #38bdf8);
       border-radius: 10px;
-    }
-
-    .price-box .rate {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--dark);
-    }
-
-    .price-box .subtext {
-      font-size: 12px;
-      color: var(--text-muted);
-      display: block;
-    }
-
-    .features-list {
-      list-style: none;
-      margin-bottom: 18px;
-    }
-
-    .features-list li {
-      font-size: 13px;
-      color: var(--text-main);
-      margin-bottom: 6px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(2,132,199,0.25);
     }
+    .logo-text h1 { font-size: 1.25rem; font-weight: 800; color: var(--dark); line-height: 1.1; }
+    .logo-text span { font-size: 0.75rem; color: var(--primary); font-weight: 700; letter-spacing: 0.5px; }
 
-    .features-list li i {
-      color: var(--accent);
-      font-size: 12px;
-    }
-
-    .card-btn {
-      width: 100%;
-      background: var(--dark);
-      color: white;
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .btn-header-call {
+      background: var(--secondary);
+      color: var(--white);
       text-decoration: none;
-      padding: 12px;
-      border-radius: 10px;
-      font-weight: 700;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: 0.2s;
-    }
-
-    .card-btn:hover {
-      background: var(--primary);
-    }
-
-    /* Areas Section */
-    .areas-container {
-      background: white;
-      padding: 35px;
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-
-    .areas-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    .area-badge {
-      background: #f1f5f9;
-      color: var(--dark);
       padding: 8px 16px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: 600;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      border: 1px solid #e2e8f0;
       transition: 0.2s;
     }
+    .btn-header-call:hover { background: #15803d; }
 
-    .area-badge:hover {
+    /* Section Global */
+    section { padding: 60px 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .sec-head { text-align: center; margin-bottom: 40px; }
+    .sec-badge {
       background: #e0f2fe;
-      border-color: var(--primary);
-      transform: translateY(-2px);
-    }
-
-    /* Location Map */
-    .location-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .map-frame {
-      width: 100%;
-      height: 380px;
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 12px;
       border-radius: 20px;
-      border: 2px solid var(--border);
-      overflow: hidden;
-      box-shadow: var(--shadow);
+      display: inline-block;
+      margin-bottom: 8px;
+      text-transform: uppercase;
     }
+    .sec-head h2 { font-size: 2rem; color: var(--dark); font-weight: 800; }
+    .sec-head p { color: var(--slate); max-width: 650px; margin: 6px auto 0; font-size: 0.98rem; }
 
-    .map-frame iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    /* 1. Hero Section */
+    .hero {
+      background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.85)), 
+                  url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: var(--white);
+      padding: 80px 20px 70px;
+      text-align: center;
     }
-
-    .contact-card {
-      background: white;
-      padding: 35px;
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
+    .hero-content { max-width: 850px; margin: 0 auto; }
+    .hero-pill {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 6px 16px;
+      border-radius: 30px;
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 16px;
     }
+    .hero h2 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+    .hero p { font-size: 1.15rem; color: #cbd5e1; margin-bottom: 28px; }
+    .hero-badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; }
+    .hero-badge-item { background: rgba(255,255,255,0.1); padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; }
+    .hero-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .btn-hero-book { background: var(--primary); color: var(--white); padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: 0.2s; }
+    .btn-hero-book:hover { background: var(--primary-dark); }
+    .btn-hero-call { background: var(--white); color: var(--dark); padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; }
 
-    .contact-point {
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      margin-top: 18px;
-    }
+    /* 2. Step-by-Step Booking Flow */
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .step-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; position: relative; }
+    .step-num { width: 36px; height: 36px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 14px; }
+    .step-card h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--dark); }
+    .step-card p { font-size: 0.88rem; color: var(--slate); }
 
-    .contact-icon {
-      background: #e0f2fe;
-      color: var(--primary);
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 18px;
-    }
+    /* 3. Services Grid */
+    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+    .service-box { background: var(--white); border-radius: 14px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.04); transition: transform 0.2s; }
+    .service-box:hover { transform: translateY(-4px); }
+    .service-box img { width: 100%; height: 210px; object-fit: cover; }
+    .service-body { padding: 20px; }
+    .service-body h3 { font-size: 1.25rem; margin-bottom: 8px; }
+    .service-body p { font-size: 0.9rem; color: var(--slate); margin-bottom: 14px; }
+    .service-features { list-style: none; margin-bottom: 16px; font-size: 0.85rem; color: #334155; }
+    .service-features li { margin-bottom: 6px; }
+    .service-features li::before { content: "✔ "; color: var(--secondary); font-weight: bold; }
 
-    /* Animated Floating Buttons */
-    .floating-container {
+    /* 4. Pricing (Urban Company Style) */
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .price-card { background: var(--white); border-radius: 14px; border: 1px solid var(--border); padding: 24px; text-align: center; position: relative; box-shadow: 0 4px 8px rgba(0,0,0,0.03); }
+    .price-card.popular { border: 2px solid var(--primary); transform: scale(1.02); }
+    .price-tag-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary); color: var(--white); padding: 3px 12px; border-radius: 14px; font-size: 0.75rem; font-weight: 700; }
+    .price-card h3 { font-size: 1.25rem; margin-top: 6px; }
+    .price-wrap { margin: 16px 0; }
+    .price-wrap .old-price { font-size: 1rem; color: #94a3b8; text-decoration: line-through; }
+    .price-wrap .live-price { font-size: 2rem; font-weight: 800; color: var(--primary); }
+    .price-list { list-style: none; text-align: left; font-size: 0.88rem; color: var(--slate); margin-bottom: 20px; }
+    .price-list li { padding: 6px 0; border-bottom: 1px dashed #f1f5f9; }
+    .btn-price-book { width: 100%; background: var(--primary); color: var(--white); border: none; padding: 12px; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.2s; }
+    .btn-price-book:hover { background: var(--primary-dark); }
+
+    /* 5. Trust / Why Choose Us */
+    .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+    .trust-card { background: var(--white); padding: 24px; border-radius: 12px; border: 1px solid var(--border); text-align: center; }
+    .trust-icon { font-size: 2rem; margin-bottom: 10px; }
+    .trust-card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .trust-card p { font-size: 0.85rem; color: var(--slate); }
+
+    /* 6. Service Locations */
+    .area-chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 900px; margin: 0 auto; }
+    .area-chip { background: var(--white); border: 1px solid var(--border); padding: 8px 16px; border-radius: 20px; font-size: 0.88rem; font-weight: 600; color: #334155; }
+    .area-chip:hover { border-color: var(--primary); color: var(--primary); }
+
+    /* 7. Reviews */
+    .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .review-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
+    .review-stars { color: var(--yellow); font-size: 1.1rem; margin-bottom: 8px; }
+    .review-text { font-size: 0.9rem; color: #334155; margin-bottom: 12px; font-style: italic; }
+    .reviewer { font-weight: 700; font-size: 0.88rem; color: var(--dark); }
+    .reviewer-loc { font-size: 0.78rem; color: #64748b; }
+
+    /* 8. FAQs */
+    .faq-wrap { max-width: 800px; margin: 0 auto; }
+    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+    .faq-question { padding: 16px 20px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { padding: 0 20px 16px; font-size: 0.9rem; color: var(--slate); display: none; border-top: 1px solid #f8fafc; }
+    .faq-item.active .faq-answer { display: block; }
+    .faq-item.active .faq-toggle { transform: rotate(180deg); }
+
+    /* 9. Booking Form (Connected to Firebase) */
+    .booking-sec { background: #f0f9ff; }
+    .form-box { background: var(--white); border-radius: 16px; padding: 36px; max-width: 620px; margin: 0 auto; border: 1px solid var(--border); box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-weight: 700; font-size: 0.9rem; margin-bottom: 6px; }
+    .form-group input, .form-group select { width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.95rem; outline: none; }
+    .form-group input:focus, .form-group select:focus { border-color: var(--primary); }
+    .btn-form-submit { width: 100%; background: var(--primary); color: var(--white); padding: 14px; border: none; border-radius: 8px; font-size: 1.05rem; font-weight: 800; cursor: pointer; transition: 0.2s; }
+    .btn-form-submit:hover { background: var(--primary-dark); }
+
+    /* 10. Footer */
+    footer { background: var(--dark); color: #94a3b8; padding: 50px 20px 20px; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; }
+    .footer-col h4 { color: var(--white); margin-bottom: 14px; font-size: 1.05rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; font-size: 0.88rem; }
+    .footer-col ul li a { color: #94a3b8; text-decoration: none; }
+    .footer-bottom { text-align: center; border-top: 1px solid #1e293b; padding-top: 20px; font-size: 0.85rem; }
+
+    /* Floating Call & WhatsApp Buttons for Mobile */
+    .floating-buttons {
       position: fixed;
-      bottom: 85px;
+      bottom: 20px;
       right: 20px;
       display: flex;
       flex-direction: column;
       gap: 12px;
-      z-index: 1050;
+      z-index: 9999;
     }
-
     .float-btn {
-      width: 54px;
-      height: 54px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
       text-decoration: none;
-      font-size: 24px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-      position: relative;
-      transition: transform 0.2s;
-    }
-
-    .float-btn:hover {
-      transform: scale(1.1);
-    }
-
-    .float-call {
-      background: #0284c7;
-      animation: pulse-blue 2s infinite;
-    }
-
-    .float-wa {
-      background: #25d366;
-      animation: pulse-green 2s infinite;
-    }
-
-    @keyframes pulse-green {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
-
-    @keyframes pulse-blue {
-      0% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(2, 132, 199, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0); }
-    }
-
-    /* Sticky Bottom Bar */
-    .sticky-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 10px 14px;
-      z-index: 999;
-      border-top: 1px solid var(--border);
-    }
-
-    .sticky-item {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 11px;
-      border-radius: 10px;
-      margin: 0 4px;
-      transition: 0.2s;
-    }
-
-    .sticky-call {
-      background: #0284c7;
       color: white;
+      font-size: 1.5rem;
     }
+    .float-wa { background: #25d366; }
+    .float-call { background: var(--primary); }
 
-    .sticky-wa {
-      background: #25d366;
-      color: white;
-    }
-
-    .sticky-book {
-      background: #0f172a;
-      color: white;
-    }
-
-    @media (max-width: 768px) {
-      .location-wrapper {
-        grid-template-columns: 1fr;
-      }
-      nav a {
-        display: none;
-      }
-      .floating-container {
-        display: none; /* Mobile me bottom sticky bar active rahega */
-      }
+    @media(max-width: 768px) {
+      .hero h2 { font-size: 2rem; }
+      .price-card.popular { transform: none; }
+      .form-box { padding: 24px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating Call & WhatsApp Buttons -->
-  <div class="floating-container">
-    <a href="tel:9325100228" class="float-btn float-call" title="Call Now">
-      <i class="fa-solid fa-phone"></i>
-    </a>
-    <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safaai%20Pune,%20mujhe%20cleaning%20booking%20karni%20hai" target="_blank" class="float-btn float-wa" title="WhatsApp Chat">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-  </div>
-
-  <!-- Header -->
-  <header>
-    <a href="index.html" class="logo">
-      <div class="logo-icon"><i class="fa-solid fa-broom"></i></div>
+<!-- Header -->
+<header>
+  <div class="header-wrap">
+    <a href="#" class="brand-logo">
+      <div class="logo-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/>
+        </svg>
+      </div>
       <div class="logo-text">
-        <h1>SAF SAFAAI</h1>
-        <span>PUNE DEEP CLEANING</span>
+        <h1>Saf Safai Pune</h1>
+        <span>SHREE SEVA DEEP CLEANING</span>
       </div>
     </a>
-    <nav>
-      <a href="#single-services">Single Services</a>
-      <a href="#packages">Full House Packages</a>
-      <a href="#areas">Areas</a>
-      <a href="#location">Contact</a>
-      <a href="booking.html" class="header-btn">
-        <i class="fa-solid fa-calendar-check"></i> Book Now
-      </a>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-badge">
-      <i class="fa-solid fa-shield-halved"></i> 100% Sanitized & Verified Staff in Pune & PCMC
+    <div class="header-actions">
+      <a href="tel:9325100228" class="btn-header-call">📞 Call 9325100228</a>
     </div>
-    <h2>Ghar Ko Banaye Naye Jaisa Chamakdar <span>Deep Cleaning Ke Sath!</span></h2>
-    <p>Pune aur PCMC ka bharosemand deep cleaning partner. High-pressure steam cleaning, single item options aur transparent price.</p>
-    <div class="hero-actions">
-      <a href="booking.html" class="btn-main">
-        <i class="fa-solid fa-calendar-plus"></i> Step-by-Step Booking
-      </a>
-      <a href="tel:9325100228" class="btn-outline">
-        <i class="fa-solid fa-phone"></i> Call: 9325100228
-      </a>
-    </div>
-  </section>
+  </div>
+</header>
 
-  <!-- Trust Strip -->
-  <div class="trust-strip">
-    <div class="trust-grid">
-      <div class="trust-item">
-        <h5>10,000+</h5>
-        <p>Ghar Clean Kiye Pune Me</p>
+<!-- 1. Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-pill">⚡ Rated 4.9/5 by 1,200+ Pune & PCMC Families</div>
+    <h2>5-Star Mechanized Deep Home Cleaning Services</h2>
+    <p>Single-disc machine scrubbing, 100% eco-friendly chemicals, and intensive bathroom descaling across Pune & PCMC.</p>
+    
+    <div class="hero-badges">
+      <div class="hero-badge-item">🛡️ Verified Background Staff</div>
+      <div class="hero-badge-item">⚙️ High-Tech Single Disc Buffing</div>
+      <div class="hero-badge-item">💵 Pay After Service Satisfaction</div>
+    </div>
+
+    <div class="hero-btns">
+      <a href="#bookingSection" class="btn-hero-book">Book Cleaning Slot</a>
+      <a href="tel:9325100228" class="btn-hero-call">Direct Helpline</a>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Step-by-Step Booking Process -->
+<section style="background: var(--white);">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Easy 4-Step Journey</span>
+      <h2>How Saf Safai Pune Works</h2>
+      <p>Hassle-free professional doorstep service tailored to your convenient time.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Select Plan</h3>
+        <p>Pick 1 BHK, 2 BHK, 3 BHK or Specialized Kitchen & Sofa packages below.</p>
       </div>
-      <div class="trust-item">
-        <h5>4.9 ★ Rating</h5>
-        <p>Google Verified Reviews</p>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Instant Call Back</h3>
+        <p>Our supervisor connects within 15 minutes to confirm slot and arrival.</p>
       </div>
-      <div class="trust-item">
-        <h5>100% Safe</h5>
-        <p>Govt Approved Eco Chemicals</p>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Machine Deep Cleaning</h3>
+        <p>Uniformed team arrives with high-grade single disc buffers & vacuums.</p>
       </div>
-      <div class="trust-item">
-        <h5>60 Mins</h5>
-        <p>Quick Doorstep Reach in Pune</p>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>Inspect & Pay</h3>
+        <p>Check every corner and pay online or cash only after 100% satisfaction.</p>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- SECTION 1: Single Item Services (Urban Company Style) -->
-  <section id="single-services">
-    <div class="section-title">
-      <h3>Single Items & Quick Services</h3>
-      <p>Pura ghar nahi karwana? Sirf specific room, bathroom ya appliance book karein!</p>
+<!-- 3. Services with High-Quality Photos -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Specialized Services</span>
+      <h2>Professional Deep Cleaning Categories</h2>
+      <p>Equipped with specialized chemicals and industrial equipment for every corner.</p>
     </div>
 
-    <div class="packages-grid">
-      <!-- 1 Bathroom -->
-      <div class="card">
-        <span class="card-tag">Bestseller</span>
-        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80" alt="bathroom deep cleaning pune" class="card-img">
-        <div class="card-body">
-          <div>
-            <h4>1 Bathroom Deep Clean</h4>
-            <p class="desc">Hard-water scale removal, tiles buffing, commode acid-free wash.</p>
-            <div class="price-box">
-              <span class="rate">₹499 <small>/ bathroom</small></span>
-              <span class="subtext">Stain & germ-free treatment</span>
-            </div>
-            <ul class="features-list">
-              <li><i class="fa-solid fa-check-circle"></i> Taps & mirror shine buffing</li>
-              <li><i class="fa-solid fa-check-circle"></i> Floor & wall tile scrub</li>
-            </ul>
-          </div>
-          <a href="booking.html?service=single-bathroom&price=499" class="card-btn">Book This Item</a>
+    <div class="service-grid">
+      <!-- Full Home -->
+      <div class="service-box">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80" alt="Full Flat Deep Cleaning Pune">
+        <div class="service-body">
+          <h3>Full Home Deep Cleaning</h3>
+          <p>Complete empty or furnished flat scrubdown from ceiling fans to floor tiles.</p>
+          <ul class="service-features">
+            <li>Mechanized floor buffing & stain removal</li>
+            <li>Cobweb removal, fan, and switchboard wipe</li>
+            <li>Balcony pressure wash & sliding window channels</li>
+          </ul>
         </div>
       </div>
 
-      <!-- Kitchen Deep Clean -->
-      <div class="card">
-        <span class="card-tag">High Demand</span>
-        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="kitchen deep cleaning wakad" class="card-img">
-        <div class="card-body">
-          <div>
-            <h4>Kitchen Deep Cleaning</h4>
-            <p class="desc">Heavy oil & grease removal, trolley wipe, slab and sink polish.</p>
-            <div class="price-box">
-              <span class="rate">₹999</span>
-              <span class="subtext">Complete oil & grease strip</span>
-            </div>
-            <ul class="features-list">
-              <li><i class="fa-solid fa-check-circle"></i> Exhaust & outer chimney wash</li>
-              <li><i class="fa-solid fa-check-circle"></i> Inside/outside cabinets scrub</li>
-            </ul>
-          </div>
-          <a href="booking.html?service=kitchen-single&price=999" class="card-btn">Book This Item</a>
+      <!-- Kitchen -->
+      <div class="service-box">
+        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="Kitchen Deep Cleaning Pune">
+        <div class="service-body">
+          <h3>Intense Kitchen Degreasing</h3>
+          <p>Remove years of sticky oil, grease, and tadka stains safely.</p>
+          <ul class="service-features">
+            <li>Chimney exterior, gas stove & slab degreasing</li>
+            <li>Trolley & cabinet deep wipe (inside/outside)</li>
+            <li>Tile grout de-oiling & sink buffing</li>
+          </ul>
         </div>
       </div>
 
-      <!-- Sofa Dry Cleaning -->
-      <div class="card">
-        <span class="card-tag">Sanitized</span>
-        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80" alt="sofa dry cleaning hinjewadi" class="card-img">
-        <div class="card-body">
-          <div>
-            <h4>Sofa Dry Cleaning</h4>
-            <p class="desc">Dry foam extraction shampooing with powerful vacuum suction.</p>
-            <div class="price-box">
-              <span class="rate">₹250 <small>/ per seat</small></span>
-              <span class="subtext">Min booking: 3-seater (₹750)</span>
-            </div>
-            <ul class="features-list">
-              <li><i class="fa-solid fa-check-circle"></i> Dust mites & food stains removal</li>
-              <li><i class="fa-solid fa-check-circle"></i> Quick-dry technology</li>
-            </ul>
-          </div>
-          <a href="booking.html?service=sofa-seat&price=250" class="card-btn">Book This Item</a>
+      <!-- Bathroom -->
+      <div class="service-box">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80" alt="Bathroom Deep Cleaning Pune">
+        <div class="service-body">
+          <h3>Bathroom Descaling & Sanitizing</h3>
+          <p>Eradicate Pune's hard water white calcium deposits and yellow tile stains.</p>
+          <ul class="service-features">
+            <li>Acid-free tile scrubbing & mold treatment</li>
+            <li>Chrome tap, shower & mirror scaling cleanup</li>
+            <li>WC seat sanitation and drain clearing</li>
+          </ul>
         </div>
       </div>
 
-      <!-- Window Glass & Tracks -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" alt="window cleaning services pune" class="card-img">
-        <div class="card-body">
-          <div>
-            <h4>Window Track & Glass</h4>
-            <p class="desc">Vacuuming narrow sliding tracks, mesh screen dusting & sparkling glass.</p>
-            <div class="price-box">
-              <span class="rate">₹250 <small>/ window</small></span>
-              <span class="subtext">Tracks + Mesh + Glass</span>
-            </div>
-            <ul class="features-list">
-              <li><i class="fa-solid fa-check-circle"></i> Narrow nozzle dust extraction</li>
-              <li><i class="fa-solid fa-check-circle"></i> Streak-free sparkling glass</li>
-            </ul>
-          </div>
-          <a href="booking.html?service=window-clean&price=250" class="card-btn">Book This Item</a>
-        </div>
-      </div>
-
-      <!-- Balcony Deep Wash -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=700&q=80" alt="balcony cleaning pune" class="card-img">
-        <div class="card-body">
-          <div>
-            <h4>Balcony Deep Wash</h4>
-            <p class="desc">Pigeon droppings removal, railing wipe & high pressure floor scrub.</p>
-            <div class="price-box">
-              <span class="rate">₹499 <small>/ balcony</small></span>
-              <span class="subtext">Heavy stains & algae cleaning</span>
-            </div>
-            <ul class="features-list">
-              <li><i class="fa-solid fa-check-circle"></i> Complete pressure wash</li>
-              <li><i class="fa-solid fa-check-circle"></i> Disinfection & deodorization</li>
-            </ul>
-          </div>
-          <a href="booking.html?service=balcony-wash&price=499" class="card-btn">Book This Item</a>
-        </div>
-      </div>
-
-      <!-- Mattress Deep Clean -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=700&q=80" alt="carpet and mattress cleaning" class="card-img">
-        <div class="card-body">
-          <div>
-            <h4>Double Mattress Sanitization</h4>
-            <p class="desc">UV sanitization, moisture extraction, and dust mite elimination.</p>
-            <div class="price-box">
-              <span class="rate">₹799</span>
-              <span class="subtext">King / Queen size</span>
-            </div>
-            <ul class="features-list">
-              <li><i class="fa-solid fa-check-circle"></i> Deep extraction shampoo</li>
-              <li><i class="fa-solid fa-check-circle"></i> Anti-bacterial spray</li>
-            </ul>
-          </div>
-          <a href="booking.html?service=mattress-clean&price=799" class="card-btn">Book This Item</a>
+      <!-- Sofa & Carpet -->
+      <div class="service-box">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80" alt="Sofa Dry Cleaning Hinjewadi Pune">
+        <div class="service-body">
+          <h3>Sofa & Carpet Shampooing</h3>
+          <p>3-step injection and extraction wet vacuuming for fabric care.</p>
+          <ul class="service-features">
+            <li>High-power dry vacuuming for hidden mites</li>
+            <li>Active foam chemical scrubbing</li>
+            <li>Moisture extraction for rapid drying</li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SECTION 2: Full Home Deep Cleaning Packages -->
-  <section id="packages">
-    <div class="section-title">
-      <h3>Full Home Deep Cleaning Packages</h3>
-      <p>Complete move-in, festive, ya regular full apartment intensive deep cleaning</p>
+<!-- 4. Transparent Urban-Style Pricing Card -->
+<section style="background: var(--white);">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Fixed Pricing Card</span>
+      <h2>Urban Standard Pricing Packages</h2>
+      <p>Up to 40% more affordable than aggregator apps with direct owner guarantee.</p>
     </div>
 
-    <div class="packages-grid">
+    <div class="pricing-grid">
       <!-- 1 BHK -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=700&q=80" alt="1 bhk deep cleaning pune" class="card-img">
-        <div class="card-body">
-          <div>
-            <h4>1 BHK Full Deep Cleaning</h4>
-            <p class="desc">Hall, Bedroom, Kitchen, 1 Bathroom & 1 Balcony spotless cleaning.</p>
-            <div class="price-box">
-              <span class="rate">₹4,000 / ₹6,000</span>
-              <span class="subtext">Without Wall: ₹4,000 | With Wall: ₹6,000</span>
-            </div>
-            <ul class="features-list">
-              <li><i class="fa-solid fa-check-circle"></i> Floor scrubbing machine buffing</li>
-              <li><i class="fa-solid fa-check-circle"></i> Fans, lights, switchboards wipe</li>
-              <li><i class="fa-solid fa-check-circle"></i> Complete bathroom descaling</li>
-            </ul>
-          </div>
-          <a href="booking.html?service=1bhk&price=4000" class="card-btn">Book 1 BHK Package</a>
+      <div class="price-card">
+        <h3>1 BHK Deep Clean</h3>
+        <div class="price-wrap">
+          <div class="old-price">₹3,499</div>
+          <div class="live-price">₹2,499</div>
         </div>
+        <ul class="price-list">
+          <li>✔ 1 Kitchen + 1 Hall + 1 Bedroom</li>
+          <li>✔ 1 Bathroom + 1 Balcony</li>
+          <li>✔ Single-disc floor scrubbing</li>
+          <li>✔ Windows & fan cleaning</li>
+        </ul>
+        <button class="btn-price-book" onclick="quickSelect('1 BHK Deep Cleaning (₹2,499)')">Select 1 BHK Plan</button>
       </div>
 
-      <!-- 2 BHK -->
-      <div class="card" style="border: 2px solid var(--primary);">
-        <span class="card-tag" style="background: var(--primary); color: white;">Pune Choice</span>
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="2 bhk deep cleaning pune" class="card-img">
-        <div class="card-body">
-          <div>
-            <h4>2 BHK Full Deep Cleaning</h4>
-            <p class="desc">2 Bedrooms, Hall, Kitchen, 2 Bathrooms complete detailing.</p>
-            <div class="price-box">
-              <span class="rate">₹5,000 / ₹7,500</span>
-              <span class="subtext">Without Wall: ₹5,000 | With Wall: ₹7,500</span>
-            </div>
-            <ul class="features-list">
-              <li><i class="fa-solid fa-check-circle"></i> Floor scrubbing & deep suction</li>
-              <li><i class="fa-solid fa-check-circle"></i> Kitchen degreasing & trolleys</li>
-              <li><i class="fa-solid fa-check-circle"></i> 2 Washrooms hard-water polish</li>
-            </ul>
-          </div>
-          <a href="booking.html?service=2bhk&price=5000" class="card-btn">Book 2 BHK Package</a>
+      <!-- 2 BHK (Popular) -->
+      <div class="price-card popular">
+        <div class="price-tag-badge">Most Popular in Pune</div>
+        <h3>2 BHK Deep Clean</h3>
+        <div class="price-wrap">
+          <div class="old-price">₹4,999</div>
+          <div class="live-price">₹3,499</div>
         </div>
+        <ul class="price-list">
+          <li>✔ 2 Bedrooms + Living + Dining Area</li>
+          <li>✔ Up to 2 Bathrooms intense descaling</li>
+          <li>✔ Full kitchen cabinet degreasing</li>
+          <li>✔ Balcony and sliding glass wash</li>
+        </ul>
+        <button class="btn-price-book" onclick="quickSelect('2 BHK Deep Cleaning (₹3,499)')">Select 2 BHK Plan</button>
       </div>
 
       <!-- 3 BHK -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=700&q=80" alt="3 bhk deep cleaning pune" class="card-img">
-        <div class="card-body">
-          <div>
-            <h4>3 BHK Full Deep Cleaning</h4>
-            <p class="desc">Large family apartment comprehensive intensive sanitization.</p>
-            <div class="price-box">
-              <span class="rate">₹6,500 / ₹9,000</span>
-              <span class="subtext">Without Wall: ₹6,500 | With Wall: ₹9,000</span>
-            </div>
-            <ul class="features-list">
-              <li><i class="fa-solid fa-check-circle"></i> Complete tile grout & dust scrub</li>
-              <li><i class="fa-solid fa-check-circle"></i> Balconies, sliding tracks & glass</li>
-              <li><i class="fa-solid fa-check-circle"></i> Dedicated team of 4-5 cleaners</li>
-            </ul>
-          </div>
-          <a href="booking.html?service=3bhk&price=6500" class="card-btn">Book 3 BHK Package</a>
+      <div class="price-card">
+        <h3>3 BHK Deep Clean</h3>
+        <div class="price-wrap">
+          <div class="old-price">₹6,499</div>
+          <div class="live-price">₹4,499</div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Areas -->
-  <section id="areas">
-    <div class="section-title">
-      <h3>Areas We Serve in Pune & PCMC</h3>
-      <p>Hum Pune ke sabhi pramukh locations me doorstep service provide karte hain</p>
-    </div>
-
-    <div class="areas-container">
-      <div class="areas-grid">
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Wakad</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Hinjewadi (Phase 1, 2, 3)</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Baner</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Balewadi</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Pimple Saudagar</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Pimple Nilakh</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Rahatani</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Chinchwad</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Pimpri</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Ravet</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Tathawade</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Punawale</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Kothrud</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Aundh</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Viman Nagar</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Kharadi</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Magarpatta</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Hadapsar</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Bavdhan</span>
-        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Moshi</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Location & Contact -->
-  <section id="location">
-    <div class="location-wrapper">
-      <div class="contact-card">
-        <h4 style="font-size: 22px; font-weight: 800; color: var(--dark); margin-bottom: 12px;">Sampark Karein & Book Karein</h4>
-        <p style="color: var(--text-muted); font-size: 14px;">Humari verified cleaning team Pune & PCMC me doorstep service ke liye hamesha tayyar hai.</p>
-        
-        <div class="contact-point">
-          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-          <div>
-            <strong style="color: var(--dark); font-size: 14px;">Direct Phone</strong>
-            <p style="color: var(--text-muted); font-size: 14px;"><a href="tel:9325100228" style="color: inherit; text-decoration: none;">+91 9325100228</a></p>
-          </div>
-        </div>
-
-        <div class="contact-point">
-          <div class="contact-icon" style="background: #dcfce7; color: #16a34a;"><i class="fa-brands fa-whatsapp"></i></div>
-          <div>
-            <strong style="color: var(--dark); font-size: 14px;">Instant WhatsApp</strong>
-            <p style="color: var(--text-muted); font-size: 14px;"><a href="https://wa.me/919325100228?text=Hello%20Saf%20Safaai%20Pune,%20mujhe%20cleaning%20book%20karni%20hai" target="_blank" style="color: inherit; text-decoration: none;">Chat on WhatsApp (Instant Reply)</a></p>
-          </div>
-        </div>
-
-        <div class="contact-point">
-          <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
-          <div>
-            <strong style="color: var(--dark); font-size: 14px;">Working Hours</strong>
-            <p style="color: var(--text-muted); font-size: 14px;">Mon - Sun: 8:00 AM - 9:00 PM</p>
-          </div>
-        </div>
+        <ul class="price-list">
+          <li>✔ 3 Bedrooms + Large Living Space</li>
+          <li>✔ Up to 3 Bathrooms complete wash</li>
+          <li>✔ Heavy floor buffing & shine</li>
+          <li>✔ Cobweb, switches, wardrobes exterior</li>
+        </ul>
+        <button class="btn-price-book" onclick="quickSelect('3 BHK Deep Cleaning (₹4,499)')">Select 3 BHK Plan</button>
       </div>
 
-      <div class="map-frame">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04711155986!2d73.7805655755531!3d18.524598599540026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Kitchen & Bath Combo -->
+      <div class="price-card">
+        <h3>Kitchen + Bath Combo</h3>
+        <div class="price-wrap">
+          <div class="old-price">₹2,699</div>
+          <div class="live-price">₹1,699</div>
+        </div>
+        <ul class="price-list">
+          <li>✔ Heavy oil and grease removal</li>
+          <li>✔ Hard water scale removal</li>
+          <li>✔ Tap, shower buffing & tile wash</li>
+          <li>✔ Chimney outer degreasing</li>
+        </ul>
+        <button class="btn-price-book" onclick="quickSelect('Kitchen + Bathroom Combo (₹1,699)')">Select Combo Plan</button>
       </div>
     </div>
-  </section>
-
-  <!-- Sticky Bottom Bar -->
-  <div class="sticky-bar">
-    <a href="tel:9325100228" class="sticky-item sticky-call">
-      <i class="fa-solid fa-phone"></i> Call
-    </a>
-    <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safaai%20Pune,%20mujhe%20service%20details%20chahiye" target="_blank" class="sticky-item sticky-wa">
-      <i class="fa-brands fa-whatsapp"></i> WhatsApp
-    </a>
-    <a href="booking.html" class="sticky-item sticky-book">
-      <i class="fa-solid fa-calendar-check"></i> Book Now
-    </a>
   </div>
+</section>
+
+<!-- 5. Trust Badges / Why Choose Us -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Our Commitment</span>
+      <h2>Why Choose Saf Safai Pune?</h2>
+      <p>We do not outsource work to untrained daily laborers.</p>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon">🧼</div>
+        <h3>Eco-Friendly Chemicals</h3>
+        <p>Government-approved Taski/Diversey chemicals that protect tiles and human health.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">⚙️</div>
+        <h3>German Buffing Equipment</h3>
+        <p>Heavy mechanized single disc rotary machines for deep grime lifting.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">⏱️</div>
+        <h3>On-Time Arrival Guarantee</h3>
+        <p>Punctual arrival with full gear across all sectors of Pune & PCMC.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon">💯</div>
+        <h3>Re-clean Guarantee</h3>
+        <p>Not happy with any spot? Our team recleans on the spot with zero arguments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Service Areas in Pune & PCMC -->
+<section style="background: var(--white);">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Service Coverage</span>
+      <h2>Active Cleaning Locations in Pune & PCMC</h2>
+      <p>Serving over 30+ prime residential societies and commercial tech parks daily.</p>
+    </div>
+    <div class="area-chips">
+      <span class="area-chip">📍 Wakad</span>
+      <span class="area-chip">📍 Hinjewadi Phase 1, 2, 3</span>
+      <span class="area-chip">📍 Baner</span>
+      <span class="area-chip">📍 Balewadi</span>
+      <span class="area-chip">📍 Rahatani</span>
+      <span class="area-chip">📍 Pimple Saudagar</span>
+      <span class="area-chip">📍 Pimple Nilakh</span>
+      <span class="area-chip">📍 Chinchwad</span>
+      <span class="area-chip">📍 Akurdi & Nigdi</span>
+      <span class="area-chip">📍 Ravet & Punawale</span>
+      <span class="area-chip">📍 Tathawade</span>
+      <span class="area-chip">📍 Aundh</span>
+      <span class="area-chip">📍 Pashan</span>
+      <span class="area-chip">📍 Kothrud</span>
+      <span class="area-chip">📍 Bavdhan</span>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Customer Reviews & Ratings -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Verified Testimonials</span>
+      <h2>What Pune Residents Say (4.9★)</h2>
+      <p>Real feedback from local homeowners across PCMC & Pune.</p>
+    </div>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Had our 2BHK deep cleaned before moving in at Wakad. The single disc floor scrubbing removed stubborn paint marks easily. Extremely polite team!"</p>
+        <div class="reviewer">Rohit Shinde</div>
+        <div class="reviewer-loc">Wakad, Pune</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Hard water stains on our bathroom glass and tiles were terrible. Saf Safai team made it look brand new. Better pricing than Urban Company."</p>
+        <div class="reviewer">Pooja Kulkarni</div>
+        <div class="reviewer-loc">Pimple Saudagar</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Prompt response and came right on time in Hinjewadi Phase 1. Kitchen oil marks and trolley greasing was done with great care. Highly recommended!"</p>
+        <div class="reviewer">Amit Verma</div>
+        <div class="reviewer-loc">Hinjewadi, Pune</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Frequently Asked Questions -->
+<section style="background: var(--white);">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Got Questions?</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know before booking our team.</p>
+    </div>
+
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          How long does a 2 BHK deep cleaning take?
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          Usually a full 2 BHK deep cleaning takes between 4 to 6 hours depending on the furnishing and condition of the flat. A dedicated team of 2-3 cleaners is deployed.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Do I need to provide any machines, ladders or cleaning liquids?
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          No! Our team comes equipped with commercial single-disc floor scrubbers, wet/dry vacuum cleaners, professional ladders, microfiber wipes, and Diversey Taski chemicals. All we need is electricity and continuous water supply.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Are your cleaning chemicals safe for kids and pets?
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes, we strictly avoid raw muriatic acids that ruin tile glaze and emit choking fumes. We use certified, eco-friendly tile descalers and sanitizers safe for pets and children.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          When do I make the payment?
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          You only pay after our cleaning supervisor walks you through the entire apartment and you are 100% satisfied with the finish. We accept UPI (GPay, PhonePe, Paytm) and Cash.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Interactive Booking Form (Firebase Linked) -->
+<section class="booking-sec" id="bookingSection">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Book In 30 Seconds</span>
+      <h2>Schedule Your Deep Cleaning Slot</h2>
+      <p>Zero advance payment required. Instant confirmation.</p>
+    </div>
+
+    <div class="form-box">
+      <form id="firebaseBookingForm">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="custName" placeholder="e.g. Santosh Chavan" required>
+        </div>
+
+        <div class="form-group">
+          <label>Mobile Number *</label>
+          <input type="tel" id="custPhone" placeholder="Enter 10-digit number" required>
+        </div>
+
+        <div class="form-group">
+          <label>Select Cleaning Package *</label>
+          <select id="custService" required>
+            <option value="1 BHK Deep Cleaning (₹2,499)">1 BHK Deep Cleaning - ₹2,499</option>
+            <option value="2 BHK Deep Cleaning (₹3,499)" selected>2 BHK Deep Cleaning - ₹3,499</option>
+            <option value="3 BHK Deep Cleaning (₹4,499)">3 BHK Deep Cleaning - ₹4,499</option>
+            <option value="Kitchen + Bathroom Combo (₹1,699)">Kitchen + Bathroom Combo - ₹1,699</option>
+            <option value="Sofa & Fabric Care (₹799+)">Sofa / Carpet Shampooing - ₹799+</option>
+            <option value="Bathroom Deep Cleaning (₹499/bath)">Bathroom Deep Cleaning - ₹499/bath</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Society Name / Area in Pune *</label>
+          <input type="text" id="custLocation" placeholder="e.g. Kaspate Vasti, Wakad / Blue Ridge, Hinjewadi" required>
+        </div>
+
+        <button type="submit" class="btn-form-submit" id="bookBtn">Confirm Instant Booking ➔</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Saf Safai Pune</h4>
+      <p style="font-size: 0.88rem; line-height: 1.6;">Shree Seva Deep Cleaning Services is Pune's leading residential & commercial deep cleaning brand. Mechanized hygiene solutions you can trust.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Packages</h4>
+      <ul>
+        <li><a href="#bookingSection">1 BHK Deep Cleaning</a></li>
+        <li><a href="#bookingSection">2 BHK Deep Cleaning</a></li>
+        <li><a href="#bookingSection">3 BHK Deep Cleaning</a></li>
+        <li><a href="#bookingSection">Kitchen Degreasing</a></li>
+        <li><a href="#bookingSection">Bathroom Descaling</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact & Helpline</h4>
+      <ul>
+        <li>📞 Phone: <a href="tel:9325100228" style="color: #38bdf8; font-weight: bold;">9325100228</a></li>
+        <li>📍 Operating: Pune, Wakad, Hinjewadi, Chinchwad, PCMC</li>
+        <li>🕒 Working Hours: 8:00 AM - 9:00 PM (All 7 Days)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Saf Safai Pune (Shree Seva Deep Cleaning). All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Floating Call & WhatsApp Buttons -->
+<div class="floating-buttons">
+  <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune,%20I%20want%20to%20enquire%20about%20deep%20cleaning%20services" class="float-btn float-wa" target="_blank" title="Chat on WhatsApp">💬</a>
+  <a href="tel:9325100228" class="float-btn float-call" title="Call Now">📞</a>
+</div>
+
+<!-- Firebase SDK Integration -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script>
+  // Firebase Configuration Auto-Linked to your project
+  const firebaseConfig = {
+    apiKey: "AIzaSyD6Mi-G6sFadne_U0XLBJCx0Xm2UKQHgME",
+    authDomain: "deepcleaningadmin-a4aae.firebaseapp.com",
+    projectId: "deepcleaningadmin-a4aae",
+    storageBucket: "deepcleaningadmin-a4aae.firebasestorage.app",
+    messagingSenderId: "237461564110",
+    appId: "1:237461564110:web:90e66791ce7fde7d457e9f"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  // Quick Plan Selection Trigger
+  function quickSelect(planName) {
+    document.getElementById('custService').value = planName;
+    document.getElementById('bookingSection').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // FAQ Accordion
+  function toggleFaq(el) {
+    const parent = el.parentElement;
+    parent.classList.toggle('active');
+  }
+
+  // Firebase Live Submission
+  const form = document.getElementById('firebaseBookingForm');
+  const btn = document.getElementById('bookBtn');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.innerText = "Securing Slot in Database...";
+
+    const bookingData = {
+      name: document.getElementById('custName').value.trim(),
+      phone: document.getElementById('custPhone').value.trim(),
+      service: document.getElementById('custService').value,
+      location: document.getElementById('custLocation').value.trim(),
+      status: "Pending",
+      createdAt: new Date().toISOString()
+    };
+
+    db.collection("bookings").add(bookingData)
+      .then(() => {
+        alert("✅ Booking Successful! Our team will call you within 15 minutes to confirm details.");
+        form.reset();
+        btn.disabled = false;
+        btn.innerText = "Confirm Instant Booking ➔";
+      })
+      .catch((error) => {
+        console.error("Submission failed: ", error);
+        alert("Server busy. Please call directly at 9325100228.");
+        btn.disabled = false;
+        btn.innerText = "Confirm Instant Booking ➔";
+      });
+  });
+</script>
 
 </body>
 </html>
