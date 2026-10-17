@@ -22,7 +22,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
     body { background: #f1f5f9; color: var(--dark); min-height: 100vh; }
 
-    /* LOGIN SCREEN */
+    /* LOGIN */
     #loginScreen {
       display: flex;
       align-items: center;
@@ -52,11 +52,9 @@
       margin: 0 auto 16px;
       font-size: 1.6rem;
     }
-    .login-card h2 { font-size: 1.5rem; margin-bottom: 6px; }
-    .login-card p { font-size: 0.88rem; color: var(--slate); margin-bottom: 24px; }
     .form-group { text-align: left; margin-bottom: 14px; }
     .form-group label { display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 5px; text-transform: uppercase; }
-    .form-group input {
+    .form-group input, .form-group textarea {
       width: 100%;
       padding: 12px;
       border: 1px solid var(--border);
@@ -64,7 +62,7 @@
       font-size: 0.95rem;
       outline: none;
     }
-    .form-group input:focus { border-color: var(--primary); }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); }
     .btn-login {
       width: 100%;
       padding: 13px;
@@ -76,21 +74,12 @@
       font-size: 1rem;
       cursor: pointer;
       margin-top: 10px;
-      transition: 0.2s;
     }
-    .btn-login:hover { background: var(--primary-dark); }
     .error-msg { color: var(--danger); font-size: 0.85rem; margin-top: 10px; display: none; }
 
-    /* DASHBOARD SCREEN */
+    /* DASHBOARD */
     #dashboardScreen { display: none; padding-bottom: 40px; }
-    
-    .topbar {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+    .topbar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
     .topbar-wrap {
       max-width: 1250px;
       margin: 0 auto;
@@ -101,9 +90,7 @@
       flex-wrap: wrap;
       gap: 12px;
     }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.15rem; color: var(--primary); }
-    .user-info { display: flex; align-items: center; gap: 14px; }
-    .user-email { font-size: 0.85rem; color: var(--slate); font-weight: 600; }
+    .brand { font-weight: 800; font-size: 1.15rem; color: var(--primary); }
     .btn-logout {
       background: #fee2e2;
       color: var(--danger);
@@ -111,10 +98,8 @@
       padding: 7px 14px;
       border-radius: 6px;
       font-weight: 700;
-      font-size: 0.85rem;
       cursor: pointer;
     }
-    .btn-logout:hover { background: var(--danger); color: var(--white); }
 
     .nav-tabs {
       display: flex;
@@ -122,14 +107,15 @@
       max-width: 1250px;
       margin: 20px auto 0;
       padding: 0 20px;
+      flex-wrap: wrap;
     }
     .tab-btn {
-      padding: 10px 20px;
+      padding: 10px 18px;
       border-radius: 8px;
       border: 1px solid var(--border);
       background: var(--white);
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       cursor: pointer;
       color: var(--slate);
     }
@@ -141,179 +127,47 @@
 
     .main-wrap { max-width: 1250px; margin: 20px auto 0; padding: 0 20px; }
 
-    /* Bookings Tab */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-    .stat-card {
-      background: var(--white);
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-    }
+    /* Stats & Table */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .stat-card { background: var(--white); padding: 20px; border-radius: 12px; border: 1px solid var(--border); }
     .stat-card h4 { font-size: 0.8rem; color: var(--slate); text-transform: uppercase; font-weight: 700; }
     .stat-card .val { font-size: 2rem; font-weight: 800; margin-top: 4px; }
     .stat-total { color: var(--primary); }
     .stat-pending { color: var(--warning); }
     .stat-completed { color: var(--success); }
 
-    .table-container {
-      background: var(--white);
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
-      overflow: hidden;
-    }
-    .controls-bar {
-      padding: 16px 20px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .search-box { flex: 1; min-width: 240px; max-width: 400px; }
-    .search-box input {
-      width: 100%;
-      padding: 10px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.9rem;
-      outline: none;
-    }
-    .filter-box select {
-      padding: 10px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.9rem;
-      outline: none;
-      background: var(--white);
-      font-weight: 600;
-    }
+    .table-container { background: var(--white); border-radius: 14px; border: 1px solid var(--border); overflow: hidden; }
+    .controls-bar { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; gap: 12px; flex-wrap: wrap; }
+    .search-box input { padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; min-width: 250px; outline: none; }
+    table { width: 100%; border-collapse: collapse; min-width: 850px; }
+    th { background: #f8fafc; padding: 14px 18px; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; color: #475569; }
+    td { padding: 16px 18px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
 
-    .table-responsive { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; text-align: left; min-width: 850px; }
-    th {
-      background: #f8fafc;
-      padding: 14px 18px;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #475569;
-      border-bottom: 1px solid var(--border);
-    }
-    td { padding: 16px 18px; border-bottom: 1px solid var(--border); font-size: 0.9rem; vertical-align: middle; }
-    tr:hover { background: #fafafa; }
-
-    .cust-name { font-weight: 700; color: var(--dark); }
-    .cust-date { font-size: 0.78rem; color: var(--slate); }
-    .package-tag {
-      background: #f0f9ff;
-      color: var(--primary-dark);
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .status-select {
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.8rem;
-      border: 1px solid var(--border);
-      cursor: pointer;
-      outline: none;
-    }
-    .status-pending { background: #fef3c7; color: #92400e; border-color: #fde68a; }
-    .status-confirmed { background: #e0f2fe; color: #075985; border-color: #bae6fd; }
-    .status-completed { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
-    .status-cancelled { background: #fee2e2; color: #991b1b; border-color: #fecaca; }
-
-    .action-group { display: flex; align-items: center; gap: 8px; }
-    .act-btn {
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      border: none;
-      cursor: pointer;
-    }
+    .status-select { padding: 6px 10px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; border: 1px solid var(--border); }
+    .act-btn { padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; text-decoration: none; border: none; cursor: pointer; display: inline-flex; gap: 4px; }
     .act-call { background: #e0f2fe; color: var(--primary); }
     .act-wa { background: #dcfce7; color: var(--success); }
     .act-del { background: #fef2f2; color: var(--danger); }
-    .act-del:hover { background: var(--danger); color: var(--white); }
 
-    /* Price Manager Tab */
-    #tabPrices { display: none; }
-    .price-admin-card {
-      background: var(--white);
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      padding: 24px;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
-    }
-    .price-group-title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--primary-dark);
-      margin: 18px 0 12px;
-      padding-bottom: 6px;
-      border-bottom: 2px solid #e0f2fe;
-    }
-    .price-group-title:first-child { margin-top: 0; }
-    .price-editor-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 14px;
-    }
-    .price-item-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #f8fafc;
-      padding: 12px 14px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-    }
-    .price-item-row label { font-size: 0.88rem; font-weight: 700; color: #334155; }
-    .price-input-wrap { display: flex; align-items: center; gap: 6px; }
-    .price-input-wrap span { font-weight: 800; color: var(--primary); }
-    .price-input-wrap input {
-      width: 100px;
-      padding: 8px 10px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      outline: none;
-      text-align: right;
-    }
-    .price-input-wrap input:focus { border-color: var(--primary); }
-    .btn-save-prices {
-      margin-top: 24px;
+    /* Forms */
+    .admin-card { background: var(--white); border-radius: 14px; border: 1px solid var(--border); padding: 24px; }
+    .price-group-title { font-size: 1.05rem; font-weight: 800; color: var(--primary-dark); margin: 18px 0 10px; border-bottom: 2px solid #e0f2fe; padding-bottom: 4px; }
+    .price-editor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+    .price-item-row { display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border); }
+    .price-item-row input { width: 105px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; text-align: right; font-weight: 700; }
+
+    .btn-submit-action {
+      margin-top: 20px;
       background: var(--primary);
       color: var(--white);
       border: none;
-      padding: 14px 28px;
+      padding: 13px 24px;
       font-size: 1rem;
       font-weight: 800;
       border-radius: 8px;
       cursor: pointer;
       width: 100%;
     }
-    .btn-save-prices:hover { background: var(--primary-dark); }
-    .save-alert { margin-top: 12px; padding: 10px; border-radius: 6px; font-weight: 700; text-align: center; display: none; }
   </style>
 </head>
 <body>
@@ -322,86 +176,62 @@
 <div id="loginScreen">
   <div class="login-card">
     <div class="login-icon">🔒</div>
-    <h2>Admin Dashboard</h2>
-    <p>Shree Seva Deep Cleaning Leads</p>
-
+    <h2>Admin Login</h2>
+    <p style="color: var(--slate); font-size: 0.85rem; margin-bottom: 20px;">Saf Safai Pune Control Panel</p>
     <div class="form-group">
-      <label>Admin Email</label>
-      <input type="email" id="loginEmail" placeholder="Enter your email" required>
+      <label>Email</label>
+      <input type="email" id="loginEmail" placeholder="admin@safsafaipune.sbs" required>
     </div>
-
     <div class="form-group">
       <label>Password</label>
       <input type="password" id="loginPassword" placeholder="Enter password" required>
     </div>
-
-    <button class="btn-login" id="loginSubmitBtn" onclick="loginAdmin()">Login to Dashboard</button>
+    <button class="btn-login" id="loginSubmitBtn" onclick="loginAdmin()">Login ➔</button>
     <div class="error-msg" id="loginError"></div>
   </div>
 </div>
 
-<!-- DASHBOARD SCREEN -->
+<!-- DASHBOARD -->
 <div id="dashboardScreen">
   <div class="topbar">
     <div class="topbar-wrap">
-      <div class="brand">
-        ✨ Saf Safai Pune - Admin Panel
-      </div>
-      <div class="user-info">
-        <span class="user-email" id="loggedAdminEmail"></span>
+      <div class="brand">✨ Saf Safai Pune - Control Panel</div>
+      <div>
+        <span id="loggedAdminEmail" style="font-size: 0.85rem; margin-right: 12px; font-weight: 600;"></span>
         <button class="btn-logout" onclick="logoutAdmin()">Logout</button>
       </div>
     </div>
   </div>
 
-  <!-- Switch Tabs -->
   <div class="nav-tabs">
-    <button class="tab-btn active" id="btnTabBookings" onclick="switchTab('bookings')">📋 Live Bookings</button>
-    <button class="tab-btn" id="btnTabPrices" onclick="switchTab('prices')">🏷️ Price Manager (Edit Rates)</button>
+    <button class="tab-btn active" id="btnTabBookings" onclick="switchTab('bookings')">📋 Live Orders & Bookings</button>
+    <button class="tab-btn" id="btnTabPrices" onclick="switchTab('prices')">🏷️ Price Manager (Rates)</button>
+    <button class="tab-btn" id="btnTabContent" onclick="switchTab('content')">🖼️ Website Photos & Text CMS</button>
   </div>
 
-  <!-- 1. Bookings Tab -->
+  <!-- TAB 1: BOOKINGS -->
   <div class="main-wrap" id="tabBookings">
     <div class="stats-grid">
-      <div class="stat-card">
-        <h4>Total Bookings</h4>
-        <div class="val stat-total" id="statTotal">0</div>
-      </div>
-      <div class="stat-card">
-        <h4>Pending Orders</h4>
-        <div class="val stat-pending" id="statPending">0</div>
-      </div>
-      <div class="stat-card">
-        <h4>Completed Cleanings</h4>
-        <div class="val stat-completed" id="statCompleted">0</div>
-      </div>
+      <div class="stat-card"><h4>Total Orders</h4><div class="val stat-total" id="statTotal">0</div></div>
+      <div class="stat-card"><h4>Pending Orders</h4><div class="val stat-pending" id="statPending">0</div></div>
+      <div class="stat-card"><h4>Completed</h4><div class="val stat-completed" id="statCompleted">0</div></div>
     </div>
 
     <div class="table-container">
       <div class="controls-bar">
         <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Search by name, phone or society area..." onkeyup="filterLeads()">
-        </div>
-        <div class="filter-box">
-          <select id="statusFilter" onchange="filterLeads()">
-            <option value="ALL">All Status</option>
-            <option value="Pending">Pending Only</option>
-            <option value="Confirmed">Confirmed Only</option>
-            <option value="Completed">Completed Only</option>
-            <option value="Cancelled">Cancelled</option>
-          </select>
+          <input type="text" id="searchInput" placeholder="Search customer, phone or area..." onkeyup="filterLeads()">
         </div>
       </div>
-
-      <div class="table-responsive">
+      <div style="overflow-x: auto;">
         <table>
           <thead>
             <tr>
               <th>Date / Time</th>
               <th>Customer</th>
-              <th>Phone Number</th>
-              <th>Service Package</th>
-              <th>Area / Society</th>
+              <th>Phone</th>
+              <th>Service Details & Add-ons</th>
+              <th>Total Bill</th>
               <th>Status</th>
               <th>Actions</th>
             </tr>
@@ -409,65 +239,115 @@
           <tbody id="leadsTbody"></tbody>
         </table>
       </div>
-      <div id="noDataNotice" style="display: none; padding: 40px; text-align: center; color: var(--slate);">
-        No cleaning bookings found matching your search.
-      </div>
     </div>
   </div>
 
-  <!-- 2. Price Manager Tab -->
-  <div class="main-wrap" id="tabPrices">
-    <div class="price-admin-card">
-      <h3 style="margin-bottom: 8px;">Direct Rate Card Manager</h3>
-      <p style="color: var(--slate); font-size: 0.9rem; margin-bottom: 20px;">Yaha price badal kar "Save All Prices" dabayein. Website par live naya rate turant update ho jayega bina code chhue.</p>
+  <!-- TAB 2: PRICES -->
+  <div class="main-wrap" id="tabPrices" style="display: none;">
+    <div class="admin-card">
+      <h3>Direct Rate Card Manager</h3>
+      <p style="color: var(--slate); font-size: 0.88rem; margin-bottom: 18px;">Rate badal kar "Save All Rates" dabayein, website par turant calculate hoga.</p>
 
-      <form id="priceManagerForm" onsubmit="saveAllPrices(event)">
-        <!-- Full Home Packages -->
-        <div class="price-group-title">Full Apartment Packages (Kitchen Included)</div>
+      <form onsubmit="saveAllPrices(event)">
+        <div class="price-group-title">Base Apartment Packages (Without Wall)</div>
         <div class="price-editor-grid">
-          <div class="price-item-row"><label>1 BHK Full Deep Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_1bhk" value="2499"></div></div>
-          <div class="price-item-row"><label>2 BHK Full Deep Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_2bhk" value="3499"></div></div>
-          <div class="price-item-row"><label>3 BHK Full Deep Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_3bhk" value="4499"></div></div>
-          <div class="price-item-row"><label>4 BHK Full Deep Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_4bhk" value="5999"></div></div>
+          <div class="price-item-row"><label>1 BHK Base Clean</label><span>₹ <input type="number" id="p_1bhk" value="4499"></span></div>
+          <div class="price-item-row"><label>2 BHK Base Clean</label><span>₹ <input type="number" id="p_2bhk" value="5499"></span></div>
+          <div class="price-item-row"><label>3 BHK Base Clean</label><span>₹ <input type="number" id="p_3bhk" value="6499"></span></div>
+          <div class="price-item-row"><label>4 BHK Base Clean</label><span>₹ <input type="number" id="p_4bhk" value="7999"></span></div>
         </div>
 
-        <!-- Single Spaces -->
-        <div class="price-group-title">Single Space & Combos</div>
+        <div class="price-group-title">Wall Cleaning Add-ons (Calculated On Flat Selection)</div>
         <div class="price-editor-grid">
-          <div class="price-item-row"><label>Kitchen Deep Cleaning</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_kitchen" value="1299"></div></div>
-          <div class="price-item-row"><label>Bathroom Deep Cleaning</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_bathroom" value="499"></div></div>
-          <div class="price-item-row"><label>Kitchen + Bath Combo</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_combo" value="1699"></div></div>
-          <div class="price-item-row"><label>3-Seater Sofa Shampoo</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_sofa3" value="799"></div></div>
-          <div class="price-item-row"><label>5-Seater Sofa Set</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_sofa5" value="1199"></div></div>
+          <div class="price-item-row"><label>1 BHK Wall Cleaning</label><span>₹ <input type="number" id="p_wall_1bhk" value="2000"></span></div>
+          <div class="price-item-row"><label>2 BHK Wall Cleaning</label><span>₹ <input type="number" id="p_wall_2bhk" value="3000"></span></div>
+          <div class="price-item-row"><label>3 BHK Wall Cleaning</label><span>₹ <input type="number" id="p_wall_3bhk" value="4000"></span></div>
+          <div class="price-item-row"><label>4 BHK Wall Cleaning</label><span>₹ <input type="number" id="p_wall_4bhk" value="5000"></span></div>
         </div>
 
-        <!-- Individual Items -->
-        <div class="price-group-title">20+ Individual Single Items</div>
+        <div class="price-group-title">Single Spaces & Combos</div>
         <div class="price-editor-grid">
-          <div class="price-item-row"><label>Chair Cleaning</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_chair" value="149"></div></div>
-          <div class="price-item-row"><label>Window & Mesh Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_window" value="199"></div></div>
-          <div class="price-item-row"><label>Balcony Deep Wash</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_balcony" value="399"></div></div>
-          <div class="price-item-row"><label>Single Bed Mattress</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_mattress_single" value="599"></div></div>
-          <div class="price-item-row"><label>Double Bed Mattress</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_mattress_double" value="999"></div></div>
-          <div class="price-item-row"><label>Ceiling Fan</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_fan" value="99"></div></div>
-          <div class="price-item-row"><label>Exhaust Fan</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_exhaust" value="149"></div></div>
-          <div class="price-item-row"><label>Refrigerator</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_fridge" value="349"></div></div>
-          <div class="price-item-row"><label>Microwave Oven</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_microwave" value="199"></div></div>
-          <div class="price-item-row"><label>Small Carpet</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_carpet_sm" value="399"></div></div>
-          <div class="price-item-row"><label>Large Carpet</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_carpet_lg" value="699"></div></div>
-          <div class="price-item-row"><label>Single Wardrobe</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_wardrobe_single" value="199"></div></div>
-          <div class="price-item-row"><label>Double Wardrobe</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_wardrobe_double" value="349"></div></div>
-          <div class="price-item-row"><label>Chimney Outer Clean</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_chimney" value="499"></div></div>
-          <div class="price-item-row"><label>Gas Stove Top</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_gasstove" value="199"></div></div>
-          <div class="price-item-row"><label>Curtain Vacuuming</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_curtain" value="149"></div></div>
-          <div class="price-item-row"><label>Single Room Floor Scrub</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_floorscrub" value="499"></div></div>
-          <div class="price-item-row"><label>Glass Partition</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_glass" value="299"></div></div>
-          <div class="price-item-row"><label>Bird Net Cleaning</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_birdnet" value="299"></div></div>
-          <div class="price-item-row"><label>Shoe Rack Sanitization</label><div class="price-input-wrap"><span>₹</span><input type="number" id="p_shoerack" value="149"></div></div>
+          <div class="price-item-row"><label>Kitchen Deep Clean</label><span>₹ <input type="number" id="p_kitchen" value="1299"></span></div>
+          <div class="price-item-row"><label>Bathroom Deep Clean</label><span>₹ <input type="number" id="p_bathroom" value="499"></span></div>
+          <div class="price-item-row"><label>Kitchen + Bath Combo</label><span>₹ <input type="number" id="p_combo" value="1699"></span></div>
+          <div class="price-item-row"><label>3-Seater Sofa Shampoo</label><span>₹ <input type="number" id="p_sofa3" value="799"></span></div>
+          <div class="price-item-row"><label>5-Seater Sofa Set</label><span>₹ <input type="number" id="p_sofa5" value="1199"></span></div>
         </div>
 
-        <button type="submit" class="btn-save-prices" id="savePriceBtn">💾 Save All Prices to Website</button>
-        <div id="savePriceMsg" class="save-alert"></div>
+        <div class="price-group-title">Individual Single Items (20+ Items)</div>
+        <div class="price-editor-grid">
+          <div class="price-item-row"><label>Chair Cleaning</label><span>₹ <input type="number" id="p_chair" value="149"></span></div>
+          <div class="price-item-row"><label>Window & Mesh</label><span>₹ <input type="number" id="p_window" value="199"></span></div>
+          <div class="price-item-row"><label>Balcony Deep Wash</label><span>₹ <input type="number" id="p_balcony" value="399"></span></div>
+          <div class="price-item-row"><label>Single Bed Mattress</label><span>₹ <input type="number" id="p_mattress_single" value="599"></span></div>
+          <div class="price-item-row"><label>Double Bed Mattress</label><span>₹ <input type="number" id="p_mattress_double" value="999"></span></div>
+          <div class="price-item-row"><label>Ceiling Fan</label><span>₹ <input type="number" id="p_fan" value="99"></span></div>
+          <div class="price-item-row"><label>Exhaust Fan</label><span>₹ <input type="number" id="p_exhaust" value="149"></span></div>
+          <div class="price-item-row"><label>Fridge Cleaning</label><span>₹ <input type="number" id="p_fridge" value="349"></span></div>
+          <div class="price-item-row"><label>Microwave Cleaning</label><span>₹ <input type="number" id="p_microwave" value="199"></span></div>
+          <div class="price-item-row"><label>Small Carpet</label><span>₹ <input type="number" id="p_carpet_sm" value="399"></span></div>
+          <div class="price-item-row"><label>Large Carpet</label><span>₹ <input type="number" id="p_carpet_lg" value="699"></span></div>
+          <div class="price-item-row"><label>Single Wardrobe</label><span>₹ <input type="number" id="p_wardrobe_single" value="199"></span></div>
+          <div class="price-item-row"><label>Double Wardrobe</label><span>₹ <input type="number" id="p_wardrobe_double" value="349"></span></div>
+          <div class="price-item-row"><label>Chimney Outer Clean</label><span>₹ <input type="number" id="p_chimney" value="499"></span></div>
+          <div class="price-item-row"><label>Gas Stove Top</label><span>₹ <input type="number" id="p_gasstove" value="199"></span></div>
+          <div class="price-item-row"><label>Curtain Vacuuming</label><span>₹ <input type="number" id="p_curtain" value="149"></span></div>
+          <div class="price-item-row"><label>Single Floor Scrub</label><span>₹ <input type="number" id="p_floorscrub" value="499"></span></div>
+          <div class="price-item-row"><label>Glass Partition</label><span>₹ <input type="number" id="p_glass" value="299"></span></div>
+          <div class="price-item-row"><label>Bird Net Cleaning</label><span>₹ <input type="number" id="p_birdnet" value="299"></span></div>
+          <div class="price-item-row"><label>Shoe Rack Sanitization</label><span>₹ <input type="number" id="p_shoerack" value="149"></span></div>
+        </div>
+
+        <button type="submit" class="btn-submit-action" id="savePriceBtn">💾 Save All Rates to Website</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TAB 3: CONTENT & PHOTO CMS -->
+  <div class="main-wrap" id="tabContent" style="display: none;">
+    <div class="admin-card">
+      <h3>Website Photos & Text Editor (CMS)</h3>
+      <p style="color: var(--slate); font-size: 0.88rem; margin-bottom: 18px;">Website ki headlines ya kisi bhi photo ka URL badal kar live update karein.</p>
+
+      <form onsubmit="saveWebsiteContent(event)">
+        <div class="form-group">
+          <label>Header Tagline / Slogan</label>
+          <input type="text" id="c_header_tagline" value="आपका घर, हमारी ज़िम्मेदारी | 100% Spotless Results">
+        </div>
+
+        <div class="form-group">
+          <label>Hero Main Headline</label>
+          <input type="text" id="c_hero_h1" value="पुणे और PCMC में प्रोफेशनल मैकेनाइज्ड डीप होम क्लीनिंग">
+        </div>
+
+        <div class="form-group">
+          <label>Hero Subtitle Text</label>
+          <textarea id="c_hero_sub" rows="2">1 BHK से 4 BHK फ्लैट्स, किचन डीग्रेसिंग, बाथरूम स्केलिंग और 20+ सिंगल आइटम्स की स्पॉटलेस सफाई।</textarea>
+        </div>
+
+        <div class="price-group-title">Real Action Cleaning Images (Photo URLs)</div>
+        
+        <div class="form-group">
+          <label>Bathroom Scrubbing Real Photo URL</label>
+          <input type="url" id="img_bathroom" value="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80">
+        </div>
+
+        <div class="form-group">
+          <label>Kitchen Degreasing Real Photo URL</label>
+          <input type="url" id="img_kitchen" value="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80">
+        </div>
+
+        <div class="form-group">
+          <label>Sofa Wet Extraction Machine Photo URL</label>
+          <input type="url" id="img_sofa" value="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80">
+        </div>
+
+        <div class="form-group">
+          <label>Window Glass Buffing Photo URL</label>
+          <input type="url" id="img_window" value="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=700&q=80">
+        </div>
+
+        <button type="submit" class="btn-submit-action" id="saveContentBtn">🖼️ Update Website Content & Photos</button>
       </form>
     </div>
   </div>
@@ -500,6 +380,7 @@
       document.getElementById('loggedAdminEmail').innerText = user.email;
       listenToLiveLeads();
       loadCurrentPrices();
+      loadWebsiteContent();
     } else {
       document.getElementById('loginScreen').style.display = 'flex';
       document.getElementById('dashboardScreen').style.display = 'none';
@@ -512,12 +393,6 @@
     const btn = document.getElementById('loginSubmitBtn');
     const errBox = document.getElementById('loginError');
 
-    if (!email || !pass) {
-      errBox.innerText = "Please enter both email and password.";
-      errBox.style.display = "block";
-      return;
-    }
-
     btn.disabled = true;
     btn.innerText = "Verifying...";
     errBox.style.display = "none";
@@ -525,96 +400,58 @@
     auth.signInWithEmailAndPassword(email, pass)
       .then(() => {
         btn.disabled = false;
-        btn.innerText = "Login to Dashboard";
+        btn.innerText = "Login ➔";
       })
       .catch(error => {
         btn.disabled = false;
-        btn.innerText = "Login to Dashboard";
-        errBox.innerText = "Invalid credentials: " + error.message;
+        btn.innerText = "Login ➔";
+        errBox.innerText = error.message;
         errBox.style.display = "block";
       });
   }
 
-  function logoutAdmin() {
-    auth.signOut();
-  }
+  function logoutAdmin() { auth.signOut(); }
 
   function switchTab(tab) {
-    if (tab === 'bookings') {
-      document.getElementById('tabBookings').style.display = 'block';
-      document.getElementById('tabPrices').style.display = 'none';
-      document.getElementById('btnTabBookings').classList.add('active');
-      document.getElementById('btnTabPrices').classList.remove('active');
-    } else {
-      document.getElementById('tabBookings').style.display = 'none';
-      document.getElementById('tabPrices').style.display = 'block';
-      document.getElementById('btnTabBookings').classList.remove('active');
-      document.getElementById('btnTabPrices').classList.add('active');
-    }
+    ['bookings', 'prices', 'content'].forEach(t => {
+      document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1)).style.display = (t === tab) ? 'block' : 'none';
+      document.getElementById('btnTab' + t.charAt(0).toUpperCase() + t.slice(1)).classList.toggle('active', t === tab);
+    });
   }
 
   function listenToLiveLeads() {
     db.collection("bookings").orderBy("createdAt", "desc").onSnapshot(snapshot => {
       allBookings = [];
-      snapshot.forEach(doc => {
-        allBookings.push({ id: doc.id, ...doc.data() });
-      });
+      snapshot.forEach(doc => allBookings.push({ id: doc.id, ...doc.data() }));
       renderDashboardTable(allBookings);
-    }, error => {
-      console.error("Firestore read error:", error);
     });
   }
 
   function renderDashboardTable(data) {
     const tbody = document.getElementById('leadsTbody');
-    const noData = document.getElementById('noDataNotice');
     tbody.innerHTML = '';
 
-    let total = allBookings.length;
-    let pending = allBookings.filter(b => (b.status || 'Pending') === 'Pending').length;
-    let completed = allBookings.filter(b => b.status === 'Completed').length;
-
-    document.getElementById('statTotal').innerText = total;
-    document.getElementById('statPending').innerText = pending;
-    document.getElementById('statCompleted').innerText = completed;
-
-    if (data.length === 0) {
-      noData.style.display = 'block';
-      return;
-    }
-    noData.style.display = 'none';
+    document.getElementById('statTotal').innerText = allBookings.length;
+    document.getElementById('statPending').innerText = allBookings.filter(b => (b.status || 'Pending') === 'Pending').length;
+    document.getElementById('statCompleted').innerText = allBookings.filter(b => b.status === 'Completed').length;
 
     data.forEach(item => {
       const status = item.status || 'Pending';
       const created = item.createdAt ? new Date(item.createdAt) : new Date();
-      const dateFormatted = created.toLocaleDateString("en-IN", { day: '2-digit', month: 'short', year: 'numeric' });
-      const timeFormatted = created.toLocaleTimeString("en-IN", { hour: '2-digit', minute: '2-digit' });
-
-      let statusClass = "status-pending";
-      if (status === 'Confirmed') statusClass = "status-confirmed";
-      if (status === 'Completed') statusClass = "status-completed";
-      if (status === 'Cancelled') statusClass = "status-cancelled";
-
       const tr = document.createElement('tr');
       tr.innerHTML = `
+        <td><b>${created.toLocaleDateString("en-IN")}</b><br><small style="color:#64748b">${created.toLocaleTimeString("en-IN", {hour: '2-digit', minute:'2-digit'})}</small></td>
+        <td><b>${item.name || 'Customer'}</b><br><small style="color:#64748b">📍 ${item.location || 'Pune'}</small></td>
+        <td><b>${item.phone || '-'}</b></td>
         <td>
-          <div style="font-weight: 600;">${dateFormatted}</div>
-          <div class="cust-date">${timeFormatted}</div>
+          <div style="background:#f0f9ff; padding:6px 10px; border-radius:6px; font-size:0.83rem; line-height: 1.4;">
+            <b>${item.service || 'Service'}</b>
+            ${item.summary ? '<br>' + item.summary : ''}
+          </div>
         </td>
+        <td><span style="font-size:1.1rem; font-weight:800; color:var(--primary);">₹${item.totalAmount || 0}</span></td>
         <td>
-          <div class="cust-name">${item.name || 'Anonymous'}</div>
-        </td>
-        <td>
-          <span style="font-weight: 700; color: #1e293b;">${item.phone || '-'}</span>
-        </td>
-        <td>
-          <span class="package-tag">${item.service || 'Full Cleaning'}</span>
-        </td>
-        <td>
-          <span style="color: #334155;">📍 ${item.location || 'Pune Area'}</span>
-        </td>
-        <td>
-          <select class="status-select ${statusClass}" onchange="changeLeadStatus('${item.id}', this.value)">
+          <select class="status-select" onchange="updateStatus('${item.id}', this.value)">
             <option value="Pending" ${status === 'Pending' ? 'selected' : ''}>Pending</option>
             <option value="Confirmed" ${status === 'Confirmed' ? 'selected' : ''}>Confirmed</option>
             <option value="Completed" ${status === 'Completed' ? 'selected' : ''}>Completed</option>
@@ -622,10 +459,10 @@
           </select>
         </td>
         <td>
-          <div class="action-group">
-            <a href="tel:${item.phone}" class="act-btn act-call" title="Call">📞 Call</a>
-            <a href="https://wa.me/91${item.phone}?text=Hello%20${encodeURIComponent(item.name || '')},%20we%20received%20your%20deep%20cleaning%20booking%20at%20Saf%20Safai%20Pune." target="_blank" class="act-btn act-wa" title="WhatsApp">💬 WA</a>
-            <button class="act-btn act-del" onclick="deleteLead('${item.id}')" title="Delete">🗑️</button>
+          <div style="display:flex; gap:6px;">
+            <a href="tel:${item.phone}" class="act-btn act-call">📞</a>
+            <a href="https://wa.me/91${item.phone}?text=Hello%20${encodeURIComponent(item.name || '')},%20Saf%20Safai%20Pune%20se%20aapka%20booking%20mila." target="_blank" class="act-btn act-wa">💬</a>
+            <button class="act-btn act-del" onclick="deleteLead('${item.id}')">🗑️</button>
           </div>
         </td>
       `;
@@ -633,107 +470,83 @@
     });
   }
 
-  function changeLeadStatus(docId, newStatus) {
-    db.collection("bookings").doc(docId).update({ status: newStatus });
-  }
-
-  function deleteLead(docId) {
-    if (confirm("Are you sure you want to delete this booking?")) {
-      db.collection("bookings").doc(docId).delete();
-    }
-  }
+  function updateStatus(id, status) { db.collection("bookings").doc(id).update({ status }); }
+  function deleteLead(id) { if(confirm("Booking delete karein?")) db.collection("bookings").doc(id).delete(); }
 
   function filterLeads() {
-    const q = document.getElementById('searchInput').value.toLowerCase().trim();
-    const filter = document.getElementById('statusFilter').value;
-
-    const filtered = allBookings.filter(item => {
-      const matchText = (item.name && item.name.toLowerCase().includes(q)) ||
-                        (item.phone && item.phone.includes(q)) ||
-                        (item.location && item.location.toLowerCase().includes(q)) ||
-                        (item.service && item.service.toLowerCase().includes(q));
-
-      const currentStatus = item.status || 'Pending';
-      const matchStatus = (filter === 'ALL') || (currentStatus === filter);
-
-      return matchText && matchStatus;
-    });
-
+    const q = document.getElementById('searchInput').value.toLowerCase();
+    const filtered = allBookings.filter(b => (b.name && b.name.toLowerCase().includes(q)) || (b.phone && b.phone.includes(q)) || (b.location && b.location.toLowerCase().includes(q)));
     renderDashboardTable(filtered);
   }
 
-  // Load Saved Prices from Firestore
   function loadCurrentPrices() {
     db.collection("prices").doc("current").get().then(doc => {
       if (doc.exists) {
-        const data = doc.data();
-        for (const [key, val] of Object.entries(data)) {
-          const input = document.getElementById('p_' + key);
-          if (input) input.value = val;
+        const p = doc.data();
+        for (const [k, v] of Object.entries(p)) {
+          const el = document.getElementById('p_' + k);
+          if (el) el.value = v;
         }
       }
-    }).catch(err => console.log("No custom prices yet, using defaults:", err));
+    });
   }
 
-  // Save All Prices to Firestore
   function saveAllPrices(e) {
     e.preventDefault();
     const btn = document.getElementById('savePriceBtn');
-    const msg = document.getElementById('savePriceMsg');
-
     btn.disabled = true;
-    btn.innerText = "Saving to Database...";
+    btn.innerText = "Saving Rates...";
 
-    const priceData = {
-      "1bhk": document.getElementById('p_1bhk').value,
-      "2bhk": document.getElementById('p_2bhk').value,
-      "3bhk": document.getElementById('p_3bhk').value,
-      "4bhk": document.getElementById('p_4bhk').value,
-      "kitchen": document.getElementById('p_kitchen').value,
-      "bathroom": document.getElementById('p_bathroom').value,
-      "combo": document.getElementById('p_combo').value,
-      "sofa3": document.getElementById('p_sofa3').value,
-      "sofa5": document.getElementById('p_sofa5').value,
-      "chair": document.getElementById('p_chair').value,
-      "window": document.getElementById('p_window').value,
-      "balcony": document.getElementById('p_balcony').value,
-      "mattress_single": document.getElementById('p_mattress_single').value,
-      "mattress_double": document.getElementById('p_mattress_double').value,
-      "fan": document.getElementById('p_fan').value,
-      "exhaust": document.getElementById('p_exhaust').value,
-      "fridge": document.getElementById('p_fridge').value,
-      "microwave": document.getElementById('p_microwave').value,
-      "carpet_sm": document.getElementById('p_carpet_sm').value,
-      "carpet_lg": document.getElementById('p_carpet_lg').value,
-      "wardrobe_single": document.getElementById('p_wardrobe_single').value,
-      "wardrobe_double": document.getElementById('p_wardrobe_double').value,
-      "chimney": document.getElementById('p_chimney').value,
-      "gasstove": document.getElementById('p_gasstove').value,
-      "curtain": document.getElementById('p_curtain').value,
-      "floorscrub": document.getElementById('p_floorscrub').value,
-      "glass": document.getElementById('p_glass').value,
-      "birdnet": document.getElementById('p_birdnet').value,
-      "shoerack": document.getElementById('p_shoerack').value
+    const keys = ["1bhk","2bhk","3bhk","4bhk","wall_1bhk","wall_2bhk","wall_3bhk","wall_4bhk","kitchen","bathroom","combo","sofa3","sofa5","chair","window","balcony","mattress_single","mattress_double","fan","exhaust","fridge","microwave","carpet_sm","carpet_lg","wardrobe_single","wardrobe_double","chimney","gasstove","curtain","floorscrub","glass","birdnet","shoerack"];
+    const payload = {};
+    keys.forEach(k => {
+      const el = document.getElementById('p_' + k);
+      if (el) payload[k] = Number(el.value);
+    });
+
+    db.collection("prices").doc("current").set(payload, { merge: true }).then(() => {
+      alert("✅ All prices updated successfully!");
+      btn.disabled = false;
+      btn.innerText = "💾 Save All Rates to Website";
+    });
+  }
+
+  function loadWebsiteContent() {
+    db.collection("settings").doc("content").get().then(doc => {
+      if (doc.exists) {
+        const d = doc.data();
+        if (d.headerTagline) document.getElementById('c_header_tagline').value = d.headerTagline;
+        if (d.heroH1) document.getElementById('c_hero_h1').value = d.heroH1;
+        if (d.heroSub) document.getElementById('c_hero_sub').value = d.heroSub;
+        if (d.imgBathroom) document.getElementById('img_bathroom').value = d.imgBathroom;
+        if (d.imgKitchen) document.getElementById('img_kitchen').value = d.imgKitchen;
+        if (d.imgSofa) document.getElementById('img_sofa').value = d.imgSofa;
+        if (d.imgWindow) document.getElementById('img_window').value = d.imgWindow;
+      }
+    });
+  }
+
+  function saveWebsiteContent(e) {
+    e.preventDefault();
+    const btn = document.getElementById('saveContentBtn');
+    btn.disabled = true;
+    btn.innerText = "Updating Website Content...";
+
+    const contentPayload = {
+      headerTagline: document.getElementById('c_header_tagline').value,
+      heroH1: document.getElementById('c_hero_h1').value,
+      heroSub: document.getElementById('c_hero_sub').value,
+      imgBathroom: document.getElementById('img_bathroom').value,
+      imgKitchen: document.getElementById('img_kitchen').value,
+      imgSofa: document.getElementById('img_sofa').value,
+      imgWindow: document.getElementById('img_window').value
     };
 
-    db.collection("prices").doc("current").set(priceData)
-      .then(() => {
-        btn.disabled = false;
-        btn.innerText = "💾 Save All Prices to Website";
-        msg.style.display = "block";
-        msg.style.background = "#dcfce7";
-        msg.style.color = "#166534";
-        msg.innerText = "✅ Prices successfully updated! Website will now show new rates.";
-        setTimeout(() => msg.style.display = "none", 4000);
-      })
-      .catch(err => {
-        btn.disabled = false;
-        btn.innerText = "💾 Save All Prices to Website";
-        msg.style.display = "block";
-        msg.style.background = "#fee2e2";
-        msg.style.color = "#991b1b";
-        msg.innerText = "Error saving prices: " + err.message;
-      });
+    db.collection("settings").doc("content").set(contentPayload, { merge: true }).then(() => {
+      alert("✅ Website photos and text successfully updated live!");
+      btn.disabled = false;
+      btn.innerText = "🖼️ Update Website Content & Photos";
+    });
   }
 </script>
 
