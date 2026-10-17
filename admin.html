@@ -7,10 +7,8 @@
   <link rel="icon" type="image/png" href="favicon-96.png">
   <style>
     :root {
-      --primary: #0284c7;
-      --primary-dark: #0369a1;
-      --success: #16a34a;
-      --warning: #d97706;
+      --primary: #16a34a;
+      --primary-dark: #15803d;
       --danger: #dc2626;
       --dark: #0f172a;
       --slate: #64748b;
@@ -22,160 +20,57 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
     body { background: #f1f5f9; color: var(--dark); min-height: 100vh; }
 
-    /* LOGIN */
-    #loginScreen {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-    .login-card {
-      background: var(--white);
-      max-width: 400px;
-      width: 100%;
-      padding: 36px 28px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
-      border: 1px solid var(--border);
-      text-align: center;
-    }
-    .login-icon {
-      width: 54px;
-      height: 54px;
-      background: #e0f2fe;
-      color: var(--primary);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-      font-size: 1.6rem;
-    }
+    #loginScreen { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+    .login-card { background: var(--white); max-width: 400px; width: 100%; padding: 36px 28px; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08); border: 1px solid var(--border); text-align: center; }
     .form-group { text-align: left; margin-bottom: 14px; }
     .form-group label { display: block; font-size: 0.82rem; font-weight: 700; color: #334155; margin-bottom: 5px; text-transform: uppercase; }
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.95rem;
-      outline: none;
-    }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); }
-    .btn-login {
-      width: 100%;
-      padding: 13px;
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    .error-msg { color: var(--danger); font-size: 0.85rem; margin-top: 10px; display: none; }
+    .form-group input { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.95rem; outline: none; }
+    .btn-login { width: 100%; padding: 13px; background: var(--primary); color: var(--white); border: none; border-radius: 8px; font-weight: 700; font-size: 1rem; cursor: pointer; margin-top: 10px; }
 
-    /* DASHBOARD */
     #dashboardScreen { display: none; padding-bottom: 40px; }
     .topbar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
-    .topbar-wrap {
-      max-width: 1250px;
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+    .topbar-wrap { max-width: 1280px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
     .brand { font-weight: 800; font-size: 1.15rem; color: var(--primary); }
-    .btn-logout {
-      background: #fee2e2;
-      color: var(--danger);
-      border: 1px solid #fecaca;
-      padding: 7px 14px;
-      border-radius: 6px;
-      font-weight: 700;
-      cursor: pointer;
-    }
+    .btn-logout { background: #fee2e2; color: var(--danger); border: 1px solid #fecaca; padding: 7px 14px; border-radius: 6px; font-weight: 700; cursor: pointer; }
 
-    .nav-tabs {
-      display: flex;
-      gap: 10px;
-      max-width: 1250px;
-      margin: 20px auto 0;
-      padding: 0 20px;
-      flex-wrap: wrap;
-    }
-    .tab-btn {
-      padding: 10px 18px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--white);
-      font-weight: 700;
-      font-size: 0.88rem;
-      cursor: pointer;
-      color: var(--slate);
-    }
-    .tab-btn.active {
-      background: var(--primary);
-      color: var(--white);
-      border-color: var(--primary);
-    }
+    .nav-tabs { display: flex; gap: 10px; max-width: 1280px; margin: 20px auto 0; padding: 0 20px; flex-wrap: wrap; }
+    .tab-btn { padding: 10px 18px; border-radius: 8px; border: 1px solid var(--border); background: var(--white); font-weight: 700; font-size: 0.88rem; cursor: pointer; color: var(--slate); }
+    .tab-btn.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
 
-    .main-wrap { max-width: 1250px; margin: 20px auto 0; padding: 0 20px; }
-
-    /* Stats & Table */
+    .main-wrap { max-width: 1280px; margin: 20px auto 0; padding: 0 20px; }
     .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
     .stat-card { background: var(--white); padding: 20px; border-radius: 12px; border: 1px solid var(--border); }
     .stat-card h4 { font-size: 0.8rem; color: var(--slate); text-transform: uppercase; font-weight: 700; }
-    .stat-card .val { font-size: 2rem; font-weight: 800; margin-top: 4px; }
-    .stat-total { color: var(--primary); }
-    .stat-pending { color: var(--warning); }
-    .stat-completed { color: var(--success); }
+    .stat-card .val { font-size: 2rem; font-weight: 900; margin-top: 4px; color: var(--primary); }
 
     .table-container { background: var(--white); border-radius: 14px; border: 1px solid var(--border); overflow: hidden; }
-    .controls-bar { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; gap: 12px; flex-wrap: wrap; }
-    .search-box input { padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; min-width: 250px; outline: none; }
     table { width: 100%; border-collapse: collapse; min-width: 850px; }
     th { background: #f8fafc; padding: 14px 18px; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; color: #475569; }
     td { padding: 16px 18px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
 
-    .status-select { padding: 6px 10px; border-radius: 8px; font-weight: 700; font-size: 0.8rem; border: 1px solid var(--border); }
     .act-btn { padding: 6px 12px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; text-decoration: none; border: none; cursor: pointer; display: inline-flex; gap: 4px; }
-    .act-call { background: #e0f2fe; color: var(--primary); }
-    .act-wa { background: #dcfce7; color: var(--success); }
+    .act-call { background: #e0f2fe; color: #0369a1; }
+    .act-wa { background: #dcfce7; color: #15803d; }
     .act-del { background: #fef2f2; color: var(--danger); }
 
-    /* Forms */
     .admin-card { background: var(--white); border-radius: 14px; border: 1px solid var(--border); padding: 24px; }
-    .price-group-title { font-size: 1.05rem; font-weight: 800; color: var(--primary-dark); margin: 18px 0 10px; border-bottom: 2px solid #e0f2fe; padding-bottom: 4px; }
-    .price-editor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+    .price-group-title { font-size: 1.05rem; font-weight: 800; color: var(--primary-dark); margin: 18px 0 10px; border-bottom: 2px solid #dcfce7; padding-bottom: 4px; }
+    .editor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
     .price-item-row { display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border); }
-    .price-item-row input { width: 105px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; text-align: right; font-weight: 700; }
+    .price-item-row input { width: 110px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; text-align: right; font-weight: 700; }
 
-    .btn-submit-action {
-      margin-top: 20px;
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      padding: 13px 24px;
-      font-size: 1rem;
-      font-weight: 800;
-      border-radius: 8px;
-      cursor: pointer;
-      width: 100%;
-    }
+    .photo-input-card { background: #f8fafc; padding: 14px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 12px; }
+    .photo-input-card label { display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 6px; color: var(--dark); }
+    .photo-input-card input { width: 100%; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.9rem; }
+
+    .btn-submit-action { margin-top: 20px; background: var(--primary); color: var(--white); border: none; padding: 14px 24px; font-size: 1rem; font-weight: 800; border-radius: 8px; cursor: pointer; width: 100%; }
   </style>
 </head>
 <body>
 
-<!-- LOGIN SCREEN -->
 <div id="loginScreen">
   <div class="login-card">
-    <div class="login-icon">🔒</div>
+    <div style="font-size: 2rem; margin-bottom: 10px;">🔒</div>
     <h2>Admin Login</h2>
     <p style="color: var(--slate); font-size: 0.85rem; margin-bottom: 20px;">Saf Safai Pune Control Panel</p>
     <div class="form-group">
@@ -187,11 +82,10 @@
       <input type="password" id="loginPassword" placeholder="Enter password" required>
     </div>
     <button class="btn-login" id="loginSubmitBtn" onclick="loginAdmin()">Login ➔</button>
-    <div class="error-msg" id="loginError"></div>
+    <div id="loginError" style="color:red; margin-top:10px; display:none; font-size:0.85rem;"></div>
   </div>
 </div>
 
-<!-- DASHBOARD -->
 <div id="dashboardScreen">
   <div class="topbar">
     <div class="topbar-wrap">
@@ -204,25 +98,20 @@
   </div>
 
   <div class="nav-tabs">
-    <button class="tab-btn active" id="btnTabBookings" onclick="switchTab('bookings')">📋 Live Orders & Bookings</button>
-    <button class="tab-btn" id="btnTabPrices" onclick="switchTab('prices')">🏷️ Price Manager (Rates)</button>
-    <button class="tab-btn" id="btnTabContent" onclick="switchTab('content')">🖼️ Website Photos & Text CMS</button>
+    <button class="tab-btn active" id="btnTabBookings" onclick="switchTab('bookings')">📋 Live Orders</button>
+    <button class="tab-btn" id="btnTabPrices" onclick="switchTab('prices')">🏷️ Rate Card Manager</button>
+    <button class="tab-btn" id="btnTabPhotos" onclick="switchTab('photos')">🖼️ Change Website Photos (URLs)</button>
   </div>
 
   <!-- TAB 1: BOOKINGS -->
   <div class="main-wrap" id="tabBookings">
     <div class="stats-grid">
-      <div class="stat-card"><h4>Total Orders</h4><div class="val stat-total" id="statTotal">0</div></div>
-      <div class="stat-card"><h4>Pending Orders</h4><div class="val stat-pending" id="statPending">0</div></div>
-      <div class="stat-card"><h4>Completed</h4><div class="val stat-completed" id="statCompleted">0</div></div>
+      <div class="stat-card"><h4>Total Orders</h4><div class="val" id="statTotal">0</div></div>
+      <div class="stat-card"><h4>Pending Orders</h4><div class="val" id="statPending">0</div></div>
+      <div class="stat-card"><h4>Completed</h4><div class="val" id="statCompleted">0</div></div>
     </div>
 
     <div class="table-container">
-      <div class="controls-bar">
-        <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Search customer, phone or area..." onkeyup="filterLeads()">
-        </div>
-      </div>
       <div style="overflow-x: auto;">
         <table>
           <thead>
@@ -230,7 +119,7 @@
               <th>Date / Time</th>
               <th>Customer</th>
               <th>Phone</th>
-              <th>Service Details & Add-ons</th>
+              <th>Details & Add-ons</th>
               <th>Total Bill</th>
               <th>Status</th>
               <th>Actions</th>
@@ -246,19 +135,19 @@
   <div class="main-wrap" id="tabPrices" style="display: none;">
     <div class="admin-card">
       <h3>Direct Rate Card Manager</h3>
-      <p style="color: var(--slate); font-size: 0.88rem; margin-bottom: 18px;">Rate badal kar "Save All Rates" dabayein, website par turant calculate hoga.</p>
+      <p style="color: var(--slate); font-size: 0.88rem; margin-bottom: 18px;">Rate badal kar "Save All Rates" dabayein, website par turant live calculate hoga.</p>
 
       <form onsubmit="saveAllPrices(event)">
-        <div class="price-group-title">Base Apartment Packages (Without Wall)</div>
-        <div class="price-editor-grid">
+        <div class="price-group-title">Apartment Packages (Base: Without Wall)</div>
+        <div class="editor-grid">
           <div class="price-item-row"><label>1 BHK Base Clean</label><span>₹ <input type="number" id="p_1bhk" value="4499"></span></div>
           <div class="price-item-row"><label>2 BHK Base Clean</label><span>₹ <input type="number" id="p_2bhk" value="5499"></span></div>
           <div class="price-item-row"><label>3 BHK Base Clean</label><span>₹ <input type="number" id="p_3bhk" value="6499"></span></div>
           <div class="price-item-row"><label>4 BHK Base Clean</label><span>₹ <input type="number" id="p_4bhk" value="7999"></span></div>
         </div>
 
-        <div class="price-group-title">Wall Cleaning Add-ons (Calculated On Flat Selection)</div>
-        <div class="price-editor-grid">
+        <div class="price-group-title">Wall Cleaning Add-ons (Auto-Calculated)</div>
+        <div class="editor-grid">
           <div class="price-item-row"><label>1 BHK Wall Cleaning</label><span>₹ <input type="number" id="p_wall_1bhk" value="2000"></span></div>
           <div class="price-item-row"><label>2 BHK Wall Cleaning</label><span>₹ <input type="number" id="p_wall_2bhk" value="3000"></span></div>
           <div class="price-item-row"><label>3 BHK Wall Cleaning</label><span>₹ <input type="number" id="p_wall_3bhk" value="4000"></span></div>
@@ -266,7 +155,7 @@
         </div>
 
         <div class="price-group-title">Single Spaces & Combos</div>
-        <div class="price-editor-grid">
+        <div class="editor-grid">
           <div class="price-item-row"><label>Kitchen Deep Clean</label><span>₹ <input type="number" id="p_kitchen" value="1299"></span></div>
           <div class="price-item-row"><label>Bathroom Deep Clean</label><span>₹ <input type="number" id="p_bathroom" value="499"></span></div>
           <div class="price-item-row"><label>Kitchen + Bath Combo</label><span>₹ <input type="number" id="p_combo" value="1699"></span></div>
@@ -274,13 +163,13 @@
           <div class="price-item-row"><label>5-Seater Sofa Set</label><span>₹ <input type="number" id="p_sofa5" value="1199"></span></div>
         </div>
 
-        <div class="price-group-title">Individual Single Items (20+ Items)</div>
-        <div class="price-editor-grid">
+        <div class="price-group-title">20+ Individual Single Items</div>
+        <div class="editor-grid">
           <div class="price-item-row"><label>Chair Cleaning</label><span>₹ <input type="number" id="p_chair" value="149"></span></div>
           <div class="price-item-row"><label>Window & Mesh</label><span>₹ <input type="number" id="p_window" value="199"></span></div>
           <div class="price-item-row"><label>Balcony Deep Wash</label><span>₹ <input type="number" id="p_balcony" value="399"></span></div>
-          <div class="price-item-row"><label>Single Bed Mattress</label><span>₹ <input type="number" id="p_mattress_single" value="599"></span></div>
-          <div class="price-item-row"><label>Double Bed Mattress</label><span>₹ <input type="number" id="p_mattress_double" value="999"></span></div>
+          <div class="price-item-row"><label>Single Mattress</label><span>₹ <input type="number" id="p_mattress_single" value="599"></span></div>
+          <div class="price-item-row"><label>Double Mattress</label><span>₹ <input type="number" id="p_mattress_double" value="999"></span></div>
           <div class="price-item-row"><label>Ceiling Fan</label><span>₹ <input type="number" id="p_fan" value="99"></span></div>
           <div class="price-item-row"><label>Exhaust Fan</label><span>₹ <input type="number" id="p_exhaust" value="149"></span></div>
           <div class="price-item-row"><label>Fridge Cleaning</label><span>₹ <input type="number" id="p_fridge" value="349"></span></div>
@@ -298,56 +187,30 @@
           <div class="price-item-row"><label>Shoe Rack Sanitization</label><span>₹ <input type="number" id="p_shoerack" value="149"></span></div>
         </div>
 
-        <button type="submit" class="btn-submit-action" id="savePriceBtn">💾 Save All Rates to Website</button>
+        <button type="submit" class="btn-submit-action">💾 Save All Rates to Website</button>
       </form>
     </div>
   </div>
 
-  <!-- TAB 3: CONTENT & PHOTO CMS -->
-  <div class="main-wrap" id="tabContent" style="display: none;">
+  <!-- TAB 3: PHOTOS CMS (Change any image live) -->
+  <div class="main-wrap" id="tabPhotos" style="display: none;">
     <div class="admin-card">
-      <h3>Website Photos & Text Editor (CMS)</h3>
-      <p style="color: var(--slate); font-size: 0.88rem; margin-bottom: 18px;">Website ki headlines ya kisi bhi photo ka URL badal kar live update karein.</p>
+      <h3>Change Website Photos (Direct Image URLs)</h3>
+      <p style="color: var(--slate); font-size: 0.88rem; margin-bottom: 18px;">Kisi bhi service ya single item ki photo ka link yahan paste karein aur save karein.</p>
 
-      <form onsubmit="saveWebsiteContent(event)">
-        <div class="form-group">
-          <label>Header Tagline / Slogan</label>
-          <input type="text" id="c_header_tagline" value="आपका घर, हमारी ज़िम्मेदारी | 100% Spotless Results">
-        </div>
+      <form onsubmit="saveWebsitePhotos(event)">
+        <div class="price-group-title">Main Section Photos</div>
+        <div class="photo-input-card"><label>Kitchen Deep Clean Photo URL</label><input type="url" id="inp_img_kitchen" value="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80"></div>
+        <div class="photo-input-card"><label>Bathroom Scrubbing Photo URL</label><input type="url" id="inp_img_bathroom" value="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80"></div>
+        <div class="photo-input-card"><label>Sofa Wet Extraction Photo URL</label><input type="url" id="inp_img_sofa" value="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80"></div>
 
-        <div class="form-group">
-          <label>Hero Main Headline</label>
-          <input type="text" id="c_hero_h1" value="पुणे और PCMC में प्रोफेशनल मैकेनाइज्ड डीप होम क्लीनिंग">
-        </div>
+        <div class="price-group-title">Single Items Photos</div>
+        <div class="photo-input-card"><label>Chair Cleaning Photo URL</label><input type="url" id="inp_img_item_chair" value="https://images.unsplash.com/photo-1580481077195-c3a821a58875?auto=format&fit=crop&w=500&q=80"></div>
+        <div class="photo-input-card"><label>Window Cleaning Photo URL</label><input type="url" id="inp_img_item_window" value="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=500&q=80"></div>
+        <div class="photo-input-card"><label>Balcony Wash Photo URL</label><input type="url" id="inp_img_item_balcony" value="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=500&q=80"></div>
+        <div class="photo-input-card"><label>Mattress Cleaning Photo URL</label><input type="url" id="inp_img_item_mattress_single" value="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=500&q=80"></div>
 
-        <div class="form-group">
-          <label>Hero Subtitle Text</label>
-          <textarea id="c_hero_sub" rows="2">1 BHK से 4 BHK फ्लैट्स, किचन डीग्रेसिंग, बाथरूम स्केलिंग और 20+ सिंगल आइटम्स की स्पॉटलेस सफाई।</textarea>
-        </div>
-
-        <div class="price-group-title">Real Action Cleaning Images (Photo URLs)</div>
-        
-        <div class="form-group">
-          <label>Bathroom Scrubbing Real Photo URL</label>
-          <input type="url" id="img_bathroom" value="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80">
-        </div>
-
-        <div class="form-group">
-          <label>Kitchen Degreasing Real Photo URL</label>
-          <input type="url" id="img_kitchen" value="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80">
-        </div>
-
-        <div class="form-group">
-          <label>Sofa Wet Extraction Machine Photo URL</label>
-          <input type="url" id="img_sofa" value="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80">
-        </div>
-
-        <div class="form-group">
-          <label>Window Glass Buffing Photo URL</label>
-          <input type="url" id="img_window" value="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=700&q=80">
-        </div>
-
-        <button type="submit" class="btn-submit-action" id="saveContentBtn">🖼️ Update Website Content & Photos</button>
+        <button type="submit" class="btn-submit-action">🖼️ Save & Update Website Photos</button>
       </form>
     </div>
   </div>
@@ -380,7 +243,7 @@
       document.getElementById('loggedAdminEmail').innerText = user.email;
       listenToLiveLeads();
       loadCurrentPrices();
-      loadWebsiteContent();
+      loadCurrentPhotos();
     } else {
       document.getElementById('loginScreen').style.display = 'flex';
       document.getElementById('dashboardScreen').style.display = 'none';
@@ -390,30 +253,16 @@
   function loginAdmin() {
     const email = document.getElementById('loginEmail').value.trim();
     const pass = document.getElementById('loginPassword').value.trim();
-    const btn = document.getElementById('loginSubmitBtn');
-    const errBox = document.getElementById('loginError');
-
-    btn.disabled = true;
-    btn.innerText = "Verifying...";
-    errBox.style.display = "none";
-
-    auth.signInWithEmailAndPassword(email, pass)
-      .then(() => {
-        btn.disabled = false;
-        btn.innerText = "Login ➔";
-      })
-      .catch(error => {
-        btn.disabled = false;
-        btn.innerText = "Login ➔";
-        errBox.innerText = error.message;
-        errBox.style.display = "block";
-      });
+    auth.signInWithEmailAndPassword(email, pass).catch(err => {
+      document.getElementById('loginError').innerText = err.message;
+      document.getElementById('loginError').style.display = 'block';
+    });
   }
 
   function logoutAdmin() { auth.signOut(); }
 
   function switchTab(tab) {
-    ['bookings', 'prices', 'content'].forEach(t => {
+    ['bookings', 'prices', 'photos'].forEach(t => {
       document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1)).style.display = (t === tab) ? 'block' : 'none';
       document.getElementById('btnTab' + t.charAt(0).toUpperCase() + t.slice(1)).classList.toggle('active', t === tab);
     });
@@ -444,14 +293,14 @@
         <td><b>${item.name || 'Customer'}</b><br><small style="color:#64748b">📍 ${item.location || 'Pune'}</small></td>
         <td><b>${item.phone || '-'}</b></td>
         <td>
-          <div style="background:#f0f9ff; padding:6px 10px; border-radius:6px; font-size:0.83rem; line-height: 1.4;">
+          <div style="background:#f0fdf4; padding:6px 10px; border-radius:6px; font-size:0.83rem;">
             <b>${item.service || 'Service'}</b>
             ${item.summary ? '<br>' + item.summary : ''}
           </div>
         </td>
-        <td><span style="font-size:1.1rem; font-weight:800; color:var(--primary);">₹${item.totalAmount || 0}</span></td>
+        <td><span style="font-size:1.1rem; font-weight:900; color:var(--primary);">₹${item.totalAmount || 0}</span></td>
         <td>
-          <select class="status-select" onchange="updateStatus('${item.id}', this.value)">
+          <select style="padding:6px; border-radius:6px; font-weight:700;" onchange="updateStatus('${item.id}', this.value)">
             <option value="Pending" ${status === 'Pending' ? 'selected' : ''}>Pending</option>
             <option value="Confirmed" ${status === 'Confirmed' ? 'selected' : ''}>Confirmed</option>
             <option value="Completed" ${status === 'Completed' ? 'selected' : ''}>Completed</option>
@@ -471,13 +320,7 @@
   }
 
   function updateStatus(id, status) { db.collection("bookings").doc(id).update({ status }); }
-  function deleteLead(id) { if(confirm("Booking delete karein?")) db.collection("bookings").doc(id).delete(); }
-
-  function filterLeads() {
-    const q = document.getElementById('searchInput').value.toLowerCase();
-    const filtered = allBookings.filter(b => (b.name && b.name.toLowerCase().includes(q)) || (b.phone && b.phone.includes(q)) || (b.location && b.location.toLowerCase().includes(q)));
-    renderDashboardTable(filtered);
-  }
+  function deleteLead(id) { if(confirm("Delete lead?")) db.collection("bookings").doc(id).delete(); }
 
   function loadCurrentPrices() {
     db.collection("prices").doc("current").get().then(doc => {
@@ -493,10 +336,6 @@
 
   function saveAllPrices(e) {
     e.preventDefault();
-    const btn = document.getElementById('savePriceBtn');
-    btn.disabled = true;
-    btn.innerText = "Saving Rates...";
-
     const keys = ["1bhk","2bhk","3bhk","4bhk","wall_1bhk","wall_2bhk","wall_3bhk","wall_4bhk","kitchen","bathroom","combo","sofa3","sofa5","chair","window","balcony","mattress_single","mattress_double","fan","exhaust","fridge","microwave","carpet_sm","carpet_lg","wardrobe_single","wardrobe_double","chimney","gasstove","curtain","floorscrub","glass","birdnet","shoerack"];
     const payload = {};
     keys.forEach(k => {
@@ -505,47 +344,36 @@
     });
 
     db.collection("prices").doc("current").set(payload, { merge: true }).then(() => {
-      alert("✅ All prices updated successfully!");
-      btn.disabled = false;
-      btn.innerText = "💾 Save All Rates to Website";
+      alert("✅ All rates updated successfully!");
     });
   }
 
-  function loadWebsiteContent() {
+  function loadCurrentPhotos() {
     db.collection("settings").doc("content").get().then(doc => {
       if (doc.exists) {
         const d = doc.data();
-        if (d.headerTagline) document.getElementById('c_header_tagline').value = d.headerTagline;
-        if (d.heroH1) document.getElementById('c_hero_h1').value = d.heroH1;
-        if (d.heroSub) document.getElementById('c_hero_sub').value = d.heroSub;
-        if (d.imgBathroom) document.getElementById('img_bathroom').value = d.imgBathroom;
-        if (d.imgKitchen) document.getElementById('img_kitchen').value = d.imgKitchen;
-        if (d.imgSofa) document.getElementById('img_sofa').value = d.imgSofa;
-        if (d.imgWindow) document.getElementById('img_window').value = d.imgWindow;
+        for (const [k, v] of Object.entries(d)) {
+          const inp = document.getElementById('inp_' + k);
+          if (inp) inp.value = v;
+        }
       }
     });
   }
 
-  function saveWebsiteContent(e) {
+  function saveWebsitePhotos(e) {
     e.preventDefault();
-    const btn = document.getElementById('saveContentBtn');
-    btn.disabled = true;
-    btn.innerText = "Updating Website Content...";
-
-    const contentPayload = {
-      headerTagline: document.getElementById('c_header_tagline').value,
-      heroH1: document.getElementById('c_hero_h1').value,
-      heroSub: document.getElementById('c_hero_sub').value,
-      imgBathroom: document.getElementById('img_bathroom').value,
-      imgKitchen: document.getElementById('img_kitchen').value,
-      imgSofa: document.getElementById('img_sofa').value,
-      imgWindow: document.getElementById('img_window').value
+    const photoPayload = {
+      img_kitchen: document.getElementById('inp_img_kitchen').value,
+      img_bathroom: document.getElementById('inp_img_bathroom').value,
+      img_sofa: document.getElementById('inp_img_sofa').value,
+      img_item_chair: document.getElementById('inp_img_item_chair').value,
+      img_item_window: document.getElementById('inp_img_item_window').value,
+      img_item_balcony: document.getElementById('inp_img_item_balcony').value,
+      img_item_mattress_single: document.getElementById('inp_img_item_mattress_single').value
     };
 
-    db.collection("settings").doc("content").set(contentPayload, { merge: true }).then(() => {
-      alert("✅ Website photos and text successfully updated live!");
-      btn.disabled = false;
-      btn.innerText = "🖼️ Update Website Content & Photos";
+    db.collection("settings").doc("content").set(photoPayload, { merge: true }).then(() => {
+      alert("✅ Photos updated successfully live on website!");
     });
   }
 </script>
