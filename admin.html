@@ -22,7 +22,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
     body { background: #f1f5f9; color: var(--dark); min-height: 100vh; }
 
-    /* 1. LOGIN SCREEN */
+    /* LOGIN SCREEN */
     #loginScreen {
       display: flex;
       align-items: center;
@@ -81,10 +81,9 @@
     .btn-login:hover { background: var(--primary-dark); }
     .error-msg { color: var(--danger); font-size: 0.85rem; margin-top: 10px; display: none; }
 
-    /* 2. DASHBOARD SCREEN */
+    /* DASHBOARD SCREEN */
     #dashboardScreen { display: none; padding-bottom: 40px; }
     
-    /* Top Bar */
     .topbar {
       background: var(--white);
       border-bottom: 1px solid var(--border);
@@ -120,7 +119,6 @@
 
     .main-wrap { max-width: 1250px; margin: 24px auto 0; padding: 0 20px; }
 
-    /* Metric Cards */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -140,7 +138,6 @@
     .stat-pending { color: var(--warning); }
     .stat-completed { color: var(--success); }
 
-    /* Controls Bar */
     .table-container {
       background: var(--white);
       border-radius: 14px;
@@ -161,7 +158,6 @@
       flex: 1;
       min-width: 240px;
       max-width: 400px;
-      position: relative;
     }
     .search-box input {
       width: 100%;
@@ -183,7 +179,6 @@
       font-weight: 600;
     }
 
-    /* Table */
     .table-responsive { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; text-align: left; min-width: 850px; }
     th {
@@ -215,7 +210,6 @@
       display: inline-block;
     }
 
-    /* Status Select */
     .status-select {
       padding: 6px 10px;
       border-radius: 8px;
@@ -230,7 +224,6 @@
     .status-completed { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
     .status-cancelled { background: #fee2e2; color: #991b1b; border-color: #fecaca; }
 
-    /* Action Links */
     .action-group { display: flex; align-items: center; gap: 8px; }
     .act-btn {
       padding: 6px 12px;
@@ -259,7 +252,6 @@
 </head>
 <body>
 
-<!-- 1. LOGIN SCREEN -->
 <div id="loginScreen">
   <div class="login-card">
     <div class="login-icon">🔒</div>
@@ -281,9 +273,7 @@
   </div>
 </div>
 
-<!-- 2. DASHBOARD SCREEN -->
 <div id="dashboardScreen">
-  <!-- Top Navigation -->
   <div class="topbar">
     <div class="topbar-wrap">
       <div class="brand">
@@ -297,7 +287,6 @@
   </div>
 
   <div class="main-wrap">
-    <!-- Metrics -->
     <div class="stats-grid">
       <div class="stat-card">
         <h4>Total Bookings</h4>
@@ -313,7 +302,6 @@
       </div>
     </div>
 
-    <!-- Leads Table Box -->
     <div class="table-container">
       <div class="controls-bar">
         <div class="search-box">
@@ -343,9 +331,7 @@
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody id="leadsTbody">
-            <!-- Dynamic Realtime Data -->
-          </tbody>
+          <tbody id="leadsTbody"></tbody>
         </table>
       </div>
       <div id="noDataNotice" class="no-data" style="display: none;">
@@ -355,15 +341,14 @@
   </div>
 </div>
 
-<!-- Firebase SDKs -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
 <script>
-  // Aapka Firebase Project Configuration
+  // Correct Sahi Firebase Configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyD6Mi-G6sFadne_U0XLBJCx0Xm2UKQHgME",
+    apiKey: "AIzaSyD6Mi-G6sFadne_U0XLBJCrOXm2UKQHgME",
     authDomain: "deepcleaningadmin-a4aae.firebaseapp.com",
     projectId: "deepcleaningadmin-a4aae",
     storageBucket: "deepcleaningadmin-a4aae.firebasestorage.app",
@@ -377,7 +362,6 @@
 
   let allBookings = [];
 
-  // Listen to Admin Authentication State
   auth.onAuthStateChanged(user => {
     if (user) {
       document.getElementById('loginScreen').style.display = 'none';
@@ -390,7 +374,6 @@
     }
   });
 
-  // Handle Login
   function loginAdmin() {
     const email = document.getElementById('loginEmail').value.trim();
     const pass = document.getElementById('loginPassword').value.trim();
@@ -420,12 +403,10 @@
       });
   }
 
-  // Handle Logout
   function logoutAdmin() {
     auth.signOut();
   }
 
-  // Realtime Database Listener
   function listenToLiveLeads() {
     db.collection("bookings").orderBy("createdAt", "desc").onSnapshot(snapshot => {
       allBookings = [];
@@ -435,17 +416,14 @@
       renderDashboardTable(allBookings);
     }, error => {
       console.error("Firestore read error:", error);
-      alert("Error loading leads: Check Firebase Security Rules!");
     });
   }
 
-  // Render Table & Metrics
   function renderDashboardTable(data) {
     const tbody = document.getElementById('leadsTbody');
     const noData = document.getElementById('noDataNotice');
     tbody.innerHTML = '';
 
-    // Calculate Realtime Stats
     let total = allBookings.length;
     let pending = allBookings.filter(b => (b.status || 'Pending') === 'Pending').length;
     let completed = allBookings.filter(b => b.status === 'Completed').length;
@@ -509,24 +487,16 @@
     });
   }
 
-  // Update Status in Realtime Database
   function changeLeadStatus(docId, newStatus) {
-    db.collection("bookings").doc(docId).update({
-      status: newStatus
-    }).catch(err => {
-      alert("Status update failed: " + err.message);
-    });
+    db.collection("bookings").doc(docId).update({ status: newStatus });
   }
 
-  // Delete Lead Prompt
   function deleteLead(docId) {
-    if (confirm("Are you sure you want to permanently delete this cleaning booking?")) {
-      db.collection("bookings").doc(docId).delete()
-        .catch(err => alert("Delete failed: " + err.message));
+    if (confirm("Are you sure you want to delete this booking?")) {
+      db.collection("bookings").doc(docId).delete();
     }
   }
 
-  // Filter & Search Engine
   function filterLeads() {
     const q = document.getElementById('searchInput').value.toLowerCase().trim();
     const filter = document.getElementById('statusFilter').value;
