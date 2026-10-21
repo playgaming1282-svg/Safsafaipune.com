@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saf Safai Pune | Shree Seva Deep Cleaning Services</title>
-  <meta name="description" content="Best home deep cleaning in Shivajinagar 2, Pimpri Chinchwad & Pune. 100% spotless mechanized cleaning with Taski chemicals. Book now without advance!">
+  <title>Saf Safai Pune | Professional Deep Cleaning Services</title>
+  <meta name="description" content="Pune & PCMC's #1 Home Deep Cleaning Service. 100% Spotless Mechanized Results. Zero Advance - Pay After Cleaning!">
 
   <link rel="icon" type="image/png" href="favicon-96.png">
 
@@ -26,12 +26,24 @@
     html { scroll-behavior: smooth; }
     body { background: var(--light-bg); color: var(--dark); line-height: 1.5; padding-bottom: 70px; }
 
-    /* Top Banner */
+    /* Live Offer Ticker Banner */
+    .offer-ticker {
+      background: linear-gradient(90deg, #15803d, #16a34a, #22c55e);
+      color: white;
+      text-align: center;
+      padding: 8px 15px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      box-shadow: inset 0 -2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Top Bar */
     .top-strip {
       background: var(--dark);
       color: #94a3b8;
-      font-size: 0.8rem;
-      padding: 6px 20px;
+      font-size: 0.78rem;
+      padding: 5px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -41,7 +53,7 @@
     /* Header */
     header {
       background: var(--white);
-      box-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -61,7 +73,7 @@
       background: linear-gradient(135deg, #16a34a, #22c55e);
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 10px rgba(22, 163, 74, 0.35);
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
     }
     .logo-text h1 { font-size: 1.25rem; font-weight: 900; color: var(--dark); line-height: 1.1; }
     .logo-text span { font-size: 0.7rem; color: var(--primary); font-weight: 800; letter-spacing: 0.8px; }
@@ -73,95 +85,130 @@
 
     .header-slogan-badge {
       background: #f0fdf4; border: 1.5px solid #86efac; color: #14532d;
-      font-size: 0.9rem; font-weight: 800; padding: 5px 14px; border-radius: 30px;
+      font-size: 0.88rem; font-weight: 800; padding: 5px 14px; border-radius: 30px;
     }
     @media(max-width: 1100px) { .header-slogan-badge { display: none; } }
 
     .header-actions { display: flex; align-items: center; gap: 8px; }
     .btn-header-book {
-      background: var(--primary); color: var(--white); text-decoration: none;
-      padding: 9px 18px; border-radius: 8px; font-weight: 800; font-size: 0.88rem; cursor: pointer; border: none;
+      background: var(--primary); color: var(--white); border: none;
+      padding: 9px 18px; border-radius: 8px; font-weight: 800; font-size: 0.88rem; cursor: pointer;
+      box-shadow: 0 4px 10px rgba(22, 163, 74, 0.25);
+      transition: 0.2s;
     }
+    .btn-header-book:hover { background: var(--primary-dark); transform: translateY(-1px); }
     .btn-header-wa {
       background: var(--wa-green); color: var(--white); text-decoration: none;
       padding: 9px 16px; border-radius: 8px; font-weight: 800; font-size: 0.88rem;
       display: inline-flex; align-items: center; gap: 6px;
+      box-shadow: 0 4px 10px rgba(37, 211, 102, 0.25);
     }
 
-    /* Hero Banner */
+    /* E-COMMERCE VISUAL CATEGORIES (Circle Strip) */
+    .ecom-cat-bar { background: var(--white); padding: 18px 20px; border-bottom: 1px solid var(--border); }
+    .ecom-cat-wrap { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-around; gap: 15px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+    .ecom-cat-wrap::-webkit-scrollbar { display: none; }
+    .ecom-cat-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--dark); min-width: 90px; cursor: pointer; }
+    .ecom-cat-img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2.5px solid var(--primary-light); box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: 0.2s; }
+    .ecom-cat-item:hover .ecom-cat-img { transform: scale(1.1); border-color: var(--primary); }
+    .ecom-cat-title { font-size: 0.82rem; font-weight: 800; margin-top: 8px; text-align: center; }
+
+    /* TRUST BADGES BAR */
+    .trust-bar { background: var(--white); padding: 16px 20px; border-bottom: 1px solid var(--border); }
+    .trust-wrap { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; text-align: center; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 0.88rem; color: var(--dark); }
+    .trust-item span { font-size: 1.4rem; }
+
+    /* HERO BANNER */
     .hero {
-      background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.88)), 
+      background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.88)), 
                   url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: var(--white); padding: 55px 20px 45px; text-align: center;
+      color: var(--white); padding: 75px 20px 65px; text-align: center;
     }
     .hero-content { max-width: 850px; margin: 0 auto; }
-    .hero-pill { background: rgba(37, 211, 102, 0.2); border: 1px solid rgba(37, 211, 102, 0.4); color: #86efac; padding: 5px 16px; border-radius: 30px; display: inline-block; font-size: 0.82rem; font-weight: 800; margin-bottom: 12px; text-transform: uppercase; }
-    .hero h2 { font-size: 2.2rem; font-weight: 900; line-height: 1.25; margin-bottom: 12px; }
-    .hero p { font-size: 1.05rem; color: #cbd5e1; margin-bottom: 20px; }
-    .hero-badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
-    .hero-badge-item { background: rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(255,255,255,0.15); }
-    .hero-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-    .btn-hero-primary { background: var(--primary); color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 800; font-size: 0.95rem; cursor: pointer; border: none; }
-    .btn-hero-wa { background: var(--wa-green); color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 800; font-size: 0.95rem; }
+    .hero-pill { background: rgba(37, 211, 102, 0.25); border: 1px solid rgba(37, 211, 102, 0.5); color: #86efac; padding: 6px 18px; border-radius: 30px; display: inline-block; font-size: 0.85rem; font-weight: 800; margin-bottom: 14px; text-transform: uppercase; }
+    .hero h2 { font-size: 2.5rem; font-weight: 900; line-height: 1.2; margin-bottom: 14px; }
+    .hero p { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 24px; }
+    .hero-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .btn-hero-primary { background: var(--primary); color: #fff; border: none; padding: 14px 30px; border-radius: 10px; font-weight: 800; font-size: 1rem; cursor: pointer; box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4); transition: 0.2s; }
+    .btn-hero-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+    .btn-hero-wa { background: var(--wa-green); color: #fff; text-decoration: none; padding: 14px 30px; border-radius: 10px; font-weight: 800; font-size: 1rem; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3); }
 
-    /* Common Sections */
-    section { padding: 45px 20px; }
+    /* SECTIONS COMMON */
+    section { padding: 55px 20px; }
     .container { max-width: 1280px; margin: 0 auto; }
-    .sec-head { text-align: center; margin-bottom: 30px; }
-    .sec-badge { background: var(--primary-light); color: var(--primary-dark); font-size: 0.75rem; font-weight: 800; padding: 4px 14px; border-radius: 20px; display: inline-block; margin-bottom: 8px; text-transform: uppercase; }
-    .sec-head h2 { font-size: 1.9rem; color: var(--dark); font-weight: 900; }
-    .sec-head p { color: var(--slate); max-width: 650px; margin: 6px auto 0; font-size: 0.92rem; }
+    .sec-head { text-align: center; margin-bottom: 40px; }
+    .sec-badge { background: var(--primary-light); color: var(--primary-dark); font-size: 0.78rem; font-weight: 800; padding: 5px 16px; border-radius: 20px; display: inline-block; margin-bottom: 8px; text-transform: uppercase; }
+    .sec-head h2 { font-size: 2.1rem; color: var(--dark); font-weight: 900; }
+    .sec-head p { color: var(--slate); max-width: 650px; margin: 8px auto 0; font-size: 0.95rem; }
 
-    /* Master Pricing Table Grid */
-    .master-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .master-card { background: var(--white); border-radius: 14px; border: 1px solid var(--border); padding: 22px; box-shadow: 0 4px 12px rgba(15,23,42,0.03); }
-    .master-card h3 { font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 14px; border-bottom: 2px solid var(--primary-light); padding-bottom: 8px; }
-    .master-row { display: flex; justify-content: space-between; font-size: 0.88rem; padding: 7px 0; border-bottom: 1px dashed #f1f5f9; color: var(--slate); }
-    .master-row span:last-child { font-weight: 800; color: var(--primary); }
+    /* STORE FRONT CARDS */
+    .ecom-store-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .ecom-card { background: var(--white); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 4px 15px rgba(15,23,42,0.05); display: flex; flex-direction: column; justify-content: space-between; transition: 0.25s; }
+    .ecom-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 25px rgba(22, 163, 74, 0.12); }
+    .ecom-card-img-wrap { position: relative; height: 190px; width: 100%; }
+    .ecom-card-img { width: 100%; height: 100%; object-fit: cover; }
+    .ecom-card-badge { position: absolute; top: 10px; left: 10px; background: rgba(15, 23, 42, 0.85); color: #86efac; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 800; }
+    .ecom-card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .ecom-card h3 { font-size: 1.3rem; font-weight: 800; color: var(--dark); margin-bottom: 6px; }
+    .ecom-card p { font-size: 0.88rem; color: var(--slate); margin-bottom: 18px; line-height: 1.5; }
+    .btn-ecom-select { width: 100%; background: var(--primary); color: #fff; border: none; padding: 13px; border-radius: 10px; font-weight: 800; font-size: 0.95rem; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25); }
+    .btn-ecom-select:hover { background: var(--primary-dark); }
 
-    /* Reviews Section */
-    .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
-    .review-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
-    .review-stars { color: var(--yellow); font-size: 1.1rem; margin-bottom: 6px; }
-    .review-text { font-size: 0.88rem; color: #334155; margin-bottom: 12px; font-style: italic; }
-    .reviewer { font-weight: 800; font-size: 0.88rem; color: var(--dark); }
-    .reviewer-loc { font-size: 0.78rem; color: var(--slate); }
+    /* BEFORE / AFTER VISUAL IMPACT BOX */
+    .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .impact-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 22px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); text-align: center; }
+    .impact-card img { width: 100%; height: 160px; object-fit: cover; border-radius: 10px; margin-bottom: 12px; }
+    .impact-card h4 { font-size: 1.15rem; font-weight: 800; color: var(--dark); margin-bottom: 6px; }
+    .impact-card p { font-size: 0.85rem; color: var(--slate); }
 
-    /* Map & Location Section */
-    .map-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; align-items: center; }
-    .address-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
-    .address-card h3 { font-size: 1.3rem; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+    /* REVIEWS SECTION */
+    .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .review-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .review-stars { color: var(--yellow); font-size: 1.15rem; margin-bottom: 8px; }
+    .review-text { font-size: 0.9rem; color: #334155; margin-bottom: 14px; font-style: italic; }
+    .reviewer { font-weight: 800; font-size: 0.9rem; color: var(--dark); }
+    .reviewer-loc { font-size: 0.8rem; color: var(--slate); }
+
+    /* LOCATION & MAP */
+    .map-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; align-items: center; }
+    .address-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 26px; }
+    .address-card h3 { font-size: 1.35rem; font-weight: 900; color: var(--dark); margin-bottom: 10px; }
     .address-card p { font-size: 0.92rem; color: var(--slate); line-height: 1.6; margin-bottom: 14px; }
-    .map-frame-box { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); height: 280px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    .map-frame-box { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); height: 280px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); }
 
-    /* MULTI-STEP INTERACTIVE BOOKING DRAWER MODAL */
-    #bookingModal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(4px); z-index: 99999; display: none; align-items: center; justify-content: center; padding: 15px; }
-    .modal-sheet { background: var(--white); max-width: 600px; width: 100%; max-height: 90vh; border-radius: 18px; overflow-y: auto; padding: 24px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3); position: relative; }
-    .modal-close { position: absolute; top: 16px; right: 18px; background: #f1f5f9; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; font-weight: 800; }
+    /* MODAL DRAWER */
+    #bookingModal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.78); backdrop-filter: blur(5px); z-index: 99999; display: none; align-items: center; justify-content: center; padding: 15px; }
+    .modal-sheet { background: var(--white); max-width: 600px; width: 100%; max-height: 90vh; border-radius: 20px; overflow-y: auto; padding: 26px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3); position: relative; }
+    .modal-close { position: absolute; top: 18px; right: 20px; background: #f1f5f9; border: none; width: 34px; height: 34px; border-radius: 50%; font-size: 1.15rem; cursor: pointer; font-weight: 800; }
     
     .category-select-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px; }
-    .cat-option-card { background: #f8fafc; border: 2px solid var(--border); border-radius: 12px; padding: 16px 10px; text-align: center; cursor: pointer; transition: 0.2s; }
+    .cat-option-card { background: #f8fafc; border: 2px solid var(--border); border-radius: 14px; padding: 14px 8px; text-align: center; cursor: pointer; transition: 0.2s; }
     .cat-option-card:hover { border-color: var(--primary); background: var(--primary-light); }
-    .cat-option-card img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 8px; }
+    .cat-option-card img { width: 65px; height: 65px; object-fit: cover; border-radius: 50%; margin-bottom: 6px; }
     .cat-option-card span { font-size: 0.85rem; font-weight: 800; color: var(--dark); display: block; }
 
     .step-box { display: none; }
     .step-box.active { display: block; }
 
-    .sub-option-btn { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 14px; margin-bottom: 10px; width: 100%; text-align: left; font-weight: 800; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
+    .sub-option-btn { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 15px; margin-bottom: 10px; width: 100%; text-align: left; font-weight: 800; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
     .sub-option-btn:hover { border-color: var(--primary); background: var(--primary-light); }
 
     .btn-back { background: #e2e8f0; border: none; padding: 8px 14px; border-radius: 6px; font-weight: 800; cursor: pointer; margin-bottom: 14px; }
     
-    .form-group { margin-bottom: 12px; }
-    .form-group label { display: block; font-weight: 700; font-size: 0.78rem; margin-bottom: 3px; text-transform: uppercase; color: #475569; }
-    .form-group input, .form-group select { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.9rem; outline: none; }
-    
-    .btn-whatsapp-send { width: 100%; background: var(--wa-green); color: #fff; padding: 13px; border: none; border-radius: 10px; font-size: 1rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35); }
+    .selected-box { background: #f0fdf4; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .sel-info h4 { font-size: 1.1rem; color: var(--primary-dark); font-weight: 800; }
+    .sel-price { font-size: 1.4rem; font-weight: 900; color: var(--primary); }
 
-    /* AI BOT CHAT WINDOW */
-    #aiBotFab { position: fixed; bottom: 80px; left: 18px; background: var(--dark); color: white; border: none; border-radius: 30px; padding: 10px 18px; font-weight: 800; font-size: 0.85rem; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.3); z-index: 9999; display: flex; align-items: center; gap: 6px; }
-    #aiBotBox { position: fixed; bottom: 130px; left: 18px; width: 310px; background: var(--white); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); z-index: 99999; display: none; flex-direction: column; overflow: hidden; }
+    .form-group { margin-bottom: 12px; }
+    .form-group label { display: block; font-weight: 700; font-size: 0.8rem; margin-bottom: 4px; text-transform: uppercase; color: #475569; }
+    .form-group input { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 10px; font-size: 0.92rem; outline: none; }
+    
+    .btn-whatsapp-send { width: 100%; background: var(--wa-green); color: #fff; padding: 14px; border: none; border-radius: 10px; font-size: 1.05rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4); }
+
+    /* AI BOT & POPUP WIDGET */
+    #aiBotFab { position: fixed; bottom: 85px; left: 18px; background: var(--dark); color: white; border: none; border-radius: 30px; padding: 10px 18px; font-weight: 800; font-size: 0.85rem; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.3); z-index: 9999; display: flex; align-items: center; gap: 6px; }
+    #aiBotBox { position: fixed; bottom: 135px; left: 18px; width: 310px; background: var(--white); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); z-index: 99999; display: none; flex-direction: column; overflow: hidden; }
     .ai-bot-head { background: var(--dark); color: white; padding: 12px 16px; font-weight: 800; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; }
     .ai-bot-messages { padding: 12px; height: 220px; overflow-y: auto; font-size: 0.82rem; background: #f8fafc; }
     .ai-msg { background: var(--white); border: 1px solid var(--border); padding: 8px 12px; border-radius: 8px; margin-bottom: 8px; line-height: 1.4; }
@@ -170,19 +217,19 @@
     .ai-bot-input input { flex: 1; border: none; padding: 10px; font-size: 0.82rem; outline: none; }
     .ai-bot-input button { background: var(--primary); color: white; border: none; padding: 0 14px; font-weight: 800; cursor: pointer; }
 
-    /* FAQ */
-    .faq-wrap { max-width: 800px; margin: 0 auto; }
-    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
-    .faq-question { padding: 14px 18px; font-weight: 800; font-size: 0.92rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-answer { padding: 0 18px 14px; font-size: 0.88rem; color: var(--slate); display: none; line-height: 1.5; }
-    .faq-item.active .faq-answer { display: block; }
+    /* CUSTOM WHATSAPP POPUP GREETING WIDGET */
+    #waPopup { position: fixed; bottom: 85px; right: 85px; background: white; border-radius: 14px; box-shadow: 0 8px 25px rgba(0,0,0,0.18); border: 1px solid var(--border); padding: 14px 18px; z-index: 9998; width: 260px; display: none; animation: popIn 0.3s ease; }
+    #waPopup h5 { font-size: 0.9rem; color: var(--dark); margin-bottom: 4px; font-weight: 800; display: flex; justify-content: space-between; }
+    #waPopup p { font-size: 0.78rem; color: var(--slate); margin-bottom: 10px; }
+    #waPopup a { background: var(--wa-green); color: white; text-decoration: none; display: block; text-align: center; padding: 6px; border-radius: 6px; font-size: 0.8rem; font-weight: 800; }
+    @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
 
-    /* FOOTER & FLOATING PULSE */
-    footer { background: var(--dark); color: #94a3b8; padding: 40px 20px 20px; font-size: 0.88rem; }
-    .footer-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 20px; }
+    /* FOOTER & PULSE */
+    footer { background: var(--dark); color: #94a3b8; padding: 45px 20px 25px; font-size: 0.88rem; }
+    .footer-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 25px; }
 
     .floating-buttons { position: fixed; bottom: 18px; right: 18px; display: flex; flex-direction: column; gap: 10px; z-index: 9999; }
-    .float-btn { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,0.3); text-decoration: none; color: white; font-size: 1.5rem; animation: pulse 2s infinite; }
+    .float-btn { width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.3); text-decoration: none; color: white; font-size: 1.5rem; animation: pulse 2s infinite; }
     .float-wa { background: var(--wa-green); }
     .float-call { background: var(--primary); }
 
@@ -190,6 +237,11 @@
   </style>
 </head>
 <body>
+
+<!-- ⚡ LIVE OFFER TICKER BANNER -->
+<div class="offer-ticker">
+  ⚡ Festive Offer: Get Extra 10% Off on Full Flat Deep Cleaning! No Advance Payment Required. Book Now! 🎉
+</div>
 
 <div class="top-strip">
   <div>⭐ Rated 4.9/5 by 1,200+ Pune & PCMC Families</div>
@@ -212,7 +264,8 @@
     </a>
 
     <nav class="header-nav">
-      <a href="#pricingSection">Master Prices</a>
+      <a href="#storeSection">Services</a>
+      <a href="#impactSection">Impact</a>
       <a href="#reviewsSection">Reviews</a>
       <a href="#locationSection">Location & Map</a>
       <a href="tel:9325100228">Call 9325100228</a>
@@ -229,86 +282,152 @@
   </div>
 </header>
 
+<!-- CIRCLE CATEGORY STRIP -->
+<div class="ecom-cat-bar">
+  <div class="ecom-cat-wrap">
+    <div class="ecom-cat-item" onclick="openBookingDrawer('flat')">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=200&q=80" class="ecom-cat-img" alt="Full Flat">
+      <span class="ecom-cat-title">Full Flat</span>
+    </div>
+    <div class="ecom-cat-item" onclick="openBookingDrawer('kitchen')">
+      <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=200&q=80" class="ecom-cat-img" alt="Kitchen">
+      <span class="ecom-cat-title">Kitchen</span>
+    </div>
+    <div class="ecom-cat-item" onclick="openBookingDrawer('bathroom')">
+      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=200&q=80" class="ecom-cat-img" alt="Bathroom">
+      <span class="ecom-cat-title">Bathroom</span>
+    </div>
+    <div class="ecom-cat-item" onclick="openBookingDrawer('sofa')">
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=200&q=80" class="ecom-cat-img" alt="Sofa Clean">
+      <span class="ecom-cat-title">Sofa Clean</span>
+    </div>
+    <div class="ecom-cat-item" onclick="openBookingDrawer('window')">
+      <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=200&q=80" class="ecom-cat-img" alt="Windows">
+      <span class="ecom-cat-title">Windows</span>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BADGES BAR -->
+<div class="trust-bar">
+  <div class="trust-wrap">
+    <div class="trust-item"><span>🛡️</span> 100% Background Verified Crew</div>
+    <div class="trust-item"><span>⚙️</span> Taski Certified Eco-Chemicals</div>
+    <div class="trust-item"><span>💵</span> Zero Advance - Pay Post Inspection</div>
+    <div class="trust-item"><span>⏱️</span> On-Time Service Guarantee</div>
+  </div>
+</div>
+
 <!-- HERO BANNER -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-pill">🔥 Master Price List & Approved Rates</div>
-    <h2>Complete House & Single Space Cleaning in Pune</h2>
-    <p>Suggested Market-Based Rates • Taski Certified Chemicals • Zero Advance Payment</p>
+    <div class="hero-pill">🔥 Pune & PCMC's #1 Mechanized Hygiene Brand</div>
+    <h2>Complete House & Single Space Deep Cleaning in Pune</h2>
+    <p>German Rotary Buffers • Taski Eco-Chemicals • 100% Spotless Guarantee</p>
     
-    <div class="hero-badges">
-      <div class="hero-badge-item">🛡️ Background Verified Crew</div>
-      <div class="hero-badge-item">⚙️ High-Pressure Scrubbing</div>
-      <div class="hero-badge-item">💵 Zero Advance Payment</div>
-    </div>
-
     <div class="hero-btns">
-      <button onclick="openBookingDrawer()" class="btn-hero-primary">Start Interactive Booking ➔</button>
+      <button onclick="openBookingDrawer()" class="btn-hero-primary">Start Instant Booking ➔</button>
       <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune,%20I%20want%20to%20enquire%20about%20cleaning" class="btn-hero-wa" target="_blank">Chat on WhatsApp 💬</a>
     </div>
   </div>
 </section>
 
-<!-- MASTER PRICING LIST SECTION -->
-<section id="pricingSection">
+<!-- STORE FRONT CARDS -->
+<section id="storeSection">
   <div class="container">
     <div class="sec-head">
-      <span class="sec-badge">Master Price List</span>
-      <h2>Approved Service Rates (Pune & PCMC)</h2>
-      <p>Suggested market-based rates. Final approval pending by business owner.</p>
+      <span class="sec-badge">Our Cleaning Services</span>
+      <h2>Select What You Want To Clean</h2>
+      <p>Click on any service card below to open the instant booking checkout.</p>
     </div>
 
-    <div class="master-grid">
-      <!-- 1. Full Home -->
-      <div class="master-card">
-        <h3>1. Full Home Deep Cleaning</h3>
-        <div class="master-row"><span>1 BHK Without Wall</span><span>₹3,499</span></div>
-        <div class="master-row"><span>1 BHK With Wall</span><span>₹4,999</span></div>
-        <div class="master-row"><span>2 BHK Without Wall</span><span>₹4,499</span></div>
-        <div class="master-row"><span>2 BHK With Wall</span><span>₹6,499</span></div>
-        <div class="master-row"><span>3 BHK Without Wall</span><span>₹5,999</span></div>
-        <div class="master-row"><span>3 BHK With Wall</span><span>₹8,499</span></div>
-        <div class="master-row"><span>4 BHK Without Wall</span><span>₹7,499</span></div>
-        <div class="master-row"><span>4 BHK With Wall</span><span>₹10,499</span></div>
+    <div class="ecom-store-grid">
+      <!-- 1. Full Flat -->
+      <div class="ecom-card">
+        <div class="ecom-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=600&q=80" class="ecom-card-img" alt="Full Flat Deep Cleaning">
+          <span class="ecom-card-badge">1BHK to 4BHK Packages</span>
+        </div>
+        <div class="ecom-card-body">
+          <h3>Full Flat Deep Cleaning</h3>
+          <p>Mechanized floor buffing, kitchen degreasing, bathroom calcium descaling, balcony wash & window squeegee wipe.</p>
+          <button class="btn-ecom-select" onclick="openBookingDrawer('flat')">Select BHK & Customize ➔</button>
+        </div>
       </div>
 
-      <!-- 2. Kitchen & Bathroom -->
-      <div class="master-card">
-        <h3>2. Kitchen & Bathroom</h3>
-        <div class="master-row"><span>Kitchen Deep Cleaning</span><span>₹1,099</span></div>
-        <div class="master-row"><span>Bathroom (1 Bath)</span><span>₹499</span></div>
-        <div class="master-row"><span>Bathroom (2 Baths)</span><span>₹899</span></div>
-        <div class="master-row"><span>Bathroom (3 Baths)</span><span>₹1,197</span></div>
-        <div class="master-row"><span>Kitchen + Bathroom Combo</span><span>₹1,499</span></div>
+      <!-- 2. Kitchen -->
+      <div class="ecom-card">
+        <div class="ecom-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" class="ecom-card-img" alt="Kitchen Deep Cleaning">
+          <span class="ecom-card-badge">Oil & Grease Wash</span>
+        </div>
+        <div class="ecom-card-body">
+          <h3>Kitchen Deep Cleaning</h3>
+          <p>Chimney exterior degreasing, gas stove, tile grout wash, trolley cabinet deep wiping, and sink scrubbing.</p>
+          <button class="btn-ecom-select" onclick="openBookingDrawer('kitchen')">Select Kitchen Type ➔</button>
+        </div>
       </div>
 
-      <!-- 3. Sofa & Chair -->
-      <div class="master-card">
-        <h3>3. Sofa & Chair Cleaning</h3>
-        <div class="master-row"><span>Sofa Per Seat</span><span>₹199</span></div>
-        <div class="master-row"><span>3-Seater Sofa</span><span>₹599</span></div>
-        <div class="master-row"><span>5-Seater Sofa</span><span>₹999</span></div>
-        <div class="master-row"><span>Dining Chair Per Chair</span><span>₹149</span></div>
+      <!-- 3. Bathroom -->
+      <div class="ecom-card">
+        <div class="ecom-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" class="ecom-card-img" alt="Bathroom Deep Cleaning">
+          <span class="ecom-card-badge">Hard Water Scale Removal</span>
+        </div>
+        <div class="ecom-card-body">
+          <h3>Bathroom Deep Cleaning</h3>
+          <p>Taski R1/R9 descaling of tiles, chrome taps, showerhead, glass partitions, mirror buffing, and commode sanitization.</p>
+          <button class="btn-ecom-select" onclick="openBookingDrawer('bathroom')">Select Bathroom Count ➔</button>
+        </div>
       </div>
 
-      <!-- 4. Other Services -->
-      <div class="master-card">
-        <h3>4. Other Services</h3>
-        <div class="master-row"><span>Hall Cleaning</span><span>₹1,499</span></div>
-        <div class="master-row"><span>Window (Per Window)</span><span>₹199</span></div>
-        <div class="master-row"><span>Ceiling Fan (Per Fan)</span><span>₹99</span></div>
-        <div class="master-row"><span>Balcony Cleaning</span><span>₹399</span></div>
-        <div class="master-row"><span>Single Mattress</span><span>₹499</span></div>
-        <div class="master-row"><span>Double Mattress</span><span>₹799</span></div>
-        <div class="master-row"><span>Fridge Cleaning</span><span>₹399</span></div>
-        <div class="master-row"><span>Chimney Cleaning</span><span>₹499</span></div>
+      <!-- 4. Sofa & Upholstery -->
+      <div class="ecom-card">
+        <div class="ecom-card-img-wrap">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80" class="ecom-card-img" alt="Sofa Shampooing">
+          <span class="ecom-card-badge">Wet Vacuum Extraction</span>
+        </div>
+        <div class="ecom-card-body">
+          <h3>Sofa & Fabric Shampooing</h3>
+          <p>High-torque foam shampooing, deep stain extraction, sweat odor removal, and 1400W dust mite vacuuming.</p>
+          <button class="btn-ecom-select" onclick="openBookingDrawer('sofa')">Select Sofa Seats ➔</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER CLEANING VISUAL IMPACT -->
+<section id="impactSection" style="background: var(--white);">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-badge">Visual Impact</span>
+      <h2>Before vs After Deep Cleaning Excellence</h2>
+      <p>See how our heavy machinery and professional formulations transform dirty surfaces into brand new.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=80" alt="Hard Water Bathroom">
+        <h4>Bathroom Calcium Descaling</h4>
+        <p>Complete removal of white hard-water scaling from taps, showerheads, and glass cubicles.</p>
+      </div>
+      <div class="impact-card">
+        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=500&q=80" alt="Kitchen Grease">
+        <h4>Kitchen Oil & Grease Removal</h4>
+        <p>100% sticky carbon and oil deposits dissolved from chimney hoods, tiles, and gas stoves.</p>
+      </div>
+      <div class="impact-card">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=500&q=80" alt="Sofa Extraction">
+        <h4>Sofa Dust Mite Extraction</h4>
+        <p>Deep wet extraction vacuuming lifts years of trapped dust, sweat stains, and germs.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- REVIEWS & TESTIMONIALS -->
-<section id="reviewsSection" style="background: var(--white);">
+<section id="reviewsSection">
   <div class="container">
     <div class="sec-head">
       <span class="sec-badge">Verified Reviews</span>
@@ -341,7 +460,7 @@
 </section>
 
 <!-- LOCATION & MAP -->
-<section id="locationSection">
+<section id="locationSection" style="background: var(--white);">
   <div class="container">
     <div class="sec-head">
       <span class="sec-badge">Address & Coverage</span>
@@ -371,7 +490,7 @@
 </section>
 
 <!-- FAQ -->
-<section id="faqSection" style="background: var(--white);">
+<section id="faqSection">
   <div class="container">
     <div class="sec-head">
       <span class="sec-badge">Help & FAQ</span>
@@ -396,47 +515,44 @@
   <div class="modal-sheet">
     <button class="modal-close" onclick="closeBookingDrawer()">✕</button>
     
-    <!-- STEP 1: SELECT CATEGORY WITH REAL ICONS -->
     <div id="step1" class="step-box active">
-      <h3 style="font-size: 1.25srem; font-weight: 900; margin-bottom: 4px;">Select Cleaning Category</h3>
-      <p style="font-size: 0.85rem; color: var(--slate); margin-bottom: 16px;">What would you like to clean today?</p>
+      <h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 4px;">Select Cleaning Category</h3>
+      <p style="font-size: 0.85rem; color: var(--slate); margin-bottom: 16px;">Click on what you want to book today:</p>
       
       <div class="category-select-grid">
         <div class="cat-option-card" onclick="selectCategory('flat')">
-          <img src="https://img.icons8.com/color/96/apartment.png" alt="Flat">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=200&q=80" alt="Flat">
           <span>Flat / BHK</span>
         </div>
         <div class="cat-option-card" onclick="selectCategory('sofa')">
-          <img src="https://img.icons8.com/color/96/sofa.png" alt="Sofa">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=200&q=80" alt="Sofa">
           <span>Sofa</span>
         </div>
         <div class="cat-option-card" onclick="selectCategory('kitchen')">
-          <img src="https://img.icons8.com/color/96/kitchen.png" alt="Kitchen">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=200&q=80" alt="Kitchen">
           <span>Kitchen</span>
         </div>
         <div class="cat-option-card" onclick="selectCategory('bathroom')">
-          <img src="https://img.icons8.com/color/96/bathroom.png" alt="Bathroom">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=200&q=80" alt="Bathroom">
           <span>Bathroom</span>
         </div>
         <div class="cat-option-card" onclick="selectCategory('fan')">
-          <img src="https://img.icons8.com/color/96/ceiling-fan.png" alt="Fan">
+          <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=200&q=80" alt="Fan">
           <span>Ceiling Fan</span>
         </div>
         <div class="cat-option-card" onclick="selectCategory('window')">
-          <img src="https://img.icons8.com/color/96/window.png" alt="Window">
+          <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=200&q=80" alt="Window">
           <span>Window</span>
         </div>
       </div>
     </div>
 
-    <!-- STEP 2: SUB-OPTIONS (BHK, SEATS, COUNT ETC) -->
     <div id="step2" class="step-box">
       <button class="btn-back" onclick="goToStep(1)">← Back</button>
       <h3 id="step2Title" style="font-size: 1.25rem; font-weight: 900; margin-bottom: 14px;">Select Option</h3>
       <div id="step2OptionsContainer"></div>
     </div>
 
-    <!-- STEP 3: FINAL DETAILS & WHATSAPP SEND -->
     <div id="step3" class="step-box">
       <button class="btn-back" onclick="goToStep(2)">← Back</button>
       <h3 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 14px;">Enter Booking Details</h3>
@@ -489,6 +605,13 @@
   </div>
 </div>
 
+<!-- CUSTOM WHATSAPP POPUP GREETING WIDGET -->
+<div id="waPopup">
+  <h5><span>💬 Live Support</span> <span style="cursor:pointer;" onclick="closeWaPopup()">✕</span></h5>
+  <p>Need help booking cleaning in Pune or PCMC? Chat with us!</p>
+  <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune,%20I%20want%20to%20enquire%20about%20cleaning" target="_blank">Chat on WhatsApp ➔</a>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
@@ -515,7 +638,7 @@
 </div>
 
 <script>
-  // Master Price List Data
+  // Master Prices Database
   const masterPrices = {
     flat_1_nw: { name: "1 BHK Without Wall Cleaning", price: 3499 },
     flat_1_w: { name: "1 BHK With Wall Cleaning", price: 4999 },
@@ -540,11 +663,23 @@
 
   let bookingState = { service: "", price: 0 };
 
+  // Popup Greeting Trigger after 3 seconds
+  setTimeout(() => {
+    document.getElementById('waPopup').style.display = 'block';
+  }, 3000);
+
+  function closeWaPopup() {
+    document.getElementById('waPopup').style.display = 'none';
+  }
+
   function toggleFaq(el) { el.parentElement.classList.toggle('active'); }
 
-  function openBookingDrawer() {
+  function openBookingDrawer(initialCat = '') {
     goToStep(1);
     document.getElementById('bookingModal').style.display = 'flex';
+    if(initialCat) {
+      selectCategory(initialCat);
+    }
   }
 
   function closeBookingDrawer() {
