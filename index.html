@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saf Safai Pune | Professional Mechanized Deep Cleaning</title>
-  <meta name="description" content="Pune & PCMC's #1 Home Deep Cleaning Service. 100% Spotless Mechanized Results. Zero Advance - Pay After Cleaning!">
+  <title>Saf Safai Pune | Shree Seva Deep Cleaning Services Pune & PCMC</title>
+  <meta name="description" content="Best home deep cleaning in Shivajinagar 2, Pimpri Chinchwad & Pune. 100% spotless mechanized cleaning with Taski chemicals. Book now without advance!">
 
   <link rel="icon" type="image/png" href="favicon-96.png">
 
@@ -26,7 +26,7 @@
     html { scroll-behavior: smooth; }
     body { background: var(--light-bg); color: var(--dark); line-height: 1.5; padding-bottom: 70px; }
 
-    /* Top Strip */
+    /* Top Banner */
     .top-strip {
       background: var(--dark);
       color: #94a3b8;
@@ -85,7 +85,16 @@
     }
     @media(max-width: 1100px) { .header-slogan-badge { display: none; } }
 
-    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .header-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-header-book {
+      background: var(--dark);
+      color: var(--white);
+      text-decoration: none;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.88rem;
+    }
     .btn-header-wa {
       background: var(--wa-green);
       color: var(--white);
@@ -97,56 +106,18 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      box-shadow: 0 3px 8px rgba(37, 211, 102, 0.3);
-    }
-    .btn-header-call {
-      background: var(--primary);
-      color: var(--white);
-      text-decoration: none;
-      padding: 9px 14px;
-      border-radius: 8px;
-      font-weight: 800;
-      font-size: 0.88rem;
     }
 
-    /* E-COMMERCE CIRCLE CATEGORIES (Urban Company Style) */
-    .ecom-cat-bar {
-      background: var(--white);
-      padding: 16px 20px;
-      border-bottom: 1px solid var(--border);
-    }
-    .ecom-cat-wrap {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-around;
-      gap: 15px;
-      overflow-x: auto;
-      white-space: nowrap;
-      scrollbar-width: none;
-    }
+    /* E-Commerce Circle Category Icons Strip */
+    .ecom-cat-bar { background: var(--white); padding: 14px 20px; border-bottom: 1px solid var(--border); }
+    .ecom-cat-wrap { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-around; gap: 15px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
     .ecom-cat-wrap::-webkit-scrollbar { display: none; }
-    .ecom-cat-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      color: var(--dark);
-      min-width: 85px;
-    }
-    .ecom-cat-img {
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--primary-light);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      transition: transform 0.2s, border-color 0.2s;
-    }
+    .ecom-cat-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--dark); min-width: 85px; }
+    .ecom-cat-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-light); box-shadow: 0 4px 10px rgba(0,0,0,0.06); transition: 0.2s; }
     .ecom-cat-item:hover .ecom-cat-img { transform: scale(1.08); border-color: var(--primary); }
     .ecom-cat-title { font-size: 0.78rem; font-weight: 800; margin-top: 6px; text-align: center; }
 
-    /* HERO BANNERS */
+    /* Hero Banner */
     .hero {
       background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.88)), 
                   url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -155,57 +126,28 @@
       text-align: center;
     }
     .hero-content { max-width: 850px; margin: 0 auto; }
-    .hero-pill {
-      background: rgba(37, 211, 102, 0.2);
-      border: 1px solid rgba(37, 211, 102, 0.4);
-      color: #86efac;
-      padding: 5px 16px;
-      border-radius: 30px;
-      display: inline-block;
-      font-size: 0.82rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-    }
+    .hero-pill { background: rgba(37, 211, 102, 0.2); border: 1px solid rgba(37, 211, 102, 0.4); color: #86efac; padding: 5px 16px; border-radius: 30px; display: inline-block; font-size: 0.82rem; font-weight: 800; margin-bottom: 12px; text-transform: uppercase; }
     .hero h2 { font-size: 2.2rem; font-weight: 900; line-height: 1.25; margin-bottom: 12px; }
     .hero p { font-size: 1.05rem; color: #cbd5e1; margin-bottom: 20px; }
     .hero-badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
     .hero-badge-item { background: rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(255,255,255,0.15); }
+    .hero-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .btn-hero-primary { background: var(--primary); color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 800; font-size: 0.95rem; }
+    .btn-hero-wa { background: var(--wa-green); color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 800; font-size: 0.95rem; }
 
-    /* SECTIONS COMMON */
+    /* Common Sections */
     section { padding: 45px 20px; }
     .container { max-width: 1280px; margin: 0 auto; }
     .sec-head { text-align: center; margin-bottom: 30px; }
-    .sec-badge {
-      background: var(--primary-light);
-      color: var(--primary-dark);
-      font-size: 0.75rem;
-      font-weight: 800;
-      padding: 4px 14px;
-      border-radius: 20px;
-      display: inline-block;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-    }
+    .sec-badge { background: var(--primary-light); color: var(--primary-dark); font-size: 0.75rem; font-weight: 800; padding: 4px 14px; border-radius: 20px; display: inline-block; margin-bottom: 8px; text-transform: uppercase; }
     .sec-head h2 { font-size: 1.9rem; color: var(--dark); font-weight: 900; }
     .sec-head p { color: var(--slate); max-width: 650px; margin: 6px auto 0; font-size: 0.92rem; }
 
-    /* E-COMMERCE FULL FLAT CARDS WITH REAL PHOTOS */
+    /* Full Home Cards */
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
-    .price-card {
-      background: var(--white);
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-    }
+    .price-card { background: var(--white); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); display: flex; flex-direction: column; justify-content: space-between; position: relative; }
     .price-card.popular { border: 2px solid var(--primary); box-shadow: 0 8px 20px -4px rgba(22, 163, 74, 0.2); }
     .tag-badge { position: absolute; top: 10px; right: 10px; z-index: 10; background: var(--primary); color: var(--white); padding: 4px 12px; border-radius: 20px; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; }
-    
     .price-card-img { width: 100%; height: 160px; object-fit: cover; }
     .price-card-body { padding: 18px; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
     .price-card h3 { font-size: 1.25rem; font-weight: 800; color: var(--dark); }
@@ -214,11 +156,10 @@
     .price-list { list-style: none; text-align: left; font-size: 0.85rem; color: var(--slate); margin-bottom: 18px; }
     .price-list li { padding: 5px 0; border-bottom: 1px dashed #f1f5f9; display: flex; align-items: flex-start; gap: 6px; }
     .price-list li::before { content: "✓"; color: var(--primary); font-weight: 900; }
-    
-    .btn-pack-book { width: 100%; background: var(--wa-green); color: var(--white); border: none; padding: 12px; border-radius: 8px; font-weight: 800; font-size: 0.92rem; cursor: pointer; transition: 0.2s; display: flex; align-items: center; justify-content: center; gap: 6px; }
-    .btn-pack-book:hover { background: #16a34a; }
+    .btn-pack-book { width: 100%; background: var(--primary); color: var(--white); border: none; padding: 12px; border-radius: 8px; font-weight: 800; font-size: 0.92rem; cursor: pointer; transition: 0.2s; display: flex; align-items: center; justify-content: center; gap: 6px; }
+    .btn-pack-book:hover { background: var(--primary-dark); }
 
-    /* SINGLE ROOM CARDS */
+    /* Single Room Cards */
     .room-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
     .room-card { background: var(--white); border-radius: 14px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.03); display: flex; flex-direction: column; }
     .room-img-wrap { position: relative; height: 170px; width: 100%; overflow: hidden; }
@@ -230,28 +171,28 @@
     .room-body .val { font-size: 1.5rem; font-weight: 900; color: var(--primary); margin-bottom: 6px; }
     .room-body p { font-size: 0.85rem; color: var(--slate); margin-bottom: 14px; }
 
-    /* STORE GRID */
-    .uc-items-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
-    .uc-item-card { background: var(--white); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 2px 6px rgba(0,0,0,0.02); transition: transform 0.2s; }
-    .uc-item-card:hover { transform: translateY(-3px); border-color: var(--primary); }
-    .uc-item-img { width: 100%; height: 135px; object-fit: cover; border-bottom: 1px solid #f1f5f9; }
-    .uc-item-content { padding: 12px; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
-    .uc-item-title { font-size: 0.92rem; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
-    .uc-item-desc { font-size: 0.76rem; color: var(--slate); margin-bottom: 10px; line-height: 1.3; }
-    .uc-item-bottom { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 8px; }
-    .uc-item-price { font-size: 1.1rem; font-weight: 900; color: var(--primary); }
-    .btn-uc-book { background: var(--primary-light); color: var(--primary-dark); border: 1px solid #bbf7d0; padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 800; cursor: pointer; transition: 0.2s; }
-    .btn-uc-book:hover { background: var(--wa-green); color: #fff; }
+    /* Reviews Section */
+    .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+    .review-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+    .review-stars { color: var(--yellow); font-size: 1.1rem; margin-bottom: 6px; }
+    .review-text { font-size: 0.88rem; color: #334155; margin-bottom: 12px; font-style: italic; }
+    .reviewer { font-weight: 800; font-size: 0.88rem; color: var(--dark); }
+    .reviewer-loc { font-size: 0.78rem; color: var(--slate); }
 
-    /* ABOUT & LOCATIONS */
-    .info-box { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 26px; text-align: center; max-width: 900px; margin: 0 auto; }
-    .info-box h3 { font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 10px; }
-    .info-box p { font-size: 0.92rem; color: var(--slate); line-height: 1.7; }
-    .location-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 16px; }
-    .loc-chip { background: var(--light-bg); border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; color: #334155; }
+    /* Map & Location Section */
+    .map-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; align-items: center; }
+    .address-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+    .address-card h3 { font-size: 1.3rem; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+    .address-card p { font-size: 0.92rem; color: var(--slate); line-height: 1.6; margin-bottom: 14px; }
+    .map-frame-box { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); height: 280px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
 
-    /* MODAL DRAWER */
-    #bookingModal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(4px); z-index: 99999; display: none; open-modal: flex; align-items: center; justify-content: center; padding: 15px; }
+    /* Knowledge Guide */
+    .guide-box { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 22px; margin-bottom: 16px; }
+    .guide-box h3 { font-size: 1.2rem; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+    .guide-box p { font-size: 0.9rem; color: var(--slate); line-height: 1.6; }
+
+    /* MODAL DRAWER (E-Commerce Mini Page) */
+    #bookingModal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(4px); z-index: 99999; display: none; align-items: center; justify-content: center; padding: 15px; }
     .modal-sheet { background: var(--white); max-width: 550px; width: 100%; max-height: 90vh; border-radius: 18px; overflow-y: auto; padding: 22px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3); position: relative; }
     .modal-close { position: absolute; top: 16px; right: 18px; background: #f1f5f9; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; font-weight: 800; }
     
@@ -265,7 +206,7 @@
     .cross-sell-section { margin-bottom: 16px; border-top: 1px solid var(--border); padding-top: 12px; }
     .cross-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; }
     .cross-card { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 8px; text-align: center; }
-    .btn-add-cross { background: var(--primary-light); color: var(--primary-dark); border: none; padding: 3px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 800; cursor: pointer; }
+    .btn-add-cross { background: var(--primary-light); color: var(--primary-dark); border: none; padding: 4px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 800; cursor: pointer; }
     .btn-add-cross.added { background: var(--primary); color: #fff; }
 
     .bill-box { background: #f8fafc; border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; margin-bottom: 14px; }
@@ -277,6 +218,17 @@
     .form-group input { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.9rem; outline: none; }
     
     .btn-whatsapp-send { width: 100%; background: var(--wa-green); color: #fff; padding: 13px; border: none; border-radius: 10px; font-size: 1rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35); }
+
+    /* AI BOT CHAT WINDOW */
+    #aiBotFab { position: fixed; bottom: 80px; left: 18px; background: var(--dark); color: white; border: none; border-radius: 30px; padding: 10px 18px; font-weight: 800; font-size: 0.85rem; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.3); z-index: 9999; display: flex; align-items: center; gap: 6px; }
+    #aiBotBox { position: fixed; bottom: 130px; left: 18px; width: 310px; background: var(--white); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); z-index: 99999; display: none; flex-direction: column; overflow: hidden; }
+    .ai-bot-head { background: var(--dark); color: white; padding: 12px 16px; font-weight: 800; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; }
+    .ai-bot-messages { padding: 12px; height: 220px; overflow-y: auto; font-size: 0.82rem; background: #f8fafc; }
+    .ai-msg { background: var(--white); border: 1px solid var(--border); padding: 8px 12px; border-radius: 8px; margin-bottom: 8px; line-height: 1.4; }
+    .ai-msg.user { background: var(--primary-light); color: var(--primary-dark); text-align: right; }
+    .ai-bot-input { display: flex; border-top: 1px solid var(--border); }
+    .ai-bot-input input { flex: 1; border: none; padding: 10px; font-size: 0.82rem; outline: none; }
+    .ai-bot-input button { background: var(--primary); color: white; border: none; padding: 0 14px; font-weight: 800; cursor: pointer; }
 
     /* FAQ */
     .faq-wrap { max-width: 800px; margin: 0 auto; }
@@ -294,18 +246,14 @@
     .float-wa { background: var(--wa-green); }
     .float-call { background: var(--primary); }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-      100% { transform: scale(1); }
-    }
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.08); } 100% { transform: scale(1); } }
   </style>
 </head>
 <body>
 
 <div class="top-strip">
-  <div>⭐ Rated 4.9/5 by 1,200+ Pune Families</div>
-  <div>⚡ Same-Day Slot Available in PCMC & Pune</div>
+  <div>⭐ Rated 4.9/5 by 1,200+ Pune & PCMC Families</div>
+  <div>⚡ Same-Day Slot Available in Shivajinagar 2 & PCMC</div>
 </div>
 
 <header>
@@ -324,11 +272,11 @@
     </a>
 
     <nav class="header-nav">
-      <a href="#fullHomePackages">Services</a>
-      <a href="#aboutSection">About Us</a>
-      <a href="#locationSection">Service Areas</a>
-      <a href="#fullHomePackages">Book Slot</a>
-      <a href="tel:9325100228">Call Support</a>
+      <a href="#fullHomePackages">Packages</a>
+      <a href="#singleSpaces">Single Space</a>
+      <a href="#reviewsSection">Reviews</a>
+      <a href="#locationSection">Location & Map</a>
+      <a href="tel:9325100228">Call 9325100228</a>
     </nav>
 
     <div class="header-slogan-badge">
@@ -336,12 +284,8 @@
     </div>
 
     <div class="header-actions">
-      <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune,%20I%20want%20to%20book%20cleaning%20service" class="btn-header-wa" target="_blank">
-        💬 WhatsApp
-      </a>
-      <a href="tel:9325100228" class="btn-header-call">
-        📞 Call
-      </a>
+      <a href="#fullHomePackages" class="btn-header-book">Book Now</a>
+      <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune,%20I%20want%20to%20book%20cleaning%20service" class="btn-header-wa" target="_blank">💬 WhatsApp</a>
     </div>
   </div>
 </header>
@@ -365,7 +309,7 @@
       <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=200&q=80" class="ecom-cat-img" alt="Sofa Clean">
       <span class="ecom-cat-title">Sofa Clean</span>
     </a>
-    <a href="#itemizedServices" class="ecom-cat-item">
+    <a href="#singleSpaces" class="ecom-cat-item">
       <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=200&q=80" class="ecom-cat-img" alt="Windows">
       <span class="ecom-cat-title">Windows</span>
     </a>
@@ -384,10 +328,15 @@
       <div class="hero-badge-item">⚙️ High-Pressure Scrubbing</div>
       <div class="hero-badge-item">💵 Zero Advance Payment</div>
     </div>
+
+    <div class="hero-btns">
+      <a href="#fullHomePackages" class="btn-hero-primary">Explore Packages & Book ➔</a>
+      <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune,%20I%20want%20to%20enquire%20about%20cleaning" class="btn-hero-wa" target="_blank">Chat on WhatsApp 💬</a>
+    </div>
   </div>
 </section>
 
-<!-- FULL HOME PACKAGES (WITH REAL PHOTOS) -->
+<!-- FULL HOME PACKAGES (WITH REAL PHOTOS & BOOK NOW) -->
 <section id="fullHomePackages">
   <div class="container">
     <div class="sec-head">
@@ -413,7 +362,7 @@
             </ul>
           </div>
           <button class="btn-pack-book" onclick="openBookingDrawer('1 BHK Full Deep Cleaning', 4499, 'flat', '1bhk')">
-            💬 Book on WhatsApp ➔
+            Book Now (Customize Add-ons) ➔
           </button>
         </div>
       </div>
@@ -435,7 +384,7 @@
             </ul>
           </div>
           <button class="btn-pack-book" onclick="openBookingDrawer('2 BHK Full Deep Cleaning', 5499, 'flat', '2bhk')">
-            💬 Book on WhatsApp ➔
+            Book Now (Customize Add-ons) ➔
           </button>
         </div>
       </div>
@@ -456,7 +405,7 @@
             </ul>
           </div>
           <button class="btn-pack-book" onclick="openBookingDrawer('3 BHK Full Deep Cleaning', 6499, 'flat', '3bhk')">
-            💬 Book on WhatsApp ➔
+            Book Now (Customize Add-ons) ➔
           </button>
         </div>
       </div>
@@ -477,7 +426,7 @@
             </ul>
           </div>
           <button class="btn-pack-book" onclick="openBookingDrawer('4 BHK Full Deep Cleaning', 7999, 'flat', '4bhk')">
-            💬 Book on WhatsApp ➔
+            Book Now (Customize Add-ons) ➔
           </button>
         </div>
       </div>
@@ -491,6 +440,7 @@
     <div class="sec-head">
       <span class="sec-badge">Specialized Rooms</span>
       <h2>Single Space Cleaning Solutions</h2>
+      <p>Targeted cleaning for Kitchen, Bathroom, Sofa without booking the whole house.</p>
     </div>
 
     <div class="room-grid">
@@ -510,7 +460,7 @@
       <div class="room-card">
         <div class="room-img-wrap">
           <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80" alt="Bathroom">
-          <span class="action-badge">Hard Water Scale Scale Out</span>
+          <span class="action-badge">Hard Water Scale Removal</span>
         </div>
         <div class="room-body">
           <h4>Bathroom Deep Clean</h4>
@@ -536,99 +486,84 @@
   </div>
 </section>
 
-<!-- STORE STORE ITEMIZED -->
-<section id="itemizedServices">
+<!-- HINDI DEEP CLEANING KNOWLEDGE GUIDE -->
+<section style="background: var(--light-bg);">
   <div class="container">
     <div class="sec-head">
-      <span class="sec-badge">Itemized Store</span>
-      <h2>Individual Items Care</h2>
+      <span class="sec-badge">डीप क्लीनिंग गाइड</span>
+      <h2>साफ सफाई क्यों है सबसे ज़रूरी?</h2>
     </div>
 
-    <div class="uc-items-grid">
-      <div class="uc-item-card">
-        <img class="uc-item-img" src="https://images.unsplash.com/photo-1580481077195-c3a821a58875?auto=format&fit=crop&w=500&q=80" alt="Chair">
-        <div class="uc-item-content">
-          <div>
-            <div class="uc-item-title">Dining / Office Chair</div>
-            <div class="uc-item-desc">Foam extraction & vacuuming</div>
-          </div>
-          <div class="uc-item-bottom">
-            <span class="uc-item-price">₹149</span>
-            <button class="btn-uc-book" onclick="openBookingDrawer('Chair Cleaning', 149, 'single')">Book</button>
-          </div>
-        </div>
-      </div>
+    <div class="guide-box">
+      <h3>🧼 1. हार्ड वॉटर (Hard Water) और कैल्शियम के दाग</h3>
+      <p>पुणे और पिंपरी-चिंचवड़ में पानी में कैल्शियम और टीडीएस अधिक होता है, जिससे बाथरूम टाइल्स और नलों पर जिद्दी परत जम जाती है। हम Taski R1 & R9 केमिकल्स का प्रयोग करके नलों और टाइल्स को नुकसान पहुंचाए बिना 100% साफ करते हैं।</p>
+    </div>
 
-      <div class="uc-item-card">
-        <img class="uc-item-img" src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=500&q=80" alt="Window">
-        <div class="uc-item-content">
-          <div>
-            <div class="uc-item-title">Sliding Window & Mesh</div>
-            <div class="uc-item-desc">Glass squeegee & track vacuum</div>
-          </div>
-          <div class="uc-item-bottom">
-            <span class="uc-item-price">₹199</span>
-            <button class="btn-uc-book" onclick="openBookingDrawer('Sliding Window & Mesh', 199, 'single')">Book</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="uc-item-card">
-        <img class="uc-item-img" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=500&q=80" alt="Balcony">
-        <div class="uc-item-content">
-          <div>
-            <div class="uc-item-title">Balcony Deep Wash</div>
-            <div class="uc-item-desc">Pressure scrub & drain flush</div>
-          </div>
-          <div class="uc-item-bottom">
-            <span class="uc-item-price">₹399</span>
-            <button class="btn-uc-book" onclick="openBookingDrawer('Balcony Deep Cleaning', 399, 'single')">Book</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="uc-item-card">
-        <img class="uc-item-img" src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=500&q=80" alt="Fan">
-        <div class="uc-item-content">
-          <div>
-            <div class="uc-item-title">Ceiling Fan Cleaning</div>
-            <div class="uc-item-desc">Blade degrease & motor wipe</div>
-          </div>
-          <div class="uc-item-bottom">
-            <span class="uc-item-price">₹99</span>
-            <button class="btn-uc-book" onclick="openBookingDrawer('Ceiling Fan Cleaning', 99, 'single')">Book</button>
-          </div>
-        </div>
-      </div>
+    <div class="guide-box">
+      <h3>🛋️ 2. सोफा और गद्दों की एक्सट्रैक्शन वैक्यूमिंग</h3>
+      <p>सोफे के कपड़ों में पसीना और धूल भरी एलर्जी जमा होती है। हमारी 1400W हाई-सक्शन वैक्यूम मशीन सोफे के अंदर से गंदा पानी और डस्ट माइट्स खींचकर बाहर निकालती है।</p>
     </div>
   </div>
 </section>
 
-<!-- ABOUT US -->
-<section id="aboutSection" style="background: var(--white);">
+<!-- REVIEWS & TESTIMONIALS -->
+<section id="reviewsSection" style="background: var(--white);">
   <div class="container">
-    <div class="info-box">
-      <h3>Saf Safai Pune (Shree Seva Deep Cleaning)</h3>
-      <p>We are Pune and PCMC's premier mechanized hygiene service provider. Equipped with industrial Taski chemicals and heavy-duty German floor scrubbers, we deliver 100% spotless cleanliness for your dream home without any advance payment.</p>
+    <div class="sec-head">
+      <span class="sec-badge">Verified Reviews</span>
+      <h2>What Pune Homeowners Say (4.9★)</h2>
+    </div>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Booked 2BHK cleaning in Shivajinagar 2. The team arrived on time with heavy floor machines and left the house spotless. Highly recommended!"</p>
+        <div class="reviewer">Anil Deshmukh</div>
+        <div class="reviewer-loc">Shivajinagar 2, PCMC</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Hard water stains on our bathroom taps and tiles were totally removed. Taski chemicals worked like magic. Zero advance paid."</p>
+        <div class="reviewer">Pooja Kulkarni</div>
+        <div class="reviewer-loc">Wakad, Pune</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Got sofa shampooing and kitchen degreasing done. Very professional crew and clear pricing on WhatsApp."</p>
+        <div class="reviewer">Saurabh Joshi</div>
+        <div class="reviewer-loc">Pimple Saudagar</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- LOCATIONS -->
+<!-- LOCATION & MAP -->
 <section id="locationSection">
   <div class="container">
-    <div class="info-box">
-      <h3>Active Service Operational Locations</h3>
-      <div class="location-chips">
-        <span class="loc-chip">📍 Wakad</span>
-        <span class="loc-chip">📍 Hinjewadi</span>
-        <span class="loc-chip">📍 Baner</span>
-        <span class="loc-chip">📍 Pimple Saudagar</span>
-        <span class="loc-chip">📍 Rahatani</span>
-        <span class="loc-chip">📍 Chinchwad</span>
-        <span class="loc-chip">📍 Ravet</span>
-        <span class="loc-chip">📍 Aundh</span>
-        <span class="loc-chip">📍 Kothrud</span>
+    <div class="sec-head">
+      <span class="sec-badge">Address & Coverage</span>
+      <h2>Our Office & Operational Areas</h2>
+    </div>
+
+    <div class="map-grid">
+      <div class="address-card">
+        <h3>📍 Saf Safai Pune HQ</h3>
+        <p><strong>Address:</strong> Shivajinagar 2, Pimpri Chinchwad, Pune, Maharashtra - 411019</p>
+        <p><strong>Direct Call:</strong> 9325100228</p>
+        <p><strong>Service Areas:</strong> Shivajinagar 2, Wakad, Hinjewadi, Baner, Pimple Saudagar, Chinchwad, Ravet, Akurdi, Kothrud & all PCMC areas.</p>
+      </div>
+
+      <div class="map-frame-box">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.520803889025!2d73.8058!3d18.6258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84234567890%3A0x1234567890!2sShivaji%20Nagar%202%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411019!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
       </div>
     </div>
   </div>
@@ -655,7 +590,7 @@
   </div>
 </section>
 
-<!-- MODAL DRAWER -->
+<!-- MODAL DRAWER (E-COMMERCE CHECKOUT MINI PAGE) -->
 <div id="bookingModal">
   <div class="modal-sheet">
     <button class="modal-close" onclick="closeBookingDrawer()">✕</button>
@@ -663,11 +598,12 @@
     <div class="selected-box">
       <div class="sel-info">
         <h4 id="modalServiceTitle">2 BHK Full Deep Cleaning</h4>
-        <span style="font-size:0.75rem; color:#15803d; font-weight:700;">Standardized Rate</span>
+        <span style="font-size:0.75rem; color:#15803d; font-weight:700;">Standardized Fixed Rate</span>
       </div>
       <div class="sel-price" id="modalServiceBasePrice">₹5,499</div>
     </div>
 
+    <!-- Wall / Furniture Toggles -->
     <div class="addon-toggles" id="wallFurnitureContainer">
       <div class="addon-toggle-item" onclick="toggleCheckbox('chkWall')">
         <label>
@@ -686,6 +622,7 @@
       </div>
     </div>
 
+    <!-- Extra Items Cross-Sell -->
     <div class="cross-sell-section">
       <h4 style="font-size:0.88rem; margin-bottom:8px;">⚡ Add Extra Individual Care:</h4>
       <div class="cross-grid">
@@ -728,13 +665,30 @@
 
       <div class="form-group">
         <label>Society & Area in Pune / PCMC *</label>
-        <input type="text" id="custArea" placeholder="e.g. Wakad, Hinjewadi, Baner" required>
+        <input type="text" id="custArea" placeholder="e.g. Shivajinagar 2, Wakad, Hinjewadi" required>
       </div>
 
       <button type="submit" class="btn-whatsapp-send">
-        💬 Confirm & Book on WhatsApp ➔
+        💬 Confirm Booking on WhatsApp ➔
       </button>
     </form>
+  </div>
+</div>
+
+<!-- 🤖 SMART AI PRICE ASSISTANT BOT -->
+<button id="aiBotFab" onclick="toggleAiBot()">🤖 Ask Price AI</button>
+
+<div id="aiBotBox">
+  <div class="ai-bot-head">
+    <span>🤖 Saf Safai Price Assistant</span>
+    <span style="cursor:pointer;" onclick="toggleAiBot()">✕</span>
+  </div>
+  <div class="ai-bot-messages" id="aiBotMsgs">
+    <div class="ai-msg">Namaste! 👋 Mai Saf Safai AI Assistant hoon. Aap mujhse kisi bhi cleaning service (1BHK, 2BHK, Kitchen, Sofa) ka rate pooch sakte hain!</div>
+  </div>
+  <div class="ai-bot-input">
+    <input type="text" id="aiInput" placeholder="Type e.g. 2bhk price..." onkeypress="handleAiKey(event)">
+    <button onclick="processAiQuery()">Ask</button>
   </div>
 </div>
 
@@ -743,12 +697,14 @@
   <div class="footer-grid">
     <div>
       <h4 style="color:#fff; margin-bottom:10px;">Saf Safai Pune</h4>
-      <p>Pune's #1 Mechanized Deep Cleaning Brand.</p>
+      <p>Shree Seva Deep Cleaning Services.</p>
+      <p style="margin-top:6px;">Shivajinagar 2, Pimpri Chinchwad, Pune - 411019</p>
     </div>
     <div>
-      <h4 style="color:#fff; margin-bottom:10px;">Quick Links</h4>
-      <p>📞 Phone: <a href="tel:9325100228" style="color:#4ade80; font-weight:bold;">9325100228</a></p>
-      <p>📍 Coverage: All Pune & PCMC</p>
+      <h4 style="color:#fff; margin-bottom:10px;">Direct Helplines</h4>
+      <p>📞 Call: <a href="tel:9325100228" style="color:#4ade80; font-weight:bold;">9325100228</a></p>
+      <p>💬 WhatsApp: 9325100228</p>
+      <p>📍 Operational: Shivajinagar 2, PCMC & Pune</p>
     </div>
   </div>
   <div style="text-align: center; border-top: 1px solid #1e293b; padding-top: 14px; font-size: 0.8rem;">
@@ -902,6 +858,37 @@
     const waUrl = `https://wa.me/919325100228?text=${waMessage}`;
     window.open(waUrl, '_blank');
     closeBookingDrawer();
+  }
+
+  // AI BOT FUNCTIONS
+  function toggleAiBot() {
+    const box = document.getElementById('aiBotBox');
+    box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  function handleAiKey(e) { if(e.key === 'Enter') processAiQuery(); }
+
+  function processAiQuery() {
+    const input = document.getElementById('aiInput');
+    const q = input.value.trim().toLowerCase();
+    if(!q) return;
+
+    const msgs = document.getElementById('aiBotMsgs');
+    msgs.innerHTML += `<div class="ai-msg user">${input.value}</div>`;
+    input.value = '';
+
+    let reply = "Aap Call (9325100228) par direct rate pooch sakte hain ya upar Book Now click kar sakte hain!";
+    if(q.includes('1bhk') || q.includes('1 bhk')) reply = "1 BHK Full Deep Cleaning ka fixed rate ₹4,499 hai (Without wall). Wall cleaning add-on +₹2,000 hai.";
+    else if(q.includes('2bhk') || q.includes('2 bhk')) reply = "2 BHK Full Deep Cleaning ka fixed rate ₹5,499 hai (Without wall). Wall cleaning add-on +₹3,000 hai.";
+    else if(q.includes('3bhk') || q.includes('3 bhk')) reply = "3 BHK Full Deep Cleaning ka fixed rate ₹6,499 hai. Wall cleaning add-on +₹4,000 hai.";
+    else if(q.includes('kitchen')) reply = "Kitchen Deep Cleaning ka rate ₹1,299 hai. Isme chimney, gas stove aur cabinet cleaning shamil hai.";
+    else if(q.includes('sofa')) reply = "3-Seater Sofa Shampooing ka rate ₹799 hai (Foam wet vacuum extraction).";
+    else if(q.includes('bathroom')) reply = "1 Bathroom Deep Cleaning ka rate ₹499 hai (Hard water scale removal included).";
+
+    setTimeout(() => {
+      msgs.innerHTML += `<div class="ai-msg">${reply}</div>`;
+      msgs.scrollTop = msgs.scrollHeight;
+    }, 400);
   }
 </script>
 
