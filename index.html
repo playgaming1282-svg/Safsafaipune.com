@@ -408,8 +408,8 @@
     </div>
   </footer>
 
-  <!-- ==================== ADVANCED AI CLEANING EXPERT CHATBOT (LEFT SIDE) ==================== -->
-  <div id="aiChatWidget" class="fixed bottom-24 left-6 z-50 hidden w-80 sm:w-[380px] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
+  <!-- ==================== AI CLEANING EXPERT CHATBOT (MIDDLE-LEFT POSITIONED) ==================== -->
+  <div id="aiChatWidget" class="fixed top-1/2 -translate-y-1/2 left-6 z-50 hidden w-80 sm:w-[380px] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
     <div class="bg-blue-600 text-white p-4 flex justify-between items-center font-bold text-sm">
       <div class="flex items-center gap-2">
         <span class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></span>
@@ -428,10 +428,10 @@
     </div>
   </div>
 
-  <!-- ==================== FLOATING ACTION BUTTONS (LEFT & RIGHT) ==================== -->
+  <!-- ==================== FLOATING ACTION BUTTONS (LEFT MIDDLE & RIGHT STACK) ==================== -->
 
-  <!-- Left Side: Advanced AI Cleaning Expert Button -->
-  <button onclick="toggleAIChat()" class="fixed bottom-6 left-6 z-40 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2 font-extrabold text-sm hover:scale-105 transition">
+  <!-- Left Side Middle: AI Cleaning Expert Floating Button -->
+  <button onclick="toggleAIChat()" class="fixed top-1/2 -translate-y-1/2 left-4 z-40 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-2 font-extrabold text-xs sm:text-sm hover:scale-105 transition">
     🤖 <span>AI Cleaning Expert</span>
   </button>
 
@@ -549,26 +549,11 @@
         let reply = "Main Saf Safai ka Professional Cleaning Expert hoon! Hum 100% eco-friendly solutions aur professional machinery se deep cleaning karte hain. Aapko kitchen, bathroom, sofa ya full home cleaning ke baare mein kya janna hai?";
         const query = userText.toLowerCase();
 
-        if(query.includes('tu kaun') || query.includes('who are you') || query.includes('what can you do')) {
+        if(query.includes('discount') || query.includes('offer') || query.includes('off')) {
+          reply = "Haan bilkul! Aaj Pune aur PCMC ke customers ke liye special offer chal raha hai—Flat 20% OFF ke sath FREE Anti-Bacterial Spraying mil rahi hai! Aap WhatsApp ya Call par booking confirm kar sakte hain.";
+        } else if(query.includes('tu kaun') || query.includes('who are you') || query.includes('what can you do')) {
           reply = "Main Saf Safai ka Professional Cleaning Expert hoon! Main aapko kitchen deep cleaning, bathroom sanitization, sofa shampooing, aur full home packages ke bare mein sabhi details aur expert tips de sakta hoon.";
         } else if(query.includes('kitchen') || query.includes('grease') || query.includes('chimney') || query.includes('oil')) {
           reply = "Kitchen Deep Cleaning (₹1,499): Isme heavy grease removers aur advanced scrubbing se chimney, exhaust fan, cabinets, aur wall tiles ki chipchipi gandagi poori tarah saaf ki jati hai.";
         } else if(query.includes('bathroom') || query.includes('scale') || query.includes('tap') || query.includes('tiles')) {
-          reply = "Bathroom Sanitization (₹999): Isme hard water descaling solutions se ziddi daag aur scale hataye jate hain, taps ko polish kiya jata hai aur germ-free fogging hoti hai.";
-        } else if(query.includes('sofa') || query.includes('carpet') || query.includes('stain')) {
-          reply = "Sofa & Carpet Shampooing (₹1,199): Isme Injection-Extraction Wet Vacuuming machine se fabric ke andar ki deep dust, sweat marks aur ziddi stains nikalne ka kaam hota hai.";
-        } else if(query.includes('price') || query.includes('cost') || query.includes('rate') || query.includes('package')) {
-          reply = "Hamari pricing ekdum transparent hai: Full Home 2BHK ₹3,999, Kitchen ₹1,499, Bathroom ₹999, Sofa ₹1,199, aur Window track ₹799 se start hoti hai!";
-        } else if(query.includes('city') || query.includes('location') || query.includes('nanded') || query.includes('pune') || query.includes('pcmc') || query.includes('mumbai') || query.includes('nagpur')) {
-          reply = "Hum primary तौर par Pune aur PCMC ke har area mein service dete hain. Agar aapko kisi bhi location par cleaning service ya expert cleaning advice chahiye, toh aap humein direct +919325100228 par call ya WhatsApp kar sakte hain!";
-        } else if(query.includes('chemicals') || query.includes('solution') || query.includes('safe')) {
-          reply = "Hum 100% non-toxic, eco-friendly aur kid/pet-safe cleaning solutions use karte hain jo surfaces ko nuksan nahi pahunchate aur ghar mein fresh fragrance chhodte hain.";
-        }
-
-        messages.innerHTML += `<div class="bg-blue-100 text-slate-800 p-3 rounded-xl max-w-[85%] mb-2 leading-relaxed font-medium">${reply}</div>`;
-        messages.scrollTop = messages.scrollHeight;
-      }, 500);
-    }
-  </script>
-</body>
-</html>
+          reply = "Bathroom Sanitization (₹
