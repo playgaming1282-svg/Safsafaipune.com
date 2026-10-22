@@ -10,10 +10,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- FontAwesome & Google Fonts & Tailwind CSS -->
+  <!-- Google Fonts & Tailwind CSS & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -24,7 +24,7 @@
           colors: {
             brandGreen: '#15803d',
             brandDarkGreen: '#0f5127',
-            brandBlue: '#0284c7',
+            brandSky: '#0284c7',
             brandDarkBlue: '#0369a1',
             brandNavy: '#0f172a'
           }
@@ -37,63 +37,74 @@
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
     .hindi-text { font-family: 'Tiro Devanagari Hindi', 'Plus Jakarta Sans', sans-serif; }
     
-    @keyframes pulse-green {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    /* Dynamic Animations */
+    @keyframes pulse-glow {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(37, 211, 102, 0.5); }
+      50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(37, 211, 102, 0.8); }
     }
-    .wa-pulse { animation: pulse-green 2s infinite; }
+    .btn-pulse-wa { animation: pulse-glow 2.5s infinite ease-in-out; }
 
-    @keyframes pulse-blue {
-      0% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7); }
-      70% { box-shadow: 0 0 0 16px rgba(14, 165, 233, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
+    @keyframes float-btn {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
     }
-    .call-pulse { animation: pulse-blue 2s infinite; }
+    .float-anim { animation: float-btn 3s infinite ease-in-out; }
 
-    /* Before After Slider Styling */
+    /* Before After Interactive Slider */
     .ba-container { position: relative; overflow: hidden; }
-    .ba-after { position: absolute; top:0; left:0; width:50%; height:100%; overflow:hidden; border-right: 3px solid #ffffff; }
-    
+    .ba-after { position: absolute; top:0; left:0; width:50%; height:100%; overflow:hidden; border-right: 4px solid #ffffff; }
+
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 relative">
 
+  <!-- TOP NOTICE BAR -->
+  <div class="bg-gradient-to-r from-emerald-700 via-teal-700 to-sky-700 text-white text-xs font-bold py-1.5 px-4 text-center flex justify-between items-center">
+    <span class="mx-auto flex items-center space-x-2">
+      <span class="bg-red-500 text-white px-2 py-0.5 rounded-full text-[10px] animate-pulse">SPECIAL OFFER</span>
+      <span>🔥 Festive Discount: Flat 15% OFF on Full Home Deep Cleaning in Pune & PCMC!</span>
+    </span>
+    <button onclick="openAdminModal()" class="text-xs text-emerald-200 hover:text-white underline font-semibold flex items-center space-x-1">
+      <i class="fa-solid fa-user-gear"></i>
+      <span>Admin Dashboard</span>
+    </button>
+  </div>
+
   <!-- TOP HEADER / NAVBAR -->
-  <header class="sticky top-0 z-40 bg-white shadow-md">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-md border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
       
-      <!-- Logo -->
-      <div class="flex items-center space-x-2">
-        <div class="bg-emerald-600 text-white p-2.5 rounded-full flex items-center justify-center shadow-lg">
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center space-x-3">
+        <div class="bg-gradient-to-tr from-emerald-600 to-teal-500 text-white p-2.5 rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/30">
           <i class="fa-solid fa-broom text-2xl"></i>
         </div>
         <div>
-          <h1 class="text-2xl font-black tracking-tight text-emerald-800 leading-none">SAF SAFAI</h1>
-          <p class="text-xs font-bold text-sky-600 tracking-wider">PUNE DEEP CLEANING</p>
+          <h1 class="text-2xl font-black tracking-tight text-slate-900 leading-none">SAF SAFAI <span class="text-emerald-600">PUNE</span></h1>
+          <p class="text-[11px] font-bold text-sky-600 tracking-wider">PREMIUM DEEP CLEANING</p>
         </div>
-      </div>
+      </a>
 
       <!-- Navigation Links -->
-      <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-700">
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-bold text-slate-700">
         <a href="#home" class="text-emerald-600 hover:text-emerald-700">होम</a>
         <a href="#services" class="hover:text-emerald-600 transition">हमारी सेवाएं</a>
         <a href="#pricing" class="hover:text-emerald-600 transition">कीमतें</a>
+        <a href="#areas" class="hover:text-emerald-600 transition">सर्विस एरिया</a>
         <a href="#how-it-works" class="hover:text-emerald-600 transition">कैसे बुक करें</a>
         <a href="#why-us" class="hover:text-emerald-600 transition">हमारे बारे में</a>
-        <a href="#faq" class="hover:text-emerald-600 transition">FAQ</a>
       </nav>
 
-      <!-- Action Call & Book -->
+      <!-- Header CTAs -->
       <div class="flex items-center space-x-3">
-        <a href="https://wa.me/919325100228" target="_blank" class="hidden sm:flex items-center space-x-2 border-2 border-emerald-500 text-emerald-700 font-bold px-3 py-1.5 rounded-full text-xs hover:bg-emerald-50 transition">
-          <i class="fa-brands fa-whatsapp text-emerald-500 text-lg"></i>
-          <span>Call / WhatsApp<br><strong class="text-slate-900">9325100228</strong></span>
+        <a href="https://wa.me/919325100228" target="_blank" class="hidden sm:flex items-center space-x-2 bg-emerald-50 hover:bg-emerald-100 border-2 border-emerald-500 text-emerald-800 font-bold px-3.5 py-1.5 rounded-xl text-xs transition">
+          <i class="fa-brands fa-whatsapp text-emerald-600 text-xl"></i>
+          <span>WhatsApp<br><strong class="text-slate-900">9325100228</strong></span>
         </a>
-        <a href="#pricing" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2.5 rounded-xl shadow-md flex items-center space-x-2 text-sm transition">
-          <i class="fa-solid fa-calendar-check"></i>
+        <a href="#pricing" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-extrabold px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-600/30 flex items-center space-x-2 text-sm transition">
+          <i class="fa-solid fa-cart-shopping"></i>
           <span>Book Now</span>
         </a>
       </div>
@@ -101,62 +112,48 @@
   </header>
 
   <!-- HERO BANNER SECTION -->
-  <section id="home" class="relative bg-gradient-to-br from-emerald-50 via-sky-50 to-white py-12 md:py-16 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+  <section id="home" class="relative bg-gradient-to-br from-emerald-900 via-slate-900 to-sky-900 text-white py-14 md:py-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
       
-      <!-- Left Hero Content -->
-      <div class="md:col-span-7 space-y-6">
-        <div class="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-800 px-3.5 py-1.5 rounded-full text-xs font-bold shadow-sm">
-          <i class="fa-solid fa-location-dot text-emerald-600"></i>
-          <span>Pune & Pimpri-Chinchwad</span>
+      <!-- Left Hero Text Content -->
+      <div class="md:col-span-7 space-y-6 text-left">
+        <div class="inline-flex items-center space-x-2 bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 px-4 py-1.5 rounded-full text-xs font-bold backdrop-blur-md">
+          <i class="fa-solid fa-location-dot text-emerald-400"></i>
+          <span>Serving Pune & Pimpri-Chinchwad Areas</span>
         </div>
 
-        <div class="space-y-2">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-emerald-700 leading-tight">
-            SAF SAFAI <span class="text-sky-600">PUNE</span>
+        <div class="space-y-3">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+            SAF SAFAI <span class="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">PUNE</span>
           </h1>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 hindi-text">
-            आपका घर, हमारी ज़म्मेदारी!
+          <h2 class="text-2xl sm:text-3xl font-bold text-emerald-200 hindi-text">
+            आपका घर, हमारी ज़म्मेदारी! ✨
           </h2>
-          <p class="text-slate-600 text-base sm:text-lg font-medium hindi-text">
-            पेशेवर और भरोसेमंद होम डीप क्लीनिंग सर्विस (पुणे और पिंपरी-चिंचवड़ में)
+          <p class="text-slate-300 text-base sm:text-lg max-w-xl hindi-text leading-relaxed">
+            पुणे और पिंपरी-चिंचवड़ की नंबर 1 पेशेवर और भरोसेमंद होम डीप क्लीनिंग सर्विस। 100% Eco-Friendly Non-Toxic जर्म-फ्री सफाई।
           </p>
         </div>
 
-        <!-- Hero Buttons -->
+        <!-- Hero Action Buttons -->
         <div class="flex flex-wrap gap-3 pt-2">
-          <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune,%20mujhe%20cleaning%20booking%20karni%20hai" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-xl font-bold flex items-center space-x-2 shadow-lg wa-pulse">
-            <i class="fa-brands fa-whatsapp text-xl"></i>
+          <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune,%20mujhe%20cleaning%20booking%20karni%20hai" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black px-6 py-3.5 rounded-2xl flex items-center space-x-2 shadow-xl shadow-emerald-500/40 btn-pulse-wa">
+            <i class="fa-brands fa-whatsapp text-2xl text-slate-950"></i>
             <span>WhatsApp Now: 9325100228</span>
           </a>
-          <a href="tel:9325100228" class="bg-sky-600 hover:bg-sky-700 text-white px-5 py-3 rounded-xl font-bold flex items-center space-x-2 shadow-lg call-pulse">
-            <i class="fa-solid fa-phone"></i>
+          <a href="tel:9325100228" class="bg-sky-500 hover:bg-sky-600 text-white font-extrabold px-6 py-3.5 rounded-2xl flex items-center space-x-2 shadow-xl shadow-sky-500/30">
+            <i class="fa-solid fa-phone-volume text-xl"></i>
             <span>Call Now: 9325100228</span>
-          </a>
-          <a href="#pricing" class="border-2 border-slate-700 hover:bg-slate-800 hover:text-white px-5 py-3 rounded-xl font-bold flex items-center space-x-2 text-slate-800 transition">
-            <i class="fa-solid fa-cart-plus"></i>
-            <span>Book Online</span>
           </a>
         </div>
       </div>
 
-      <!-- Right Hero Graphic -->
+      <!-- Right Hero Graphic/Image Display -->
       <div class="md:col-span-5 relative flex justify-center">
-        <div class="bg-gradient-to-tr from-emerald-500 to-sky-400 p-1.5 rounded-3xl shadow-2xl w-full max-w-md">
-          <div class="bg-white p-6 rounded-[22px] text-center space-y-4">
-            <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl shadow-inner">
-              <i class="fa-solid fa-house-chimney-crack"></i>
-            </div>
-            <h3 class="text-2xl font-black text-slate-800 hindi-text">स्वच्छ घर, स्वस्थ परिवार ❤️</h3>
-            <p class="text-sm text-slate-600 hindi-text">
-              100% Non-Toxic & Eco-Friendly केमिकल के साथ आपके घर के हर कोने की सुरक्षित और गहरी सफाई।
-            </p>
-            <div class="grid grid-cols-2 gap-2 text-xs font-bold text-slate-700 pt-2">
-              <div class="bg-slate-100 p-2 rounded-lg">✓ Trained Staff</div>
-              <div class="bg-slate-100 p-2 rounded-lg">✓ Advanced Machines</div>
-              <div class="bg-slate-100 p-2 rounded-lg">✓ On-time Service</div>
-              <div class="bg-slate-100 p-2 rounded-lg">✓ Best Rate Guarantee</div>
-            </div>
+        <div class="relative w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 p-2 rounded-3xl shadow-2xl">
+          <img id="img-hero-banner" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Deep Cleaning Banner" class="w-full h-72 object-cover rounded-2xl shadow-md">
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-black text-white hindi-text">स्वच्छ घर, स्वस्थ परिवार ❤️</h3>
+            <p class="text-xs text-emerald-200 mt-1 hindi-text">आधुनिक वैक्यूम और स्टीम मशीनों के साथ 100% गहरी सफाई</p>
           </div>
         </div>
       </div>
@@ -165,367 +162,255 @@
   </section>
 
   <!-- SERVICES SECTION (हमारी सेवाएं) -->
-  <section id="services" class="py-14 bg-white">
+  <section id="services" class="py-16 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-800 hindi-text">हमारी सेवाएं</h2>
-      <p class="text-slate-500 mt-1 mb-10 hindi-text">आपके घर के हर कोने की पूरी सफाई</p>
+      <span class="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Top Rated Cleaning</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2 hindi-text">हमारी सेवाएं</h2>
+      <p class="text-slate-500 mt-1 mb-12 hindi-text">आपके घर के हर कोने की पूरी सफाई</p>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <!-- Service Card 1 -->
-        <div onclick="quickAddToCart('Flat Deep Clean (1 BHK - 4 BHK)', 4000)" class="cursor-pointer bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
-          <div class="w-14 h-14 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
-            <i class="fa-solid fa-building"></i>
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group">
+          <div class="relative h-44 overflow-hidden">
+            <img id="img-flat" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Flat Cleaning">
+            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow">Popular</span>
           </div>
-          <h4 class="font-bold text-slate-800 mt-3 hindi-text">फ्लैट</h4>
-          <p class="text-[11px] text-slate-500 font-semibold">(1 BHK - 4 BHK)</p>
-          <button class="mt-3 text-xs bg-emerald-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
+          <div class="p-5 text-left">
+            <h4 class="font-black text-lg text-slate-900 hindi-text">फ्लैट डीप क्लीनिंग</h4>
+            <p class="text-xs text-slate-500 mt-1 hindi-text">(1 BHK, 2 BHK, 3 BHK, 4 BHK)</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-400">Starting</span>
+              <button onclick="quickAddToCart('Flat Deep Clean (1 BHK)', 4000)" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 px-4 rounded-xl shadow-md transition">+ Add Service</button>
+            </div>
+          </div>
         </div>
 
         <!-- Service Card 2 -->
-        <div onclick="quickAddToCart('Kitchen Cleaning', 1500)" class="cursor-pointer bg-sky-50 hover:bg-sky-100 border border-sky-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
-          <div class="w-14 h-14 bg-sky-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
-            <i class="fa-solid fa-kitchen-set"></i>
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group">
+          <div class="relative h-44 overflow-hidden">
+            <img id="img-kitchen" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Kitchen Cleaning">
           </div>
-          <h4 class="font-bold text-slate-800 mt-3 hindi-text">किचन</h4>
-          <p class="text-[11px] text-slate-500 font-semibold">Deep Scrubbing</p>
-          <button class="mt-3 text-xs bg-sky-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
+          <div class="p-5 text-left">
+            <h4 class="font-black text-lg text-slate-900 hindi-text">किचन डीप क्लीनिंग</h4>
+            <p class="text-xs text-slate-500 mt-1 hindi-text">Oil Stain & Degreasing Scrubbing</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-400">Starting</span>
+              <button onclick="quickAddToCart('Kitchen Cleaning', 1500)" class="bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold py-2 px-4 rounded-xl shadow-md transition">+ Add Service</button>
+            </div>
+          </div>
         </div>
 
         <!-- Service Card 3 -->
-        <div onclick="quickAddToCart('Bathroom Cleaning', 700)" class="cursor-pointer bg-teal-50 hover:bg-teal-100 border border-teal-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
-          <div class="w-14 h-14 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
-            <i class="fa-solid fa-shower"></i>
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group">
+          <div class="relative h-44 overflow-hidden">
+            <img id="img-bathroom" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Bathroom Cleaning">
           </div>
-          <h4 class="font-bold text-slate-800 mt-3 hindi-text">बाथरूम</h4>
-          <p class="text-[11px] text-slate-500 font-semibold">Tile & Fitting Clean</p>
-          <button class="mt-3 text-xs bg-teal-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
+          <div class="p-5 text-left">
+            <h4 class="font-black text-lg text-slate-900 hindi-text">बाथरूम डीप क्लीनिंग</h4>
+            <p class="text-xs text-slate-500 mt-1 hindi-text">Tile Scale & Tap Fitting Polish</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-400">Starting</span>
+              <button onclick="quickAddToCart('Bathroom Cleaning', 700)" class="bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold py-2 px-4 rounded-xl shadow-md transition">+ Add Service</button>
+            </div>
+          </div>
         </div>
 
         <!-- Service Card 4 -->
-        <div onclick="quickAddToCart('Sofa Cleaning', 250)" class="cursor-pointer bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
-          <div class="w-14 h-14 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
-            <i class="fa-solid fa-couch"></i>
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group">
+          <div class="relative h-44 overflow-hidden">
+            <img id="img-sofa" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Sofa Cleaning">
           </div>
-          <h4 class="font-bold text-slate-800 mt-3 hindi-text">सोफा</h4>
-          <p class="text-[11px] text-slate-500 font-semibold">Shampoo & Vacuum</p>
-          <button class="mt-3 text-xs bg-indigo-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
-        </div>
-
-        <!-- Service Card 5 -->
-        <div onclick="quickAddToCart('Hall Cleaning', 1500)" class="cursor-pointer bg-purple-50 hover:bg-purple-100 border border-purple-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
-          <div class="w-14 h-14 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
-            <i class="fa-solid fa-tv"></i>
+          <div class="p-5 text-left">
+            <h4 class="font-black text-lg text-slate-900 hindi-text">सोफा ड्राई क्लीनिंग</h4>
+            <p class="text-xs text-slate-500 mt-1 hindi-text">Shampooing & Vacuum Extraction</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-400">Per Seat</span>
+              <button onclick="quickAddToCart('Sofa Cleaning (Per Seat)', 250)" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2 px-4 rounded-xl shadow-md transition">+ Add Service</button>
+            </div>
           </div>
-          <h4 class="font-bold text-slate-800 mt-3 hindi-text">हॉल</h4>
-          <p class="text-[11px] text-slate-500 font-semibold">Complete Living Room</p>
-          <button class="mt-3 text-xs bg-purple-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
-        </div>
-
-        <!-- Service Card 6 -->
-        <div onclick="quickAddToCart('Window Cleaning', 250)" class="cursor-pointer bg-cyan-50 hover:bg-cyan-100 border border-cyan-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
-          <div class="w-14 h-14 bg-cyan-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
-            <i class="fa-solid fa-window-maximize"></i>
-          </div>
-          <h4 class="font-bold text-slate-800 mt-3 hindi-text">विंडो</h4>
-          <p class="text-[11px] text-slate-500 font-semibold">Glass & Track Wash</p>
-          <button class="mt-3 text-xs bg-cyan-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
-        </div>
-
-        <!-- Service Card 7 -->
-        <div onclick="quickAddToCart('Fan Cleaning', 100)" class="cursor-pointer bg-amber-50 hover:bg-amber-100 border border-amber-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
-          <div class="w-14 h-14 bg-amber-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
-            <i class="fa-solid fa-fan"></i>
-          </div>
-          <h4 class="font-bold text-slate-800 mt-3 hindi-text">फैन</h4>
-          <p class="text-[11px] text-slate-500 font-semibold">Deep Dusting</p>
-          <button class="mt-3 text-xs bg-amber-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- WHY CHOOSE US (हम क्यों चुनें?) -->
-  <section id="why-us" class="py-10 bg-slate-100 border-y border-slate-200">
+  <!-- PRICING & CUSTOM PACKAGE E-COMMERCE CART SECTION (सेवा की कीमतें) -->
+  <section id="pricing" class="py-16 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-center text-slate-800 mb-8 hindi-text">हम क्यों चुनें?</h2>
-      
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-xl mb-2">
-            <i class="fa-solid fa-user-shield"></i>
-          </div>
-          <h4 class="font-bold text-sm text-slate-800 hindi-text">प्रोफेशनल और अनुभवी टीम</h4>
-        </div>
-
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-xl mb-2">
-            <i class="fa-solid fa-leaf"></i>
-          </div>
-          <h4 class="font-bold text-sm text-slate-800 hindi-text">इको-फ्रेंडली क्लीनिंग प्रोडक्ट्स</h4>
-        </div>
-
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-xl mb-2">
-            <i class="fa-solid fa-clock"></i>
-          </div>
-          <h4 class="font-bold text-sm text-slate-800 hindi-text">समय पर सेवा</h4>
-        </div>
-
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-xl mb-2">
-            <i class="fa-solid fa-indian-rupee-sign"></i>
-          </div>
-          <h4 class="font-bold text-sm text-slate-800 hindi-text">किफायती कीमतें</h4>
-        </div>
-
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center col-span-2 md:col-span-1">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-xl mb-2">
-            <i class="fa-solid fa-thumbs-up"></i>
-          </div>
-          <h4 class="font-bold text-sm text-slate-800 hindi-text">100% संतुष्टि</h4>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW TO BOOK (बुकिंग कैसे करें?) -->
-  <section id="how-it-works" class="py-14 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-extrabold text-center text-slate-800 mb-2 hindi-text">बुकिंग कैसे करें?</h2>
-      <p class="text-center text-slate-500 mb-10 text-sm hindi-text">बस 4 आसान स्टेप्स में अपनी सफाई बुक करें</p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl relative text-center">
-          <span class="absolute top-3 left-3 bg-emerald-600 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">1</span>
-          <div class="text-3xl text-emerald-600 mb-3"><i class="fa-solid fa-list-check"></i></div>
-          <h3 class="font-bold text-lg text-slate-800 hindi-text">सेवा चुनें</h3>
-          <p class="text-xs text-slate-600 mt-1 hindi-text">(फ्लैट / किचन / बाथरूम आदि)</p>
-        </div>
-
-        <div class="bg-sky-50 border border-sky-200 p-6 rounded-2xl relative text-center">
-          <span class="absolute top-3 left-3 bg-sky-600 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">2</span>
-          <div class="text-3xl text-sky-600 mb-3"><i class="fa-solid fa-house"></i></div>
-          <h3 class="font-bold text-lg text-slate-800 hindi-text">BHK चुनें</h3>
-          <p class="text-xs text-slate-600 mt-1 font-semibold">(1/2/3/4 BHK)</p>
-        </div>
-
-        <div class="bg-teal-50 border border-teal-200 p-6 rounded-2xl relative text-center">
-          <span class="absolute top-3 left-3 bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">3</span>
-          <div class="text-3xl text-teal-600 mb-3"><i class="fa-solid fa-layer-group"></i></div>
-          <h3 class="font-bold text-lg text-slate-800 hindi-text">दीवार के साथ / बिना</h3>
-          <p class="text-xs text-slate-600 mt-1 hindi-text">और कीमत देखें</p>
-        </div>
-
-        <div class="bg-emerald-100 border-2 border-emerald-500 p-6 rounded-2xl relative text-center">
-          <span class="absolute top-3 left-3 bg-emerald-700 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">4</span>
-          <div class="text-3xl text-emerald-700 mb-3"><i class="fa-brands fa-whatsapp"></i></div>
-          <h3 class="font-bold text-lg text-slate-800 hindi-text">WhatsApp पर बुक करें</h3>
-          <p class="text-xs text-emerald-800 mt-1 font-semibold hindi-text">हम तुरंत संपर्क करेंगे</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING TABLE & CART DYNAMIC SECTION (सेवा की कीमतें) -->
-  <section id="pricing" class="py-14 bg-slate-50 border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-800 hindi-text">सेवा की कीमतें</h2>
-        <p class="text-slate-500 text-sm mt-1 hindi-text">(शुरुआती दरें)</p>
+      <div class="text-center mb-12">
+        <span class="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1 rounded-full uppercase">Transparent Pricing</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2 hindi-text">सेवा की कीमतें</h2>
+        <p class="text-slate-500 text-sm mt-1 hindi-text">अपना पैकेज चुनें और लाइव कार्ट में ऐड करें</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
-        <!-- Packages List (Left Side) -->
+        <!-- Left Side: Interactive Package Cards -->
         <div class="lg:col-span-8 space-y-6">
           
-          <!-- BHK Full Home Packages Grid -->
+          <!-- BHK Cards Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             
-            <!-- 1 BHK -->
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-500 transition">
-              <div class="flex items-center justify-between border-b pb-3 mb-3">
-                <span class="font-extrabold text-lg text-emerald-700">1 BHK Deep Clean</span>
-                <i class="fa-solid fa-building text-emerald-600 text-2xl"></i>
+            <!-- 1 BHK Package Card -->
+            <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200 hover:border-emerald-500 transition shadow-sm">
+              <div class="flex items-center space-x-3 mb-3">
+                <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black">1</div>
+                <div>
+                  <h4 class="font-black text-lg text-slate-900">1 BHK Deep Clean</h4>
+                  <p class="text-xs text-slate-500 hindi-text">पूरा फ्लैट सैनिटाइजेशन</p>
+                </div>
               </div>
-              <div class="space-y-2 text-sm text-slate-600 mb-4">
-                <div class="flex justify-between">
-                  <span class="hindi-text">(बिना दीवार):</span>
-                  <span class="font-bold text-slate-900">₹4,000</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="hindi-text">(दीवार के साथ):</span>
-                  <span class="font-bold text-slate-900">₹5,500 – ₹6,000</span>
-                </div>
+              <div class="space-y-1 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
+                <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900" id="price-1bhk-no-wall">₹4,000</strong></div>
+                <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900" id="price-1bhk-wall">₹5,500</strong></div>
               </div>
               <div class="grid grid-cols-2 gap-2">
-                <button onclick="addToCart('1 BHK (बिना दीवार)', 4000)" class="bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-2 rounded-xl text-xs transition border border-emerald-300">
-                  + बिना दीवार Add
+                <button onclick="addToCart('1 BHK (बिना दीवार)', getPrice('1bhk-no-wall', 4000))" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
+                  + बिना दीवार
                 </button>
-                <button onclick="addToCart('1 BHK (दीवार के साथ)', 5500)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs transition">
-                  + दीवार के साथ Add
+                <button onclick="addToCart('1 BHK (दीवार के साथ)', getPrice('1bhk-wall', 5500))" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
+                  + दीवार के साथ
                 </button>
               </div>
             </div>
 
-            <!-- 2 BHK -->
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-500 transition">
-              <div class="flex items-center justify-between border-b pb-3 mb-3">
-                <span class="font-extrabold text-lg text-emerald-700">2 BHK Deep Clean</span>
-                <i class="fa-solid fa-building text-emerald-600 text-2xl"></i>
+            <!-- 2 BHK Package Card -->
+            <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200 hover:border-emerald-500 transition shadow-sm">
+              <div class="flex items-center space-x-3 mb-3">
+                <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black">2</div>
+                <div>
+                  <h4 class="font-black text-lg text-slate-900">2 BHK Deep Clean</h4>
+                  <p class="text-xs text-slate-500 hindi-text">2 बेडरूम + हॉल + किचन</p>
+                </div>
               </div>
-              <div class="space-y-2 text-sm text-slate-600 mb-4">
-                <div class="flex justify-between">
-                  <span class="hindi-text">(बिना दीवार):</span>
-                  <span class="font-bold text-slate-900">₹4,500</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="hindi-text">(दीवार के साथ):</span>
-                  <span class="font-bold text-slate-900">₹7,500</span>
-                </div>
+              <div class="space-y-1 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
+                <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900" id="price-2bhk-no-wall">₹4,500</strong></div>
+                <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900" id="price-2bhk-wall">₹7,500</strong></div>
               </div>
               <div class="grid grid-cols-2 gap-2">
-                <button onclick="addToCart('2 BHK (बिना दीवार)', 4500)" class="bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-2 rounded-xl text-xs transition border border-emerald-300">
-                  + बिना दीवार Add
+                <button onclick="addToCart('2 BHK (बिना दीवार)', getPrice('2bhk-no-wall', 4500))" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
+                  + बिना दीवार
                 </button>
-                <button onclick="addToCart('2 BHK (दीवार के साथ)', 7500)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs transition">
-                  + दीवार के साथ Add
+                <button onclick="addToCart('2 BHK (दीवार के साथ)', getPrice('2bhk-wall', 7500))" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
+                  + दीवार के साथ
                 </button>
               </div>
             </div>
 
-            <!-- 3 BHK -->
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-500 transition">
-              <div class="flex items-center justify-between border-b pb-3 mb-3">
-                <span class="font-extrabold text-lg text-emerald-700">3 BHK Deep Clean</span>
-                <i class="fa-solid fa-building text-emerald-600 text-2xl"></i>
+            <!-- 3 BHK Package Card -->
+            <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200 hover:border-emerald-500 transition shadow-sm">
+              <div class="flex items-center space-x-3 mb-3">
+                <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black">3</div>
+                <div>
+                  <h4 class="font-black text-lg text-slate-900">3 BHK Deep Clean</h4>
+                  <p class="text-xs text-slate-500 hindi-text">3 बेडरूम + हॉल + बालकनी</p>
+                </div>
               </div>
-              <div class="space-y-2 text-sm text-slate-600 mb-4">
-                <div class="flex justify-between">
-                  <span class="hindi-text">(बिना दीवार):</span>
-                  <span class="font-bold text-slate-900">₹6,000</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="hindi-text">(दीवार के साथ):</span>
-                  <span class="font-bold text-slate-900">₹9,000</span>
-                </div>
+              <div class="space-y-1 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
+                <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900" id="price-3bhk-no-wall">₹6,000</strong></div>
+                <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900" id="price-3bhk-wall">₹9,000</strong></div>
               </div>
               <div class="grid grid-cols-2 gap-2">
-                <button onclick="addToCart('3 BHK (बिना दीवार)', 6000)" class="bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-2 rounded-xl text-xs transition border border-emerald-300">
-                  + बिना दीवार Add
+                <button onclick="addToCart('3 BHK (बिना दीवार)', getPrice('3bhk-no-wall', 6000))" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
+                  + बिना दीवार
                 </button>
-                <button onclick="addToCart('3 BHK (दीवार के साथ)', 9000)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs transition">
-                  + दीवार के साथ Add
+                <button onclick="addToCart('3 BHK (दीवार के साथ)', getPrice('3bhk-wall', 9000))" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
+                  + दीवार के साथ
                 </button>
               </div>
             </div>
 
-            <!-- 4 BHK -->
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-500 transition">
-              <div class="flex items-center justify-between border-b pb-3 mb-3">
-                <span class="font-extrabold text-lg text-emerald-700">4 BHK Deep Clean</span>
-                <i class="fa-solid fa-building text-emerald-600 text-2xl"></i>
+            <!-- 4 BHK Package Card -->
+            <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200 hover:border-emerald-500 transition shadow-sm">
+              <div class="flex items-center space-x-3 mb-3">
+                <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black">4</div>
+                <div>
+                  <h4 class="font-black text-lg text-slate-900">4 BHK Deep Clean</h4>
+                  <p class="text-xs text-slate-500 hindi-text">बड़ा फ्लैट / डुप्लेक्स</p>
+                </div>
               </div>
-              <div class="space-y-2 text-sm text-slate-600 mb-4">
-                <div class="flex justify-between">
-                  <span class="hindi-text">(बिना दीवार):</span>
-                  <span class="font-bold text-slate-900">₹8,000</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="hindi-text">(दीवार के साथ):</span>
-                  <span class="font-bold text-slate-900">₹12,000</span>
-                </div>
+              <div class="space-y-1 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
+                <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900" id="price-4bhk-no-wall">₹8,000</strong></div>
+                <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900" id="price-4bhk-wall">₹12,000</strong></div>
               </div>
               <div class="grid grid-cols-2 gap-2">
-                <button onclick="addToCart('4 BHK (बिना दीवार)', 8000)" class="bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-2 rounded-xl text-xs transition border border-emerald-300">
-                  + बिना दीवार Add
+                <button onclick="addToCart('4 BHK (बिना दीवार)', getPrice('4bhk-no-wall', 8000))" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
+                  + बिना दीवार
                 </button>
-                <button onclick="addToCart('4 BHK (दीवार के साथ)', 12000)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs transition">
-                  + दीवार के साथ Add
+                <button onclick="addToCart('4 BHK (दीवार के साथ)', getPrice('4bhk-wall', 12000))" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
+                  + दीवार के साथ
                 </button>
               </div>
             </div>
 
           </div>
 
-          <!-- Individual Services Grid -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            
-            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
-              <h5 class="font-bold text-sm text-slate-800 hindi-text">किचन</h5>
-              <p class="text-xs text-emerald-700 font-extrabold my-1">₹1,500 – ₹2,500</p>
-              <button onclick="addToCart('Kitchen Cleaning', 1500)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
+          <!-- Add-on Individual Items -->
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+            <h4 class="font-black text-base text-slate-900 mb-3 hindi-text">इंडिविजुअल सेवाएं (Add-ons)</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <button onclick="addToCart('Kitchen Cleaning', getPrice('kitchen', 1500))" class="bg-white p-3 rounded-xl border border-slate-200 text-left hover:border-emerald-500 transition">
+                <span class="font-bold text-xs block text-slate-800">किचन: <strong class="text-emerald-700" id="price-kitchen">₹1,500</strong></span>
+                <span class="text-[10px] text-slate-400">+ Add to cart</span>
+              </button>
+              <button onclick="addToCart('Bathroom Cleaning', getPrice('bathroom', 700))" class="bg-white p-3 rounded-xl border border-slate-200 text-left hover:border-emerald-500 transition">
+                <span class="font-bold text-xs block text-slate-800">बाथरूम: <strong class="text-emerald-700" id="price-bathroom">₹700</strong></span>
+                <span class="text-[10px] text-slate-400">+ Add to cart</span>
+              </button>
+              <button onclick="addToCart('Sofa Cleaning', getPrice('sofa', 250))" class="bg-white p-3 rounded-xl border border-slate-200 text-left hover:border-emerald-500 transition">
+                <span class="font-bold text-xs block text-slate-800">सोफा (Seat): <strong class="text-emerald-700" id="price-sofa">₹250</strong></span>
+                <span class="text-[10px] text-slate-400">+ Add to cart</span>
+              </button>
+              <button onclick="addToCart('Hall Cleaning', getPrice('hall', 1500))" class="bg-white p-3 rounded-xl border border-slate-200 text-left hover:border-emerald-500 transition">
+                <span class="font-bold text-xs block text-slate-800">हॉल: <strong class="text-emerald-700" id="price-hall">₹1,500</strong></span>
+                <span class="text-[10px] text-slate-400">+ Add to cart</span>
+              </button>
+              <button onclick="addToCart('Fan Cleaning', getPrice('fan', 100))" class="bg-white p-3 rounded-xl border border-slate-200 text-left hover:border-emerald-500 transition">
+                <span class="font-bold text-xs block text-slate-800">फैन: <strong class="text-emerald-700" id="price-fan">₹100</strong></span>
+                <span class="text-[10px] text-slate-400">+ Add to cart</span>
+              </button>
+              <button onclick="addToCart('Window Cleaning', getPrice('window', 250))" class="bg-white p-3 rounded-xl border border-slate-200 text-left hover:border-emerald-500 transition">
+                <span class="font-bold text-xs block text-slate-800">विंडो: <strong class="text-emerald-700" id="price-window">₹250</strong></span>
+                <span class="text-[10px] text-slate-400">+ Add to cart</span>
+              </button>
             </div>
-
-            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
-              <h5 class="font-bold text-sm text-slate-800 hindi-text">बाथरूम</h5>
-              <p class="text-xs text-emerald-700 font-extrabold my-1">₹700</p>
-              <button onclick="addToCart('Bathroom Cleaning', 700)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
-            </div>
-
-            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
-              <h5 class="font-bold text-sm text-slate-800 hindi-text">सोफा</h5>
-              <p class="text-xs text-emerald-700 font-extrabold my-1">₹250 – ₹300 (प्रति सीट)</p>
-              <button onclick="addToCart('Sofa Cleaning (Per Seat)', 250)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
-            </div>
-
-            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
-              <h5 class="font-bold text-sm text-slate-800 hindi-text">हॉल</h5>
-              <p class="text-xs text-emerald-700 font-extrabold my-1">₹1,500 – ₹3,000</p>
-              <button onclick="addToCart('Hall Cleaning', 1500)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
-            </div>
-
-            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
-              <h5 class="font-bold text-sm text-slate-800 hindi-text">फैन</h5>
-              <p class="text-xs text-emerald-700 font-extrabold my-1">₹100</p>
-              <button onclick="addToCart('Fan Cleaning', 100)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
-            </div>
-
-            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
-              <h5 class="font-bold text-sm text-slate-800 hindi-text">विंडो</h5>
-              <p class="text-xs text-emerald-700 font-extrabold my-1">₹250</p>
-              <button onclick="addToCart('Window Cleaning', 250)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
-            </div>
-
           </div>
 
-          <p class="text-xs text-slate-400 text-right italic hindi-text">* कीमतें क्षेत्र और स्थिति के अनुसार बदल सकती हैं।</p>
         </div>
 
-        <!-- Dynamic Cart / Booking Form Side (Right Side) -->
+        <!-- Right Side: E-Commerce Live Shopping Cart -->
         <div class="lg:col-span-4">
-          <div class="bg-white p-6 rounded-2xl border-2 border-emerald-500 shadow-xl sticky top-24">
-            <div class="flex items-center justify-between border-b pb-3 mb-4">
-              <h3 class="font-extrabold text-xl text-slate-800 flex items-center space-x-2">
+          <div class="bg-white p-6 rounded-3xl border-2 border-emerald-500 shadow-2xl sticky top-24">
+            <div class="flex items-center justify-between border-b pb-4 mb-4">
+              <h3 class="font-black text-xl text-slate-900 flex items-center space-x-2">
                 <i class="fa-solid fa-cart-shopping text-emerald-600"></i>
-                <span>Your Selected Cart</span>
+                <span>Your Selected Order</span>
               </h3>
-              <span id="cart-count" class="bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">0 items</span>
+              <span id="cart-count" class="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">0 items</span>
             </div>
 
-            <!-- Cart Items Holder -->
-            <div id="cart-items" class="space-y-3 max-h-56 overflow-y-auto mb-4 divide-y">
-              <p class="text-sm text-slate-400 text-center py-6 hindi-text">कार्ट में कोई सर्विस नहीं है। कृपया ऊपर से सर्विस चुनें।</p>
+            <!-- Dynamic Cart Items Container -->
+            <div id="cart-items" class="space-y-3 max-h-60 overflow-y-auto mb-4 divide-y">
+              <p class="text-sm text-slate-400 text-center py-8 hindi-text">कार्ट खाली है। कृपया सर्विसेज ऐड करें!</p>
             </div>
 
-            <!-- Total Price -->
-            <div class="border-t pt-3 mb-4 flex justify-between items-center font-extrabold text-lg text-slate-800">
-              <span>Estimated Total:</span>
-              <span id="cart-total" class="text-emerald-700">₹0</span>
+            <!-- Total Calculation -->
+            <div class="border-t pt-3 mb-4 flex justify-between items-center font-black text-lg text-slate-900">
+              <span>Total Price:</span>
+              <span id="cart-total" class="text-emerald-700 text-xl">₹0</span>
             </div>
 
-            <!-- Booking Details Input -->
-            <div class="space-y-3 mb-4">
-              <input type="text" id="cust-name" placeholder="आपका नाम (Your Name)" class="w-full text-sm border p-2.5 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
-              <input type="text" id="cust-address" placeholder="पता (Pune / PCMC Area Address)" class="w-full text-sm border p-2.5 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
-              <input type="date" id="cust-date" class="w-full text-sm border p-2.5 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
+            <!-- Customer Details Input -->
+            <div class="space-y-2.5 mb-5">
+              <input type="text" id="cust-name" placeholder="आपका नाम (Your Name)" class="w-full text-xs border p-3 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
+              <input type="text" id="cust-address" placeholder="पता (Pune / PCMC Area)" class="w-full text-xs border p-3 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
+              <input type="date" id="cust-date" class="w-full text-xs border p-3 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
             </div>
 
-            <!-- Submit Booking via WhatsApp -->
-            <button onclick="checkoutToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow-lg flex items-center justify-center space-x-2 transition">
-              <i class="fa-brands fa-whatsapp text-xl"></i>
+            <!-- Submit WhatsApp Order Button -->
+            <button onclick="checkoutToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3.5 rounded-2xl shadow-xl flex items-center justify-center space-x-2 transition">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
               <span>Book Order via WhatsApp</span>
             </button>
           </div>
@@ -535,196 +420,220 @@
     </div>
   </section>
 
-  <!-- BEFORE / AFTER INTERACTIVE BANNER -->
-  <section class="py-12 bg-slate-900 text-white">
-    <div class="max-w-7xl mx-auto px-4">
-      
-      <div class="bg-gradient-to-r from-emerald-800 to-teal-900 rounded-3xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border border-emerald-500/30 shadow-2xl">
-        
-        <!-- Before After Interactive Slider Graphic -->
-        <div class="md:col-span-6">
-          <div class="ba-container w-full h-64 sm:h-80 rounded-2xl shadow-xl border-2 border-white/20 select-none cursor-ew-resize" id="ba-slider">
-            <!-- Before Image (Background) -->
-            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Dirty Before">
-            <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full shadow">BEFORE</span>
+  <!-- SERVICE AREAS IN PUNE & PCMC SECTION -->
+  <section id="areas" class="py-14 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase">Locations Covered</span>
+      <h2 class="text-3xl font-black mt-2 hindi-text">पुणे और पिंपरी-चिंचवड़ सर्विस एरिया</h2>
+      <p class="text-slate-400 text-xs mt-1 mb-10 hindi-text">हम नीचे दिए गए सभी प्रमुख इलाकों में सर्विस प्रदान करते हैं</p>
 
-            <!-- After Image (Overlay Slider) -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-xs font-bold">
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Wakad</div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Baner</div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Hinjewadi</div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Kharadi</div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Kothrud</div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Shivajinagar</div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Pimpri</div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Chinchwad</div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Aundh</div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Viman Nagar</div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Hadapsar</div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-slate-200">Ravet</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER INTERACTIVE SLIDER BANNER -->
+  <section class="py-14 bg-slate-950 text-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 rounded-3xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border border-emerald-500/20 shadow-2xl">
+        
+        <!-- Interactive Slider -->
+        <div class="md:col-span-6">
+          <div class="ba-container w-full h-64 sm:h-80 rounded-2xl shadow-2xl border-2 border-white/20 select-none cursor-ew-resize" id="ba-slider">
+            <img id="img-before" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Before Cleaning">
+            <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full shadow">BEFORE</span>
+
             <div class="ba-after" id="ba-after">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" class="absolute top-0 left-0 max-w-none h-full object-cover" id="ba-after-img" alt="Clean After">
-              <span class="absolute top-3 right-3 bg-emerald-600 text-white text-xs font-black px-3 py-1 rounded-full shadow">AFTER</span>
+              <img id="img-after" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" class="absolute top-0 left-0 max-w-none h-full object-cover" id="ba-after-img" alt="After Cleaning">
+              <span class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-black px-3 py-1 rounded-full shadow">AFTER</span>
             </div>
           </div>
-          <p class="text-center text-xs text-slate-300 mt-2">↔️ Drag/Move mouse over image to compare Before & After</p>
+          <p class="text-center text-[11px] text-slate-400 mt-2">↔️ Slide mouse over image to compare Before & After results</p>
         </div>
 
-        <!-- Banner Text & CTA -->
         <div class="md:col-span-6 space-y-4">
-          <h2 class="text-3xl sm:text-4xl font-extrabold hindi-text leading-tight">
-            साफ घर, बेहतर जीवन
-          </h2>
-          <p class="text-emerald-200 text-base hindi-text">
-            आज ही अपनी सफाई बुक करें! हमारे पास प्रशिक्षित स्टाफ और आधुनिक तकनीक है।
-          </p>
-
-          <div class="space-y-2 text-sm pt-2">
-            <div class="flex items-center space-x-2"><i class="fa-solid fa-circle-check text-emerald-400"></i><span class="hindi-text">घर (Homes & Apartments)</span></div>
-            <div class="flex items-center space-x-2"><i class="fa-solid fa-circle-check text-emerald-400"></i><span class="hindi-text">ऑफिस (Offices & Workspaces)</span></div>
-            <div class="flex items-center space-x-2"><i class="fa-solid fa-circle-check text-emerald-400"></i><span class="hindi-text">व्यापारिक स्थल (Commercial Places)</span></div>
-            <div class="flex items-center space-x-2"><i class="fa-solid fa-circle-check text-emerald-400"></i><span class="hindi-text">सोसाइटी (Housing Societies)</span></div>
-          </div>
-
-          <a href="tel:9325100228" class="inline-flex items-center space-x-3 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold px-6 py-3.5 rounded-2xl shadow-lg text-lg transition mt-4">
-            <i class="fa-solid fa-phone-volume"></i>
-            <span>9325100228</span>
+          <h2 class="text-3xl font-black hindi-text">साफ घर, बेहतर जीवन ✨</h2>
+          <p class="text-slate-300 text-sm hindi-text">100% संतुष्टि की गारंटी के साथ प्रोफेशनल डीप क्लीनिंग।</p>
+          <a href="tel:9325100228" class="inline-flex items-center space-x-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black px-6 py-3.5 rounded-2xl shadow-xl transition">
+            <i class="fa-solid fa-phone-volume text-xl"></i>
+            <span>Call: 9325100228</span>
           </a>
         </div>
 
       </div>
-
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-slate-950 text-slate-300 pt-12 pb-24 md:pb-12 border-t border-slate-800 text-sm">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-      
-      <!-- Col 1: About -->
-      <div class="space-y-3">
-        <div class="flex items-center space-x-2">
-          <i class="fa-solid fa-broom text-emerald-500 text-2xl"></i>
-          <span class="font-extrabold text-xl text-white">SAF SAFAI PUNE</span>
-        </div>
-        <p class="text-xs text-slate-400 leading-relaxed hindi-text">
-          पुणे और पिंपरी-चिंचवड़ में बेस्ट होम डीप क्लीनिंग सेवाएं। हम आधुनिक मशीनों और safe eco-friendly chemicals के साथ काम करते हैं।
-        </p>
-      </div>
-
-      <!-- Col 2: Quick Links -->
-      <div>
-        <h4 class="font-bold text-white mb-3">Quick Links</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a href="#home" class="hover:text-emerald-400">होम (Home)</a></li>
-          <li><a href="#services" class="hover:text-emerald-400">हमारी सेवाएं (Services)</a></li>
-          <li><a href="#pricing" class="hover:text-emerald-400">कीमतें (Pricing)</a></li>
-          <li><a href="#why-us" class="hover:text-emerald-400">FAQ & About</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 3: Contact Info -->
-      <div>
-        <h4 class="font-bold text-white mb-3">Contact Us</h4>
-        <ul class="space-y-2 text-xs text-slate-400">
-          <li class="flex items-start space-x-2"><i class="fa-solid fa-location-dot mt-0.5 text-emerald-500"></i><span>Pune & Pimpri-Chinchwad</span></li>
-          <li class="flex items-center space-x-2"><i class="fa-solid fa-phone text-emerald-500"></i><span>9325100228</span></li>
-          <li class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-emerald-500"></i><span>WhatsApp Available 24/7</span></li>
-        </ul>
-      </div>
-
-      <!-- Col 4: Follow Us -->
-      <div>
-        <h4 class="font-bold text-white mb-3">Follow Us</h4>
-        <div class="flex space-x-3 text-lg">
-          <a href="#" class="w-9 h-9 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-600 text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="#" class="w-9 h-9 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-600 text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="w-9 h-9 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-600 text-white transition"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="w-9 h-9 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-600 text-white transition"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-        <p class="text-xs text-emerald-400 mt-4 font-bold hindi-text">आपका घर, हमारी ज़म्मेदारी! ❤️</p>
-      </div>
-
-    </div>
-
-    <div class="border-t border-slate-800 max-w-7xl mx-auto px-4 pt-4 flex flex-col sm:flex-row justify-between text-xs text-slate-500">
-      <p>© 2025 Saf Safai Pune. All Rights Reserved.</p>
+  <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-900 text-xs">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+      <p>© 2026 Saf Safai Pune. All Rights Reserved.</p>
       <p>Website Designed by Santosh Chavan</p>
     </div>
   </footer>
 
-  <!-- DYNAMIC AI BOT WIDGET -->
-  <div id="ai-bot-wrapper" class="fixed bottom-20 right-4 z-50">
+  <!-- FLOATING ACTION BUTTONS ABOVE AI BOT -->
+  <div class="fixed bottom-6 right-4 z-50 flex flex-col items-end space-y-3">
     
-    <!-- Bot Window -->
-    <div id="ai-chat-window" class="hidden w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[450px] mb-3 transition-all">
-      <!-- Bot Header -->
-      <div class="bg-gradient-to-r from-emerald-700 to-teal-800 text-white p-3.5 flex items-center justify-between">
-        <div class="flex items-center space-x-2">
-          <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm">🤖</div>
-          <div>
-            <h4 class="font-bold text-sm leading-tight">Safai AI Assistant</h4>
-            <span class="text-[10px] text-emerald-200 flex items-center"><span class="w-1.5 h-1.5 bg-emerald-400 rounded-full inline-block mr-1"></span>Online | Instant Help</span>
-          </div>
-        </div>
-        <button onclick="toggleAiBot()" class="text-white/80 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
-      </div>
+    <!-- Floating Real WhatsApp Button -->
+    <a href="https://wa.me/919325100228" target="_blank" class="w-13 h-13 bg-emerald-500 hover:bg-emerald-600 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center float-anim border-2 border-white">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
 
-      <!-- Messages Body -->
-      <div id="chat-messages" class="flex-1 p-3 overflow-y-auto space-y-3 text-xs bg-slate-50">
-        <div class="bg-white border border-slate-200 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] text-slate-700 shadow-sm hindi-text">
-          नमस्ते! 🙏 मैं आपका AI सफाई सहायक हूँ। मैं आपको सही पैकेज चुनने और बुक करने में मदद कर सकता हूँ। <br><br>आपका घर कितने BHK का है?
-        </div>
-      </div>
+    <!-- Floating Direct Call Button -->
+    <a href="tel:9325100228" class="w-13 h-13 bg-sky-500 hover:bg-sky-600 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center float-anim border-2 border-white">
+      <i class="fa-solid fa-phone text-xl"></i>
+    </a>
 
-      <!-- Suggested Quick Chips -->
-      <div class="p-2 bg-white border-t flex space-x-1 overflow-x-auto no-scrollbar text-[11px]">
-        <button onclick="sendQuickMsg('1 BHK Clean')" class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded-lg font-bold border border-emerald-200 shrink-0">1 BHK</button>
-        <button onclick="sendQuickMsg('2 BHK Clean')" class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded-lg font-bold border border-emerald-200 shrink-0">2 BHK</button>
-        <button onclick="sendQuickMsg('Kitchen Cleaning Rate')" class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded-lg font-bold border border-emerald-200 shrink-0">Kitchen Rate</button>
-        <button onclick="sendQuickMsg('Book Now')" class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded-lg font-bold border border-emerald-200 shrink-0">Book Slot</button>
-      </div>
-
-      <!-- Input Bar -->
-      <div class="p-2 bg-white border-t flex items-center space-x-2">
-        <input type="text" id="ai-user-input" placeholder="Type message..." onkeypress="if(event.key === 'Enter') handleAiSend()" class="flex-1 text-xs border rounded-xl px-3 py-2 outline-none focus:ring-1 focus:ring-emerald-500">
-        <button onclick="handleAiSend()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-xl text-xs font-bold"><i class="fa-solid fa-paper-plane"></i></button>
-      </div>
-    </div>
-
-    <!-- Bot Toggle Floating Button -->
-    <button onclick="toggleAiBot()" class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-3.5 rounded-full shadow-2xl flex items-center space-x-2 hover:scale-105 transition float-right">
-      <i class="fa-solid fa-robot text-2xl"></i>
-      <span class="text-xs font-bold pr-1 hidden sm:inline">Ask AI Assistant</span>
+    <!-- Floating AI Bot Button -->
+    <button onclick="toggleAiBot()" class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white px-4 py-3 rounded-full shadow-2xl flex items-center space-x-2 hover:scale-105 transition border-2 border-white">
+      <i class="fa-solid fa-robot text-xl"></i>
+      <span class="text-xs font-bold pr-1">Ask AI Bot</span>
     </button>
 
   </div>
 
-  <!-- STICKY MOBILE CALL / WHATSAPP BOTTOM BAR -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-2 sm:hidden z-40 grid grid-cols-2 gap-2 shadow-2xl">
-    <a href="tel:9325100228" class="bg-sky-600 text-white font-bold py-2.5 rounded-xl flex items-center justify-center space-x-2 text-xs">
-      <i class="fa-solid fa-phone"></i>
-      <span>Call 9325100228</span>
-    </a>
-    <a href="https://wa.me/919325100228" target="_blank" class="bg-emerald-600 text-white font-bold py-2.5 rounded-xl flex items-center justify-center space-x-2 text-xs">
-      <i class="fa-brands fa-whatsapp text-lg"></i>
-      <span>WhatsApp Booking</span>
-    </a>
+  <!-- DYNAMIC AI BOT CHAT WINDOW -->
+  <div id="ai-chat-window" class="hidden fixed bottom-24 right-4 z-50 w-80 sm:w-96 bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[420px]">
+    <div class="bg-gradient-to-r from-emerald-700 to-teal-800 text-white p-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <span class="text-xl">🤖</span>
+        <h4 class="font-bold text-sm">Safai AI Assistant</h4>
+      </div>
+      <button onclick="toggleAiBot()" class="text-white"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div id="chat-messages" class="flex-1 p-3 overflow-y-auto space-y-3 text-xs bg-slate-50 hindi-text">
+      <div class="bg-white p-2.5 rounded-xl border text-slate-700">नमस्ते! 🙏 मैं आपका AI सफाई सहायक हूँ। बताइए आपका घर कितने BHK का है?</div>
+    </div>
+    <div class="p-2 border-t flex space-x-1">
+      <input type="text" id="ai-user-input" placeholder="Type message..." onkeypress="if(event.key === 'Enter') handleAiSend()" class="flex-1 text-xs border rounded-xl p-2 outline-none">
+      <button onclick="handleAiSend()" class="bg-emerald-600 text-white px-3 py-2 rounded-xl text-xs"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <!-- ADMIN DASHBOARD MODAL -->
+  <div id="admin-modal" class="hidden fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden border border-slate-200 max-h-[90vh] flex flex-col">
+      
+      <!-- Admin Header -->
+      <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
+        <h3 class="font-black text-lg flex items-center space-x-2">
+          <i class="fa-solid fa-user-shield text-emerald-400"></i>
+          <span>Saf Safai Pune Admin Panel</span>
+        </h3>
+        <button onclick="closeAdminModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+
+      <!-- Admin Body -->
+      <div class="p-6 overflow-y-auto space-y-6 text-xs flex-1">
+        
+        <!-- Password Auth Box -->
+        <div id="admin-auth" class="space-y-3">
+          <label class="font-bold text-slate-700 block">Enter Admin Password:</label>
+          <input type="password" id="admin-pass-input" placeholder="Default Password: admin123" class="w-full border p-3 rounded-xl outline-none">
+          <button onclick="verifyAdminPass()" class="bg-emerald-600 text-white font-bold py-2.5 px-6 rounded-xl">Login</button>
+        </div>
+
+        <!-- Dashboard Controls (Hidden until logged in) -->
+        <div id="admin-controls" class="hidden space-y-6">
+          
+          <!-- Image Upload Manager -->
+          <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+            <h4 class="font-black text-sm text-slate-900">📷 Update Section Photos (Direct File Upload)</h4>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="font-bold block mb-1">Hero Banner Photo:</label>
+                <input type="file" accept="image/*" onchange="uploadImage(event, 'img-hero-banner')" class="w-full text-xs">
+              </div>
+              <div>
+                <label class="font-bold block mb-1">Flat Cleaning Photo:</label>
+                <input type="file" accept="image/*" onchange="uploadImage(event, 'img-flat')" class="w-full text-xs">
+              </div>
+              <div>
+                <label class="font-bold block mb-1">Kitchen Photo:</label>
+                <input type="file" accept="image/*" onchange="uploadImage(event, 'img-kitchen')" class="w-full text-xs">
+              </div>
+              <div>
+                <label class="font-bold block mb-1">Bathroom Photo:</label>
+                <input type="file" accept="image/*" onchange="uploadImage(event, 'img-bathroom')" class="w-full text-xs">
+              </div>
+            </div>
+          </div>
+
+          <!-- Price Manager -->
+          <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+            <h4 class="font-black text-sm text-slate-900">💰 Update Package Prices</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div>
+                <label class="font-bold block">1 BHK (No Wall):</label>
+                <input type="number" id="edit-1bhk-no-wall" value="4000" class="border p-1.5 rounded w-full">
+              </div>
+              <div>
+                <label class="font-bold block">1 BHK (Wall):</label>
+                <input type="number" id="edit-1bhk-wall" value="5500" class="border p-1.5 rounded w-full">
+              </div>
+              <div>
+                <label class="font-bold block">2 BHK (Wall):</label>
+                <input type="number" id="edit-2bhk-wall" value="7500" class="border p-1.5 rounded w-full">
+              </div>
+            </div>
+            <button onclick="saveAdminPrices()" class="bg-emerald-600 text-white font-bold py-2 px-4 rounded-xl">Save New Prices</button>
+          </div>
+
+          <!-- Orders Log -->
+          <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+            <h4 class="font-black text-sm text-slate-900 mb-2">📋 WhatsApp Orders Log</h4>
+            <p class="text-slate-500 italic">Bookings made via WhatsApp checkout are synced here locally.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
   </div>
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    // --- CART SYSTEM LOGIC ---
+    // --- CART SYSTEM ---
     let cart = [];
+    let customPrices = {};
+
+    function getPrice(key, defaultVal) {
+      return customPrices[key] || defaultVal;
+    }
 
     function addToCart(itemName, price) {
       const existing = cart.find(item => item.name === itemName);
       if(existing) {
         existing.qty += 1;
       } else {
-        cart.push({ name: itemName, price: price, qty: 1 });
+        cart.push({ name: itemName, price: parseInt(price), qty: 1 });
       }
       renderCart();
     }
 
     function quickAddToCart(itemName, price) {
       addToCart(itemName, price);
-      // Smooth scroll to cart on mobile/desktop
       document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
     }
 
     function updateQty(index, change) {
       cart[index].qty += change;
-      if(cart[index].qty <= 0) {
-        cart.splice(index, 1);
-      }
+      if(cart[index].qty <= 0) cart.splice(index, 1);
       renderCart();
     }
 
@@ -734,7 +643,7 @@
       const cartTotalEl = document.getElementById('cart-total');
 
       if(cart.length === 0) {
-        cartItemsEl.innerHTML = `<p class="text-sm text-slate-400 text-center py-6 hindi-text">कार्ट में कोई सर्विस नहीं है। कृपया ऊपर से सर्विस चुनें।</p>`;
+        cartItemsEl.innerHTML = `<p class="text-sm text-slate-400 text-center py-8 hindi-text">कार्ट खाली है। कृपया सर्विसेज ऐड करें!</p>`;
         cartCountEl.innerText = `0 items`;
         cartTotalEl.innerText = `₹0`;
         return;
@@ -751,16 +660,16 @@
 
         html += `
           <div class="flex items-center justify-between py-2 text-xs">
-            <div class="flex-1">
+            <div>
               <h5 class="font-bold text-slate-800 hindi-text">${item.name}</h5>
               <span class="text-slate-500">₹${item.price} each</span>
             </div>
             <div class="flex items-center space-x-2">
-              <button onclick="updateQty(${idx}, -1)" class="w-6 h-6 bg-slate-200 text-slate-700 font-bold rounded-lg flex items-center justify-center">-</button>
-              <span class="font-bold text-slate-900">${item.qty}</span>
-              <button onclick="updateQty(${idx}, 1)" class="w-6 h-6 bg-emerald-600 text-white font-bold rounded-lg flex items-center justify-center">+</button>
+              <button onclick="updateQty(${idx}, -1)" class="w-6 h-6 bg-slate-200 text-slate-700 font-bold rounded flex items-center justify-center">-</button>
+              <span class="font-bold">${item.qty}</span>
+              <button onclick="updateQty(${idx}, 1)" class="w-6 h-6 bg-emerald-600 text-white font-bold rounded flex items-center justify-center">+</button>
             </div>
-            <span class="font-extrabold text-emerald-700 ml-3 min-w-[50px] text-right">₹${itemTotal}</span>
+            <span class="font-bold text-emerald-700">₹${itemTotal}</span>
           </div>
         `;
       });
@@ -772,7 +681,7 @@
 
     function checkoutToWhatsApp() {
       if(cart.length === 0) {
-        alert('Please add at least one cleaning service to your cart!');
+        alert('Please add at least one service to cart!');
         return;
       }
 
@@ -788,92 +697,90 @@
         total += item.price * item.qty;
       });
 
-      const message = `*NEW CLEANING SERVICE BOOKING - SAF SAFAI PUNE*\n\n` +
-                      `*Customer Details:*\n` +
-                      `• Name: ${name}\n` +
-                      `• Address: ${address}\n` +
-                      `• Preferred Date: ${date}\n\n` +
-                      `*Selected Services:*\n${itemsList}\n` +
-                      `*Total Amount:* ₹${total}\n\n` +
-                      `Please confirm my booking slot!`;
+      const message = `*NEW BOOKING - SAF SAFAI PUNE*\n\n` +
+                      `*Customer:* ${name}\n` +
+                      `*Address:* ${address}\n` +
+                      `*Date:* ${date}\n\n` +
+                      `*Services Selected:*\n${itemsList}\n` +
+                      `*Total Bill:* ₹${total}`;
 
-      const encodedMsg = encodeURIComponent(message);
-      window.open(`https://wa.me/919325100228?text=${encodedMsg}`, '_blank');
+      window.open(`https://wa.me/919325100228?text=${encodeURIComponent(message)}`, '_blank');
     }
 
-    // --- BEFORE / AFTER INTERACTIVE SLIDER LOGIC ---
+    // --- BEFORE AFTER SLIDER ---
     const baSlider = document.getElementById('ba-slider');
     const baAfter = document.getElementById('ba-after');
     const baAfterImg = document.getElementById('ba-after-img');
 
-    function updateSlider(x) {
-      const rect = baSlider.getBoundingClientRect();
-      let pos = ((x - rect.left) / rect.width) * 100;
-      if (pos < 0) pos = 0;
-      if (pos > 100) pos = 100;
-      
-      baAfter.style.width = pos + '%';
-      baAfterImg.style.width = rect.width + 'px';
-    }
-
     if(baSlider) {
-      baSlider.addEventListener('mousemove', (e) => updateSlider(e.clientX));
-      baSlider.addEventListener('touchmove', (e) => updateSlider(e.touches[0].clientX));
-      window.addEventListener('resize', () => {
-        if(baSlider) baAfterImg.style.width = baSlider.getBoundingClientRect().width + 'px';
+      baSlider.addEventListener('mousemove', (e) => {
+        const rect = baSlider.getBoundingClientRect();
+        let pos = ((e.clientX - rect.left) / rect.width) * 100;
+        baAfter.style.width = Math.max(0, Math.min(100, pos)) + '%';
+        if(baAfterImg) baAfterImg.style.width = rect.width + 'px';
       });
     }
 
-    // --- AI CHATBOT LOGIC ---
+    // --- AI BOT ---
     function toggleAiBot() {
-      const win = document.getElementById('ai-chat-window');
-      win.classList.toggle('hidden');
-    }
-
-    function sendQuickMsg(txt) {
-      document.getElementById('ai-user-input').value = txt;
-      handleAiSend();
+      document.getElementById('ai-chat-window').classList.toggle('hidden');
     }
 
     function handleAiSend() {
       const input = document.getElementById('ai-user-input');
-      const text = input.value.trim();
-      if(!text) return;
+      const val = input.value.trim();
+      if(!val) return;
 
-      const chatBox = document.getElementById('chat-messages');
-
-      // User Message
-      chatBox.innerHTML += `
-        <div class="bg-emerald-600 text-white p-2.5 rounded-2xl rounded-tr-none max-w-[80%] ml-auto font-medium">
-          ${text}
-        </div>
-      `;
-
+      const chat = document.getElementById('chat-messages');
+      chat.innerHTML += `<div class="bg-emerald-600 text-white p-2 rounded-xl max-w-[80%] ml-auto text-right">${val}</div>`;
       input.value = '';
-      chatBox.scrollTop = chatBox.scrollHeight;
 
-      // Smart Bot Response Simulation
       setTimeout(() => {
-        let reply = "मैं आपकी बात समझ गया! क्या आप WhatsApp पर सीधी बात करके अपना पसंदीदा स्लॉट कन्फर्म करना चाहेंगे?";
-        const lower = text.toLowerCase();
+        chat.innerHTML += `<div class="bg-white p-2.5 rounded-xl border text-slate-700">धन्यवाद! क्या आप WhatsApp पर direct chat karke slot book karna chahenge?</div>`;
+        chat.scrollTop = chat.scrollHeight;
+      }, 500);
+    }
 
-        if(lower.includes('1 bhk') || lower.includes('1bhk')) {
-          reply = "1 BHK deep cleaning की शुरुआत ₹4,000 से है (बिना दीवार) और ₹5,500 (दीवार के साथ)। <br><button onclick='quickAddToCart(\"1 BHK (बिना दीवार)\", 4000)' class='mt-2 bg-emerald-700 text-white px-2 py-1 rounded text-[10px] font-bold'>+ Add 1 BHK to Cart</button>";
-        } else if(lower.includes('2 bhk') || lower.includes('2bhk')) {
-          reply = "2 BHK deep cleaning की दरें ₹4,500 (बिना दीवार) और ₹7,500 (दीवार के साथ) हैं। <br><button onclick='quickAddToCart(\"2 BHK (दीवार के साथ)\", 7500)' class='mt-2 bg-emerald-700 text-white px-2 py-1 rounded text-[10px] font-bold'>+ Add 2 BHK to Cart</button>";
-        } else if(lower.includes('kitchen') || lower.includes('किचन')) {
-          reply = "किचन डीप क्लीनिंग की कीमत ₹1,500 - ₹2,500 है जिसमें डीप स्क्रबिंग और ऑइल स्टेन क्लीनिंग शामिल है।";
-        } else if(lower.includes('book') || lower.includes('slot')) {
-          reply = "आप ऊपर दिए कार्ट सेक्शन में अपनी डिटेल भरकर तुरंत 'Book Order via WhatsApp' पर क्लिक कर सकते हैं!";
+    // --- ADMIN DASHBOARD PANEL ---
+    function openAdminModal() {
+      document.getElementById('admin-modal').classList.remove('hidden');
+    }
+
+    function closeAdminModal() {
+      document.getElementById('admin-modal').classList.add('hidden');
+    }
+
+    function verifyAdminPass() {
+      const pass = document.getElementById('admin-pass-input').value;
+      if(pass === 'admin123') {
+        document.getElementById('admin-auth').classList.add('hidden');
+        document.getElementById('admin-controls').classList.remove('hidden');
+      } else {
+        alert('Wrong Password!');
+      }
+    }
+
+    function uploadImage(event, targetImgId) {
+      const file = event.target.files[0];
+      if(file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById(targetImgId).src = e.target.result;
         }
+        reader.readAsDataURL(file);
+      }
+    }
 
-        chatBox.innerHTML += `
-          <div class="bg-white border border-slate-200 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] text-slate-700 shadow-sm hindi-text">
-            ${reply}
-          </div>
-        `;
-        chatBox.scrollTop = chatBox.scrollHeight;
-      }, 600);
+    function saveAdminPrices() {
+      customPrices['1bhk-no-wall'] = parseInt(document.getElementById('edit-1bhk-no-wall').value);
+      customPrices['1bhk-wall'] = parseInt(document.getElementById('edit-1bhk-wall').value);
+      customPrices['2bhk-wall'] = parseInt(document.getElementById('edit-2bhk-wall').value);
+
+      document.getElementById('price-1bhk-no-wall').innerText = '₹' + customPrices['1bhk-no-wall'];
+      document.getElementById('price-1bhk-wall').innerText = '₹' + customPrices['1bhk-wall'];
+      document.getElementById('price-2bhk-wall').innerText = '₹' + customPrices['2bhk-wall'];
+
+      alert('Prices Updated Successfully!');
     }
   </script>
 </body>
