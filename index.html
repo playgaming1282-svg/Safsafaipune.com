@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="hi" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,48 +10,32 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Google Search Console Verification Tag -->
-  <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_KEY">
-
-  <!-- Google Fonts & Tailwind CSS -->
+  <!-- FontAwesome & Google Fonts & Tailwind CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- LocalBusiness Schema (JSON-LD) for Local SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Saf Safai Pune",
-    "image": "1000706692.webp",
-    "telephone": "+919325100228",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Shivajinagar 2, Pimpri Chinchwad",
-      "addressLocality": "Pune",
-      "postalCode": "411019",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 18.6298,
-      "longitude": 73.7997
-    },
-    "url": "https://safsafaipune.sbs",
-    "priceRange": "₹599 - ₹6999",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "1450"
-    },
-    "areaServed": ["Pune", "PCMC", "Shivajinagar", "Wakad", "Baner", "Hinjewadi", "Kothrud", "Kharadi", "Pimpri", "Chinchwad"]
-  }
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandGreen: '#15803d',
+            brandDarkGreen: '#0f5127',
+            brandBlue: '#0284c7',
+            brandDarkBlue: '#0369a1',
+            brandNavy: '#0f172a'
+          }
+        }
+      }
+    }
   </script>
 
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .hindi-text { font-family: 'Tiro Devanagari Hindi', 'Plus Jakarta Sans', sans-serif; }
     
     @keyframes pulse-green {
       0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
@@ -67,657 +51,829 @@
     }
     .call-pulse { animation: pulse-blue 2s infinite; }
 
+    /* Before After Slider Styling */
+    .ba-container { position: relative; overflow: hidden; }
+    .ba-after { position: absolute; top:0; left:0; width:50%; height:100%; overflow:hidden; border-right: 3px solid #ffffff; }
+    
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900 pb-28 md:pb-0">
+<body class="bg-slate-50 text-slate-800 relative">
 
-  <!-- Top Announcement Bar -->
-  <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 text-white text-xs md:text-sm py-2 px-4 text-center font-medium shadow-inner flex justify-between items-center max-w-7xl mx-auto rounded-b-lg">
-    <div class="flex items-center gap-2 mx-auto md:mx-0">
-      <span class="inline-block w-2.5 h-2.5 bg-green-400 rounded-full animate-ping"></span>
-      <span>🔥 <strong>Pune & PCMC Special Offer:</strong> Flat 20% OFF + FREE Anti-Bacterial Spraying Today!</span>
-    </div>
-    <div class="hidden md:flex items-center gap-4 text-slate-300">
-      <span>📍 Shivajinagar 2, PCMC, Pune - 411019</span>
-      <span>📞 <a href="tel:9325100228" class="text-yellow-400 font-bold hover:underline">9325100228</a></span>
-    </div>
-  </div>
-
-  <!-- Header / Navbar -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+  <!-- TOP HEADER / NAVBAR -->
+  <header class="sticky top-0 z-40 bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white text-xl font-black shadow-md shadow-blue-500/30">✨</div>
-        <div>
-          <h1 class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-blue-700 via-indigo-700 to-cyan-600 bg-clip-text text-transparent">Saf Safai Pune</h1>
-          <p class="text-[10px] text-slate-500 font-bold tracking-wider uppercase">Deep Cleaning Specialist</p>
+      
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <div class="bg-emerald-600 text-white p-2.5 rounded-full flex items-center justify-center shadow-lg">
+          <i class="fa-solid fa-broom text-2xl"></i>
         </div>
-      </a>
+        <div>
+          <h1 class="text-2xl font-black tracking-tight text-emerald-800 leading-none">SAF SAFAI</h1>
+          <p class="text-xs font-bold text-sky-600 tracking-wider">PUNE DEEP CLEANING</p>
+        </div>
+      </div>
 
-      <nav class="hidden lg:flex items-center gap-8 font-semibold text-slate-700 text-sm">
-        <a href="#about" class="hover:text-blue-600 transition">About Us</a>
-        <a href="#why-us" class="hover:text-blue-600 transition">Why Mechanized?</a>
-        <a href="#services" class="hover:text-blue-600 transition">Services & Packages</a>
-        <a href="#process" class="hover:text-blue-600 transition">Booking Steps</a>
-        <a href="#reviews" class="hover:text-blue-600 transition">Google Reviews</a>
-        <a href="#coverage" class="hover:text-blue-600 transition">Service Areas</a>
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-700">
+        <a href="#home" class="text-emerald-600 hover:text-emerald-700">होम</a>
+        <a href="#services" class="hover:text-emerald-600 transition">हमारी सेवाएं</a>
+        <a href="#pricing" class="hover:text-emerald-600 transition">कीमतें</a>
+        <a href="#how-it-works" class="hover:text-emerald-600 transition">कैसे बुक करें</a>
+        <a href="#why-us" class="hover:text-emerald-600 transition">हमारे बारे में</a>
+        <a href="#faq" class="hover:text-emerald-600 transition">FAQ</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <a href="tel:9325100228" class="hidden sm:flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold px-4 py-2.5 rounded-xl shadow-lg transition text-sm">
-          <span>📞 9325100228</span>
+      <!-- Action Call & Book -->
+      <div class="flex items-center space-x-3">
+        <a href="https://wa.me/919325100228" target="_blank" class="hidden sm:flex items-center space-x-2 border-2 border-emerald-500 text-emerald-700 font-bold px-3 py-1.5 rounded-full text-xs hover:bg-emerald-50 transition">
+          <i class="fa-brands fa-whatsapp text-emerald-500 text-lg"></i>
+          <span>Call / WhatsApp<br><strong class="text-slate-900">9325100228</strong></span>
         </a>
-        <button onclick="toggleDrawer()" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-extrabold px-5 py-2.5 rounded-xl shadow-lg shadow-orange-500/30 transition text-sm flex items-center gap-2">
-          <span>⚡ Instant Book</span>
-        </button>
+        <a href="#pricing" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2.5 rounded-xl shadow-md flex items-center space-x-2 text-sm transition">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Book Now</span>
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-b from-blue-50 via-indigo-50/50 to-slate-50 py-12 md:py-20 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 border border-blue-200 text-blue-800 text-xs font-bold mb-4">
-          <span class="w-2 h-2 rounded-full bg-blue-600"></span> #1 Deep Cleaning Service in Pune & PCMC
+  <!-- HERO BANNER SECTION -->
+  <section id="home" class="relative bg-gradient-to-br from-emerald-50 via-sky-50 to-white py-12 md:py-16 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      
+      <!-- Left Hero Content -->
+      <div class="md:col-span-7 space-y-6">
+        <div class="inline-flex items-center space-x-2 bg-emerald-100 text-emerald-800 px-3.5 py-1.5 rounded-full text-xs font-bold shadow-sm">
+          <i class="fa-solid fa-location-dot text-emerald-600"></i>
+          <span>Pune & Pimpri-Chinchwad</span>
         </div>
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-tight mb-6">
-          Ghar Chamkaayein <span class="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Professional Precision</span> Ke Sath!
-        </h1>
-        <p class="text-slate-600 text-base sm:text-lg mb-8 font-medium leading-relaxed">
-          Ziddi daag, oil grease, aur hard water scale ko kahein alvida. Hum laayein hain 100% Non-Toxic eco-friendly solutions & Advanced Mechanized Deep Cleaning for Pune & PCMC homes.
-        </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 mb-8">
-          <button onclick="toggleDrawer()" class="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 text-white font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl shadow-blue-600/30 hover:scale-[1.02] transition flex items-center justify-center gap-3">
-            <span>🛒 Choose Cleaning Package</span>
-          </button>
-          <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune!%20Mujhe%20Deep%20Cleaning%20ke%20liye%20quote%20chahiye." target="_blank" class="bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl shadow-green-500/30 hover:scale-[1.02] transition flex items-center justify-center gap-3">
-            <span>WhatsApp Quick Quote</span>
+        <div class="space-y-2">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-emerald-700 leading-tight">
+            SAF SAFAI <span class="text-sky-600">PUNE</span>
+          </h1>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 hindi-text">
+            आपका घर, हमारी ज़म्मेदारी!
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg font-medium hindi-text">
+            पेशेवर और भरोसेमंद होम डीप क्लीनिंग सर्विस (पुणे और पिंपरी-चिंचवड़ में)
+          </p>
+        </div>
+
+        <!-- Hero Buttons -->
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune,%20mujhe%20cleaning%20booking%20karni%20hai" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-xl font-bold flex items-center space-x-2 shadow-lg wa-pulse">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span>WhatsApp Now: 9325100228</span>
+          </a>
+          <a href="tel:9325100228" class="bg-sky-600 hover:bg-sky-700 text-white px-5 py-3 rounded-xl font-bold flex items-center space-x-2 shadow-lg call-pulse">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call Now: 9325100228</span>
+          </a>
+          <a href="#pricing" class="border-2 border-slate-700 hover:bg-slate-800 hover:text-white px-5 py-3 rounded-xl font-bold flex items-center space-x-2 text-slate-800 transition">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Book Online</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Hero Graphic -->
+      <div class="md:col-span-5 relative flex justify-center">
+        <div class="bg-gradient-to-tr from-emerald-500 to-sky-400 p-1.5 rounded-3xl shadow-2xl w-full max-w-md">
+          <div class="bg-white p-6 rounded-[22px] text-center space-y-4">
+            <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl shadow-inner">
+              <i class="fa-solid fa-house-chimney-crack"></i>
+            </div>
+            <h3 class="text-2xl font-black text-slate-800 hindi-text">स्वच्छ घर, स्वस्थ परिवार ❤️</h3>
+            <p class="text-sm text-slate-600 hindi-text">
+              100% Non-Toxic & Eco-Friendly केमिकल के साथ आपके घर के हर कोने की सुरक्षित और गहरी सफाई।
+            </p>
+            <div class="grid grid-cols-2 gap-2 text-xs font-bold text-slate-700 pt-2">
+              <div class="bg-slate-100 p-2 rounded-lg">✓ Trained Staff</div>
+              <div class="bg-slate-100 p-2 rounded-lg">✓ Advanced Machines</div>
+              <div class="bg-slate-100 p-2 rounded-lg">✓ On-time Service</div>
+              <div class="bg-slate-100 p-2 rounded-lg">✓ Best Rate Guarantee</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION (हमारी सेवाएं) -->
+  <section id="services" class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-800 hindi-text">हमारी सेवाएं</h2>
+      <p class="text-slate-500 mt-1 mb-10 hindi-text">आपके घर के हर कोने की पूरी सफाई</p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
+        
+        <!-- Service Card 1 -->
+        <div onclick="quickAddToCart('Flat Deep Clean (1 BHK - 4 BHK)', 4000)" class="cursor-pointer bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
+          <div class="w-14 h-14 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <h4 class="font-bold text-slate-800 mt-3 hindi-text">फ्लैट</h4>
+          <p class="text-[11px] text-slate-500 font-semibold">(1 BHK - 4 BHK)</p>
+          <button class="mt-3 text-xs bg-emerald-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div onclick="quickAddToCart('Kitchen Cleaning', 1500)" class="cursor-pointer bg-sky-50 hover:bg-sky-100 border border-sky-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
+          <div class="w-14 h-14 bg-sky-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
+            <i class="fa-solid fa-kitchen-set"></i>
+          </div>
+          <h4 class="font-bold text-slate-800 mt-3 hindi-text">किचन</h4>
+          <p class="text-[11px] text-slate-500 font-semibold">Deep Scrubbing</p>
+          <button class="mt-3 text-xs bg-sky-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div onclick="quickAddToCart('Bathroom Cleaning', 700)" class="cursor-pointer bg-teal-50 hover:bg-teal-100 border border-teal-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
+          <div class="w-14 h-14 bg-teal-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
+            <i class="fa-solid fa-shower"></i>
+          </div>
+          <h4 class="font-bold text-slate-800 mt-3 hindi-text">बाथरूम</h4>
+          <p class="text-[11px] text-slate-500 font-semibold">Tile & Fitting Clean</p>
+          <button class="mt-3 text-xs bg-teal-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div onclick="quickAddToCart('Sofa Cleaning', 250)" class="cursor-pointer bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
+          <div class="w-14 h-14 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
+            <i class="fa-solid fa-couch"></i>
+          </div>
+          <h4 class="font-bold text-slate-800 mt-3 hindi-text">सोफा</h4>
+          <p class="text-[11px] text-slate-500 font-semibold">Shampoo & Vacuum</p>
+          <button class="mt-3 text-xs bg-indigo-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div onclick="quickAddToCart('Hall Cleaning', 1500)" class="cursor-pointer bg-purple-50 hover:bg-purple-100 border border-purple-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
+          <div class="w-14 h-14 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
+            <i class="fa-solid fa-tv"></i>
+          </div>
+          <h4 class="font-bold text-slate-800 mt-3 hindi-text">हॉल</h4>
+          <p class="text-[11px] text-slate-500 font-semibold">Complete Living Room</p>
+          <button class="mt-3 text-xs bg-purple-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div onclick="quickAddToCart('Window Cleaning', 250)" class="cursor-pointer bg-cyan-50 hover:bg-cyan-100 border border-cyan-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
+          <div class="w-14 h-14 bg-cyan-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
+            <i class="fa-solid fa-window-maximize"></i>
+          </div>
+          <h4 class="font-bold text-slate-800 mt-3 hindi-text">विंडो</h4>
+          <p class="text-[11px] text-slate-500 font-semibold">Glass & Track Wash</p>
+          <button class="mt-3 text-xs bg-cyan-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
+        </div>
+
+        <!-- Service Card 7 -->
+        <div onclick="quickAddToCart('Fan Cleaning', 100)" class="cursor-pointer bg-amber-50 hover:bg-amber-100 border border-amber-200 p-4 rounded-2xl text-center transition shadow-sm hover:shadow-md group">
+          <div class="w-14 h-14 bg-amber-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl group-hover:scale-110 transition">
+            <i class="fa-solid fa-fan"></i>
+          </div>
+          <h4 class="font-bold text-slate-800 mt-3 hindi-text">फैन</h4>
+          <p class="text-[11px] text-slate-500 font-semibold">Deep Dusting</p>
+          <button class="mt-3 text-xs bg-amber-700 text-white font-bold py-1 px-3 rounded-lg w-full">+ Add</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US (हम क्यों चुनें?) -->
+  <section id="why-us" class="py-10 bg-slate-100 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-center text-slate-800 mb-8 hindi-text">हम क्यों चुनें?</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-xl mb-2">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <h4 class="font-bold text-sm text-slate-800 hindi-text">प्रोफेशनल और अनुभवी टीम</h4>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-xl mb-2">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <h4 class="font-bold text-sm text-slate-800 hindi-text">इको-फ्रेंडली क्लीनिंग प्रोडक्ट्स</h4>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-xl mb-2">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <h4 class="font-bold text-sm text-slate-800 hindi-text">समय पर सेवा</h4>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-xl mb-2">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+          </div>
+          <h4 class="font-bold text-sm text-slate-800 hindi-text">किफायती कीमतें</h4>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center col-span-2 md:col-span-1">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-xl mb-2">
+            <i class="fa-solid fa-thumbs-up"></i>
+          </div>
+          <h4 class="font-bold text-sm text-slate-800 hindi-text">100% संतुष्टि</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO BOOK (बुकिंग कैसे करें?) -->
+  <section id="how-it-works" class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-center text-slate-800 mb-2 hindi-text">बुकिंग कैसे करें?</h2>
+      <p class="text-center text-slate-500 mb-10 text-sm hindi-text">बस 4 आसान स्टेप्स में अपनी सफाई बुक करें</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl relative text-center">
+          <span class="absolute top-3 left-3 bg-emerald-600 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">1</span>
+          <div class="text-3xl text-emerald-600 mb-3"><i class="fa-solid fa-list-check"></i></div>
+          <h3 class="font-bold text-lg text-slate-800 hindi-text">सेवा चुनें</h3>
+          <p class="text-xs text-slate-600 mt-1 hindi-text">(फ्लैट / किचन / बाथरूम आदि)</p>
+        </div>
+
+        <div class="bg-sky-50 border border-sky-200 p-6 rounded-2xl relative text-center">
+          <span class="absolute top-3 left-3 bg-sky-600 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">2</span>
+          <div class="text-3xl text-sky-600 mb-3"><i class="fa-solid fa-house"></i></div>
+          <h3 class="font-bold text-lg text-slate-800 hindi-text">BHK चुनें</h3>
+          <p class="text-xs text-slate-600 mt-1 font-semibold">(1/2/3/4 BHK)</p>
+        </div>
+
+        <div class="bg-teal-50 border border-teal-200 p-6 rounded-2xl relative text-center">
+          <span class="absolute top-3 left-3 bg-teal-600 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">3</span>
+          <div class="text-3xl text-teal-600 mb-3"><i class="fa-solid fa-layer-group"></i></div>
+          <h3 class="font-bold text-lg text-slate-800 hindi-text">दीवार के साथ / बिना</h3>
+          <p class="text-xs text-slate-600 mt-1 hindi-text">और कीमत देखें</p>
+        </div>
+
+        <div class="bg-emerald-100 border-2 border-emerald-500 p-6 rounded-2xl relative text-center">
+          <span class="absolute top-3 left-3 bg-emerald-700 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">4</span>
+          <div class="text-3xl text-emerald-700 mb-3"><i class="fa-brands fa-whatsapp"></i></div>
+          <h3 class="font-bold text-lg text-slate-800 hindi-text">WhatsApp पर बुक करें</h3>
+          <p class="text-xs text-emerald-800 mt-1 font-semibold hindi-text">हम तुरंत संपर्क करेंगे</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING TABLE & CART DYNAMIC SECTION (सेवा की कीमतें) -->
+  <section id="pricing" class="py-14 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-800 hindi-text">सेवा की कीमतें</h2>
+        <p class="text-slate-500 text-sm mt-1 hindi-text">(शुरुआती दरें)</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Packages List (Left Side) -->
+        <div class="lg:col-span-8 space-y-6">
+          
+          <!-- BHK Full Home Packages Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <!-- 1 BHK -->
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-500 transition">
+              <div class="flex items-center justify-between border-b pb-3 mb-3">
+                <span class="font-extrabold text-lg text-emerald-700">1 BHK Deep Clean</span>
+                <i class="fa-solid fa-building text-emerald-600 text-2xl"></i>
+              </div>
+              <div class="space-y-2 text-sm text-slate-600 mb-4">
+                <div class="flex justify-between">
+                  <span class="hindi-text">(बिना दीवार):</span>
+                  <span class="font-bold text-slate-900">₹4,000</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="hindi-text">(दीवार के साथ):</span>
+                  <span class="font-bold text-slate-900">₹5,500 – ₹6,000</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <button onclick="addToCart('1 BHK (बिना दीवार)', 4000)" class="bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-2 rounded-xl text-xs transition border border-emerald-300">
+                  + बिना दीवार Add
+                </button>
+                <button onclick="addToCart('1 BHK (दीवार के साथ)', 5500)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs transition">
+                  + दीवार के साथ Add
+                </button>
+              </div>
+            </div>
+
+            <!-- 2 BHK -->
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-500 transition">
+              <div class="flex items-center justify-between border-b pb-3 mb-3">
+                <span class="font-extrabold text-lg text-emerald-700">2 BHK Deep Clean</span>
+                <i class="fa-solid fa-building text-emerald-600 text-2xl"></i>
+              </div>
+              <div class="space-y-2 text-sm text-slate-600 mb-4">
+                <div class="flex justify-between">
+                  <span class="hindi-text">(बिना दीवार):</span>
+                  <span class="font-bold text-slate-900">₹4,500</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="hindi-text">(दीवार के साथ):</span>
+                  <span class="font-bold text-slate-900">₹7,500</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <button onclick="addToCart('2 BHK (बिना दीवार)', 4500)" class="bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-2 rounded-xl text-xs transition border border-emerald-300">
+                  + बिना दीवार Add
+                </button>
+                <button onclick="addToCart('2 BHK (दीवार के साथ)', 7500)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs transition">
+                  + दीवार के साथ Add
+                </button>
+              </div>
+            </div>
+
+            <!-- 3 BHK -->
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-500 transition">
+              <div class="flex items-center justify-between border-b pb-3 mb-3">
+                <span class="font-extrabold text-lg text-emerald-700">3 BHK Deep Clean</span>
+                <i class="fa-solid fa-building text-emerald-600 text-2xl"></i>
+              </div>
+              <div class="space-y-2 text-sm text-slate-600 mb-4">
+                <div class="flex justify-between">
+                  <span class="hindi-text">(बिना दीवार):</span>
+                  <span class="font-bold text-slate-900">₹6,000</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="hindi-text">(दीवार के साथ):</span>
+                  <span class="font-bold text-slate-900">₹9,000</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <button onclick="addToCart('3 BHK (बिना दीवार)', 6000)" class="bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-2 rounded-xl text-xs transition border border-emerald-300">
+                  + बिना दीवार Add
+                </button>
+                <button onclick="addToCart('3 BHK (दीवार के साथ)', 9000)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs transition">
+                  + दीवार के साथ Add
+                </button>
+              </div>
+            </div>
+
+            <!-- 4 BHK -->
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-500 transition">
+              <div class="flex items-center justify-between border-b pb-3 mb-3">
+                <span class="font-extrabold text-lg text-emerald-700">4 BHK Deep Clean</span>
+                <i class="fa-solid fa-building text-emerald-600 text-2xl"></i>
+              </div>
+              <div class="space-y-2 text-sm text-slate-600 mb-4">
+                <div class="flex justify-between">
+                  <span class="hindi-text">(बिना दीवार):</span>
+                  <span class="font-bold text-slate-900">₹8,000</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="hindi-text">(दीवार के साथ):</span>
+                  <span class="font-bold text-slate-900">₹12,000</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <button onclick="addToCart('4 BHK (बिना दीवार)', 8000)" class="bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white font-bold py-2 rounded-xl text-xs transition border border-emerald-300">
+                  + बिना दीवार Add
+                </button>
+                <button onclick="addToCart('4 BHK (दीवार के साथ)', 12000)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs transition">
+                  + दीवार के साथ Add
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Individual Services Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
+              <h5 class="font-bold text-sm text-slate-800 hindi-text">किचन</h5>
+              <p class="text-xs text-emerald-700 font-extrabold my-1">₹1,500 – ₹2,500</p>
+              <button onclick="addToCart('Kitchen Cleaning', 1500)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
+            </div>
+
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
+              <h5 class="font-bold text-sm text-slate-800 hindi-text">बाथरूम</h5>
+              <p class="text-xs text-emerald-700 font-extrabold my-1">₹700</p>
+              <button onclick="addToCart('Bathroom Cleaning', 700)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
+            </div>
+
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
+              <h5 class="font-bold text-sm text-slate-800 hindi-text">सोफा</h5>
+              <p class="text-xs text-emerald-700 font-extrabold my-1">₹250 – ₹300 (प्रति सीट)</p>
+              <button onclick="addToCart('Sofa Cleaning (Per Seat)', 250)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
+            </div>
+
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
+              <h5 class="font-bold text-sm text-slate-800 hindi-text">हॉल</h5>
+              <p class="text-xs text-emerald-700 font-extrabold my-1">₹1,500 – ₹3,000</p>
+              <button onclick="addToCart('Hall Cleaning', 1500)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
+            </div>
+
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
+              <h5 class="font-bold text-sm text-slate-800 hindi-text">फैन</h5>
+              <p class="text-xs text-emerald-700 font-extrabold my-1">₹100</p>
+              <button onclick="addToCart('Fan Cleaning', 100)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
+            </div>
+
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 text-center">
+              <h5 class="font-bold text-sm text-slate-800 hindi-text">विंडो</h5>
+              <p class="text-xs text-emerald-700 font-extrabold my-1">₹250</p>
+              <button onclick="addToCart('Window Cleaning', 250)" class="w-full bg-slate-800 hover:bg-emerald-600 text-white font-bold py-1.5 rounded-lg text-xs transition">+ Add</button>
+            </div>
+
+          </div>
+
+          <p class="text-xs text-slate-400 text-right italic hindi-text">* कीमतें क्षेत्र और स्थिति के अनुसार बदल सकती हैं।</p>
+        </div>
+
+        <!-- Dynamic Cart / Booking Form Side (Right Side) -->
+        <div class="lg:col-span-4">
+          <div class="bg-white p-6 rounded-2xl border-2 border-emerald-500 shadow-xl sticky top-24">
+            <div class="flex items-center justify-between border-b pb-3 mb-4">
+              <h3 class="font-extrabold text-xl text-slate-800 flex items-center space-x-2">
+                <i class="fa-solid fa-cart-shopping text-emerald-600"></i>
+                <span>Your Selected Cart</span>
+              </h3>
+              <span id="cart-count" class="bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">0 items</span>
+            </div>
+
+            <!-- Cart Items Holder -->
+            <div id="cart-items" class="space-y-3 max-h-56 overflow-y-auto mb-4 divide-y">
+              <p class="text-sm text-slate-400 text-center py-6 hindi-text">कार्ट में कोई सर्विस नहीं है। कृपया ऊपर से सर्विस चुनें।</p>
+            </div>
+
+            <!-- Total Price -->
+            <div class="border-t pt-3 mb-4 flex justify-between items-center font-extrabold text-lg text-slate-800">
+              <span>Estimated Total:</span>
+              <span id="cart-total" class="text-emerald-700">₹0</span>
+            </div>
+
+            <!-- Booking Details Input -->
+            <div class="space-y-3 mb-4">
+              <input type="text" id="cust-name" placeholder="आपका नाम (Your Name)" class="w-full text-sm border p-2.5 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
+              <input type="text" id="cust-address" placeholder="पता (Pune / PCMC Area Address)" class="w-full text-sm border p-2.5 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
+              <input type="date" id="cust-date" class="w-full text-sm border p-2.5 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
+            </div>
+
+            <!-- Submit Booking via WhatsApp -->
+            <button onclick="checkoutToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow-lg flex items-center justify-center space-x-2 transition">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Book Order via WhatsApp</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER INTERACTIVE BANNER -->
+  <section class="py-12 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4">
+      
+      <div class="bg-gradient-to-r from-emerald-800 to-teal-900 rounded-3xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border border-emerald-500/30 shadow-2xl">
+        
+        <!-- Before After Interactive Slider Graphic -->
+        <div class="md:col-span-6">
+          <div class="ba-container w-full h-64 sm:h-80 rounded-2xl shadow-xl border-2 border-white/20 select-none cursor-ew-resize" id="ba-slider">
+            <!-- Before Image (Background) -->
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Dirty Before">
+            <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full shadow">BEFORE</span>
+
+            <!-- After Image (Overlay Slider) -->
+            <div class="ba-after" id="ba-after">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" class="absolute top-0 left-0 max-w-none h-full object-cover" id="ba-after-img" alt="Clean After">
+              <span class="absolute top-3 right-3 bg-emerald-600 text-white text-xs font-black px-3 py-1 rounded-full shadow">AFTER</span>
+            </div>
+          </div>
+          <p class="text-center text-xs text-slate-300 mt-2">↔️ Drag/Move mouse over image to compare Before & After</p>
+        </div>
+
+        <!-- Banner Text & CTA -->
+        <div class="md:col-span-6 space-y-4">
+          <h2 class="text-3xl sm:text-4xl font-extrabold hindi-text leading-tight">
+            साफ घर, बेहतर जीवन
+          </h2>
+          <p class="text-emerald-200 text-base hindi-text">
+            आज ही अपनी सफाई बुक करें! हमारे पास प्रशिक्षित स्टाफ और आधुनिक तकनीक है।
+          </p>
+
+          <div class="space-y-2 text-sm pt-2">
+            <div class="flex items-center space-x-2"><i class="fa-solid fa-circle-check text-emerald-400"></i><span class="hindi-text">घर (Homes & Apartments)</span></div>
+            <div class="flex items-center space-x-2"><i class="fa-solid fa-circle-check text-emerald-400"></i><span class="hindi-text">ऑफिस (Offices & Workspaces)</span></div>
+            <div class="flex items-center space-x-2"><i class="fa-solid fa-circle-check text-emerald-400"></i><span class="hindi-text">व्यापारिक स्थल (Commercial Places)</span></div>
+            <div class="flex items-center space-x-2"><i class="fa-solid fa-circle-check text-emerald-400"></i><span class="hindi-text">सोसाइटी (Housing Societies)</span></div>
+          </div>
+
+          <a href="tel:9325100228" class="inline-flex items-center space-x-3 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold px-6 py-3.5 rounded-2xl shadow-lg text-lg transition mt-4">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>9325100228</span>
           </a>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-200">
-          <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
-            <span class="text-green-500 font-extrabold text-base">✓</span> 100% Non-Toxic
-          </div>
-          <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
-            <span class="text-green-500 font-extrabold text-base">✓</span> 4.9★ Google Rated
-          </div>
-          <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
-            <span class="text-green-500 font-extrabold text-base">✓</span> Re-Clean Guarantee
-          </div>
-        </div>
       </div>
 
-      <div class="relative">
-        <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
-          <img src="1000706692.webp" alt="Kitchen Deep Cleaning Pune" class="w-full h-[380px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80'">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
-            <span class="bg-yellow-400 text-slate-900 font-extrabold text-xs px-3 py-1 rounded-full w-max mb-2">PRO MECHANIZED CLEANING</span>
-            <h3 class="text-xl font-bold">Kitchen & Heavy Degreasing Master</h3>
-            <p class="text-xs text-slate-200">Advanced degreasers for spotless counters, chimneys & tiles.</p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- About Us & Cleaning Quality Section -->
-  <section id="about" class="py-16 bg-white border-y border-slate-200">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="max-w-3xl mx-auto text-center mb-12">
-        <span class="text-blue-600 font-extrabold text-sm uppercase tracking-widest">ABOUT SAF SAFAI PUNE</span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2">Pune's Most Trusted Deep Cleaning Experts</h2>
-        <p class="text-slate-600 text-base sm:text-lg font-medium mt-4 leading-relaxed">
-          Humaara maqsad hai aapke ghar ko aisi chamakti hui safai dena jisse aapka rehna aur bhi sehatmand aur sukoon bhara ban jaye. Hum normal jhadu-pochha nahi karte, balki **Heavy-Duty Professional Machinery aur Safe Chemical Solutions** ke sath har kone ki deep scrubbing karte hain.
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-300 pt-12 pb-24 md:pb-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      
+      <!-- Col 1: About -->
+      <div class="space-y-3">
+        <div class="flex items-center space-x-2">
+          <i class="fa-solid fa-broom text-emerald-500 text-2xl"></i>
+          <span class="font-extrabold text-xl text-white">SAF SAFAI PUNE</span>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed hindi-text">
+          पुणे और पिंपरी-चिंचवड़ में बेस्ट होम डीप क्लीनिंग सेवाएं। हम आधुनिक मशीनों और safe eco-friendly chemicals के साथ काम करते हैं।
         </p>
       </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center">
-          <div class="text-4xl mb-4">🛡️</div>
-          <h3 class="text-xl font-black text-slate-900 mb-2">100% Safe & Non-Toxic</h3>
-          <p class="text-slate-600 text-sm font-medium">Bachhon, buzurgo, aur pets ke liye bilkul safe organic cleaning formulas jo ghar ko mehkate hain.</p>
-        </div>
-        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center">
-          <div class="text-4xl mb-4">⚙️</div>
-          <h3 class="text-xl font-black text-slate-900 mb-2">Advanced Machinery</h3>
-          <p class="text-slate-600 text-sm font-medium">Single-disc floor scrubbers, heavy extraction vacuum cleaners, aur professional steam/foggers ka use.</p>
-        </div>
-        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 text-center">
-          <div class="text-4xl mb-4">💯</div>
-          <h3 class="text-xl font-black text-slate-900 mb-2">Re-Clean Guarantee</h3>
-          <p class="text-slate-600 text-sm font-medium">Agar aapko safai mein koi kami lage, toh hum bina kisi extra charge ke dobara clean karke denge!</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Service Catalog / Packages Section -->
-  <section id="services" class="py-16 bg-slate-100">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-blue-600 font-extrabold text-sm uppercase tracking-widest">OUR PROFESSIONAL PACKAGES</span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2">Advanced Deep Cleaning Services</h2>
-        <p class="text-slate-600 text-base sm:text-lg font-medium mt-2">Professional machinery aur expert technicians ke sath 100% spotless guarantee!</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Kitchen Deep Cleaning -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 flex flex-col hover:shadow-xl transition">
-          <img src="1000706692.webp" alt="Kitchen Deep Cleaning" class="h-48 w-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80'">
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-xl font-bold text-slate-900">Kitchen Deep Cleaning</h3>
-                <span class="text-blue-700 font-black text-lg">₹1,499</span>
-              </div>
-              <p class="text-xs text-slate-700 mb-3 leading-relaxed">
-                <strong>🛠️ Kaise Hoti Hai Service:</strong> Heavy oil grease ko remove karne ke liye powerful professional degreasers use hote hain. Chimney filters soak karke exhaust fan, modular cabinets (andar-bahar), gas stove, aur wall tiles ki mechanized scrubbing ki jati hai.
-              </p>
-            </div>
-            <button onclick="addToCart('Kitchen Deep Cleaning', 1499)" class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
-              <span>Add to Booking</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Bathroom Deep Cleaning -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 flex flex-col hover:shadow-xl transition">
-          <img src="1000706693.jpg" alt="Bathroom Deep Cleaning" class="h-48 w-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80'">
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-xl font-bold text-slate-900">Bathroom Sanitization</h3>
-                <span class="text-blue-700 font-black text-lg">₹999</span>
-              </div>
-              <p class="text-xs text-slate-700 mb-3 leading-relaxed">
-                <strong>🛠️ Kaise Hoti Hai Service:</strong> Hard water scale hatane ke liye special descaling solutions use hote hain. Chrome taps aur shower heads ki shine wapas laayi jati hai, aur anti-bacterial fogging hoti hai.
-              </p>
-            </div>
-            <button onclick="addToCart('Bathroom Deep Cleaning', 999)" class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
-              <span>Add to Booking</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Sofa & Carpet Cleaning -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 flex flex-col hover:shadow-xl transition">
-          <img src="1000706694.png" alt="Sofa & Carpet Cleaning" class="h-48 w-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80'">
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-xl font-bold text-slate-900">Sofa & Carpet Shampooing</h3>
-                <span class="text-blue-700 font-black text-lg">₹1,199</span>
-              </div>
-              <p class="text-xs text-slate-700 mb-3 leading-relaxed">
-                <strong>🛠️ Kaise Hoti Hai Service:</strong> Advanced <strong>Injection-Extraction Wet Vacuuming Machine</strong> ka use hota hai. Sofa fabric ke andar jami deep dust, sweat marks, aur ziddi stains ko eco shampoo se wash karke extract kiya jata hai.
-              </p>
-            </div>
-            <button onclick="addToCart('Sofa Shampooing', 1199)" class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
-              <span>Add to Booking</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Window Cleaning -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 flex flex-col hover:shadow-xl transition">
-          <img src="1000706690.jpg" alt="Window Cleaning" class="h-48 w-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80'">
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-xl font-bold text-slate-900">Window & Mesh Cleaning</h3>
-                <span class="text-blue-700 font-black text-lg">₹799</span>
-              </div>
-              <p class="text-xs text-slate-700 mb-3 leading-relaxed">
-                <strong>🛠️ Kaise Hoti Hai Service:</strong> Glass panes par special cleaning polish use karke streak-free crystal clear shine di jati hai. Sliding channel tracks ki mitti ko vacuuming aur brush tools se clean karte hain.
-              </p>
-            </div>
-            <button onclick="addToCart('Window Cleaning', 799)" class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
-              <span>Add to Booking</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Fan & Light Cleaning -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200 flex flex-col hover:shadow-xl transition">
-          <img src="1000706691.webp" alt="Fan & Light Cleaning" class="h-48 w-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80'">
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-xl font-bold text-slate-900">Fan & Fixtures Deep Clean</h3>
-                <span class="text-blue-700 font-black text-lg">₹599</span>
-              </div>
-              <p class="text-xs text-slate-700 mb-3 leading-relaxed">
-                <strong>🛠️ Kaise Hoti Hai Service:</strong> Ceiling fans ki blades par jamay moti mitti aur oily dust ko microfiber wipes aur safe solutions se saaf kiya jata hai. Fixtures ki dusting aur polishing hoti hai.
-              </p>
-            </div>
-            <button onclick="addToCart('Fan Deep Cleaning', 599)" class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
-              <span>Add to Booking</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Full Home Package -->
-        <div class="bg-gradient-to-br from-blue-900 to-indigo-900 rounded-2xl overflow-hidden shadow-xl text-white flex flex-col border-2 border-yellow-400 hover:scale-[1.01] transition">
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <span class="bg-yellow-400 text-slate-900 text-[10px] font-black px-2.5 py-1 rounded-full uppercase">Most Popular</span>
-              <h3 class="text-2xl font-black mt-2">Full Home Deep Clean (2BHK / 3BHK)</h3>
-              <p class="text-xs text-slate-200 mt-2 leading-relaxed">
-                <strong>🛠️ Complete Service Breakdown:</strong> Pura ghar single day mein chamkaya jata hai! Floor scrubbing machine se tile cleaning, kitchen heavy degreasing, bathrooms descaling, aur windows cleaning sab kuch shamil hai.
-              </p>
-              <div class="text-3xl font-black text-yellow-400 mt-4">₹3,999 <span class="text-xs text-slate-300 font-normal">/ 2BHK Special</span></div>
-            </div>
-            <button onclick="addToCart('Full Home 2BHK Deep Clean', 3999)" class="w-full bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-extrabold py-3.5 rounded-xl mt-6 transition shadow-lg">
-              Book Full Home Package
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Step-by-Step Booking Guide Section -->
-  <section id="process" class="py-16 bg-white border-y border-slate-200">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-blue-600 font-extrabold text-sm uppercase tracking-widest">SIMPLE 3-STEP BOOKING</span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2">How to Book Your Deep Cleaning</h2>
-        <p class="text-slate-600 font-medium mt-2">Sirf kuch clicks mein apke ghar par expert cleaning team pohoch jayegi!</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-blue-50 border border-blue-200 p-8 rounded-2xl text-center">
-          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-black text-xl mx-auto mb-4">1</div>
-          <h3 class="text-xl font-extrabold text-slate-900 mb-2">Select Service</h3>
-          <p class="text-slate-600 text-sm">Apne pasand ka package (Kitchen, Bathroom, ya Full Home) "Add to Booking" karke cart mein jodein.</p>
-        </div>
-        <div class="bg-blue-50 border border-blue-200 p-8 rounded-2xl text-center">
-          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-black text-xl mx-auto mb-4">2</div>
-          <h3 class="text-xl font-extrabold text-slate-900 mb-2">Confirm via WhatsApp</h3>
-          <p class="text-slate-600 text-sm">Cart drawer kholkar wall cleaning add-on select karein aur "Confirm Booking via WhatsApp" dabayein.</p>
-        </div>
-        <div class="bg-blue-50 border border-blue-200 p-8 rounded-2xl text-center">
-          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-black text-xl mx-auto mb-4">3</div>
-          <h3 class="text-xl font-extrabold text-slate-900 mb-2">Enjoy Spotless Home</h3>
-          <p class="text-slate-600 text-sm">Humari professional expert team tayyaye time par machinery ke sath apke ghar aakar pura ghar chamka degi!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Google Reviews Auto-Slider (10+ Verified Reviews) -->
-  <section id="reviews" class="py-16 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-50 border border-yellow-200 text-yellow-800 text-xs font-bold mb-2">
-          <span class="text-yellow-500 text-base">⭐</span> 4.9 out of 5 Rating on Google Reviews (1450+ Happy Homes)
-        </div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2">Verified Customer Reviews</h2>
-        <p class="text-slate-600 font-medium mt-1">Dekho hamare Pune & PCMC ke customers kya bolte hain!</p>
-      </div>
-
-      <div class="relative">
-        <div id="reviewSlider" class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4 px-2">
-          <!-- Review 1 -->
-          <div class="min-w-[300px] max-w-[300px] bg-white border border-slate-200 rounded-2xl p-6 shadow-md flex flex-col justify-between flex-shrink-0">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-black flex items-center justify-center text-sm">S</div>
-                <div><h4 class="font-bold text-slate-900 text-sm">Siddharth More</h4><p class="text-[11px] text-slate-500">Wakad, Pune</p></div>
-              </div>
-              <div class="text-yellow-400 text-sm mb-2">⭐⭐⭐⭐⭐</div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">"2BHK deep cleaning ke liye call kiya tha. Kitchen tiles aur hard water stains ekdum clean ho gaye. Highly recommended!"</p>
-            </div>
-            <span class="mt-4 text-[10px] text-emerald-600 font-bold">✓ Verified Google Review</span>
-          </div>
-          <!-- Review 2 -->
-          <div class="min-w-[300px] max-w-[300px] bg-white border border-slate-200 rounded-2xl p-6 shadow-md flex flex-col justify-between flex-shrink-0">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-black flex items-center justify-center text-sm">P</div>
-                <div><h4 class="font-bold text-slate-900 text-sm">Priya Kulkarni</h4><p class="text-[11px] text-slate-500">Hinjewadi Phase 1</p></div>
-              </div>
-              <div class="text-yellow-400 text-sm mb-2">⭐⭐⭐⭐⭐</div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">"Professional service standard use karte hain. Pura ghar mehakne laga! No harsh chemical smell, pet safe hai."</p>
-            </div>
-            <span class="mt-4 text-[10px] text-emerald-600 font-bold">✓ Verified Google Review</span>
-          </div>
-          <!-- Review 3 -->
-          <div class="min-w-[300px] max-w-[300px] bg-white border border-slate-200 rounded-2xl p-6 shadow-md flex flex-col justify-between flex-shrink-0">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-amber-600 text-white font-black flex items-center justify-center text-sm">A</div>
-                <div><h4 class="font-bold text-slate-900 text-sm">Amit Ranade</h4><p class="text-[11px] text-slate-500">Baner, Pune</p></div>
-              </div>
-              <div class="text-yellow-400 text-sm mb-2">⭐⭐⭐⭐⭐</div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">"Sofa shampooing and carpet wet vacuuming super perfection se kiya. Purane tea stains completely gayab ho gaye!"</p>
-            </div>
-            <span class="mt-4 text-[10px] text-emerald-600 font-bold">✓ Verified Google Review</span>
-          </div>
-          <!-- Review 4 -->
-          <div class="min-w-[300px] max-w-[300px] bg-white border border-slate-200 rounded-2xl p-6 shadow-md flex flex-col justify-between flex-shrink-0">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-indigo-600 text-white font-black flex items-center justify-center text-sm">R</div>
-                <div><h4 class="font-bold text-slate-900 text-sm">Rohit Deshmukh</h4><p class="text-[11px] text-slate-500">Shivajinagar, Pune</p></div>
-              </div>
-              <div class="text-yellow-400 text-sm mb-2">⭐⭐⭐⭐⭐</div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">"Chimney aur kitchen degreasing itni acchi ki ki bilkul nayi jaisi lagne lagi hai. Best cleaning team in Pune!"</p>
-            </div>
-            <span class="mt-4 text-[10px] text-emerald-600 font-bold">✓ Verified Google Review</span>
-          </div>
-          <!-- Review 5 -->
-          <div class="min-w-[300px] max-w-[300px] bg-white border border-slate-200 rounded-2xl p-6 shadow-md flex flex-col justify-between flex-shrink-0">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-rose-600 text-white font-black flex items-center justify-center text-sm">S</div>
-                <div><h4 class="font-bold text-slate-900 text-sm">Snehal Joshi</h4><p class="text-[11px] text-slate-500">Kothrud, Pune</p></div>
-              </div>
-              <div class="text-yellow-400 text-sm mb-2">⭐⭐⭐⭐⭐</div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">"Bathroom descaling amazing thi! Years purane hard water marks ek hi din mein saaf ho gaye. Highly satisfied."</p>
-            </div>
-            <span class="mt-4 text-[10px] text-emerald-600 font-bold">✓ Verified Google Review</span>
-          </div>
-          <!-- Review 6 -->
-          <div class="min-w-[300px] max-w-[300px] bg-white border border-slate-200 rounded-2xl p-6 shadow-md flex flex-col justify-between flex-shrink-0">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-teal-600 text-white font-black flex items-center justify-center text-sm">V</div>
-                <div><h4 class="font-bold text-slate-900 text-sm">Vikram Shinde</h4><p class="text-[11px] text-slate-500">Pimpri, PCMC</p></div>
-              </div>
-              <div class="text-yellow-400 text-sm mb-2">⭐⭐⭐⭐⭐</div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">"Time par aaye aur professional tools ke sath kaam kiya. Full home package price bhi bohot reasonable hai."</p>
-            </div>
-            <span class="mt-4 text-[10px] text-emerald-600 font-bold">✓ Verified Google Review</span>
-          </div>
-          <!-- Review 7 -->
-          <div class="min-w-[300px] max-w-[300px] bg-white border border-slate-200 rounded-2xl p-6 shadow-md flex flex-col justify-between flex-shrink-0">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-purple-600 text-white font-black flex items-center justify-center text-sm">N</div>
-                <div><h4 class="font-bold text-slate-900 text-sm">Neha Kadam</h4><p class="text-[11px] text-slate-500">Wakad, Pune</p></div>
-              </div>
-              <div class="text-yellow-400 text-sm mb-2">⭐⭐⭐⭐⭐</div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">"Eco-friendly products use karte hain jo ki bacchon ke liye safe hai. Bohot hi polite aur expert staff hai."</p>
-            </div>
-            <span class="mt-4 text-[10px] text-emerald-600 font-bold">✓ Verified Google Review</span>
-          </div>
-          <!-- Review 8 -->
-          <div class="min-w-[300px] max-w-[300px] bg-white border border-slate-200 rounded-2xl p-6 shadow-md flex flex-col justify-between flex-shrink-0">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-cyan-600 text-white font-black flex items-center justify-center text-sm">K</div>
-                <div><h4 class="font-bold text-slate-900 text-sm">Karan Malhotra</h4><p class="text-[11px] text-slate-500">Kharadi, Pune</p></div>
-              </div>
-              <div class="text-yellow-400 text-sm mb-2">⭐⭐⭐⭐⭐</div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">"Window glass cleaning aur mesh dusting bohot hi neat tareeqe se ki. Glass bilkul transparent ho gaya!"</p>
-            </div>
-            <span class="mt-4 text-[10px] text-emerald-600 font-bold">✓ Verified Google Review</span>
-          </div>
-          <!-- Review 9 -->
-          <div class="min-w-[300px] max-w-[300px] bg-white border border-slate-200 rounded-2xl p-6 shadow-md flex flex-col justify-between flex-shrink-0">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-orange-600 text-white font-black flex items-center justify-center text-sm">S</div>
-                <div><h4 class="font-bold text-slate-900 text-sm">Swapnil Patil</h4><p class="text-[11px] text-slate-500">Baner, Pune</p></div>
-              </div>
-              <div class="text-yellow-400 text-sm mb-2">⭐⭐⭐⭐⭐</div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">"Quick booking response aur WhatsApp par instant confirmation mil gaya. Highly professional service."</p>
-            </div>
-            <span class="mt-4 text-[10px] text-emerald-600 font-bold">✓ Verified Google Review</span>
-          </div>
-          <!-- Review 10 -->
-          <div class="min-w-[300px] max-w-[300px] bg-white border border-slate-200 rounded-2xl p-6 shadow-md flex flex-col justify-between flex-shrink-0">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-pink-600 text-white font-black flex items-center justify-center text-sm">A</div>
-                <div><h4 class="font-bold text-slate-900 text-sm">Anjali Gawande</h4><p class="text-[11px] text-slate-500">Chinchwad, PCMC</p></div>
-              </div>
-              <div class="text-yellow-400 text-sm mb-2">⭐⭐⭐⭐⭐</div>
-              <p class="text-xs text-slate-700 leading-relaxed font-medium">"Amazing deep cleaning! Pura ghar chamak utha. Value for money services hai Pune mein."</p>
-            </div>
-            <span class="mt-4 text-[10px] text-emerald-600 font-bold">✓ Verified Google Review</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Coverage Area Section -->
-  <section id="coverage" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-blue-600 font-extrabold text-sm uppercase tracking-widest">PUNE & PCMC SERVICE AREA</span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2">Serving Every Corner of Pune</h2>
-        <p class="text-slate-600 font-medium mt-2">Exclusive operational radius across Pune City & Pimpri Chinchwad.</p>
-      </div>
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 font-bold text-slate-800 text-sm flex items-center gap-2">📍 Shivajinagar 1 & 2</div>
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 font-bold text-slate-800 text-sm flex items-center gap-2">📍 Wakad & Hinjewadi</div>
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 font-bold text-slate-800 text-sm flex items-center gap-2">📍 Baner & Aundh</div>
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 font-bold text-slate-800 text-sm flex items-center gap-2">📍 Pimpri & Chinchwad</div>
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 font-bold text-slate-800 text-sm flex items-center gap-2">📍 Kothrud & Karve Nagar</div>
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 font-bold text-slate-800 text-sm flex items-center gap-2">📍 Kharadi & Viman Nagar</div>
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 font-bold text-slate-800 text-sm flex items-center gap-2">📍 Hadapsar & Magarpatta</div>
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 font-bold text-slate-800 text-sm flex items-center gap-2">📍 Nigdi, Ravet & Akurdi</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Google Map & Footer -->
-  <footer class="bg-slate-900 text-white pt-16 pb-32 md:pb-12 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12">
+      <!-- Col 2: Quick Links -->
       <div>
-        <h3 class="text-2xl font-black text-white mb-4">Saf Safai Pune</h3>
-        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Pune & PCMC's trusted deep cleaning partner. 100% satisfaction guarantee with expert mechanized cleaning team.</p>
-        <p class="text-slate-300 text-sm font-semibold">📍 Address: Shivajinagar 2, Pimpri Chinchwad, Pune - 411019</p>
-        <p class="text-slate-300 text-sm font-semibold mt-1">📞 Contact: <a href="tel:9325100228" class="text-yellow-400 underline">9325100228</a></p>
-      </div>
-
-      <div>
-        <h4 class="text-lg font-bold mb-4">Quick Links</h4>
-        <ul class="space-y-2 text-sm text-slate-400">
-          <li><button onclick="toggleDrawer()" class="hover:text-white transition">⚡ Open Booking Drawer</button></li>
-          <li><a href="#reviews" class="hover:text-white transition">Google Reviews</a></li>
-          <li><a href="#coverage" class="hover:text-white transition">PCMC Service Locations</a></li>
+        <h4 class="font-bold text-white mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#home" class="hover:text-emerald-400">होम (Home)</a></li>
+          <li><a href="#services" class="hover:text-emerald-400">हमारी सेवाएं (Services)</a></li>
+          <li><a href="#pricing" class="hover:text-emerald-400">कीमतें (Pricing)</a></li>
+          <li><a href="#why-us" class="hover:text-emerald-400">FAQ & About</a></li>
         </ul>
       </div>
 
-      <div class="rounded-2xl overflow-hidden h-48 bg-slate-800 border border-slate-700">
-        <iframe title="Saf Safai Pune Location" src="https://maps.google.com/maps?q=Shivajinagar%202,%20Pimpri%20Chinchwad,%20Pune%20411019&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <!-- Col 3: Contact Info -->
+      <div>
+        <h4 class="font-bold text-white mb-3">Contact Us</h4>
+        <ul class="space-y-2 text-xs text-slate-400">
+          <li class="flex items-start space-x-2"><i class="fa-solid fa-location-dot mt-0.5 text-emerald-500"></i><span>Pune & Pimpri-Chinchwad</span></li>
+          <li class="flex items-center space-x-2"><i class="fa-solid fa-phone text-emerald-500"></i><span>9325100228</span></li>
+          <li class="flex items-center space-x-2"><i class="fa-brands fa-whatsapp text-emerald-500"></i><span>WhatsApp Available 24/7</span></li>
+        </ul>
       </div>
+
+      <!-- Col 4: Follow Us -->
+      <div>
+        <h4 class="font-bold text-white mb-3">Follow Us</h4>
+        <div class="flex space-x-3 text-lg">
+          <a href="#" class="w-9 h-9 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-600 text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="w-9 h-9 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-600 text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="w-9 h-9 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-600 text-white transition"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="w-9 h-9 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-600 text-white transition"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="text-xs text-emerald-400 mt-4 font-bold hindi-text">आपका घर, हमारी ज़म्मेदारी! ❤️</p>
+      </div>
+
     </div>
-    <div class="text-center text-xs text-slate-500 mt-12 border-t border-slate-800 pt-6">
-      © 2026 Saf Safai Pune. All Rights Reserved. Exclusively operational for Pune & PCMC.
+
+    <div class="border-t border-slate-800 max-w-7xl mx-auto px-4 pt-4 flex flex-col sm:flex-row justify-between text-xs text-slate-500">
+      <p>© 2025 Saf Safai Pune. All Rights Reserved.</p>
+      <p>Website Designed by Santosh Chavan</p>
     </div>
   </footer>
 
-  <!-- ==================== SUPER ADVANCED AI CLEANING EXPERT CHATBOT ==================== -->
-  <div id="aiChatWidget" class="fixed bottom-20 left-4 z-50 hidden w-[92%] max-w-[360px] h-[440px] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
-    <div class="bg-blue-600 text-white p-3.5 flex justify-between items-center font-bold text-sm shadow-md">
-      <div class="flex items-center gap-2">
-        <span class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></span>
-        <span>🤖 Saf Safai AI Cleaning Expert</span>
-      </div>
-      <button onclick="toggleAIChat()" class="text-white hover:text-slate-200 font-black text-lg px-2">✕</button>
-    </div>
-    <div id="aiMessages" class="p-4 flex-1 overflow-y-auto space-y-3 text-xs bg-slate-50">
-      <div class="bg-blue-100 text-slate-800 p-3 rounded-xl max-w-[85%] leading-relaxed font-medium">
-        Namaste! Main Saf Safai ka Professional AI Cleaning Expert hoon. Aapko kitchen, bathroom, sofa, wall cleaning ya 2BHK packages ke baare mein kuch bhi puchna ho, bejhijhak puchiye!
-      </div>
-    </div>
-    <div class="p-3 border-t border-slate-200 flex gap-2 bg-white">
-      <input type="text" id="aiInput" placeholder="Sawal pucho (e.g. wall cleaning / 2bhk price)..." class="flex-1 text-xs border border-slate-300 rounded-xl p-3 focus:outline-none focus:border-blue-600" onkeypress="if(event.key === 'Enter') sendAIMessage()">
-      <button onclick="sendAIMessage()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-xl text-xs font-bold transition">Send</button>
-    </div>
-  </div>
-
-  <!-- ==================== FLOATING DESKTOP BUTTONS & STICKY MOBILE BAR ==================== -->
-
-  <!-- Left Bottom: AI Cleaning Expert Floating Button -->
-  <button onclick="toggleAIChat()" class="fixed bottom-20 left-4 z-40 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2.5 rounded-full shadow-2xl hidden md:flex items-center gap-2 font-extrabold text-sm hover:scale-105 transition">
-    🤖 <span>AI Cleaning Expert</span>
-  </button>
-
-  <!-- Right Side Floating Buttons (Desktop Only) -->
-  <div class="hidden md:flex flex-col gap-3 fixed bottom-6 right-6 z-40">
-    <a href="tel:9325100228" class="bg-gradient-to-r from-sky-500 to-blue-600 text-white p-3.5 rounded-full shadow-2xl call-pulse flex items-center justify-center transition hover:scale-105" title="Call Now">
-      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-    </a>
-    <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune!%20Mujhe%20service%20book%20karni%20hai." target="_blank" class="bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-2xl wa-pulse flex items-center justify-center transition" title="WhatsApp">
-      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-    </a>
-  </div>
-
-  <!-- STICKY BOTTOM ACTION BAR (MOBILE ONLY) -->
-  <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-t border-slate-200 p-2.5 flex items-center justify-between gap-2.5 md:hidden shadow-2xl">
-    <a href="tel:9325100228" class="flex-1 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-extrabold text-xs text-center py-3 rounded-xl shadow-md call-pulse flex items-center justify-center gap-1.5">
-      <span>📞 Call</span>
-    </a>
-    <button onclick="toggleAIChat()" class="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-extrabold text-xs text-center py-3 rounded-xl shadow-md flex items-center justify-center gap-1.5">
-      <span>🤖 AI Expert</span>
-    </button>
-    <button onclick="toggleDrawer()" class="flex-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-extrabold text-xs text-center py-3 rounded-xl shadow-md flex items-center justify-center gap-1">
-      <span>🛒 Cart (<span id="cartCountMobile">0</span>)</span>
-    </button>
-    <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune!" target="_blank" class="w-11 h-11 bg-[#25D366] text-white rounded-xl shadow-md flex items-center justify-center wa-pulse flex-shrink-0">
-      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-    </a>
-  </div>
-
-  <!-- E-COMMERCE BOOKING DRAWER MODAL (WITH WALL CLEANING ADD-ON) -->
-  <div id="bookingDrawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex justify-end">
-    <div class="bg-white w-full max-w-md h-full shadow-2xl flex flex-col">
-      <div class="p-4 bg-slate-900 text-white flex justify-between items-center">
-        <h3 class="text-lg font-bold">🛒 Your Cleaning Cart & Add-Ons</h3>
-        <button onclick="toggleDrawer()" class="text-slate-400 hover:text-white font-black text-xl">✕</button>
-      </div>
-      <div class="p-6 flex-1 overflow-y-auto space-y-4" id="cartItems">
-        <p class="text-slate-500 text-center text-sm">Cart khali hai. Package select karein!</p>
-      </div>
-      <!-- Add-on Option inside Cart Drawer -->
-      <div class="px-6 py-3 bg-blue-50 border-t border-blue-100" id="addOnSection">
-        <label class="flex items-center gap-3 cursor-pointer">
-          <input type="checkbox" id="wallCleaningAddon" onchange="renderCart()" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
-          <span class="text-xs font-extrabold text-slate-800">Add Wall Deep Dusting & Cleaning (+₹799)</span>
-        </label>
-      </div>
-      <div class="p-6 bg-slate-50 border-t border-slate-200">
-        <div class="flex justify-between font-black text-lg text-slate-900 mb-4">
-          <span>Total Price:</span>
-          <span id="cartTotal">₹0</span>
+  <!-- DYNAMIC AI BOT WIDGET -->
+  <div id="ai-bot-wrapper" class="fixed bottom-20 right-4 z-50">
+    
+    <!-- Bot Window -->
+    <div id="ai-chat-window" class="hidden w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[450px] mb-3 transition-all">
+      <!-- Bot Header -->
+      <div class="bg-gradient-to-r from-emerald-700 to-teal-800 text-white p-3.5 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-sm">🤖</div>
+          <div>
+            <h4 class="font-bold text-sm leading-tight">Safai AI Assistant</h4>
+            <span class="text-[10px] text-emerald-200 flex items-center"><span class="w-1.5 h-1.5 bg-emerald-400 rounded-full inline-block mr-1"></span>Online | Instant Help</span>
+          </div>
         </div>
-        <a id="whatsappCheckoutBtn" href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune!" target="_blank" class="w-full bg-[#25D366] text-white font-extrabold py-3.5 rounded-xl shadow-lg flex items-center justify-center gap-2">
-          <span>Confirm Booking via WhatsApp</span>
-        </a>
+        <button onclick="toggleAiBot()" class="text-white/80 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+
+      <!-- Messages Body -->
+      <div id="chat-messages" class="flex-1 p-3 overflow-y-auto space-y-3 text-xs bg-slate-50">
+        <div class="bg-white border border-slate-200 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] text-slate-700 shadow-sm hindi-text">
+          नमस्ते! 🙏 मैं आपका AI सफाई सहायक हूँ। मैं आपको सही पैकेज चुनने और बुक करने में मदद कर सकता हूँ। <br><br>आपका घर कितने BHK का है?
+        </div>
+      </div>
+
+      <!-- Suggested Quick Chips -->
+      <div class="p-2 bg-white border-t flex space-x-1 overflow-x-auto no-scrollbar text-[11px]">
+        <button onclick="sendQuickMsg('1 BHK Clean')" class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded-lg font-bold border border-emerald-200 shrink-0">1 BHK</button>
+        <button onclick="sendQuickMsg('2 BHK Clean')" class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded-lg font-bold border border-emerald-200 shrink-0">2 BHK</button>
+        <button onclick="sendQuickMsg('Kitchen Cleaning Rate')" class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded-lg font-bold border border-emerald-200 shrink-0">Kitchen Rate</button>
+        <button onclick="sendQuickMsg('Book Now')" class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded-lg font-bold border border-emerald-200 shrink-0">Book Slot</button>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="p-2 bg-white border-t flex items-center space-x-2">
+        <input type="text" id="ai-user-input" placeholder="Type message..." onkeypress="if(event.key === 'Enter') handleAiSend()" class="flex-1 text-xs border rounded-xl px-3 py-2 outline-none focus:ring-1 focus:ring-emerald-500">
+        <button onclick="handleAiSend()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-xl text-xs font-bold"><i class="fa-solid fa-paper-plane"></i></button>
       </div>
     </div>
+
+    <!-- Bot Toggle Floating Button -->
+    <button onclick="toggleAiBot()" class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-3.5 rounded-full shadow-2xl flex items-center space-x-2 hover:scale-105 transition float-right">
+      <i class="fa-solid fa-robot text-2xl"></i>
+      <span class="text-xs font-bold pr-1 hidden sm:inline">Ask AI Assistant</span>
+    </button>
+
   </div>
 
-  <!-- Advanced JavaScript Logic -->
+  <!-- STICKY MOBILE CALL / WHATSAPP BOTTOM BAR -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-2 sm:hidden z-40 grid grid-cols-2 gap-2 shadow-2xl">
+    <a href="tel:9325100228" class="bg-sky-600 text-white font-bold py-2.5 rounded-xl flex items-center justify-center space-x-2 text-xs">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call 9325100228</span>
+    </a>
+    <a href="https://wa.me/919325100228" target="_blank" class="bg-emerald-600 text-white font-bold py-2.5 rounded-xl flex items-center justify-center space-x-2 text-xs">
+      <i class="fa-brands fa-whatsapp text-lg"></i>
+      <span>WhatsApp Booking</span>
+    </a>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
   <script>
+    // --- CART SYSTEM LOGIC ---
     let cart = [];
-    function toggleDrawer() { document.getElementById('bookingDrawer').classList.toggle('hidden'); }
-    function addToCart(serviceName, price) {
-      cart.push({ name: serviceName, price: price });
+
+    function addToCart(itemName, price) {
+      const existing = cart.find(item => item.name === itemName);
+      if(existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name: itemName, price: price, qty: 1 });
+      }
       renderCart();
-      toggleDrawer();
     }
+
+    function quickAddToCart(itemName, price) {
+      addToCart(itemName, price);
+      // Smooth scroll to cart on mobile/desktop
+      document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function updateQty(index, change) {
+      cart[index].qty += change;
+      if(cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+      renderCart();
+    }
+
     function renderCart() {
-      const cartContainer = document.getElementById('cartItems');
-      const cartTotal = document.getElementById('cartTotal');
-      const cartCountMobile = document.getElementById('cartCountMobile');
-      const whatsappBtn = document.getElementById('whatsappCheckoutBtn');
-      const wallAddonCheckbox = document.getElementById('wallCleaningAddon');
+      const cartItemsEl = document.getElementById('cart-items');
+      const cartCountEl = document.getElementById('cart-count');
+      const cartTotalEl = document.getElementById('cart-total');
 
       if(cart.length === 0) {
-        cartContainer.innerHTML = `<p class="text-slate-500 text-center text-sm py-8">Cart khali hai. Service select karein!</p>`;
-        cartTotal.innerText = `₹0`;
-        cartCountMobile.innerText = `0`;
-        whatsappBtn.href = `https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune!`;
+        cartItemsEl.innerHTML = `<p class="text-sm text-slate-400 text-center py-6 hindi-text">कार्ट में कोई सर्विस नहीं है। कृपया ऊपर से सर्विस चुनें।</p>`;
+        cartCountEl.innerText = `0 items`;
+        cartTotalEl.innerText = `₹0`;
         return;
       }
 
       let total = 0;
-      let textMessage = "Hello Saf Safai Pune! Mujhe yeh cleaning services book karni hain:\n";
+      let totalQty = 0;
+      let html = '';
 
-      cartContainer.innerHTML = cart.map((item, index) => {
-        total += item.price;
-        textMessage += `- ${item.name} (₹${item.price})\n`;
-        return `
-          <div class="flex justify-between items-center bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
-            <div>
-              <div class="font-bold text-slate-900 text-sm">${item.name}</div>
-              <div class="text-xs text-blue-600 font-black">₹${item.price}</div>
+      cart.forEach((item, idx) => {
+        const itemTotal = item.price * item.qty;
+        total += itemTotal;
+        totalQty += item.qty;
+
+        html += `
+          <div class="flex items-center justify-between py-2 text-xs">
+            <div class="flex-1">
+              <h5 class="font-bold text-slate-800 hindi-text">${item.name}</h5>
+              <span class="text-slate-500">₹${item.price} each</span>
             </div>
-            <button onclick="removeFromCart(${index})" class="text-red-500 text-xs font-bold">Remove</button>
+            <div class="flex items-center space-x-2">
+              <button onclick="updateQty(${idx}, -1)" class="w-6 h-6 bg-slate-200 text-slate-700 font-bold rounded-lg flex items-center justify-center">-</button>
+              <span class="font-bold text-slate-900">${item.qty}</span>
+              <button onclick="updateQty(${idx}, 1)" class="w-6 h-6 bg-emerald-600 text-white font-bold rounded-lg flex items-center justify-center">+</button>
+            </div>
+            <span class="font-extrabold text-emerald-700 ml-3 min-w-[50px] text-right">₹${itemTotal}</span>
           </div>
         `;
-      }).join('');
+      });
 
-      // Check if Wall Cleaning Add-on is checked
-      if(wallAddonCheckbox && wallAddonCheckbox.checked) {
-        total += 799;
-        textMessage += `- Add-on: Wall Deep Dusting & Cleaning (₹799)\n`;
-      }
-
-      textMessage += `\nTotal Amount: ₹${total}\nLocation: [Pune/PCMC]`;
-      cartTotal.innerText = `₹${total}`;
-      cartCountMobile.innerText = cart.length + (wallAddonCheckbox && wallAddonCheckbox.checked ? 1 : 0);
-      whatsappBtn.href = `https://wa.me/919325100228?text=${encodeURIComponent(textMessage)}`;
+      cartItemsEl.innerHTML = html;
+      cartCountEl.innerText = `${totalQty} items`;
+      cartTotalEl.innerText = `₹${total}`;
     }
-    function removeFromCart(index) { cart.splice(index, 1); renderCart(); }
 
-    const slider = document.getElementById('reviewSlider');
-    setInterval(() => {
-      if (slider) {
-        slider.scrollLeft += 320;
-        if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) { slider.scrollLeft = 0; }
+    function checkoutToWhatsApp() {
+      if(cart.length === 0) {
+        alert('Please add at least one cleaning service to your cart!');
+        return;
       }
-    }, 3500);
 
-    function toggleAIChat() { document.getElementById('aiChatWidget').classList.toggle('hidden'); }
-    
-    // Super Advanced AI Expert Cleaning Assistant Logic
-    function sendAIMessage() {
-      const input = document.getElementById('aiInput');
-      const messages = document.getElementById('aiMessages');
-      if(!input.value.trim()) return;
+      const name = document.getElementById('cust-name').value || 'Not provided';
+      const address = document.getElementById('cust-address').value || 'Not provided';
+      const date = document.getElementById('cust-date').value || 'As early as possible';
 
-      const userText = input.value;
-      messages.innerHTML += `<div class="bg-blue-600 text-white p-2.5 rounded-xl ml-auto max-w-[85%] text-right mb-2 font-medium">${userText}</div>`;
+      let itemsList = '';
+      let total = 0;
+
+      cart.forEach(item => {
+        itemsList += `• ${item.name} x ${item.qty} = ₹${item.price * item.qty}\n`;
+        total += item.price * item.qty;
+      });
+
+      const message = `*NEW CLEANING SERVICE BOOKING - SAF SAFAI PUNE*\n\n` +
+                      `*Customer Details:*\n` +
+                      `• Name: ${name}\n` +
+                      `• Address: ${address}\n` +
+                      `• Preferred Date: ${date}\n\n` +
+                      `*Selected Services:*\n${itemsList}\n` +
+                      `*Total Amount:* ₹${total}\n\n` +
+                      `Please confirm my booking slot!`;
+
+      const encodedMsg = encodeURIComponent(message);
+      window.open(`https://wa.me/919325100228?text=${encodedMsg}`, '_blank');
+    }
+
+    // --- BEFORE / AFTER INTERACTIVE SLIDER LOGIC ---
+    const baSlider = document.getElementById('ba-slider');
+    const baAfter = document.getElementById('ba-after');
+    const baAfterImg = document.getElementById('ba-after-img');
+
+    function updateSlider(x) {
+      const rect = baSlider.getBoundingClientRect();
+      let pos = ((x - rect.left) / rect.width) * 100;
+      if (pos < 0) pos = 0;
+      if (pos > 100) pos = 100;
+      
+      baAfter.style.width = pos + '%';
+      baAfterImg.style.width = rect.width + 'px';
+    }
+
+    if(baSlider) {
+      baSlider.addEventListener('mousemove', (e) => updateSlider(e.clientX));
+      baSlider.addEventListener('touchmove', (e) => updateSlider(e.touches[0].clientX));
+      window.addEventListener('resize', () => {
+        if(baSlider) baAfterImg.style.width = baSlider.getBoundingClientRect().width + 'px';
+      });
+    }
+
+    // --- AI CHATBOT LOGIC ---
+    function toggleAiBot() {
+      const win = document.getElementById('ai-chat-window');
+      win.classList.toggle('hidden');
+    }
+
+    function sendQuickMsg(txt) {
+      document.getElementById('ai-user-input').value = txt;
+      handleAiSend();
+    }
+
+    function handleAiSend() {
+      const input = document.getElementById('ai-user-input');
+      const text = input.value.trim();
+      if(!text) return;
+
+      const chatBox = document.getElementById('chat-messages');
+
+      // User Message
+      chatBox.innerHTML += `
+        <div class="bg-emerald-600 text-white p-2.5 rounded-2xl rounded-tr-none max-w-[80%] ml-auto font-medium">
+          ${text}
+        </div>
+      `;
+
       input.value = '';
+      chatBox.scrollTop = chatBox.scrollHeight;
 
+      // Smart Bot Response Simulation
       setTimeout(() => {
-        let reply = "Main Saf Safai ka Professional Cleaning Expert hoon! Hum 100% eco-friendly solutions aur professional machinery se deep cleaning karte hain. Aapko kitchen, bathroom, sofa, wall cleaning ya full home cleaning ke baare mein kya janna hai?";
-        const query = userText.toLowerCase();
+        let reply = "मैं आपकी बात समझ गया! क्या आप WhatsApp पर सीधी बात करके अपना पसंदीदा स्लॉट कन्फर्म करना चाहेंगे?";
+        const lower = text.toLowerCase();
 
-        if(query.includes('discount') || query.includes('offer') || query.includes('off')) {
-          reply = "Haan bilkul! Aaj Pune aur PCMC ke customers ke liye special offer chal raha hai—Flat 20% OFF ke sath FREE Anti-Bacterial Spraying mil rahi hai!";
-        } else if(query.includes('nanded') || query.includes('mumbai') || query.includes('nagpur') || query.includes('delhi')) {
-          reply = "Namaste! Hum filhal exclusive sirf Pune aur PCMC (jaise Wakad, Baner, Hinjewadi, Shivajinagar, Pimpri, Chinchwad) ke areas mein hi professional deep cleaning services provide karte hain.";
-        } else if(query.includes('wall') || query.includes('deewar') || query.includes('diwar')) {
-          reply = "Wall Cleaning Add-on (₹799): Aap apne kisi bhi package ke sath Wall Deep Dusting & Cleaning add kar sakte hain! Isme diwaron par jami mitti, cobwebs (makdi ke jaale), aur minor stains ko safe microfiber techniques se clean kiya jata hai.";
-        } else if(query.includes('sofa') || query.includes('shampoo')) {
-          reply = "Sofa Shampooing (₹1,199): Hum Advanced Injection-Extraction Wet Vacuuming machine use karte hain jo dry vacuuming, eco shampooing, aur deep stain extraction ke sath sofa bilkul naye jaisa chamka deti hai.";
-        } else if(query.includes('kitchen') || query.includes('grease') || query.includes('chimney')) {
-          reply = "Kitchen Deep Cleaning (₹1,499): Isme heavy grease removers aur advanced scrubbing se chimney, exhaust fan, cabinets, aur wall tiles ki chipchipi gandagi poori tarah saaf ki jati hai.";
-        } else if(query.includes('bathroom') || query.includes('scale') || query.includes('tap')) {
-          reply = "Bathroom Sanitization (₹999): Isme hard water scale, calcium, aur ziddi daag hatane ke liye special descaling solutions aur anti-bacterial fogging use hoti hai.";
-        } else if(query.includes('2bhk') || query.includes('full home') || query.includes('price')) {
-          reply = "Full Home Deep Cleaning 2BHK ke liye sirf ₹3,999 se start hai! Isme single disc floor scrubbing, kitchen, bathroom, aur windows sab kuch single day mein deep clean hota hai.";
-        } else if(!query.includes('cleaning') && !query.includes('price') && !query.includes('service') && !query.includes('package') && !query.includes('offer')) {
-          reply = "Main Saf Safai ka AI Cleaning Expert hoon! Main sirf Pune aur PCMC ki deep cleaning services, packages, wall cleaning add-on aur cleaning process ke baare mein help kar sakta hoon.";
+        if(lower.includes('1 bhk') || lower.includes('1bhk')) {
+          reply = "1 BHK deep cleaning की शुरुआत ₹4,000 से है (बिना दीवार) और ₹5,500 (दीवार के साथ)। <br><button onclick='quickAddToCart(\"1 BHK (बिना दीवार)\", 4000)' class='mt-2 bg-emerald-700 text-white px-2 py-1 rounded text-[10px] font-bold'>+ Add 1 BHK to Cart</button>";
+        } else if(lower.includes('2 bhk') || lower.includes('2bhk')) {
+          reply = "2 BHK deep cleaning की दरें ₹4,500 (बिना दीवार) और ₹7,500 (दीवार के साथ) हैं। <br><button onclick='quickAddToCart(\"2 BHK (दीवार के साथ)\", 7500)' class='mt-2 bg-emerald-700 text-white px-2 py-1 rounded text-[10px] font-bold'>+ Add 2 BHK to Cart</button>";
+        } else if(lower.includes('kitchen') || lower.includes('किचन')) {
+          reply = "किचन डीप क्लीनिंग की कीमत ₹1,500 - ₹2,500 है जिसमें डीप स्क्रबिंग और ऑइल स्टेन क्लीनिंग शामिल है।";
+        } else if(lower.includes('book') || lower.includes('slot')) {
+          reply = "आप ऊपर दिए कार्ट सेक्शन में अपनी डिटेल भरकर तुरंत 'Book Order via WhatsApp' पर क्लिक कर सकते हैं!";
         }
 
-        messages.innerHTML += `<div class="bg-blue-100 text-slate-800 p-3 rounded-xl max-w-[85%] leading-relaxed font-medium">${reply}</div>`;
-        messages.scrollTop = messages.scrollHeight;
-      }, 500);
+        chatBox.innerHTML += `
+          <div class="bg-white border border-slate-200 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] text-slate-700 shadow-sm hindi-text">
+            ${reply}
+          </div>
+        `;
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }, 600);
     }
   </script>
 </body>
