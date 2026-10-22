@@ -64,15 +64,11 @@
 <body class="bg-slate-50 text-slate-800 relative">
 
   <!-- TOP NOTICE BAR -->
-  <div class="bg-gradient-to-r from-emerald-700 via-teal-700 to-sky-700 text-white text-xs font-bold py-1.5 px-4 text-center flex justify-between items-center">
-    <span class="mx-auto flex items-center space-x-2">
+  <div class="bg-gradient-to-r from-emerald-700 via-teal-700 to-sky-700 text-white text-xs font-bold py-2 px-4 text-center">
+    <span class="mx-auto flex items-center justify-center space-x-2">
       <span class="bg-red-500 text-white px-2 py-0.5 rounded-full text-[10px] animate-pulse">SPECIAL OFFER</span>
       <span>🔥 Festive Discount: Flat 15% OFF on Full Home Deep Cleaning in Pune & PCMC!</span>
     </span>
-    <button onclick="openAdminModal()" class="text-xs text-emerald-200 hover:text-white underline font-semibold flex items-center space-x-1">
-      <i class="fa-solid fa-user-gear"></i>
-      <span>Admin Dashboard</span>
-    </button>
   </div>
 
   <!-- TOP HEADER / NAVBAR -->
@@ -263,15 +259,15 @@
               </div>
             </div>
             <div class="space-y-1.5 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
-              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900" id="price-1bhk-no-wall">₹4,000</strong></div>
-              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900" id="price-1bhk-wall">₹5,500</strong></div>
+              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900">₹4,000</strong></div>
+              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900">₹5,500</strong></div>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-2 pt-2">
-            <button onclick="addToCart('1 BHK (बिना दीवार)', getPrice('1bhk-no-wall', 4000))" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
+            <button onclick="addToCart('1 BHK (बिना दीवार)', 4000)" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
               + बिना दीवार
             </button>
-            <button onclick="addToCart('1 BHK (दीवार के साथ)', getPrice('1bhk-wall', 5500))" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
+            <button onclick="addToCart('1 BHK (दीवार के साथ)', 5500)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
               + दीवार के साथ
             </button>
           </div>
@@ -288,15 +284,15 @@
               </div>
             </div>
             <div class="space-y-1.5 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
-              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900" id="price-2bhk-no-wall">₹4,500</strong></div>
-              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900" id="price-2bhk-wall">₹7,500</strong></div>
+              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900">₹4,500</strong></div>
+              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900">₹7,500</strong></div>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-2 pt-2">
-            <button onclick="addToCart('2 BHK (बिना दीवार)', getPrice('2bhk-no-wall', 4500))" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
+            <button onclick="addToCart('2 BHK (बिना दीवार)', 4500)" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
               + बिना दीवार
             </button>
-            <button onclick="addToCart('2 BHK (दीवार के साथ)', getPrice('2bhk-wall', 7500))" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
+            <button onclick="addToCart('2 BHK (दीवार के साथ)', 7500)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
               + दीवार के साथ
             </button>
           </div>
@@ -313,15 +309,15 @@
               </div>
             </div>
             <div class="space-y-1.5 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
-              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900" id="price-3bhk-no-wall">₹6,000</strong></div>
-              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900" id="price-3bhk-wall">₹9,000</strong></div>
+              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900">₹6,000</strong></div>
+              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900">₹9,000</strong></div>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-2 pt-2">
-            <button onclick="addToCart('3 BHK (बिना दीवार)', getPrice('3bhk-no-wall', 6000))" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
+            <button onclick="addToCart('3 BHK (बिना दीवार)', 6000)" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
               + बिना दीवार
             </button>
-            <button onclick="addToCart('3 BHK (दीवार के साथ)', getPrice('3bhk-wall', 9000))" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
+            <button onclick="addToCart('3 BHK (दीवार के साथ)', 9000)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
               + दीवार के साथ
             </button>
           </div>
@@ -338,15 +334,15 @@
               </div>
             </div>
             <div class="space-y-1.5 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
-              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900" id="price-4bhk-no-wall">₹8,000</strong></div>
-              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900" id="price-4bhk-wall">₹12,000</strong></div>
+              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900">₹8,000</strong></div>
+              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900">₹12,000</strong></div>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-2 pt-2">
-            <button onclick="addToCart('4 BHK (बिना दीवार)', getPrice('4bhk-no-wall', 8000))" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
+            <button onclick="addToCart('4 BHK (बिना दीवार)', 8000)" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
               + बिना दीवार
             </button>
-            <button onclick="addToCart('4 BHK (दीवार के साथ)', getPrice('4bhk-wall', 12000))" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
+            <button onclick="addToCart('4 BHK (दीवार के साथ)', 12000)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
               + दीवार के साथ
             </button>
           </div>
@@ -358,28 +354,28 @@
       <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
         <h4 class="font-black text-base text-slate-900 mb-4 hindi-text">इंडिविजुअल सेवाएं (Add-on Services)</h4>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-          <button onclick="addToCart('Kitchen Cleaning', getPrice('kitchen', 1500))" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">किचन: <strong class="text-emerald-700" id="price-kitchen">₹1,500</strong></span>
+          <button onclick="addToCart('Kitchen Cleaning', 1500)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
+            <span class="font-bold text-xs block text-slate-800">किचन: <strong class="text-emerald-700">₹1,500</strong></span>
             <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
           </button>
-          <button onclick="addToCart('Bathroom Cleaning', getPrice('bathroom', 700))" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">बाथरूम: <strong class="text-emerald-700" id="price-bathroom">₹700</strong></span>
+          <button onclick="addToCart('Bathroom Cleaning', 700)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
+            <span class="font-bold text-xs block text-slate-800">बाथरूम: <strong class="text-emerald-700">₹700</strong></span>
             <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
           </button>
-          <button onclick="addToCart('Sofa Cleaning', getPrice('sofa', 250))" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">सोफा: <strong class="text-emerald-700" id="price-sofa">₹250</strong></span>
+          <button onclick="addToCart('Sofa Cleaning', 250)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
+            <span class="font-bold text-xs block text-slate-800">सोफा: <strong class="text-emerald-700">₹250</strong></span>
             <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
           </button>
-          <button onclick="addToCart('Hall Cleaning', getPrice('hall', 1500))" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">हॉल: <strong class="text-emerald-700" id="price-hall">₹1,500</strong></span>
+          <button onclick="addToCart('Hall Cleaning', 1500)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
+            <span class="font-bold text-xs block text-slate-800">हॉल: <strong class="text-emerald-700">₹1,500</strong></span>
             <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
           </button>
-          <button onclick="addToCart('Fan Cleaning', getPrice('fan', 100))" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">फैन: <strong class="text-emerald-700" id="price-fan">₹100</strong></span>
+          <button onclick="addToCart('Fan Cleaning', 100)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
+            <span class="font-bold text-xs block text-slate-800">फैन: <strong class="text-emerald-700">₹100</strong></span>
             <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
           </button>
-          <button onclick="addToCart('Window Cleaning', getPrice('window', 250))" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">विंडो: <strong class="text-emerald-700" id="price-window">₹250</strong></span>
+          <button onclick="addToCart('Window Cleaning', 250)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
+            <span class="font-bold text-xs block text-slate-800">विंडो: <strong class="text-emerald-700">₹250</strong></span>
             <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
           </button>
         </div>
@@ -387,11 +383,11 @@
     </div>
   </section>
 
-  <!-- POPUP MINI PAGE CART SIDE DRAWER (NEW FEATURE) -->
+  <!-- POPUP MINI PAGE CART SIDE DRAWER -->
   <div id="cart-drawer-overlay" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeCartDrawer()"></div>
   
   <div id="side-cart-drawer" class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-md bg-white shadow-2xl transform translate-x-full flex flex-col">
-    <!-- Mini Page Drawer Header -->
+    <!-- Header -->
     <div class="bg-gradient-to-r from-emerald-700 to-teal-800 text-white p-5 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <i class="fa-solid fa-cart-shopping text-2xl text-emerald-300"></i>
@@ -405,21 +401,20 @@
       </button>
     </div>
 
-    <!-- Mini Page Drawer Items Body -->
+    <!-- Items List -->
     <div class="flex-1 p-5 overflow-y-auto space-y-4 bg-slate-50">
       <div id="drawer-cart-items" class="space-y-3 divide-y">
         <p class="text-sm text-slate-400 text-center py-12 hindi-text">कार्ट में कोई भी आइटम नहीं है। कृपया पैकेज या सर्विस जोड़ें!</p>
       </div>
     </div>
 
-    <!-- Mini Page Drawer Checkout Footer -->
+    <!-- Checkout Footer -->
     <div class="p-5 bg-white border-t border-slate-200 space-y-4 shadow-lg">
       <div class="flex justify-between items-center font-black text-xl text-slate-900">
         <span>Estimated Total:</span>
         <span id="drawer-cart-total" class="text-emerald-700">₹0</span>
       </div>
 
-      <!-- Quick Details Input inside Mini Page -->
       <div class="space-y-2">
         <input type="text" id="drawer-cust-name" placeholder="आपका नाम (Your Name)" class="w-full text-xs border p-3 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
         <input type="text" id="drawer-cust-address" placeholder="पता (Pune / PCMC Area)" class="w-full text-xs border p-3 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
@@ -489,11 +484,11 @@
     </div>
   </section>
 
-  <!-- RICH & DETAILED FOOTER SECTION (UPDATED) -->
+  <!-- RICH & DETAILED FOOTER SECTION -->
   <footer id="footer-contact" class="bg-slate-950 text-slate-300 pt-16 pb-28 md:pb-12 border-t border-slate-900 text-xs">
     <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-10">
       
-      <!-- Col 1: About Us & Hindi Deep Cleaning Info (4 cols) -->
+      <!-- Col 1: About Us & Hindi Deep Cleaning Info -->
       <div id="about-info" class="md:col-span-4 space-y-4">
         <div class="flex items-center space-x-3">
           <div class="bg-emerald-600 text-white p-2 rounded-xl">
@@ -514,7 +509,7 @@
         </div>
       </div>
 
-      <!-- Col 2: Services Offered (3 cols) -->
+      <!-- Col 2: Services Offered -->
       <div class="md:col-span-3 space-y-3">
         <h4 class="font-black text-sm text-white uppercase tracking-wider text-emerald-400">हमारी मुख्य सेवाएं</h4>
         <ul class="space-y-2 text-slate-400 font-medium">
@@ -527,7 +522,7 @@
         </ul>
       </div>
 
-      <!-- Col 3: Quick Book Now CTA Form (2 cols) -->
+      <!-- Col 3: Quick Book Now CTA Form -->
       <div class="md:col-span-2 space-y-3">
         <h4 class="font-black text-sm text-white uppercase tracking-wider text-emerald-400">Instant Booking</h4>
         <p class="text-slate-400 text-[11px] hindi-text">तुरंत स्लॉट बुक करने के लिए बटन पर क्लिक करें:</p>
@@ -539,7 +534,7 @@
         </a>
       </div>
 
-      <!-- Col 4: Full Contact Details (3 cols) -->
+      <!-- Col 4: Full Contact Details -->
       <div class="md:col-span-3 space-y-3">
         <h4 class="font-black text-sm text-white uppercase tracking-wider text-emerald-400">संपर्क विवरण (Contact Us)</h4>
         <div class="space-y-2.5 text-slate-400">
@@ -611,92 +606,10 @@
     </div>
   </div>
 
-  <!-- ADMIN DASHBOARD MODAL -->
-  <div id="admin-modal" class="hidden fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-md flex items-center justify-center p-4">
-    <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden border border-slate-200 max-h-[90vh] flex flex-col">
-      
-      <!-- Admin Header -->
-      <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
-        <h3 class="font-black text-lg flex items-center space-x-2">
-          <i class="fa-solid fa-user-shield text-emerald-400"></i>
-          <span>Saf Safai Pune Admin Panel</span>
-        </h3>
-        <button onclick="closeAdminModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
-      </div>
-
-      <!-- Admin Body -->
-      <div class="p-6 overflow-y-auto space-y-6 text-xs flex-1">
-        
-        <!-- Password Auth Box -->
-        <div id="admin-auth" class="space-y-3">
-          <label class="font-bold text-slate-700 block">Enter Admin Password:</label>
-          <input type="password" id="admin-pass-input" placeholder="Default Password: admin123" class="w-full border p-3 rounded-xl outline-none">
-          <button onclick="verifyAdminPass()" class="bg-emerald-600 text-white font-bold py-2.5 px-6 rounded-xl">Login</button>
-        </div>
-
-        <!-- Dashboard Controls (Hidden until logged in) -->
-        <div id="admin-controls" class="hidden space-y-6">
-          
-          <!-- Image Upload Manager -->
-          <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
-            <h4 class="font-black text-sm text-slate-900">📷 Update Section Photos (Direct File Upload)</h4>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div>
-                <label class="font-bold block mb-1">Hero Banner Photo:</label>
-                <input type="file" accept="image/*" onchange="uploadImage(event, 'img-hero-banner')" class="w-full text-xs">
-              </div>
-              <div>
-                <label class="font-bold block mb-1">Flat Cleaning Photo:</label>
-                <input type="file" accept="image/*" onchange="uploadImage(event, 'img-flat')" class="w-full text-xs">
-              </div>
-              <div>
-                <label class="font-bold block mb-1">Kitchen Photo:</label>
-                <input type="file" accept="image/*" onchange="uploadImage(event, 'img-kitchen')" class="w-full text-xs">
-              </div>
-              <div>
-                <label class="font-bold block mb-1">Bathroom Photo:</label>
-                <input type="file" accept="image/*" onchange="uploadImage(event, 'img-bathroom')" class="w-full text-xs">
-              </div>
-            </div>
-          </div>
-
-          <!-- Price Manager -->
-          <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
-            <h4 class="font-black text-sm text-slate-900">💰 Update Package Prices</h4>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              <div>
-                <label class="font-bold block">1 BHK (No Wall):</label>
-                <input type="number" id="edit-1bhk-no-wall" value="4000" class="border p-1.5 rounded w-full">
-              </div>
-              <div>
-                <label class="font-bold block">1 BHK (Wall):</label>
-                <input type="number" id="edit-1bhk-wall" value="5500" class="border p-1.5 rounded w-full">
-              </div>
-              <div>
-                <label class="font-bold block">2 BHK (Wall):</label>
-                <input type="number" id="edit-2bhk-wall" value="7500" class="border p-1.5 rounded w-full">
-              </div>
-            </div>
-            <button onclick="saveAdminPrices()" class="bg-emerald-600 text-white font-bold py-2 px-4 rounded-xl">Save New Prices</button>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
   <!-- JAVASCRIPT LOGIC -->
   <script>
     // --- CART SYSTEM & SIDE DRAWER LOGIC ---
     let cart = [];
-    let customPrices = {};
-
-    function getPrice(key, defaultVal) {
-      return customPrices[key] || defaultVal;
-    }
 
     function addToCart(itemName, price) {
       const existing = cart.find(item => item.name === itemName);
@@ -706,7 +619,7 @@
         cart.push({ name: itemName, price: parseInt(price), qty: 1 });
       }
       renderCart();
-      openCartDrawer(); // Automatically open side drawer when item added!
+      openCartDrawer();
     }
 
     function openCartDrawer() {
@@ -827,48 +740,6 @@
         chat.innerHTML += `<div class="bg-white p-2.5 rounded-xl border text-slate-700">धन्यवाद! क्या आप WhatsApp पर direct chat karke slot book karna chahenge?</div>`;
         chat.scrollTop = chat.scrollHeight;
       }, 500);
-    }
-
-    // --- ADMIN DASHBOARD PANEL ---
-    function openAdminModal() {
-      document.getElementById('admin-modal').classList.remove('hidden');
-    }
-
-    function closeAdminModal() {
-      document.getElementById('admin-modal').classList.add('hidden');
-    }
-
-    function verifyAdminPass() {
-      const pass = document.getElementById('admin-pass-input').value;
-      if(pass === 'admin123') {
-        document.getElementById('admin-auth').classList.add('hidden');
-        document.getElementById('admin-controls').classList.remove('hidden');
-      } else {
-        alert('Wrong Password!');
-      }
-    }
-
-    function uploadImage(event, targetImgId) {
-      const file = event.target.files[0];
-      if(file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          document.getElementById(targetImgId).src = e.target.result;
-        }
-        reader.readAsDataURL(file);
-      }
-    }
-
-    function saveAdminPrices() {
-      customPrices['1bhk-no-wall'] = parseInt(document.getElementById('edit-1bhk-no-wall').value);
-      customPrices['1bhk-wall'] = parseInt(document.getElementById('edit-1bhk-wall').value);
-      customPrices['2bhk-wall'] = parseInt(document.getElementById('edit-2bhk-wall').value);
-
-      document.getElementById('price-1bhk-no-wall').innerText = '₹' + customPrices['1bhk-no-wall'];
-      document.getElementById('price-1bhk-wall').innerText = '₹' + customPrices['1bhk-wall'];
-      document.getElementById('price-2bhk-wall').innerText = '₹' + customPrices['2bhk-wall'];
-
-      alert('Prices Updated Successfully!');
     }
   </script>
 </body>
