@@ -1,752 +1,813 @@
+
 <!DOCTYPE html>
-<html lang="hi" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saf Safai Pune | #1 Professional Deep Cleaning Services in Pune & PCMC</title>
-  <meta name="description" content="Looking for professional deep cleaning services in Pune & PCMC? Saf Safai Pune offers expert mechanized cleaning using 100% Non-toxic eco-friendly cleaning solutions. Call 9325100228 for 2BHK, Kitchen, Sofa & Bathroom cleaning.">
-  <meta name="keywords" content="Deep Cleaning Services Pune, Home Cleaning PCMC, Kitchen Cleaning Shivajinagar, Sofa Cleaning Wakad, Saf Safai Pune">
-<meta name="google-site-verification" content="3b2K3DD3x95ngHQHLSKeOPGkMC9B6A_F0Fqti_nCsTM" />
 
-  
-  <!-- Standard & Android Favicon -->
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <title>Deep Cleaning Services in Pune | Saf Safai Pune</title>
+  <meta name="description" content="Looking for deep cleaning services in Pune? Contact Saf Safai Pune for home, kitchen, bathroom, sofa, bungalow and office cleaning. Get a quote on WhatsApp.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#071b35">
 
-<!-- Apple / iOS Devices -->
-<link rel="apple-touch-icon" href="/favicon.png">
+  <!-- IMPORTANT:
+       Apne original Google Search Console verification tag
+       aur favicon links ko yahan unchanged paste karein. -->
 
-
-  <!-- Fonts & Icons & Tailwind CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandGreen: '#15803d',
-            brandDarkGreen: '#0f5127',
-            brandSky: '#0284c7',
-            brandDarkBlue: '#0369a1',
-            brandNavy: '#0f172a'
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .hindi-text { font-family: 'Tiro Devanagari Hindi', 'Plus Jakarta Sans', sans-serif; }
-    
-    /* Animations */
-    @keyframes pulse-glow {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(37, 211, 102, 0.5); }
-      50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(37, 211, 102, 0.8); }
+    :root {
+      --navy: #071b35;
+      --blue: #0878f9;
+      --cyan: #19c8df;
+      --green: #16a34a;
+      --ink: #14243b;
+      --muted: #68778b;
+      --light: #f3f7fc;
+      --white: #fff;
+      --border: #e2eaf4;
+      --radius: 18px;
+      --shadow: 0 12px 35px rgba(7,27,53,.09);
     }
-    .btn-pulse-wa { animation: pulse-glow 2.5s infinite ease-in-out; }
 
-    @keyframes float-btn {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-6px); }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.6;
     }
-    .float-anim { animation: float-btn 3s infinite ease-in-out; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; }
+    img { max-width: 100%; }
 
-    /* Before After Interactive Slider */
-    .ba-container { position: relative; overflow: hidden; }
-    .ba-after { position: absolute; top:0; left:0; width:50%; height:100%; overflow:hidden; border-right: 4px solid #ffffff; }
+    .announcement {
+      text-align: center;
+      padding: 8px 12px;
+      background: var(--navy);
+      color: white;
+      font-size: 13px;
+    }
+    .announcement span { color: #72f0dc; font-weight: 800; }
 
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+    .nav {
+      max-width: 1180px;
+      min-height: 76px;
+      margin: auto;
+      padding: 12px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      font-size: 21px;
+      color: var(--navy);
+    }
+    .brand-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      color: white;
+      background: linear-gradient(135deg,var(--blue),var(--cyan));
+    }
+    .nav-links { display: flex; align-items: center; gap: 23px; font-size: 14px; font-weight: 700; }
+    .nav-links a:hover { color: var(--blue); }
 
-    /* Cart Slide Drawer */
-    #side-cart-drawer { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 0;
+      border-radius: 12px;
+      padding: 13px 19px;
+      font-weight: 800;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 22px #0878f933; }
+    .btn-primary { color: white; background: linear-gradient(120deg,var(--blue),#0759cb); }
+    .btn-whatsapp { color: white; background: var(--green); }
+    .btn-outline { border: 1px solid var(--border); background: white; color: var(--navy); }
+    .btn-small { padding: 9px 13px; font-size: 13px; }
+
+    .hero {
+      overflow: hidden;
+      color: white;
+      background:
+        radial-gradient(ellipse at 85% 15%,#1689f45c,transparent 38%),
+        linear-gradient(130deg,#06152c,#0b2f55 65%,#075a79);
+    }
+    .hero-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 78px 22px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 45px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border: 1px solid #ffffff3b;
+      border-radius: 30px;
+      background: #ffffff0e;
+      font-size: 13px;
+      color: #a9f6f1;
+      font-weight: 800;
+    }
+    h1 { font-size: clamp(34px,5vw,57px); line-height: 1.13; letter-spacing: -1.5px; margin: 20px 0; }
+    .gradient-text { color: #55e2e3; }
+    .hero p { max-width: 640px; color: #d8e8f8; font-size: 17px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+    .hero-points { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 27px; font-size: 13px; color: #e0efff; }
+    .hero-points i { color: #6cf0c2; margin-right: 5px; }
+
+    .hero-card {
+      padding: 26px;
+      border: 1px solid #ffffff35;
+      border-radius: 24px;
+      background: #ffffff12;
+      box-shadow: 0 25px 80px #0003;
+      backdrop-filter: blur(12px);
+    }
+    .hero-card h2 { margin-top: 0; font-size: 24px; }
+    .quick-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 13px 0;
+      border-bottom: 1px solid #ffffff20;
+    }
+    .quick-item:last-child { border-bottom: 0; }
+    .quick-icon {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      color: #8df3f0;
+      background: #ffffff14;
+    }
+    .quick-item small { display: block; color: #c5d9ed; }
+
+    section { padding: 70px 22px; }
+    .container { max-width: 1180px; margin: auto; }
+    .section-head { text-align: center; max-width: 730px; margin: 0 auto 35px; }
+    .section-head .kicker { color: var(--blue); font-size: 12px; letter-spacing: 1.5px; font-weight: 900; text-transform: uppercase; }
+    h2.section-title { margin: 8px 0 12px; font-size: clamp(28px,4vw,39px); line-height: 1.2; color: var(--navy); }
+    .section-head p { color: var(--muted); margin: 0; }
+
+    .service-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 23px;
+      background: white;
+      box-shadow: 0 6px 20px #102c4b08;
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+    }
+    .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: #a9d0ff; }
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      background: #eaf3ff;
+      border-radius: 15px;
+      font-size: 22px;
+    }
+    .service-card h3 { margin: 16px 0 6px; font-size: 19px; }
+    .service-card p { margin: 0 0 15px; color: var(--muted); font-size: 14px; min-height: 45px; }
+    .service-bottom { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .price { color: var(--navy); font-weight: 900; font-size: 18px; }
+    .price small { display: block; color: var(--muted); font-weight: 500; font-size: 11px; }
+
+    .booking-section { background: var(--light); }
+    .booking-layout { display: grid; grid-template-columns: .7fr 1.3fr; gap: 25px; align-items: start; }
+    .booking-info {
+      padding: 28px;
+      border-radius: var(--radius);
+      background: var(--navy);
+      color: white;
+    }
+    .booking-info h3 { font-size: 24px; margin-top: 0; }
+    .booking-info p { color: #c7d8ec; }
+    .booking-info li { margin: 13px 0; }
+    .booking-info i { color: #64e8d2; margin-right: 8px; }
+    .catalogue {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+    }
+    .catalogue h3 { margin-top: 0; }
+    .field { display: grid; gap: 7px; margin: 13px 0; }
+    .field label { font-weight: 700; font-size: 13px; }
+    .field input, .field select, .field textarea {
+      width: 100%;
+      border: 1px solid #d8e2ef;
+      border-radius: 10px;
+      padding: 12px;
+      background: white;
+      color: var(--ink);
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid #b8d7ff; border-color: var(--blue); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .cart-list { display: grid; gap: 10px; margin: 15px 0; }
+    .cart-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--border);
+      padding: 12px;
+      border-radius: 12px;
+    }
+    .cart-row small { display: block; color: var(--muted); }
+    .cart-controls { display: flex; align-items: center; gap: 8px; }
+    .qty-btn {
+      width: 30px; height: 30px; border-radius: 8px;
+      border: 1px solid var(--border); background: #f6f9fd;
+    }
+    .remove-btn { border: 0; color: #c02626; background: transparent; font-size: 12px; }
+    .total-line { display: flex; justify-content: space-between; padding: 15px 0; border-top: 1px solid var(--border); font-weight: 900; }
+    .muted-note { font-size: 12px; color: var(--muted); }
+
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .step { text-align: center; padding: 25px; border: 1px solid var(--border); border-radius: var(--radius); }
+    .step-num { margin: 0 auto 13px; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: #eaf3ff; color: var(--blue); font-weight: 900; font-size: 20px; }
+
+    .faq-list { max-width: 850px; margin: auto; display: grid; gap: 12px; }
+    details { border: 1px solid var(--border); border-radius: 12px; padding: 17px 19px; background: white; }
+    summary { font-weight: 800; cursor: pointer; }
+    details p { color: var(--muted); margin-bottom: 0; }
+
+    .cta-band {
+      padding: 40px;
+      border-radius: 22px;
+      color: white;
+      background: linear-gradient(120deg,#075bd2,#087eae);
+      display: flex; justify-content: space-between; align-items: center; gap: 22px;
+    }
+    .cta-band h2 { margin: 0 0 8px; font-size: 29px; }
+    .cta-band p { margin: 0; color: #e1f1ff; }
+
+    footer { background: #06152a; color: white; padding: 45px 22px 25px; }
+    .footer-grid { max-width: 1180px; margin: auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 30px; }
+    footer p, footer a { color: #bdcde0; }
+    footer a:hover { color: white; }
+    .footer-bottom { max-width: 1180px; margin: 25px auto 0; padding-top: 18px; border-top: 1px solid #ffffff20; color: #a9bbd0; font-size: 12px; }
+
+    .floating-actions { position: fixed; right: 18px; bottom: 22px; z-index: 40; display: grid; gap: 12px; }
+    .float-btn {
+      width: 57px; height: 57px; display: grid; place-items: center;
+      border-radius: 50%; color: white; font-size: 25px;
+      box-shadow: 0 8px 25px #0003; animation: float 3s ease-in-out infinite;
+    }
+    .float-wa { background: #16a34a; }
+    .float-call { background: #0878f9; animation-delay: .5s; }
+    .float-btn:hover { transform: scale(1.08); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+    .mobile-bottom {
+      display: none; position: fixed; z-index: 35; bottom: 0; left: 0; right: 0;
+      padding: 9px 12px calc(9px + env(safe-area-inset-bottom));
+      background: white; border-top: 1px solid var(--border);
+      grid-template-columns: 1fr 1fr; gap: 9px;
+    }
+
+    @media (max-width: 850px) {
+      .nav-links { display: none; }
+      .hero-inner { grid-template-columns: 1fr; padding: 55px 22px; }
+      .hero-card { max-width: 560px; }
+      .service-grid { grid-template-columns: repeat(2,1fr); }
+      .booking-layout { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .nav { min-height: 66px; padding: 10px 14px; }
+      .brand { font-size: 17px; }
+      .brand-icon { width: 38px; height: 38px; }
+      .nav > .btn { padding: 10px 12px; font-size: 12px; }
+      section { padding: 52px 16px; }
+      .hero-inner { padding: 46px 17px; gap: 28px; }
+      h1 { letter-spacing: -.7px; }
+      .hero p { font-size: 15px; }
+      .hero-actions .btn { flex: 1; }
+      .hero-card, .catalogue, .booking-info { padding: 20px; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service-card p { min-height: 0; }
+      .steps { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; gap: 0; }
+      .cta-band { padding: 25px; flex-direction: column; align-items: flex-start; }
+      .footer-grid { grid-template-columns: 1fr; gap: 15px; }
+      .floating-actions { right: 12px; bottom: 82px; }
+      .float-btn { width: 48px; height: 48px; font-size: 21px; }
+      .mobile-bottom { display: grid; }
+      body { padding-bottom: 68px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 relative">
 
-  <!-- TOP NOTICE BAR -->
-  <div class="bg-gradient-to-r from-emerald-700 via-teal-700 to-sky-700 text-white text-xs font-bold py-2 px-4 text-center">
-    <span class="mx-auto flex items-center justify-center space-x-2">
-      <span class="bg-red-500 text-white px-2 py-0.5 rounded-full text-[10px] animate-pulse">SPECIAL OFFER</span>
-      <span>🔥 Festive Discount: Flat 15% OFF on Full Home Deep Cleaning in Pune & PCMC!</span>
-    </span>
+<body>
+  <div class="announcement">
+    <i class="fa-solid fa-sparkles"></i>
+    Pune Home & Office Cleaning — <span>WhatsApp par quote lein</span>
   </div>
 
-  <!-- TOP HEADER / NAVBAR -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-md border-b border-slate-100">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-      
-      <!-- Brand Logo -->
-      <a href="#home" class="flex items-center space-x-3">
-        <div class="bg-gradient-to-tr from-emerald-600 to-teal-500 text-white p-2.5 rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/30">
-          <i class="fa-solid fa-broom text-2xl"></i>
-        </div>
-        <div>
-          <h1 class="text-2xl font-black tracking-tight text-slate-900 leading-none">SAF SAFAI <span class="text-emerald-600">PUNE</span></h1>
-          <p class="text-[11px] font-bold text-sky-600 tracking-wider">PREMIUM DEEP CLEANING</p>
-        </div>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="Saf Safai Pune home">
+        <span class="brand-icon"><i class="fa-solid fa-broom"></i></span>
+        <span>Saf Safai <span style="color:#0878f9">Pune</span></span>
       </a>
-
-      <!-- Navigation Links -->
-      <nav class="hidden md:flex items-center space-x-6 text-sm font-bold text-slate-700">
-        <a href="#home" class="text-emerald-600 hover:text-emerald-700">होम</a>
-        <a href="#services" class="hover:text-emerald-600 transition">हमारी सेवाएं</a>
-        <a href="#pricing" class="hover:text-emerald-600 transition">कीमतें</a>
-        <a href="#areas" class="hover:text-emerald-600 transition">सर्विस एरिया</a>
-        <a href="#about-info" class="hover:text-emerald-600 transition">हमारे बारे में</a>
-        <a href="#footer-contact" class="hover:text-emerald-600 transition">संपर्क करें</a>
-      </nav>
-
-      <!-- Header CTAs & Mini Cart Button -->
-      <div class="flex items-center space-x-3">
-        <!-- Floating Cart Badge Trigger Button -->
-        <button onclick="openCartDrawer()" class="relative bg-emerald-100 hover:bg-emerald-200 text-emerald-800 p-2.5 rounded-xl flex items-center justify-center transition border border-emerald-300">
-          <i class="fa-solid fa-cart-shopping text-xl text-emerald-700"></i>
-          <span id="nav-cart-badge" class="absolute -top-1.5 -right-1.5 bg-red-600 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
-        </button>
-
-        <a href="https://wa.me/919325100228" target="_blank" class="hidden sm:flex items-center space-x-2 bg-emerald-50 hover:bg-emerald-100 border-2 border-emerald-500 text-emerald-800 font-bold px-3.5 py-1.5 rounded-xl text-xs transition">
-          <i class="fa-brands fa-whatsapp text-emerald-600 text-xl"></i>
-          <span>WhatsApp<br><strong class="text-slate-900">9325100228</strong></span>
-        </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#booking">Book Cleaning</a>
+        <a href="#process">How It Works</a>
+        <a href="#faq">FAQs</a>
       </div>
-    </div>
+      <button class="btn btn-primary btn-small" onclick="goToBooking()">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>My Booking <b id="nav-count">0</b></span>
+      </button>
+    </nav>
   </header>
 
-  <!-- HERO BANNER SECTION -->
-  <section id="home" class="relative bg-gradient-to-br from-emerald-900 via-slate-900 to-sky-900 text-white py-14 md:py-20 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
-      
-      <!-- Left Hero Text Content -->
-      <div class="md:col-span-7 space-y-6 text-left">
-        <div class="inline-flex items-center space-x-2 bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 px-4 py-1.5 rounded-full text-xs font-bold backdrop-blur-md">
-          <i class="fa-solid fa-location-dot text-emerald-400"></i>
-          <span>Serving Pune & Pimpri-Chinchwad Areas</span>
-        </div>
-
-        <div class="space-y-3">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
-            SAF SAFAI <span class="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">PUNE</span>
-          </h1>
-          <h2 class="text-2xl sm:text-3xl font-bold text-emerald-200 hindi-text">
-            आपका घर, हमारी ज़म्मेदारी! ✨
-          </h2>
-          <p class="text-slate-300 text-base sm:text-lg max-w-xl hindi-text leading-relaxed">
-            पुणे और पिंपरी-चिंचवड़ की नंबर 1 पेशेवर और भरोसेमंद होम डीप क्लीनिंग सर्विस। 100% Eco-Friendly Non-Toxic जर्म-फ्री सफाई।
-          </p>
-        </div>
-
-        <!-- Hero Action Buttons -->
-        <div class="flex flex-wrap gap-3 pt-2">
-          <a href="https://wa.me/919325100228?text=Hello%20Saf%20Safai%20Pune,%20mujhe%20cleaning%20booking%20karni%20hai" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black px-6 py-3.5 rounded-2xl flex items-center space-x-2 shadow-xl shadow-emerald-500/40 btn-pulse-wa">
-            <i class="fa-brands fa-whatsapp text-2xl text-slate-950"></i>
-            <span>WhatsApp Now: 9325100228</span>
-          </a>
-          <a href="tel:9325100228" class="bg-sky-500 hover:bg-sky-600 text-white font-extrabold px-6 py-3.5 rounded-2xl flex items-center space-x-2 shadow-xl shadow-sky-500/30">
-            <i class="fa-solid fa-phone-volume text-xl"></i>
-            <span>Call Now: 9325100228</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Right Hero Graphic/Image Display -->
-      <div class="md:col-span-5 relative flex justify-center">
-        <div class="relative w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 p-2 rounded-3xl shadow-2xl">
-          <img id="img-hero-banner" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Deep Cleaning Banner" class="w-full h-72 object-cover rounded-2xl shadow-md">
-          <div class="p-4 text-center">
-            <h3 class="text-xl font-black text-white hindi-text">स्वच्छ घर, स्वस्थ परिवार ❤️</h3>
-            <p class="text-xs text-emerald-200 mt-1 hindi-text">आधुनिक वैक्यूम और स्टीम मशीनों के साथ 100% गहरी सफाई</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SERVICES SECTION (हमारी सेवाएं) -->
-  <section id="services" class="py-16 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <span class="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Top Rated Cleaning</span>
-      <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2 hindi-text">हमारी सेवाएं</h2>
-      <p class="text-slate-500 mt-1 mb-12 hindi-text">आपके घर के हर कोने की पूरी सफाई</p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Service Card 1 -->
-        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group">
-          <div class="relative h-44 overflow-hidden">
-            <img id="img-flat" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Flat Cleaning">
-            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow">Popular</span>
-          </div>
-          <div class="p-5 text-left">
-            <h4 class="font-black text-lg text-slate-900 hindi-text">फ्लैट डीप क्लीनिंग</h4>
-            <p class="text-xs text-slate-500 mt-1 hindi-text">(1 BHK, 2 BHK, 3 BHK, 4 BHK)</p>
-            <div class="mt-4 flex items-center justify-between">
-              <span class="text-xs font-bold text-slate-400">Full Home</span>
-              <button onclick="addToCart('Flat Deep Clean (1 BHK)', 4000)" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 px-4 rounded-xl shadow-md transition">+ Add Service</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service Card 2 -->
-        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group">
-          <div class="relative h-44 overflow-hidden">
-            <img id="img-kitchen" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Kitchen Cleaning">
-          </div>
-          <div class="p-5 text-left">
-            <h4 class="font-black text-lg text-slate-900 hindi-text">किचन डीप क्लीनिंग</h4>
-            <p class="text-xs text-slate-500 mt-1 hindi-text">Oil Stain & Degreasing Scrubbing</p>
-            <div class="mt-4 flex items-center justify-between">
-              <span class="text-xs font-bold text-slate-400">Deep Clean</span>
-              <button onclick="addToCart('Kitchen Cleaning', 1500)" class="bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold py-2 px-4 rounded-xl shadow-md transition">+ Add Service</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service Card 3 -->
-        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group">
-          <div class="relative h-44 overflow-hidden">
-            <img id="img-bathroom" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Bathroom Cleaning">
-          </div>
-          <div class="p-5 text-left">
-            <h4 class="font-black text-lg text-slate-900 hindi-text">बाथरूम डीप क्लीनिंग</h4>
-            <p class="text-xs text-slate-500 mt-1 hindi-text">Tile Scale & Tap Fitting Polish</p>
-            <div class="mt-4 flex items-center justify-between">
-              <span class="text-xs font-bold text-slate-400">Sanitized</span>
-              <button onclick="addToCart('Bathroom Cleaning', 700)" class="bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold py-2 px-4 rounded-xl shadow-md transition">+ Add Service</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service Card 4 -->
-        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition group">
-          <div class="relative h-44 overflow-hidden">
-            <img id="img-sofa" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Sofa Cleaning">
-          </div>
-          <div class="p-5 text-left">
-            <h4 class="font-black text-lg text-slate-900 hindi-text">सोफा ड्राई क्लीनिंग</h4>
-            <p class="text-xs text-slate-500 mt-1 hindi-text">Shampooing & Vacuum Extraction</p>
-            <div class="mt-4 flex items-center justify-between">
-              <span class="text-xs font-bold text-slate-400">Per Seat</span>
-              <button onclick="addToCart('Sofa Cleaning (Per Seat)', 250)" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2 px-4 rounded-xl shadow-md transition">+ Add Service</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING & CUSTOM PACKAGE E-COMMERCE SECTION (कीमतें) -->
-  <section id="pricing" class="py-16 bg-white border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <span class="bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1 rounded-full uppercase">Transparent Pricing</span>
-        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2 hindi-text">सेवा की कीमतें</h2>
-        <p class="text-slate-500 text-sm mt-1 hindi-text">अपना पैकेज चुनें - Cart Drawer automatically open hoga!</p>
-      </div>
-
-      <!-- BHK Packages Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-        
-        <!-- 1 BHK Card -->
-        <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 hover:border-emerald-500 transition shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center space-x-3 mb-3">
-              <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black">1</div>
-              <div>
-                <h4 class="font-black text-lg text-slate-900">1 BHK Deep Clean</h4>
-                <p class="text-xs text-slate-500 hindi-text">पूरा फ्लैट सैनिटाइजेशन</p>
-              </div>
-            </div>
-            <div class="space-y-1.5 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
-              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900">₹4,000</strong></div>
-              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900">₹5,500</strong></div>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 gap-2 pt-2">
-            <button onclick="addToCart('1 BHK (बिना दीवार)', 4000)" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
-              + बिना दीवार
-            </button>
-            <button onclick="addToCart('1 BHK (दीवार के साथ)', 5500)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
-              + दीवार के साथ
-            </button>
-          </div>
-        </div>
-
-        <!-- 2 BHK Card -->
-        <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 hover:border-emerald-500 transition shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center space-x-3 mb-3">
-              <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black">2</div>
-              <div>
-                <h4 class="font-black text-lg text-slate-900">2 BHK Deep Clean</h4>
-                <p class="text-xs text-slate-500 hindi-text">2 बेडरूम + हॉल + किचन</p>
-              </div>
-            </div>
-            <div class="space-y-1.5 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
-              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900">₹4,500</strong></div>
-              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900">₹7,500</strong></div>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 gap-2 pt-2">
-            <button onclick="addToCart('2 BHK (बिना दीवार)', 4500)" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
-              + बिना दीवार
-            </button>
-            <button onclick="addToCart('2 BHK (दीवार के साथ)', 7500)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
-              + दीवार के साथ
-            </button>
-          </div>
-        </div>
-
-        <!-- 3 BHK Card -->
-        <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 hover:border-emerald-500 transition shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center space-x-3 mb-3">
-              <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black">3</div>
-              <div>
-                <h4 class="font-black text-lg text-slate-900">3 BHK Deep Clean</h4>
-                <p class="text-xs text-slate-500 hindi-text">3 बेडरूम + हॉल + बालकनी</p>
-              </div>
-            </div>
-            <div class="space-y-1.5 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
-              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900">₹6,000</strong></div>
-              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900">₹9,000</strong></div>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 gap-2 pt-2">
-            <button onclick="addToCart('3 BHK (बिना दीवार)', 6000)" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
-              + बिना दीवार
-            </button>
-            <button onclick="addToCart('3 BHK (दीवार के साथ)', 9000)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
-              + दीवार के साथ
-            </button>
-          </div>
-        </div>
-
-        <!-- 4 BHK Card -->
-        <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 hover:border-emerald-500 transition shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center space-x-3 mb-3">
-              <div class="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black">4</div>
-              <div>
-                <h4 class="font-black text-lg text-slate-900">4 BHK Deep Clean</h4>
-                <p class="text-xs text-slate-500 hindi-text">बड़ा फ्लैट / डुप्लेक्स</p>
-              </div>
-            </div>
-            <div class="space-y-1.5 text-xs text-slate-600 border-y border-slate-200 py-3 my-3">
-              <div class="flex justify-between"><span>बिना दीवार:</span><strong class="text-slate-900">₹8,000</strong></div>
-              <div class="flex justify-between"><span>दीवार के साथ:</span><strong class="text-slate-900">₹12,000</strong></div>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 gap-2 pt-2">
-            <button onclick="addToCart('4 BHK (बिना दीवार)', 8000)" class="bg-white text-emerald-700 font-bold py-2 rounded-xl text-xs border border-emerald-300 hover:bg-emerald-50">
-              + बिना दीवार
-            </button>
-            <button onclick="addToCart('4 BHK (दीवार के साथ)', 12000)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs shadow-md">
-              + दीवार के साथ
-            </button>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Add-on Individual Items -->
-      <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
-        <h4 class="font-black text-base text-slate-900 mb-4 hindi-text">इंडिविजुअल सेवाएं (Add-on Services)</h4>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-          <button onclick="addToCart('Kitchen Cleaning', 1500)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">किचन: <strong class="text-emerald-700">₹1,500</strong></span>
-            <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
-          </button>
-          <button onclick="addToCart('Bathroom Cleaning', 700)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">बाथरूम: <strong class="text-emerald-700">₹700</strong></span>
-            <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
-          </button>
-          <button onclick="addToCart('Sofa Cleaning', 250)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">सोफा: <strong class="text-emerald-700">₹250</strong></span>
-            <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
-          </button>
-          <button onclick="addToCart('Hall Cleaning', 1500)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">हॉल: <strong class="text-emerald-700">₹1,500</strong></span>
-            <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
-          </button>
-          <button onclick="addToCart('Fan Cleaning', 100)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">फैन: <strong class="text-emerald-700">₹100</strong></span>
-            <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
-          </button>
-          <button onclick="addToCart('Window Cleaning', 250)" class="bg-white p-3.5 rounded-2xl border border-slate-200 text-left hover:border-emerald-500 transition">
-            <span class="font-bold text-xs block text-slate-800">विंडो: <strong class="text-emerald-700">₹250</strong></span>
-            <span class="text-[10px] text-slate-400 font-semibold">+ Add Item</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- POPUP MINI PAGE CART SIDE DRAWER -->
-  <div id="cart-drawer-overlay" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeCartDrawer()"></div>
-  
-  <div id="side-cart-drawer" class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-md bg-white shadow-2xl transform translate-x-full flex flex-col">
-    <!-- Header -->
-    <div class="bg-gradient-to-r from-emerald-700 to-teal-800 text-white p-5 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <i class="fa-solid fa-cart-shopping text-2xl text-emerald-300"></i>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
         <div>
-          <h3 class="font-black text-lg leading-tight">Your Selected Cart</h3>
-          <p class="text-xs text-emerald-200 hindi-text">चयनित सेवाओं की सूची</p>
-        </div>
-      </div>
-      <button onclick="closeCartDrawer()" class="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition">
-        <i class="fa-solid fa-xmark text-lg"></i>
-      </button>
-    </div>
-
-    <!-- Items List -->
-    <div class="flex-1 p-5 overflow-y-auto space-y-4 bg-slate-50">
-      <div id="drawer-cart-items" class="space-y-3 divide-y">
-        <p class="text-sm text-slate-400 text-center py-12 hindi-text">कार्ट में कोई भी आइटम नहीं है। कृपया पैकेज या सर्विस जोड़ें!</p>
-      </div>
-    </div>
-
-    <!-- Checkout Footer -->
-    <div class="p-5 bg-white border-t border-slate-200 space-y-4 shadow-lg">
-      <div class="flex justify-between items-center font-black text-xl text-slate-900">
-        <span>Estimated Total:</span>
-        <span id="drawer-cart-total" class="text-emerald-700">₹0</span>
-      </div>
-
-      <div class="space-y-2">
-        <input type="text" id="drawer-cust-name" placeholder="आपका नाम (Your Name)" class="w-full text-xs border p-3 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
-        <input type="text" id="drawer-cust-address" placeholder="पता (Pune / PCMC Area)" class="w-full text-xs border p-3 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
-        <input type="date" id="drawer-cust-date" class="w-full text-xs border p-3 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none">
-      </div>
-
-      <button onclick="checkoutToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3.5 rounded-2xl shadow-xl flex items-center justify-center space-x-2 transition text-sm">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
-        <span>Book Order via WhatsApp</span>
-      </button>
-    </div>
-  </div>
-
-  <!-- SERVICE AREAS IN PUNE & PCMC SECTION -->
-  <section id="areas" class="py-14 bg-slate-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase">Locations Covered</span>
-      <h2 class="text-3xl font-black mt-2 hindi-text">पुणे और पिंपरी-चिंचवड़ सर्विस एरिया</h2>
-      <p class="text-slate-400 text-xs mt-1 mb-10 hindi-text">हम नीचे दिए गए सभी प्रमुख इलाकों में तुरंत सर्विस प्रदान करते हैं</p>
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-xs font-bold">
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Wakad</div>
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Baner</div>
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Hinjewadi</div>
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Kharadi</div>
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Kothrud</div>
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Shivajinagar</div>
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Pimpri</div>
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Chinchwad</div>
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Aundh</div>
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Viman Nagar</div>
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Hadapsar</div>
-        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700 text-slate-200">Ravet</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BEFORE / AFTER INTERACTIVE SLIDER BANNER -->
-  <section class="py-14 bg-slate-950 text-white">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 rounded-3xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border border-emerald-500/20 shadow-2xl">
-        
-        <!-- Interactive Slider -->
-        <div class="md:col-span-6">
-          <div class="ba-container w-full h-64 sm:h-80 rounded-2xl shadow-2xl border-2 border-white/20 select-none cursor-ew-resize" id="ba-slider">
-            <img id="img-before" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Before Cleaning">
-            <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full shadow">BEFORE</span>
-
-            <div class="ba-after" id="ba-after">
-              <img id="img-after" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" class="absolute top-0 left-0 max-w-none h-full object-cover" id="ba-after-img" alt="After Cleaning">
-              <span class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-black px-3 py-1 rounded-full shadow">AFTER</span>
-            </div>
-          </div>
-          <p class="text-center text-[11px] text-slate-400 mt-2">↔️ Slide mouse over image to compare Before & After results</p>
-        </div>
-
-        <div class="md:col-span-6 space-y-4">
-          <h2 class="text-3xl font-black hindi-text">साफ घर, बेहतर जीवन ✨</h2>
-          <p class="text-slate-300 text-sm hindi-text">100% संतुष्टि की गारंटी के साथ प्रोफेशनल डीप क्लीनिंग।</p>
-          <a href="tel:9325100228" class="inline-flex items-center space-x-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black px-6 py-3.5 rounded-2xl shadow-xl transition">
-            <i class="fa-solid fa-phone-volume text-xl"></i>
-            <span>Call: 9325100228</span>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- RICH & DETAILED FOOTER SECTION -->
-  <footer id="footer-contact" class="bg-slate-950 text-slate-300 pt-16 pb-28 md:pb-12 border-t border-slate-900 text-xs">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-10">
-      
-      <!-- Col 1: About Us & Hindi Deep Cleaning Info -->
-      <div id="about-info" class="md:col-span-4 space-y-4">
-        <div class="flex items-center space-x-3">
-          <div class="bg-emerald-600 text-white p-2 rounded-xl">
-            <i class="fa-solid fa-broom text-xl"></i>
-          </div>
-          <h3 class="text-xl font-black text-white">SAF SAFAI PUNE</h3>
-        </div>
-        
-        <p class="text-slate-400 leading-relaxed hindi-text text-xs">
-          <strong>Saf Safai Pune</strong> पुणे और पिंपरी-चिंचवड़ (PCMC) की सबसे भरोसेमंद होम डीप क्लीनिंग सर्विस है। हम आपके घर, किचन, बाथरूम और सोफे की जर्म-फ्री गहरी सफाई के लिए एडवांस मशीनों और Eco-Friendly (गैर-विषैले) केमिकल्स का इस्तेमाल करते हैं।
-        </p>
-
-        <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-2xl space-y-2">
-          <h4 class="font-bold text-emerald-400 text-xs hindi-text">💡 डीप क्लीनिंग क्यों जरूरी है?</h4>
-          <p class="text-[11px] text-slate-400 hindi-text leading-normal">
-            सामान्य झाड़ू-पोछा सिर्फ ऊपर की धूल हटाता है, लेकिन **डीप क्लीनिंग** जिद्दी तेल के दाग, बाथरूम के स्केल और बैक्टीरिया को खत्म करके आपके परिवार को स्वस्थ माहौल देती है।
+          <span class="eyebrow"><i class="fa-solid fa-location-dot"></i> Home & Office Cleaning in Pune</span>
+          <h1>Ghar ki safai, <span class="gradient-text">professional tareeke se.</span></h1>
+          <p>
+            Deep cleaning for apartments, bungalows, row houses and offices.
+            Apni required services select karein aur WhatsApp par booking request bhejein.
           </p>
+          <div class="hero-actions">
+            <button class="btn btn-whatsapp" onclick="contactWhatsApp('Namaste Saf Safai Pune, mujhe cleaning service ka quote chahiye.')">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp Quote
+            </button>
+            <a class="btn btn-outline" href="tel:+919325100228">
+              <i class="fa-solid fa-phone"></i> Call Us
+            </a>
+          </div>
+          <div class="hero-points">
+            <span><i class="fa-solid fa-check-circle"></i> Service options</span>
+            <span><i class="fa-solid fa-check-circle"></i> Clear quote request</span>
+            <span><i class="fa-solid fa-check-circle"></i> Pune service area</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2>What do you need cleaned?</h2>
+          <p style="margin-top:-8px">Choose a service to start your booking.</p>
+          <div class="quick-item">
+            <span class="quick-icon"><i class="fa-solid fa-house"></i></span>
+            <div><strong>Home Deep Cleaning</strong><small>1–5 BHK, bungalow and row house</small></div>
+          </div>
+          <div class="quick-item">
+            <span class="quick-icon"><i class="fa-solid fa-kitchen-set"></i></span>
+            <div><strong>Kitchen & Bathroom</strong><small>Separate cleaning options</small></div>
+          </div>
+          <div class="quick-item">
+            <span class="quick-icon"><i class="fa-solid fa-building"></i></span>
+            <div><strong>Office Cleaning</strong><small>Request a customised quote</small></div>
+          </div>
+          <button class="btn btn-primary" style="width:100%;margin-top:18px" onclick="goToBooking()">
+            Select Services <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
       </div>
+    </section>
 
-      <!-- Col 2: Services Offered -->
-      <div class="md:col-span-3 space-y-3">
-        <h4 class="font-black text-sm text-white uppercase tracking-wider text-emerald-400">हमारी मुख्य सेवाएं</h4>
-        <ul class="space-y-2 text-slate-400 font-medium">
-          <li class="hover:text-emerald-400 transition"><a href="#pricing">• 1BHK, 2BHK, 3BHK, 4BHK Deep Clean</a></li>
-          <li class="hover:text-emerald-400 transition"><a href="#services">• Kitchen Oil & Degreasing Clean</a></li>
-          <li class="hover:text-emerald-400 transition"><a href="#services">• Bathroom Scrubbing & Scale Remove</a></li>
-          <li class="hover:text-emerald-400 transition"><a href="#services">• Sofa Shampoo & Vacuum Extract</a></li>
-          <li class="hover:text-emerald-400 transition"><a href="#pricing">• Hall & Balcony Cleaning</a></li>
-          <li class="hover:text-emerald-400 transition"><a href="#pricing">• Fan, Window Track & Glass Wash</a></li>
-        </ul>
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Our Services</span>
+          <h2 class="section-title">Cleaning services for every space</h2>
+          <p>Apni property aur required service select karein. Jahan price listed nahi hai, wahan WhatsApp par quote milega.</p>
+        </div>
+
+        <div class="service-grid" id="service-grid"></div>
       </div>
+    </section>
 
-      <!-- Col 3: Quick Book Now CTA Form -->
-      <div class="md:col-span-2 space-y-3">
-        <h4 class="font-black text-sm text-white uppercase tracking-wider text-emerald-400">Instant Booking</h4>
-        <p class="text-slate-400 text-[11px] hindi-text">तुरंत स्लॉट बुक करने के लिए बटन पर क्लिक करें:</p>
-        <a href="#pricing" class="block bg-emerald-600 hover:bg-emerald-700 text-white text-center font-bold py-2.5 px-4 rounded-xl shadow-md transition text-xs">
-          <i class="fa-solid fa-calendar-check mr-1"></i> Book Now Online
+    <section class="booking-section" id="booking">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Booking Request</span>
+          <h2 class="section-title">Build your cleaning order</h2>
+          <p>Services add karein, property details fill karein aur WhatsApp par request send karein.</p>
+        </div>
+
+        <div class="booking-layout">
+          <aside class="booking-info">
+            <h3>Booking kaise hogi?</h3>
+            <p>WhatsApp par request bhejne ke baad team se price, availability aur service details confirm karein.</p>
+            <ul style="padding-left:18px">
+              <li><i class="fa-solid fa-check"></i> Multiple services add kar sakte hain</li>
+              <li><i class="fa-solid fa-check"></i> Unknown-price services ke liye quote</li>
+              <li><i class="fa-solid fa-check"></i> Date aur address share karein</li>
+              <li><i class="fa-solid fa-check"></i> Final booking confirmation WhatsApp par</li>
+            </ul>
+            <p class="muted-note" style="color:#c7d8ec">Displayed prices are estimates based on the listed options. Final price and availability must be confirmed before booking.</p>
+          </aside>
+
+          <div class="catalogue">
+            <h3><i class="fa-solid fa-basket-shopping" style="color:#0878f9"></i> Your selected services</h3>
+            <p class="muted-note">Neeche catalogue se services add karein. Quantity +/− se change kar sakte hain.</p>
+            <div id="cart-list" class="cart-list">
+              <p class="muted-note">Abhi koi service select nahi ki gayi hai.</p>
+            </div>
+            <div class="total-line">
+              <span>Listed-price subtotal</span>
+              <span id="cart-total">₹0</span>
+            </div>
+            <p class="muted-note">Quote-only items subtotal mein include nahi hain. Extra charges, if any, confirmation se pehle discuss honge.</p>
+
+            <form id="booking-form">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="customer-name">Your name *</label>
+                  <input id="customer-name" name="name" required autocomplete="name" placeholder="Full name">
+                </div>
+                <div class="field">
+                  <label for="customer-phone">Phone number *</label>
+                  <input id="customer-phone" name="phone" required type="tel" inputmode="tel" pattern="[0-9 +()-]{10,16}" autocomplete="tel" placeholder="Your contact number">
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="property-type">Property type *</label>
+                  <select id="property-type" required>
+                    <option value="">Select property</option>
+                    <option>1 BHK</option>
+                    <option>2 BHK</option>
+                    <option>3 BHK</option>
+                    <option>4 BHK</option>
+                    <option>5 BHK</option>
+                    <option>Bungalow</option>
+                    <option>Row House</option>
+                    <option>Office / Commercial</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="cleaning-date">Preferred date</label>
+                  <input id="cleaning-date" type="date">
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="customer-address">Full address in Pune *</label>
+                <textarea id="customer-address" required rows="2" placeholder="Area, society/building, landmark"></textarea>
+              </div>
+              <div class="field">
+                <label for="customer-notes">Extra details (optional)</label>
+                <textarea id="customer-notes" rows="2" placeholder="Rooms, specific requirements, preferred time..."></textarea>
+              </div>
+              <button class="btn btn-whatsapp" type="submit" style="width:100%">
+                <i class="fa-brands fa-whatsapp"></i> Send Booking Request on WhatsApp
+              </button>
+              <p class="muted-note">This form opens WhatsApp with your request. It does not automatically confirm a booking or collect payment.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Simple Process</span>
+          <h2 class="section-title">Book in three easy steps</h2>
+          <p>Request bhejne ke baad price aur schedule confirm karna na bhoolein.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Select services</h3>
+            <p>Property type aur required cleaning options choose karein.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Send your request</h3>
+            <p>Contact details aur address ke saath WhatsApp par request bhejein.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Confirm the booking</h3>
+            <p>Final price, scope, availability aur timing team se confirm karein.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" style="background:#f3f7fc">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">FAQs</span>
+          <h2 class="section-title">Frequently asked questions</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Do you provide deep cleaning services in Pune?</summary>
+            <p>Saf Safai Pune ke saath Pune area mein cleaning request discuss kar sakte hain. Apna location share karke service availability confirm karein.</p>
+          </details>
+          <details>
+            <summary>Can I request cleaning for a 5 BHK, bungalow or row house?</summary>
+            <p>Haan, in property types ke liye request bhej sakte hain. Final quote property size, condition aur selected services ke hisaab se confirm hoga.</p>
+          </details>
+          <details>
+            <summary>How much does office or bungalow cleaning cost?</summary>
+            <p>In services ke liye fixed price yahan list nahi kiya gaya hai. WhatsApp par property details share karke customised quote maangein.</p>
+          </details>
+          <details>
+            <summary>Is my booking confirmed when I click WhatsApp?</summary>
+            <p>Nahi. Button sirf aapki request WhatsApp par prepare karta hai. Booking tab confirm samjhein jab team price, date aur availability confirm kare.</p>
+          </details>
+          <details>
+            <summary>Can I add kitchen, bathroom and sofa cleaning together?</summary>
+            <p>Haan. Catalogue mein alag-alag services add karke ek combined request bhej sakte hain. Final combined price team se confirm karein.</p>
+          </details>
+          <details>
+            <summary>Can I change the preferred date later?</summary>
+            <p>Preferred date request mein share karein. Date change ke liye WhatsApp par team se availability confirm karein.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Need a customised cleaning quote?</h2>
+            <p>Property type, location aur required service WhatsApp par share karein.</p>
+          </div>
+          <button class="btn btn-whatsapp" onclick="contactWhatsApp('Namaste Saf Safai Pune, mujhe customised cleaning quote chahiye.')">
+            <i class="fa-brands fa-whatsapp"></i> Get a Quote
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="brand" style="color:white">
+          <span class="brand-icon"><i class="fa-solid fa-broom"></i></span>
+          <span>Saf Safai Pune</span>
         </a>
-        <a href="https://wa.me/919325100228" target="_blank" class="block bg-slate-900 border border-emerald-500/50 hover:bg-slate-800 text-emerald-400 text-center font-bold py-2 px-4 rounded-xl transition text-xs">
-          <i class="fa-brands fa-whatsapp mr-1"></i> Direct WhatsApp
-        </a>
+        <p>Home and office cleaning service requests in Pune. Contact us to discuss your cleaning requirements and get a quote.</p>
       </div>
-
-      <!-- Col 4: Full Contact Details -->
-      <div class="md:col-span-3 space-y-3">
-        <h4 class="font-black text-sm text-white uppercase tracking-wider text-emerald-400">संपर्क विवरण (Contact Us)</h4>
-        <div class="space-y-2.5 text-slate-400">
-          <div class="flex items-start space-x-2.5">
-            <i class="fa-solid fa-location-dot text-emerald-500 mt-1"></i>
-            <span>Shivraj Nagar 2, Pimpri Chinchwad, Pune - 411019</span>
-          </div>
-          <div class="flex items-center space-x-2.5">
-            <i class="fa-solid fa-phone text-emerald-500"></i>
-            <a href="tel:9325100228" class="hover:text-white font-bold text-slate-200">+91 9325100228</a>
-          </div>
-          <div class="flex items-center space-x-2.5">
-            <i class="fa-brands fa-whatsapp text-emerald-500"></i>
-            <span>24/7 Available on WhatsApp</span>
-          </div>
-        </div>
-
-        <div class="pt-2 flex space-x-3 text-base">
-          <a href="https://wa.me/919325100228" class="w-8 h-8 bg-slate-900 rounded-lg border border-slate-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="tel:9325100228" class="w-8 h-8 bg-slate-900 rounded-lg border border-slate-800 flex items-center justify-center hover:bg-sky-600 hover:text-white transition"><i class="fa-solid fa-phone"></i></a>
-        </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="#services">Cleaning Services</a></p>
+        <p><a href="#booking">Book a Service</a></p>
+        <p><a href="#process">How It Works</a></p>
+        <p><a href="#faq">FAQs</a></p>
       </div>
-
+      <div>
+        <h3>Contact</h3>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+919325100228">+91 93251 00228</a></p>
+        <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/919325100228" target="_blank" rel="noopener noreferrer">WhatsApp Saf Safai Pune</a></p>
+        <p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra</p>
+      </div>
     </div>
-
-    <!-- Copyright Sub-footer -->
-    <div class="border-t border-slate-900 max-w-7xl mx-auto px-4 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center text-slate-500 text-[11px] space-y-2 sm:space-y-0">
-      <p>© 2026 Saf Safai Pune. All Rights Reserved.</p>
-      <p>Website Designed by Santosh Chavan</p>
+    <div class="footer-bottom">
+      © <span id="year"></span> Saf Safai Pune. All rights reserved.
     </div>
   </footer>
 
-  <!-- FLOATING ACTION BUTTONS ABOVE AI BOT -->
-  <div class="fixed bottom-6 right-4 z-40 flex flex-col items-end space-y-3">
-    
-    <!-- Floating Real WhatsApp Button -->
-    <a href="https://wa.me/919325100228" target="_blank" class="w-12 h-12 bg-emerald-500 hover:bg-emerald-600 text-white p-3 rounded-full shadow-2xl flex items-center justify-center float-anim border-2 border-white">
-      <i class="fa-brands fa-whatsapp text-2xl"></i>
+  <div class="floating-actions" aria-label="Contact shortcuts">
+    <a class="float-btn float-wa" href="https://wa.me/919325100228"
+       target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"
+       title="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
     </a>
-
-    <!-- Floating Direct Call Button -->
-    <a href="tel:9325100228" class="w-12 h-12 bg-sky-500 hover:bg-sky-600 text-white p-3 rounded-full shadow-2xl flex items-center justify-center float-anim border-2 border-white">
-      <i class="fa-solid fa-phone text-lg"></i>
+    <a class="float-btn float-call" href="tel:+919325100228"
+       aria-label="Call Saf Safai Pune" title="Call us">
+      <i class="fa-solid fa-phone"></i>
     </a>
+  </div>
 
-    <!-- Floating AI Bot Button -->
-    <button onclick="toggleAiBot()" class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white px-4 py-3 rounded-full shadow-2xl flex items-center space-x-2 hover:scale-105 transition border-2 border-white">
-      <i class="fa-solid fa-robot text-xl"></i>
-      <span class="text-xs font-bold pr-1">Ask AI Bot</span>
+  <div class="mobile-bottom">
+    <a class="btn btn-outline" href="tel:+919325100228">
+      <i class="fa-solid fa-phone"></i> Call
+    </a>
+    <button class="btn btn-whatsapp" onclick="goToBooking()">
+      <i class="fa-solid fa-cart-shopping"></i> Book Service
     </button>
-
   </div>
 
-  <!-- DYNAMIC AI BOT CHAT WINDOW -->
-  <div id="ai-chat-window" class="hidden fixed bottom-24 right-4 z-50 w-80 sm:w-96 bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[420px]">
-    <div class="bg-gradient-to-r from-emerald-700 to-teal-800 text-white p-4 flex justify-between items-center">
-      <div class="flex items-center space-x-2">
-        <span class="text-xl">🤖</span>
-        <h4 class="font-bold text-sm">Safai AI Assistant</h4>
-      </div>
-      <button onclick="toggleAiBot()" class="text-white"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <div id="chat-messages" class="flex-1 p-3 overflow-y-auto space-y-3 text-xs bg-slate-50 hindi-text">
-      <div class="bg-white p-2.5 rounded-xl border text-slate-700">नमस्ते! 🙏 मैं आपका AI सफाई सहायक हूँ। बताइए आपका घर कितने BHK का है?</div>
-    </div>
-    <div class="p-2 border-t flex space-x-1">
-      <input type="text" id="ai-user-input" placeholder="Type message..." onkeypress="if(event.key === 'Enter') handleAiSend()" class="flex-1 text-xs border rounded-xl p-2 outline-none">
-      <button onclick="handleAiSend()" class="bg-emerald-600 text-white px-3 py-2 rounded-xl text-xs"><i class="fa-solid fa-paper-plane"></i></button>
-    </div>
-  </div>
-
-  <!-- JAVASCRIPT LOGIC -->
   <script>
-    // --- CART SYSTEM & SIDE DRAWER LOGIC ---
-    let cart = [];
+    "use strict";
 
-    function addToCart(itemName, price) {
-      const existing = cart.find(item => item.name === itemName);
-      if(existing) {
-        existing.qty += 1;
-      } else {
-        cart.push({ name: itemName, price: parseInt(price), qty: 1 });
-      }
+    // Listed prices are from the existing price list.
+    // Confirm all prices before publishing. Null means quote required.
+    const services = [
+      {id:"deep-1", name:"1 BHK Deep Cleaning", category:"Home Cleaning", price:4000, icon:"fa-house"},
+      {id:"deep-2", name:"2 BHK Deep Cleaning", category:"Home Cleaning", price:4500, icon:"fa-house"},
+      {id:"deep-3", name:"3 BHK Deep Cleaning", category:"Home Cleaning", price:6000, icon:"fa-house"},
+      {id:"deep-4", name:"4 BHK Deep Cleaning", category:"Home Cleaning", price:8000, icon:"fa-house"},
+      {id:"deep-5", name:"5 BHK Deep Cleaning", category:"Home Cleaning", price:null, icon:"fa-house"},
+      {id:"walls-1", name:"1 BHK Deep Cleaning with Walls", category:"Home Cleaning", price:5500, icon:"fa-paint-roller"},
+      {id:"walls-2", name:"2 BHK Deep Cleaning with Walls", category:"Home Cleaning", price:7500, icon:"fa-paint-roller"},
+      {id:"walls-3", name:"3 BHK Deep Cleaning with Walls", category:"Home Cleaning", price:9000, icon:"fa-paint-roller"},
+      {id:"walls-4", name:"4 BHK Deep Cleaning with Walls", category:"Home Cleaning", price:12000, icon:"fa-paint-roller"},
+      {id:"bungalow", name:"Bungalow Deep Cleaning", category:"Home Cleaning", price:null, icon:"fa-house-chimney"},
+      {id:"row-house", name:"Row House Deep Cleaning", category:"Home Cleaning", price:null, icon:"fa-house"},
+      {id:"office", name:"Office / Commercial Cleaning", category:"Commercial", price:null, icon:"fa-building"},
+      {id:"kitchen", name:"Kitchen Deep Cleaning", category:"Add-on Cleaning", price:1500, icon:"fa-kitchen-set"},
+      {id:"bathroom", name:"Bathroom Deep Cleaning", category:"Add-on Cleaning", price:700, icon:"fa-shower"},
+      {id:"sofa", name:"Sofa Cleaning (per seat)", category:"Add-on Cleaning", price:250, icon:"fa-couch"},
+      {id:"hall", name:"Hall Cleaning", category:"Add-on Cleaning", price:1500, icon:"fa-couch"},
+      {id:"fan", name:"Ceiling Fan Cleaning", category:"Add-on Cleaning", price:100, icon:"fa-fan"},
+      {id:"window", name:"Window Cleaning", category:"Add-on Cleaning", price:250, icon:"fa-window-maximize"},
+      {id:"mattress", name:"Mattress Cleaning", category:"Special Cleaning", price:null, icon:"fa-bed"},
+      {id:"carpet", name:"Carpet Cleaning", category:"Special Cleaning", price:null, icon:"fa-rug"},
+      {id:"movein", name:"Move-in / Move-out Cleaning", category:"Special Cleaning", price:null, icon:"fa-box-open"},
+      {id:"post-renovation", name:"Post-renovation Cleaning", category:"Special Cleaning", price:null, icon:"fa-hammer"}
+    ];
+
+    const cart = new Map();
+    const money = amount => "₹" + Number(amount).toLocaleString("en-IN");
+
+    function renderServices() {
+      const grid = document.getElementById("service-grid");
+      grid.innerHTML = services.map(service => `
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid ${service.icon}" aria-hidden="true"></i></div>
+          <p style="font-size:11px;color:#0878f9;font-weight:800;min-height:0;margin:13px 0 0">${service.category}</p>
+          <h3>${service.name}</h3>
+          <p>${service.price === null
+            ? "Price property details ke hisaab se confirm hoga."
+            : "Listed price; final scope aur charges confirm karein."}</p>
+          <div class="service-bottom">
+            <div class="price">${service.price === null ? "Get Quote" : money(service.price)}
+              <small>${service.price === null ? "Custom pricing" : "Listed price"}</small>
+            </div>
+            <button class="btn btn-primary btn-small" type="button"
+              onclick="addService('${service.id}')">
+              <i class="fa-solid fa-plus"></i> Add
+            </button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function addService(id) {
+      const service = services.find(item => item.id === id);
+      if (!service) return;
+      const existing = cart.get(id);
+      cart.set(id, {service, qty: existing ? existing.qty + 1 : 1});
       renderCart();
-      openCartDrawer();
+      const count = document.getElementById("nav-count");
+      count.textContent = [...cart.values()].reduce((sum, item) => sum + item.qty, 0);
     }
 
-    function openCartDrawer() {
-      document.getElementById('cart-drawer-overlay').classList.remove('hidden');
-      document.getElementById('side-cart-drawer').classList.remove('translate-x-full');
-    }
-
-    function closeCartDrawer() {
-      document.getElementById('cart-drawer-overlay').classList.add('hidden');
-      document.getElementById('side-cart-drawer').classList.add('translate-x-full');
-    }
-
-    function updateQty(index, change) {
-      cart[index].qty += change;
-      if(cart[index].qty <= 0) cart.splice(index, 1);
+    function changeQty(id, delta) {
+      const item = cart.get(id);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) cart.delete(id);
       renderCart();
+      document.getElementById("nav-count").textContent =
+        [...cart.values()].reduce((sum, item) => sum + item.qty, 0);
     }
 
     function renderCart() {
-      const drawerItemsEl = document.getElementById('drawer-cart-items');
-      const drawerTotalEl = document.getElementById('drawer-cart-total');
-      const navBadgeEl = document.getElementById('nav-cart-badge');
+      const list = document.getElementById("cart-list");
+      const items = [...cart.values()];
 
-      if(cart.length === 0) {
-        drawerItemsEl.innerHTML = `<p class="text-sm text-slate-400 text-center py-12 hindi-text">कार्ट में कोई भी आइटम नहीं है। कृपया पैकेज या सर्विस जोड़ें!</p>`;
-        drawerTotalEl.innerText = `₹0`;
-        navBadgeEl.innerText = `0`;
-        return;
-      }
-
-      let total = 0;
-      let totalQty = 0;
-      let html = '';
-
-      cart.forEach((item, idx) => {
-        const itemTotal = item.price * item.qty;
-        total += itemTotal;
-        totalQty += item.qty;
-
-        html += `
-          <div class="flex items-center justify-between py-3 text-xs">
-            <div class="flex-1 pr-2">
-              <h5 class="font-bold text-slate-900 hindi-text text-sm">${item.name}</h5>
-              <span class="text-slate-500 font-medium">₹${item.price} each</span>
+      if (!items.length) {
+        list.innerHTML = '<p class="muted-note">Abhi koi service select nahi ki gayi hai. Upar catalogue se Add button dabayein.</p>';
+      } else {
+        list.innerHTML = items.map(({service, qty}) => `
+          <div class="cart-row">
+            <div>
+              <strong>${service.name}</strong>
+              <small>${service.price === null ? "Quote required" : money(service.price) + " each"}</small>
+              <button class="remove-btn" type="button" onclick="changeQty('${service.id}',-${qty})">Remove</button>
             </div>
-            <div class="flex items-center space-x-2 bg-slate-200 p-1 rounded-xl">
-              <button onclick="updateQty(${idx}, -1)" class="w-6 h-6 bg-white text-slate-800 font-extrabold rounded-lg flex items-center justify-center shadow-sm">-</button>
-              <span class="font-bold px-1 text-slate-900">${item.qty}</span>
-              <button onclick="updateQty(${idx}, 1)" class="w-6 h-6 bg-emerald-600 text-white font-extrabold rounded-lg flex items-center justify-center shadow-sm">+</button>
+            <div class="cart-controls">
+              <button class="qty-btn" type="button" aria-label="Decrease quantity" onclick="changeQty('${service.id}',-1)">−</button>
+              <strong>${qty}</strong>
+              <button class="qty-btn" type="button" aria-label="Increase quantity" onclick="changeQty('${service.id}',1)">+</button>
             </div>
-            <span class="font-black text-emerald-700 ml-3 text-sm min-w-[55px] text-right">₹${itemTotal}</span>
           </div>
-        `;
-      });
+        `).join("");
+      }
 
-      drawerItemsEl.innerHTML = html;
-      drawerTotalEl.innerText = `₹${total}`;
-      navBadgeEl.innerText = `${totalQty}`;
+      const total = items.reduce((sum, item) => {
+        return sum + (item.service.price === null ? 0 : item.service.price * item.qty);
+      }, 0);
+      document.getElementById("cart-total").textContent = money(total);
     }
 
-    function checkoutToWhatsApp() {
-      if(cart.length === 0) {
-        alert('Please add at least one service to your cart!');
+    function goToBooking() {
+      document.getElementById("booking").scrollIntoView({behavior:"smooth"});
+    }
+
+    function contactWhatsApp(message) {
+      const url = "https://wa.me/919325100228?text=" + encodeURIComponent(message);
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    document.getElementById("booking-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      if (cart.size === 0) {
+        alert("Please pehle catalogue se kam se kam ek service add karein.");
+        goToBooking();
         return;
       }
 
-      const name = document.getElementById('drawer-cust-name').value || 'Not provided';
-      const address = document.getElementById('drawer-cust-address').value || 'Not provided';
-      const date = document.getElementById('drawer-cust-date').value || 'As early as possible';
+      const name = document.getElementById("customer-name").value.trim();
+      const phone = document.getElementById("customer-phone").value.trim();
+      const property = document.getElementById("property-type").value;
+      const date = document.getElementById("cleaning-date").value || "Not specified";
+      const address = document.getElementById("customer-address").value.trim();
+      const notes = document.getElementById("customer-notes").value.trim();
 
-      let itemsList = '';
-      let total = 0;
+      if (!name || !phone || !property || !address) {
+        alert("Please required fields fill karein.");
+        return;
+      }
 
-      cart.forEach(item => {
-        itemsList += `• ${item.name} x ${item.qty} = ₹${item.price * item.qty}\n`;
-        total += item.price * item.qty;
+      const items = [...cart.values()];
+      const subtotal = items.reduce((sum, item) =>
+        sum + (item.service.price === null ? 0 : item.service.price * item.qty), 0);
+      const hasQuoteItems = items.some(item => item.service.price === null);
+
+      let message = "NAMASTE SAF SAFAI PUNE!%0A";
+      message = decodeURIComponent(message);
+      message += "\n*Cleaning Booking Request*\n";
+      message += "\n*Name:* " + name;
+      message += "\n*Customer phone:* " + phone;
+      message += "\n*Property:* " + property;
+      message += "\n*Preferred date:* " + date;
+      message += "\n*Address:* " + address;
+      message += "\n\n*Selected services:*\n";
+
+      items.forEach(({service, qty}) => {
+        message += "- " + service.name + " x " + qty +
+          " — " + (service.price === null ? "Quote required" : money(service.price) + " each") + "\n";
       });
 
-      const message = `*NEW BOOKING - SAF SAFAI PUNE*\n\n` +
-                      `*Customer:* ${name}\n` +
-                      `*Address:* ${address}\n` +
-                      `*Date:* ${date}\n\n` +
-                      `*Services Selected:*\n${itemsList}\n` +
-                      `*Total Bill:* ₹${total}`;
+      message += "\n*Listed-price subtotal:* " + money(subtotal);
+      if (hasQuoteItems) message += "\nSome services need a separate quote.";
+      message += "\nFinal price, service scope and availability to be confirmed.";
+      if (notes) message += "\n\n*Extra details:* " + notes;
 
-      window.open(`https://wa.me/919325100228?text=${encodeURIComponent(message)}`, '_blank');
-    }
+      window.open("https://wa.me/919325100228?text=" + encodeURIComponent(message),
+        "_blank", "noopener,noreferrer");
+    });
 
-    // --- BEFORE AFTER SLIDER ---
-    const baSlider = document.getElementById('ba-slider');
-    const baAfter = document.getElementById('ba-after');
-    const baAfterImg = document.getElementById('ba-after-img');
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    if(baSlider) {
-      baSlider.addEventListener('mousemove', (e) => {
-        const rect = baSlider.getBoundingClientRect();
-        let pos = ((e.clientX - rect.left) / rect.width) * 100;
-        baAfter.style.width = Math.max(0, Math.min(100, pos)) + '%';
-        if(baAfterImg) baAfterImg.style.width = rect.width + 'px';
-      });
-    }
+    // Prevent choosing a past date in the booking form.
+    const dateField = document.getElementById("cleaning-date");
+    const localToday = new Date();
+    dateField.min = [
+      localToday.getFullYear(),
+      String(localToday.getMonth() + 1).padStart(2, "0"),
+      String(localToday.getDate()).padStart(2, "0")
+    ].join("-");
 
-    // --- AI BOT ---
-    function toggleAiBot() {
-      document.getElementById('ai-chat-window').classList.toggle('hidden');
-    }
-
-    function handleAiSend() {
-      const input = document.getElementById('ai-user-input');
-      const val = input.value.trim();
-      if(!val) return;
-
-      const chat = document.getElementById('chat-messages');
-      chat.innerHTML += `<div class="bg-emerald-600 text-white p-2 rounded-xl max-w-[80%] ml-auto text-right">${val}</div>`;
-      input.value = '';
-
-      setTimeout(() => {
-        chat.innerHTML += `<div class="bg-white p-2.5 rounded-xl border text-slate-700">धन्यवाद! क्या आप WhatsApp पर direct chat karke slot book karna chahenge?</div>`;
-        chat.scrollTop = chat.scrollHeight;
-      }, 500);
-    }
+    renderServices();
+    renderCart();
   </script>
 </body>
 </html>
